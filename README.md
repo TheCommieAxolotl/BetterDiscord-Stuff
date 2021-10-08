@@ -1,7 +1,7 @@
 # BetterDiscord-Stuff
 BetterDiscord Plugins and Themes
 
-**Download** :   ![GitHub Releases][downloads-badge]
+**Download BetterDiscord** :   ![GitHub Releases][downloads-badge]
 
 [downloads-badge]: https://img.shields.io/github/downloads/BetterDiscord/BetterDiscord/latest/total?style=flat-square
 
