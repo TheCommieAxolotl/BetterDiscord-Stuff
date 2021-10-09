@@ -1,3 +1,10 @@
+/**
+* @name nightround
+* @author TheCommieAxolotl#6898
+* @description night. round. simple.
+* @version 0.9.5
+* @authorId 538487970408300544
+*/
 
 @import url("https://discord-custom-covers.github.io/usrbg/dist/usrbg.css");
 @import url("https://monstrousdev.github.io/themes/addons/user-tags.css");
@@ -37,9 +44,7 @@
 }
 
 /**
-
 CHAT CSS
-
 */
 
 /* Pin message */
@@ -367,9 +372,7 @@ box-shadow: rgba(255, 44, 44, .3) 0px 5px 15px;
 }
 
 /**
-
 HOME CSS
-
 */
 
 /* home page and DMs stuff */
@@ -420,9 +423,7 @@ HOME CSS
 }
 
 /**
-
 SETTINGS CSS
-
 */
 
 /* Server template */
@@ -756,9 +757,7 @@ box-shadow: rgba(44, 139, 255, .3) 0px 5px 15px;
 
 
 /**
-
 BASE CSS
-
 */
 
 /* Status picker (updated 07/11/21)*/
@@ -1648,9 +1647,7 @@ border-bottom-color: var(--popout-activeborders);
 
 
 /**
-
 MISC CSS
-
 */
 
 /* Loading glow effect */
@@ -1882,9 +1879,7 @@ button.gm-spotify-controls-button{
 }
 
 /**
-
 DISORD VARS
-
 */
 
 :root.theme-dark
