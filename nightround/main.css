@@ -1,4 +1,19 @@
 
+@import url("https://discord-custom-covers.github.io/usrbg/dist/usrbg.css");
+@import url("https://monstrousdev.github.io/themes/addons/user-tags.css");
+@import url("https://nyri4.github.io/donators/donators.css");
+@import url("https://nyri4.github.io/halloween/halloween.css");
+
+:root{
+    --brand-experiment: #868D9F;
+    --dark-primary:   #16181D;
+    --dark-secondary:      #16181D;
+    --dark-secondary-alt:       #1D1F25;
+    --dark-bright:    #1D1F25;
+    --roundmoled-background:   #1D1F25;
+    --popout-activeborders: #1f1f1f;
+}
+
 /* Badges */
 #app-mount [data-user-id="753142102736502885"] .badgeList-1R1WgZ::after,
 #app-mount [data-user-id="753142102736502885"] .profileBadges-ohc0Vu::after,
