@@ -1,6 +1,6 @@
 /**
   * @name CallWarnings
-  * @version 0.1.0
+  * @version 0.1.1
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
@@ -20,7 +20,7 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.1.0",
+           version: "0.1.1",
            description: "Adds warnings to call button."
        },
        changelog: [
@@ -34,7 +34,7 @@ module.exports = (() => {
 
        const PluginCSS =
   `
-    #user-context-call:hover,
+  #user-context-call:hover,
   #user-context-call.focused-3afm-j
   {
     background: red;
