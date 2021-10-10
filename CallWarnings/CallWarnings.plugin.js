@@ -1,6 +1,6 @@
 /**
   * @name CallWarnings
-  * @version 0.1.1
+  * @version 0.1.2
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
@@ -21,16 +21,46 @@ module.exports = (() => {
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
            version: "0.1.1",
-           description: "Adds warnings to call button."
+           description: "Partially added a settings menu."
        },
+
+       defaultConfig: [
+          {
+              type: "switch",
+              id: "hideAll",
+              name: "Hide Call Direct Call Buttons",
+              note: "Removes ALL Call Buttons (You can still enter a VC)",
+              value: false,
+          },
+      ],
+
        changelog: [
            {
                title: 'Update',
                type: 'fixed',
                items: ['Added the red tint to dm call buttons.']
+
            }
        ],
+
+
    }
+
+      const NoButtonCSS =
+
+      `
+      #user-context-call
+      {
+        display: none;
+      }
+
+      [aria-label='Start Video Call'] .icon-22AiRD,
+      [aria-label='Start Voice Call'] .icon-22AiRD
+      {
+        display: none;
+      }
+
+      `;
 
        const PluginCSS =
   `
@@ -104,12 +134,45 @@ module.exports = (() => {
             return class CallWarnings extends Plugin {
 
      async onStart() {
-         PluginUtilities.addStyle(this.getName(), PluginCSS);
+
+       PluginUtilities.addStyle(this.getName(), PluginCSS);
+
+      if (noButtons = true) {
+       PluginUtilities.addStyle(this.getName(), NoButtonCSS);
      }
 
+   }
+
      onStop() {
-       PluginUtilities.removeStyle(this.getName());
-       Patcher.unpatchAll();
+        PluginUtilities.removeStyle(this.getName());
+        Patcher.unpatchAll();
+     }
+
+     disableCallButtons() {
+
+       var noButtons = false;
+
+     }
+
+     enableCallButtons() {
+
+       var noButtons = true;
+
+     }
+
+     getSettingsPanel() {
+         const panel = this.buildSettingsPanel();
+         panel.addListener(() => {
+             this.doCleanup();
+             this.doSetup();
+         });
+         return panel.getElement();
+     }
+
+     updateSettings(id, value) {
+         if (id !== "hideAll") return;
+         if (value) return this.enableCallButtons();
+         return this.disableCallButtons();
      }
 
    };
@@ -120,3 +183,4 @@ module.exports = (() => {
   })(global.ZeresPluginLibrary.buildPlugin(config));
 })();
 /*@end@*/
+
