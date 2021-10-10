@@ -4,8 +4,8 @@
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
-  * @source
-  * @updateUrl
+  * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js
+  * @updateUrl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js
  */
 
 
@@ -19,7 +19,7 @@ module.exports = (() => {
                    discord_id: "538487970408300544"
                }
            ],
-           github_raw: "",
+           github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
            version: "0.0.4",
            description: "Adds warnings to call button."
        },
