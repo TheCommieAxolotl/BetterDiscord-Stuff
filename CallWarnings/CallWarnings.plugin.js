@@ -1,6 +1,6 @@
 /**
   * @name CallWarnings
-  * @version 0.1.9
+  * @version 0.1.10
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
@@ -22,8 +22,8 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.1.9",
-           description: "Partially added a settings menu."
+           version: "0.1.10",
+           description: "Makes it harder to accidentally call someone."
        },
 
        defaultConfig: [
@@ -40,7 +40,7 @@ module.exports = (() => {
            {
                title: 'Update',
                type: 'fixed',
-               items: ['Added the red tint to dm call buttons.']
+               items: ['Partially added a settings menu.']
 
            }
        ],
