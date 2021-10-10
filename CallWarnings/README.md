@@ -10,8 +10,5 @@ A utility plugin for BetterDiscord
 
 # Screenshots
 
-[](https://user-images.githubusercontent.com/87679354/136685002-16ee1a67-522f-4fac-bf9c-2def8f66d495.png)
-
-[](https://user-images.githubusercontent.com/87679354/136684960-4d7dce58-65c0-4f4d-b377-08e88d7c23b4.png)
-
-
+<img width="188" alt="Screen Shot 2021-10-10 at 5 22 18 pm" src="https://user-images.githubusercontent.com/87679354/136685110-62207ede-f50f-4804-b3e6-0a679d31ccc4.png">
+<img width="458" alt="Screen Shot 2021-10-10 at 5 22 43 pm" src="https://user-images.githubusercontent.com/87679354/136685112-151733ca-9eaf-4cbe-91c0-ea2b02947059.png">
