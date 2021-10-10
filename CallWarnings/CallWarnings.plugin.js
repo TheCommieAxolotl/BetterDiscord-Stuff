@@ -1,12 +1,14 @@
 /**
   * @name CallWarnings
-  * @version 0.1.3
+  * @version 0.1.9
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
   * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js
   * @updateUrl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js
+  * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/CallWarnings/CallWarnings.plugin.js
  */
+
 
 
 module.exports = (() => {
@@ -20,7 +22,7 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.1.3",
+           version: "0.1.9",
            description: "Partially added a settings menu."
        },
 
@@ -183,4 +185,3 @@ module.exports = (() => {
   })(global.ZeresPluginLibrary.buildPlugin(config));
 })();
 /*@end@*/
-
