@@ -5,6 +5,7 @@
 # Credits
 
 - **[Tropical](https://github.com/Tropix126)** for [usrbg](https://github.com/Discord-Custom-Covers/usrbg).
+- **[Monster Dev](https://github.com/monstrousdev)** for [user tags](https://github.com/monstrousdev/themes/blob/master/addons/user-tags.css)
 
 # Screenshots
 
