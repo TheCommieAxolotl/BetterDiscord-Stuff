@@ -2,7 +2,11 @@
 
 **The base css is from [Roundmolded Theme](https://github.com/tiredmala/Roundmoled) by tiredmala**
 
-screenshots:
+# Credits
+
+- **[Tropical](https://github.com/Tropix126)** for [usrbg](https://github.com/Discord-Custom-Covers/usrbg).
+
+# Screenshots
 
 ![](https://user-images.githubusercontent.com/87679354/136646427-edfb08d6-99c7-459e-881c-3642a97600c7.png)
 
