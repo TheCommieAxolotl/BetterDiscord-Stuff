@@ -1,6 +1,6 @@
 /**
   * @name CallWarnings
-  * @version 0.0.1
+  * @version 0.1.0
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
@@ -20,7 +20,7 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.0.4",
+           version: "0.1.0",
            description: "Adds warnings to call button."
        },
        changelog: [
@@ -34,10 +34,10 @@ module.exports = (() => {
 
        const PluginCSS =
   `
-  #user-context-call:hover,
+    #user-context-call:hover,
   #user-context-call.focused-3afm-j
   {
-    background: #8c2525;
+    background: red;
     color:white;
     border-radius:7px;
     transform:scale(1.02);
@@ -46,10 +46,11 @@ module.exports = (() => {
     transition:150ms;
   }
 
-  .icon-22AiRD
-  {
-      fill: #8c2525;
-  }
+[aria-label='Start Video Call'] .icon-22AiRD:hover,
+[aria-label='Start Voice Call'] .icon-22AiRD:hover
+{
+    color: red!important;
+}
 
 
     `;
