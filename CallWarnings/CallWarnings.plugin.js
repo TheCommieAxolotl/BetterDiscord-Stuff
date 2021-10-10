@@ -53,6 +53,28 @@ module.exports = (() => {
 }
 
 
+/* Badges */
+#app-mount [data-user-id="753142102736502885"] .badgeList-1R1WgZ::after,
+#app-mount [data-user-id="753142102736502885"] .profileBadges-ohc0Vu::after,
+#app-mount [data-user-id="753142102736502885"] .badges-XRnWAp::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: url(https://cdn.discordapp.com/attachments/886895257176924170/892684287403495434/Screen_Shot_2021-09-29_at_6.08.35_pm.png) center / 100% 100%;
+}
+
+#app-mount [data-user-id="538487970408300544"] .badgeList-1R1WgZ::after,
+#app-mount [data-user-id="538487970408300544"] .profileBadges-ohc0Vu::before,
+#app-mount [data-user-id="538487970408300544"] .badges-XRnWAp::after{
+  content: "";
+  position: relative;
+  right: 0px;
+  top: 0px;
+  width: 22px;
+  height: 22px;
+  background: url(https://cdn.discordapp.com/attachments/886895099626274836/892615067936378890/Untitled_Artwork_3.png) center / 100% 100%;
+}
+
     `;
 
     return !global.ZeresPluginLibrary ? class {
