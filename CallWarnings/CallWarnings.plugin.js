@@ -1,6 +1,6 @@
 /**
   * @name CallWarnings
-  * @version 0.1.12
+  * @version 0.1.13
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
@@ -22,7 +22,7 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.1.12",
+           version: "0.1.13",
            description: "Makes it harder to accidentally call someone."
        },
 
@@ -53,13 +53,13 @@ module.exports = (() => {
       `
       #user-context-call
       {
-        display: none;
+        display: none !important;
       }
 
       [aria-label='Start Video Call'] .icon-22AiRD,
       [aria-label='Start Voice Call'] .icon-22AiRD
       {
-        display: none;
+        display: none !important;
       }
 
       `;
