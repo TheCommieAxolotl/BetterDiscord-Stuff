@@ -6,7 +6,7 @@ A utility plugin for BetterDiscord
 
 - Adds an obnoxious red titnt to all places where you may accidentally call someone.
 - On hover, the Start Voice Call and Video Call buttons turn red.
-- more to be added soon...
+- A setting to completely remove the Direct Call Buttons.
 
 # Screenshots
 
