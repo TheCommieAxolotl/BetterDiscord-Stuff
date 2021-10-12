@@ -1,6 +1,6 @@
 /**
   * @name CallWarnings
-  * @version 0.1.14
+  * @version 0.1.15
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
@@ -22,7 +22,7 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.1.14",
+           version: "0.1.15",
            description: "Makes it harder to accidentally call someone."
        },
 
@@ -40,7 +40,7 @@ module.exports = (() => {
            {
                title: 'Update',
                type: 'fixed',
-               items: ['Partially added a settings menu.', 'Fixed the settings.']
+               items: ['Added an option to COMPLETELEY remove call buttons.']
 
            }
        ],
@@ -49,20 +49,19 @@ module.exports = (() => {
    }
 
       const NoButtonCSS =
+  `
+  #user-context-call
+  {
+    display: none !important;
+  }
 
-      `
-      #user-context-call
-      {
-        display: none !important;
-      }
+  [aria-label='Start Video Call'] .icon-22AiRD,
+  [aria-label='Start Voice Call'] .icon-22AiRD
+  {
+    display: none !important;
+  }
 
-      [aria-label='Start Video Call'] .icon-22AiRD,
-      [aria-label='Start Voice Call'] .icon-22AiRD
-      {
-        display: none !important;
-      }
-
-      `;
+    `;
 
        const PluginCSS =
   `
@@ -136,6 +135,8 @@ module.exports = (() => {
             return class CallWarnings extends Plugin {
 
      async onStart() {
+
+var noButtons = true;
 
        PluginUtilities.addStyle(this.getName(), PluginCSS);
 
