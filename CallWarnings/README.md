@@ -13,6 +13,7 @@ A utility plugin for BetterDiscord
 # Screenshots
 
 *Setting to completely remove the Direct Call Buttons.*
+
 <img width="600" alt="Screen Shot 2021-10-12 at 8 33 58 pm" src="https://user-images.githubusercontent.com/87679354/136931163-9252a9f7-57b9-42a9-ac2d-ee7c0f0013c5.png">
 
 *Red tint to button in user context menu.*
