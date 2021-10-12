@@ -1,6 +1,6 @@
 /**
   * @name CallWarnings
-  * @version 0.2.0
+  * @version 0.2.1
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Adds warnings to call button.
@@ -22,7 +22,7 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.2.0",
+           version: "0.2.1",
            description: "Makes it harder to accidentally call someone."
        },
 
@@ -31,7 +31,7 @@ module.exports = (() => {
               type: "switch",
               id: "hideAll",
               name: "Hide Call Direct Call Buttons",
-              note: "Removes ALL Call Buttons (Requires restart)",
+              note: "Removes ALL Call Buttons (Requires restart with ctrl + r)",
               value: false,
           },
       ],
