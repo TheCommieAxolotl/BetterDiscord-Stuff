@@ -9,8 +9,6 @@
 
 @import url("https://discord-custom-covers.github.io/usrbg/dist/usrbg.css");
 @import url("https://monstrousdev.github.io/themes/addons/user-tags.css");
-@import url("https://nyri4.github.io/donators/donators.css");
-@import url("https://nyri4.github.io/halloween/halloween.css");
 
 :root{
     --brand-experiment: #868D9F;
@@ -1496,6 +1494,12 @@ border-bottom-color: var(--popout-activeborders);
 .attachButtonPlus-jWVFah
 {
     fill: #868D9F;
+}
+
+.button-1ZiXG9
+{
+  position: relative;
+  top: -3px;
 }
 
 .title-eS5yk3
