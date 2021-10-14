@@ -2,7 +2,7 @@
 * @name nightround
 * @author TheCommieAxolotl#6898
 * @description night. round. simple.
-* @version 1.1.0
+* @version 2.0.0
 * @authorId 538487970408300544
 * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/nightround/nightround.theme.css
 */
@@ -18,10 +18,11 @@
     --dark-bright:    #1D1F25;
     --roundmoled-background:   #1D1F25;
     --popout-activeborders: #1f1f1f;
-    --warning: #8c2525;
+    --warning:  rgba(255,0,0,1);
 }
 
 /* Badges */
+
 #app-mount [data-user-id="753142102736502885"] .badgeList-1R1WgZ::after,
 #app-mount [data-user-id="753142102736502885"] .profileBadges-ohc0Vu::after,
 #app-mount [data-user-id="753142102736502885"] .badges-XRnWAp::after {
@@ -31,6 +32,7 @@
   background: url(https://cdn.discordapp.com/attachments/886895257176924170/892684287403495434/Screen_Shot_2021-09-29_at_6.08.35_pm.png) center / 100% 100%;
 }
 
+#app-mount [data-user-id="538487970408300544"] .name-uJV0GL::after,
 #app-mount [data-user-id="538487970408300544"] .badgeList-1R1WgZ::after,
 #app-mount [data-user-id="538487970408300544"] .profileBadges-ohc0Vu::before,
 #app-mount [data-user-id="538487970408300544"] .badges-XRnWAp::after{
@@ -1411,8 +1413,8 @@ border-bottom-color: var(--popout-activeborders);
 {
     margin-right: 10px;
     margin-left: 7px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 0px;
     border-radius: 18px;
 }
 
