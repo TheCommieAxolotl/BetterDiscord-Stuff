@@ -1,9 +1,9 @@
 /**
   * @name CallWarnings
-  * @version 0.2.2
+  * @version 0.2.4
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
-  * @description Adds warnings to call button.
+  * @description Makes it harder to accidentally call someone.
   * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js
   * @updateUrl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js
   * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/CallWarnings/CallWarnings.plugin.js
@@ -22,7 +22,7 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.2.2",
+           version: "0.2.4",
            description: "Makes it harder to accidentally call someone."
        },
 
@@ -32,7 +32,7 @@ module.exports = (() => {
               id: "hideAll",
               name: "Hide Call Direct Call Buttons",
               note: "Removes ALL Call Buttons (Requires restart with ctrl + r)",
-              value: false,
+              value: true,
           },
       ],
 
@@ -167,7 +167,7 @@ module.exports = (() => {
 
      updateSettings(id, value) {
          if (id !== "hideAll") return;
-         if (value) return this.enableCallButtons();
+         if (value) return this.disableCallButtons();
          return this.disableCallButtons();
      }
 
