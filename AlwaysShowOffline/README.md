@@ -1,5 +1,5 @@
 
-# AlwaysShowOffline
+# AlwaysShowOffline (**NOT FUNCTIONAL**)
 
 Another utility plugin for BetterDiscord
 
