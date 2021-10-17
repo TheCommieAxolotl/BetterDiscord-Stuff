@@ -1,7 +1,7 @@
 /**
  * @name AlwaysShowOffline
  * @author TheCommieAxolotl#6898
- * @description Always show offline users in memberlist.
+ * @description Always show offline users in memberlist. (Disabling plugin requires restart!)
  * @version 0.0.3
  * @authorId 538487970408300544
  * @authorLink https://twitter.com/Whoever
@@ -24,7 +24,7 @@ module.exports = (() => {
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js",
             version: "0.0.3",
-            description: "Always show offline users in memberlist."
+            description: "Always show offline users in memberlist. (Disabling plugin requires restart!)"
         },
 
         changelog: [
@@ -65,15 +65,26 @@ module.exports = (() => {
 
             return class AlwaysShowOffline extends Plugin {
 
+
+                
                 async onStart() {
 
-                    // guildId should == 86004744966914048
-                    
-                    const setupPlugin = ("test");
+                    BdApi.findModuleByProps("dirtyDispatch").subscribe("TYPING_START", () => {
+                        return this.changeServer()
+                    })
+
+                   
+
+                }
+
+                onStop() {
+                    Patcher.unpatchAll();
+                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("TYPING_START", listener)
+                }
+
+                changeServer() {
 
                     console.clear()
-
-                    console.log(setupPlugin)
 
                     // const guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
                     // const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
@@ -81,12 +92,8 @@ module.exports = (() => {
 
                     const currentGuildId = guildInfo.id;
 
-                    console.log(currentGuildId)
+                   
 
-                }
-
-                onStop() {
-                    Patcher.unpatchAll();
                 }
 
             };
