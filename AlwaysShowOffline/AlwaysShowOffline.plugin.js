@@ -5,8 +5,8 @@
  * @version 0.0.1
  * @authorId 538487970408300544
  * @authorLink https://twitter.com/Whoever
- * @source 
- * @updateurl
+ * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
+ * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
  */
 
 
@@ -21,7 +21,7 @@ module.exports = (() => {
                     discord_id: "538487970408300544"
                 }
             ],
-            github_raw: "",
+            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js",
             version: "0.0.1",
             description: "Always show offline users in memberlist."
         },
