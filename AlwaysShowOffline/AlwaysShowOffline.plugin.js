@@ -2,8 +2,9 @@
  * @name AlwaysShowOffline
  * @author TheCommieAxolotl#6898
  * @description Always show offline users in memberlist.
- * @version 0.0.2
+ * @version 0.0.3
  * @authorId 538487970408300544
+ * @authorLink https://twitter.com/Whoever
  * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
  * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
  * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
@@ -22,7 +23,7 @@ module.exports = (() => {
                 }
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js",
-            version: "0.0.2",
+            version: "0.0.3",
             description: "Always show offline users in memberlist."
         },
 
@@ -30,7 +31,7 @@ module.exports = (() => {
             {
                 title: 'Pre-Release',
                 type: 'added',
-                items: ['First Version!.']
+                items: ['First version!']
 
             }
         ],
@@ -58,31 +59,35 @@ module.exports = (() => {
         }
         start() { }
         stop() { }
-
-        start() { }
-        stop() { }
     } : (([Plugin, Api]) => {
         const plugin = (Plugin, Api) => {
             const { DiscordModules: { React, DiscordConstants, ReactDOM }, DiscordModules, WebpackModules, Patcher, PluginUtilities } = Api;
 
-            return class CallWarnings extends Plugin {
+            return class AlwaysShowOffline extends Plugin {
 
                 async onStart() {
-                    Object.defineProperty(BdApi.findModuleByProps('getLastSelectedGuildId'), 'getLastSelectedGuildId', {
-                        
-                    });
+
+                    // guildId should == 86004744966914048
                     
-                    var guildId = (getSelectedGuildId);
+                    const setupPlugin = ("test");
 
-                    console.log(guildId)
+                    console.clear()
 
+                    console.log(setupPlugin)
+
+                    // const guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
+                    // const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
+                    console.log(guildInfo)
+
+                    const currentGuildId = guildInfo.id;
+
+                    console.log(currentGuildId)
 
                 }
 
                 onStop() {
                     Patcher.unpatchAll();
                 }
-
 
             };
 
