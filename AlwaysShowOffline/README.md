@@ -1,7 +1,13 @@
 
-# AlwaysShowOffline (**NOT FUNCTIONAL**)
+# AlwaysShowOffline (**NOT FUNCTIONAL**) WILL ALWAYS CRASH YOUR DISCORD IF NOT SET UP CORRECTLY
 
 Another utility plugin for BetterDiscord
+
+code to be pasted into console on restart:
+```js
+var guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
+var guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
+```
 
 # Features
 
