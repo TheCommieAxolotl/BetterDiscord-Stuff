@@ -67,35 +67,34 @@ module.exports = (() => {
             const { DiscordModules: { React, DiscordConstants, ReactDOM }, DiscordModules, WebpackModules, Patcher, PluginUtilities } = Api;
 
             return class AlwaysShowOffline extends Plugin {
-
-
                 
                 async onStart() {
 
-                    BdApi.findModuleByProps("dirtyDispatch").subscribe("TYPING_START", () => {
+                    BdApi.findModuleByProps("dirtyDispatch").subscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", () => {
                         return this.changeServer()
                     })
-
-                   
 
                 }
 
                 onStop() {
                     Patcher.unpatchAll();
-                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("TYPING_START", listener)
+                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", listener)
                 }
 
                 changeServer() {
 
-                    console.clear()
+                    
 
-                    // const guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
-                    // const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
+                    // var guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
+                    // var guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
+
                     console.log(guildInfo)
 
                     const currentGuildId = guildInfo.id;
 
-                   
+                   guildInfo.showOffline = true;
+
+                   guildInfo.members = 10;
 
                 }
 
@@ -107,3 +106,4 @@ module.exports = (() => {
     })(global.ZeresPluginLibrary.buildPlugin(config));
 })();
 /*@end@*/
+
