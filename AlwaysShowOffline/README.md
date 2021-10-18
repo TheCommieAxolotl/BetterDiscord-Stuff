@@ -3,7 +3,7 @@
 
 Another utility plugin for BetterDiscord
 
-code to be pasted into console on restart:
+Code that **needs** to be pasted into console on restart:
 ```js
 var guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
 var guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
