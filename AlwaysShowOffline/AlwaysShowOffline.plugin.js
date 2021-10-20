@@ -23,7 +23,7 @@ module.exports = (() => {
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js",
             version: "0.0.3",
-            description: "Always show offline users in memberlist."
+            description: "Always show offline users in memberlist. (Disabling requires restart)"
         },
 
         changelog: [
@@ -32,11 +32,6 @@ module.exports = (() => {
                 type: 'added',
                 items: ['First version!'],
             },
-            {
-                title: 'Read Before Using!',
-                type: 'fixed',
-                items: ['Paste the snippet on GitHub into the console to get this to work!'],
-            }
         ],
 
 
@@ -60,7 +55,12 @@ module.exports = (() => {
                 }
             });
         }
-        start() { }
+        start() { 
+
+            const guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
+            const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
+            console.log(guildInfo)
+         }
         stop() { }
     } : (([Plugin, Api]) => {
         const plugin = (Plugin, Api) => {
@@ -70,6 +70,10 @@ module.exports = (() => {
                 
                 async onStart() {
 
+                    const guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
+                    const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
+                    console.log(guildInfo)
+
                     BdApi.findModuleByProps("dirtyDispatch").subscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", () => {
                         return this.changeServer()
                     })
@@ -78,15 +82,14 @@ module.exports = (() => {
 
                 onStop() {
                     Patcher.unpatchAll();
-                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", listener)
+                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", () => {})
                 }
 
                 changeServer() {
 
-                    
 
-                    // var guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
-                    // var guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
+                    const guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
+                    const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
 
                     console.log(guildInfo)
 
@@ -95,6 +98,10 @@ module.exports = (() => {
                    guildInfo.showOffline = true;
 
                    guildInfo.members = 10;
+
+                   if (guildInfo.showOffline = true) {
+                       
+                   }
 
                 }
 
