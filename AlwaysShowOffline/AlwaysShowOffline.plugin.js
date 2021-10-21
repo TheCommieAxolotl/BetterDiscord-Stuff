@@ -95,13 +95,15 @@ module.exports = (() => {
 
                     const currentGuildId = guildInfo.id;
 
-                   guildInfo.showOffline = true;
+                    guildInfo.showOffline = true;
 
-                   guildInfo.members = 10;
+                    guildInfo.members = 10;
 
-                   if (guildInfo.showOffline = true) {
-                       
-                   }
+                    if (guildInfo.showOffline = true) {
+
+                        // Dammit i'm stuck here! everything else worked... ugh
+
+                    }
 
                 }
 
