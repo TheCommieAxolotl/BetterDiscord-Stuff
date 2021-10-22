@@ -101,7 +101,7 @@ module.exports = (() => {
 
                     if (guildInfo.showOffline = true) {
 
-                        // Dammit i'm stuck here! everything else worked... ugh
+                        // Ugh i'm stuck here! everything else worked... ugh
 
                     }
 
