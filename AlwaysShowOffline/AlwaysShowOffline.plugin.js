@@ -26,6 +26,24 @@ module.exports = (() => {
             description: "Always show offline users in memberlist. (Disabling requires restart)"
         },
 
+        defaultConfig: [
+            {
+                type: "switch",
+                id: "showToasts",
+                name: "Show Toasts",
+                note: "Remove Notifications from AlwaysShowOffline",
+                value: false,
+            },
+            {
+                type: "switch",
+                id: "devMode",
+                name: "Developer Mode",
+                note: "No one else is going to use this. Right?",
+                value: false,
+            },
+
+        ],
+
         changelog: [
             {
                 title: 'Pre-Release',
@@ -74,7 +92,7 @@ module.exports = (() => {
                     const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
                     console.log(guildInfo)
 
-                    BdApi.findModuleByProps("dirtyDispatch").subscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", () => {
+                    BdApi.findModuleByProps("dirtyDispatch").subscribe("LOAD_MESSAGES", () => {
                         return this.changeServer()
                     })
 
@@ -82,11 +100,10 @@ module.exports = (() => {
 
                 onStop() {
                     Patcher.unpatchAll();
-                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", () => {})
+                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("LOAD_MESSAGES", () => {})
                 }
 
                 changeServer() {
-
 
                     const guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
                     const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
@@ -101,10 +118,34 @@ module.exports = (() => {
 
                     if (guildInfo.showOffline = true) {
 
-                        // Ugh i'm stuck here! everything else worked... ugh
+                        // At a later date i will add select servers option 
+                            BdApi.showToast("Showing offline Members for this Guild.", { timeout: 3000, type: 'success' });
 
                     }
 
+                    else {
+                        
+                        BdApi.showToast("Guild disabled.", { timeout: 3000, type: 'faliure' });
+
+                    }
+
+                }
+
+                enableDev() {}
+
+                getSettingsPanel() {
+                    const panel = this.buildSettingsPanel();
+                    panel.addListener(() => {
+                        this.doCleanup();
+                        this.doSetup();
+                    });
+                    return panel.getElement();
+                }
+
+                updateSettings(id, value) {
+                    if (id !== "devMode") return;
+                    if (value) return this.enableDev();
+                    return this.disableDev();
                 }
 
             };
