@@ -7,5 +7,6 @@
 BetterDiscord Plugins and Themes
 
 **Download BetterDiscord:** https://betterdiscord.app/
+**Support Server:** https://betterdiscord.app/invite
 
 ![](https://betterdiscord.app/resources/branding/logo_large.svg)
