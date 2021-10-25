@@ -1,6 +1,6 @@
 /**
   * @name CallWarnings
-  * @version 0.2.4
+  * @version 0.2.5
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
   * @description Makes it harder to accidentally call someone.
@@ -23,7 +23,7 @@ module.exports = (() => {
                }
            ],
            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js",
-           version: "0.2.4",
+           version: "0.2.5",
            description: "Makes it harder to accidentally call someone."
        },
 
