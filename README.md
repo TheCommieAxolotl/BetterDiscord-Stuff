@@ -6,6 +6,7 @@
 # BetterDiscord Stuff
 BetterDiscord Plugins and Themes
 
+**Axolotl Support Server:** https://discord.gg/g2KnUw7u7N
 **Download BetterDiscord:** https://betterdiscord.app/
 **Support Server:** https://betterdiscord.app/invite
 
