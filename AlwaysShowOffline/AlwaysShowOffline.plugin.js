@@ -2,7 +2,7 @@
  * @name AlwaysShowOffline
  * @author TheCommieAxolotl#6898
  * @description Always show offline users in memberlist.
- * @version 0.0.6
+ * @version 0.0.7
  * @authorId 538487970408300544
  * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
  * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
@@ -23,7 +23,7 @@ module.exports = (() => {
                 }
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js",
-            version: "0.0.6",
+            version: "0.0.7",
             description: "Always show offline users in memberlist. (Disabling requires restart)"
         },
 
@@ -49,7 +49,12 @@ module.exports = (() => {
             {
                 title: 'Pre-Release',
                 type: 'added',
-                items: ['First version!'] ['Added Invite link!']
+                items: ['Webpack 5 update.'] ['Added Invite link!']
+            },
+            {
+                title: 'Discord Webpack 5 Hotfix',
+                type: 'fixed',
+                items: ['Disable ALL settings']
             },
         ],
 
@@ -82,32 +87,43 @@ module.exports = (() => {
         const plugin = (Plugin, Api) => {
             const { DiscordModules: { React, DiscordConstants, ReactDOM }, DiscordModules, WebpackModules, Patcher, PluginUtilities } = Api;
 
+            const SelectedGuildStore = BdApi.findModuleByProps("getLastSelectedGuildId");
+
             return class AlwaysShowOffline extends Plugin {
                 
+           
+                
                 async onStart() {
+                    
+                    BdApi.findModuleByProps("dirtyDispatch").subscribe("PRESENCE_UPDATE", () => {
 
-
-                    BdApi.findModuleByProps("dirtyDispatch").subscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", () => {
-                        return this.changeServer()
+                    this.lastGuildId = SelectedGuildStore.getGuildId();
+                    this.changeServer()
+                    
                     })
-
+                
                 }
 
                 onStop() {
                     Patcher.unpatchAll();
-                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("UPDATE_CHANNEL_LIST_DIMENSIONS", () => {})
+                    BdApi.findModuleByProps("dirtyDispatch").unsubscribe("PRESENCE_UPDATE", () => {})
                 }
 
                 changeServer() {
 
+                    
+                    const guildId = SelectedGuildStore.getGuildId();
+                    if (this.lastGuildId === guildId) {
+                    
+
                     this.saveSettings()
 
-                    const guildId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
-                    const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildId)
+                    const guildSId = BdApi.findModuleByProps('getLastSelectedGuildId').getGuildId()
+                    const guildInfo = BdApi.findModuleByProps('getGuild').getGuild(guildSId)
 
                     if (this.settings.devMode) {
-                    
-                    console.log(guildInfo)
+
+                        console.log(guildInfo)
 
                     }
 
@@ -120,7 +136,7 @@ module.exports = (() => {
                     if (guildInfo.showOffline = true) {
 
                         // At a later date i will add select servers option 
- 
+
                         if (this.settings.showToasts) {
 
                             BdApi.showToast("Showing offline Members for this Guild.", { timeout: 3000, type: 'success' });
@@ -129,6 +145,11 @@ module.exports = (() => {
                         }
                     }
 
+                }
+
+
+                    this.lastGuildId = guildId;
+                    
                 }
 
                 getSettingsPanel() {
