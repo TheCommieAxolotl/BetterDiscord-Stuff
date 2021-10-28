@@ -10,3 +10,5 @@ Another utility plugin for BetterDiscord
 - Always shows offline users in memberlist (doesn't work yet)
 
 # Screenshots
+
+(coming soon)
