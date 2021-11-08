@@ -222,6 +222,8 @@ background: var(--brand-experiment) !important;
   background-color: var(--background-floating);
 }
 
+#user-settings-cog,
+#user-settings-cog .submenu-2-ysNh.menu-3sdvDG,
 #message,
 #message .submenu-2-ysNh.menu-3sdvDG,
 #textarea-context,
@@ -241,6 +243,8 @@ background: var(--brand-experiment) !important;
     border-radius: 5px;
 }
 
+#user-settings-cog::before,
+#user-settings-cog .submenu-2-ysNh.menu-3sdvDG::before,
 #message::before,
 #message .submenu-2-ysNh.menu-3sdvDG::before,
 #textarea-context::before,
