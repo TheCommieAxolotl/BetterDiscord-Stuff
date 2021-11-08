@@ -1,6 +1,8 @@
 # WinCord Theme for BetterDiscord
 A Modern Discord Theme Inspired By The FluentCord Theme and Concept
 
+(Original Css. Check for yourself)
+
 # ScreenShots
 
 <img width="1440" alt="Screen Shot 2021-11-08 at 8 20 47 pm" src="https://user-images.githubusercontent.com/87679354/140716094-5f2c96fb-c15a-4dce-b39b-964a6ec35d28.png">
