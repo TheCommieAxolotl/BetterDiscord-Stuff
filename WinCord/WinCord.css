@@ -222,8 +222,6 @@ background: var(--brand-experiment) !important;
   background-color: var(--background-floating);
 }
 
-#user-settings-cog,
-#user-settings-cog .submenu-2-ysNh.menu-3sdvDG,
 #message,
 #message .submenu-2-ysNh.menu-3sdvDG,
 #textarea-context,
@@ -237,14 +235,16 @@ background: var(--brand-experiment) !important;
 #channel-context,
 #channel-context .submenu-2-ysNh.menu-3sdvDG,
 #status-picker,
-#status-picker .submenu-2-ysNh.menu-3sdvDG 
+#status-picker .submenu-2-ysNh.menu-3sdvDG,
+#user-settings-cog,
+#user-settings-cog .submenu-2-ysNh.menu-3sdvDG,
+.popoutContainer-1MXdqN,
+.container-2dqNWc
 {
     background: transparent;
     border-radius: 5px;
 }
 
-#user-settings-cog::before,
-#user-settings-cog .submenu-2-ysNh.menu-3sdvDG::before,
 #message::before,
 #message .submenu-2-ysNh.menu-3sdvDG::before,
 #textarea-context::before,
@@ -258,7 +258,11 @@ background: var(--brand-experiment) !important;
 #channel-context::before,
 #channel-context .submenu-2-ysNh.menu-3sdvDG::before,
 #status-picker::before,
-#status-picker .submenu-2-ysNh.menu-3sdvDG::before 
+#status-picker .submenu-2-ysNh.menu-3sdvDG::before,
+#user-settings-cog::before,
+#user-settings-cog .submenu-2-ysNh.menu-3sdvDG::before,
+.popoutContainer-1MXdqN::before,
+.container-2dqNWc::before
 { 
     content: "";
     position: absolute;
@@ -267,6 +271,21 @@ background: var(--brand-experiment) !important;
     backdrop-filter: blur(var(--menu-blur));
     background: var(--background-floating);
     border-radius: 5px;
+}
+
+.popoutContainer-1MXdqN
+{
+    backdrop-filter: blur(var(--menu-blur));
+    background-color: var(--background-floating)
+}
+
+.menu-3sdvDG::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(var(--menu-blur));
+  background-color: var(--background-floating);
 }
 
 .footer-3UKYOU,
