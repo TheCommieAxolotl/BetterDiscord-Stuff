@@ -1,7 +1,10 @@
 # WinCord Theme for BetterDiscord
 A Modern Discord Theme Inspired By The FluentCord Theme and Concept
 
-(Original Css. Check for yourself)
+(Original CSS. Check for yourself)
+
+# Please Read
+To Set up this theme, you **have** to update a variable `--channel-info-spacing: [your value]px;`. The updated value depends on your screen size.
 
 # ScreenShots
 
