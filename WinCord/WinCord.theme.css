@@ -19,6 +19,7 @@
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Sources/WinCord/WinCord.css");
 
 :root {
+    --channel-info-spacing: 578px; /* MUST CHANGE FOR YOUR DISPLAY SIZE */
     --please-dont-change-these: "like Really Please Leave Them";
     --header-primary: #fff;
     --header-secondary: #b9bbbe;
@@ -50,7 +51,6 @@
     --info-warning-background: #818cc067;
     --info-warning-foreground: #818cc0;
     --menu-blur:   10px;
-    --channel-info-spacing: 578px; /* MUST CHANGE FOR YOUR DISPLAY SIZE */
     --transparent: transparent;
 }
 /* Made By The Commie Axolotl */
