@@ -3,7 +3,7 @@
  * @version 1.0.0
  * @author TheCommieAxolotl#6898
  * @authorId 538487970408300544
- * @description A clean, modern feel to Discord
+ * @description A clean, modern feel
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/WinCord
  * @invite g2KnUw7u7N
 */
@@ -41,6 +41,7 @@
     --background-accent: #4f545c;
     --background-floating: #3d3d3d5b;
     --brand-experiment: #6771A1;
+    --brand-experiment-560: #6771A1;
     --background-blur: 10px;
     --background-transparent:  #64646421;
     --background-toolbar: #272729;
@@ -48,7 +49,8 @@
     --background-mentioned-hover: #484e5f;
     --info-warning-background: #818cc067;
     --info-warning-foreground: #818cc0;
-    --menu-blur: 10px;
+    --menu-blur:   10px;
+    --channel-info-spacing: 578px; /* MUST CHANGE FOR YOUR DISPLAY SIZE */
     --transparent: transparent;
 }
 /* Made By The Commie Axolotl */
