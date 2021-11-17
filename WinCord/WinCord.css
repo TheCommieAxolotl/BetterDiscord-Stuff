@@ -116,7 +116,7 @@ background: var(--brand-experiment) !important;
   font-size: 14px;
   z-index: -2;
   top: 50px;
-  right: 578px;
+  right: var(--channel-info-spacing);
 }
 
 #app-mount .nicknames-1XK4Zt.overflow-WK9Ogt::before
