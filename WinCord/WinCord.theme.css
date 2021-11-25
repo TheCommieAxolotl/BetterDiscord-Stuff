@@ -16,7 +16,7 @@
 @import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css');
 
 /* Source */
-@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Sources/WinCord/WinCord.css");
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/WinCord/WinCord.css");
 
 :root {
     --channel-info-spacing: 578px; /* MUST CHANGE FOR YOUR DISPLAY SIZE */
