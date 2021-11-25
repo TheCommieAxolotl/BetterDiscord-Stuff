@@ -110,6 +110,22 @@ background: var(--brand-experiment) !important;
   top: 50px;
 }
 
+.UserBackgrounds-banner-badge
+{
+    display: none;
+}
+
+.resultsGroup-r_nuzN
+{
+    backdrop-filter: blur(var(--menu-blur));
+    background-color: var(--transparent);
+}
+
+.container-3ayLPN 
+{
+    opacity: 1;
+}
+
 #app-mount .title-29uC1r::after
 {
   font-weight: 500;
@@ -120,7 +136,7 @@ background: var(--brand-experiment) !important;
   font-size: 14px;
   z-index: -2;
   top: 50px;
-  right: var(--channel-info-spacing);
+  justify-content: center !important;
 }
 
 #app-mount .nicknames-1XK4Zt.overflow-WK9Ogt::before
