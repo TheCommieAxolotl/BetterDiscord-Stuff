@@ -88,6 +88,11 @@ background: var(--brand-experiment) !important;
   color: var(--brand-experiment);
 }
 
+.wrapper-2aW0bm
+{
+    backdrop-filter: blur(var(--menu-blur));
+}
+
 #app-mount .tabBar-ZmDY9v.topPill-30KHOu::after
 {
   font-weight: 500;
