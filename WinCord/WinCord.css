@@ -115,11 +115,15 @@ background: var(--brand-experiment) !important;
     display: none;
 }
 
-.resultsGroup-r_nuzN,
-.wrapper-2aW0bm
+.resultsGroup-r_nuzN
 {
     backdrop-filter: blur(var(--menu-blur));
     background-color: var(--transparent);
+}
+
+.wrapper-2aW0bm
+{
+    backdrop-filter: blur(var(--menu-blur));
 }
 
 .container-3ayLPN 
