@@ -5,6 +5,7 @@
  * @version 0.0.8
  * @authorId 538487970408300544
  * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
+ * @website https://thecommieaxolotl.github.io/BetterDiscord-Stuff/
  * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
  * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/AlwaysShowOffline/AlwaysShowOffline.plugin.js
  * @invite g2KnUw7u7N
