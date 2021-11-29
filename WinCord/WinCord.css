@@ -8,6 +8,11 @@
   background-color: var(--background-toolbar);
 }
 
+.info-1VyQPT .colorMuted-HdFt4q:last-child:after {
+  content: "WinCord" var(--version);
+  display: block;
+}
+
 .avatar-1BDn8e[src*="538487970408300544"] + h2 .username-1A8OIy::after {
     content: 'THEME CREATOR';
     color: #fff;
