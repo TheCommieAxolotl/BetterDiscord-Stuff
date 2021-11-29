@@ -24,6 +24,25 @@
     top: -2px;
 }
 
+.panels-j1Uci_>.container-3baos1 .flex-1xMQg5>:not(:last-child) {
+  opacity: 0%;
+  width: 0px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.panels-j1Uci_>.container-3baos1:hover .flex-1xMQg5>:not(:last-child) {
+  opacity: 100%;
+  width: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+
 .expandedFolderBackground-3ZDF05,
 .expandedFolderIconWrapper-3fmTfW,
 .folder-2w6LX1
