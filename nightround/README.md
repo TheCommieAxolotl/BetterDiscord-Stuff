@@ -1,4 +1,4 @@
-# nightround theme for BetterDiscord
+# nightround theme for BetterDiscord (unmaintained)
 
 **The base css is from [Roundmolded Theme](https://github.com/tiredmala/Roundmoled) by tiredmala**
 
