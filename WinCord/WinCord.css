@@ -13,7 +13,7 @@
 }
 
 .info-1VyQPT .colorMuted-HdFt4q:last-child:after {
-  content: "WinCord" var(--version);
+  content: "WinCord " ""var(--version)"";
   display: block;
 }
 
