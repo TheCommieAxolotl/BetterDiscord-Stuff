@@ -19,11 +19,13 @@ https://user-images.githubusercontent.com/87679354/143792172-ee31c37d-05ee-4f23-
 
 <img width="253" alt="Screen Shot 2021-11-29 at 11 18 54 am" src="https://user-images.githubusercontent.com/87679354/143792286-cecdee67-6d17-4b87-becd-d223f2223096.png">
 
-# ScreenShots
+4) Channel Topic Placeholders
+
+https://user-images.githubusercontent.com/87679354/141253165-83e8475d-4ab0-4d65-b6b4-2608c562463d.mov
+
+# Screenshots
 
 <img width="1440" alt="Screen Shot 2021-11-29 at 11 24 33 am" src="https://user-images.githubusercontent.com/87679354/143792479-76aa4dc3-0e16-40a1-bd7d-36043373c7fc.png">
 <img width="1440" alt="Screen Shot 2021-11-29 at 11 24 46 am" src="https://user-images.githubusercontent.com/87679354/143792492-2eb94030-f668-4ca7-9c41-7783aa9802cc.png">
 <img width="1440" alt="Screen Shot 2021-11-29 at 11 25 54 am" src="https://user-images.githubusercontent.com/87679354/143792553-c08f56ee-418c-41e6-8ea8-a5137f52e496.png">
 <img width="1440" alt="Screen Shot 2021-11-29 at 11 26 12 am" src="https://user-images.githubusercontent.com/87679354/143792563-b7975253-6465-4828-994b-3d97c0bd0ac5.png">
-
-https://user-images.githubusercontent.com/87679354/141253165-83e8475d-4ab0-4d65-b6b4-2608c562463d.mov
