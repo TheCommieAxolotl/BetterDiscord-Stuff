@@ -3,9 +3,10 @@
   * @version 0.3.0
   * @author TheCommieAxolotl#6898
   * @authorId 538487970408300544
-  * @description Makes it harder to accidentally call someone.
+  * @description Makes it harder to accidentally call someone. (unmaintained)
   * @invite g2KnUw7u7N
   * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js
+  * @website https://thecommieaxolotl.github.io/BetterDiscord-Stuff/
   * @updateUrl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CallWarnings/CallWarnings.plugin.js
   * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/CallWarnings/CallWarnings.plugin.js
  */
