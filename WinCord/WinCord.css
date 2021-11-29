@@ -7,6 +7,13 @@
     display: none;
 }
 
+.animatedContainer-1NSq4T, .bannerImage-3KhIJ6 {
+   border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .replyBar-1YLQ2F
 {
   background-color: var(--background-toolbar);
