@@ -2,14 +2,9 @@
   --version: "1.0.0";
 }
 
-.count-bFJRJm 
-{
-    display: none;
-}
-
 #app-mount .app-2rEoOp::before {
     content: "Your version of WinCord is outdated. Please download the newest version from: https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/WinCord/WinCord.theme.css";
-    display: var(--version2_0, block);
+    display: var(--version1_0, block);
     background-color: #6771A1;
     color: #fff;
     font-size: 14px;
@@ -17,6 +12,11 @@
     font-weight: 500;
     text-align: center;
     z-index: 101;
+}
+
+.count-bFJRJm 
+{
+    display: none;
 }
 
 .animatedContainer-1NSq4T, .bannerImage-3KhIJ6 {
