@@ -19,10 +19,10 @@
   background-color: var(--background-toolbar);
 }
 
-.info-1VyQPT .colorMuted-HdFt4q:last-child:after {
+[aria-label=USER_SETTINGS] .info-1VyQPT > span:first-child::before {
   content: "WinCord " var(--version);
   position: relative;
-  top: 10px;
+  top: 0px;
   display: block;
 }
 
