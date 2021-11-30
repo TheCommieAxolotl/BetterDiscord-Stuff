@@ -22,6 +22,7 @@
 :root {
     --channel-info-spacing: 578px; /* MUST CHANGE FOR YOUR DISPLAY SIZE */
     --please-dont-change-these: "like Really Please Leave Them";
+    --version1_0: none;
     --header-primary: #fff;
     --header-secondary: #b9bbbe;
     --text-normal: #dcddde;
