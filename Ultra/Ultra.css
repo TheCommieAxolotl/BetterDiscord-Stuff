@@ -56,6 +56,21 @@
     font-family: var(--font);
 }
 
+.membersGroup-v9BXpm {
+    margin-bottom: 10px;
+}
+
+rect.pointerEvents-2zdfdO {
+    x: 22 !important;
+    y: 1 !important;
+    height: 10px;
+    width: 10px;
+}
+
+.membersWrap-2h-GB4 {
+    min-height: 10000px !important;
+}
+
 .option-96V44q::after {
     background: linear-gradient (90deg, rgba(54,57,63,0), #36393f 80%);
 }
