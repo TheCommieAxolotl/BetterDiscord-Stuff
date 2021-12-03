@@ -4,7 +4,7 @@
 
 #app-mount .app-2rEoOp::before {
     content: "Your version of Ultra is outdated. Please download the newest version from: https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/Ultra/Ultra.theme.css";
-    display: var(--version1_0, block);
+    display: var(--version1_0_1, block);
     background-color: var(--brand-experiment);
     color: #fff;
     font-size: 14px;
