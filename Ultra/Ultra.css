@@ -28,6 +28,10 @@
   display: block;
 }
 
+.theme-dark .message-2qRu38 {
+    background-color: var(--background-primary);
+}
+
 .desaturateUserColors-1gar-1 {
     font-weight: bold;
 }
