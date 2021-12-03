@@ -1,9 +1,9 @@
 # Ultra Theme for BetterDiscord
 A Smooth and Dark theme that is complimented with a touch of colour
 
-# Features
+## Features
 
-# Screenshots
+## Screenshots
 
 <img width="1440" alt="Home" src="https://user-images.githubusercontent.com/87679354/144570450-d1b116fd-a56e-4945-890b-c81270b81493.png">
 
