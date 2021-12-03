@@ -64,7 +64,7 @@
     background-color: var(--background-secondary) !important;
 }
 
-.wrapper-3t9DeA foreignObject {
+.wrapper-3t9DeA foreignObject:not(rect.pointerEvents-2zdfdO) {
     mask: unset;
 }
 
