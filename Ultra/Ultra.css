@@ -382,8 +382,10 @@ code {
     border-radius: 20px;
 }
 
-.members-1998pB, .members-1998pB>div,
-.container-2PDP7D {
+.members-1998pB, 
+.members-1998pB>div,
+.container-2PDP7D,
+.container-1CU5bi {
     background-color: var(--background-primary);
 }
 
