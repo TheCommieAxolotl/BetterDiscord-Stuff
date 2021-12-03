@@ -22,7 +22,7 @@
 }
 
 .selected-1Tbx07 {
-    background-color: var(--brand-experiment);
+    background-color: var(--brand-experiment) !important;
 }
 
 [aria-label=USER_SETTINGS] .info-1VyQPT > span:first-child::before {
