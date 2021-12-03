@@ -1,3 +1,32 @@
+:root {
+  --version: "1.0.0";
+}
+
+#app-mount .app-2rEoOp::before {
+    content: "Your version of Ultra is outdated. Please download the newest version from: https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/Ultra/Ultra.theme.css";
+    display: var(--version1_0, block);
+    background-color: var(--brand-experiment);
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 101;
+}
+
+.animatedContainer-1NSq4T, .bannerImage-3KhIJ6 {
+   border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+[aria-label=USER_SETTINGS] .info-1VyQPT > span:first-child::before {
+  content: "Ultra " var(--version);
+  position: relative;
+  top: 0px;
+  display: block;
+}
 
 .desaturateUserColors-1gar-1 {
     font-weight: bold;
