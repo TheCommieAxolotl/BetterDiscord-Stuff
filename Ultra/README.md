@@ -12,3 +12,5 @@ A Smooth and Dark theme that is complimented with a touch of colour
 <img width="1440" alt="Context Notifications" src="https://user-images.githubusercontent.com/87679354/144570498-2818b327-ec48-4db3-b69d-00191284e8bb.png">
 
 <img width="1440" alt="Discover Servers" src="https://user-images.githubusercontent.com/87679354/144570725-a801b82a-5549-493e-baf7-a84067e0bdbe.png">
+
+<img width="1440" alt="User Popout" src="https://user-images.githubusercontent.com/87679354/144659029-fba6b649-11a1-4127-bb50-310ab1bbafa4.png">
