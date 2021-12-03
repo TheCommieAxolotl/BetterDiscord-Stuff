@@ -21,6 +21,10 @@
   border-bottom-right-radius: 5px;
 }
 
+.selected-1Tbx07 {
+    background-color: var(--brand-experiment);
+}
+
 [aria-label=USER_SETTINGS] .info-1VyQPT > span:first-child::before {
   content: "Ultra " var(--version);
   position: relative;
@@ -28,7 +32,7 @@
   display: block;
 }
 
-.theme-dark .message-2qRu38 {
+.message-2qRu38 {
     background-color: var(--background-primary);
 }
 
