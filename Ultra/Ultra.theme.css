@@ -4,7 +4,7 @@
  * @author TheCommieAxolotl#6898
  * @authorId 538487970408300544
  * @description A Smooth, Black theme
- * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/Ultra/
+ * @source 
  * @website https://thecommieaxolotl.github.io/BetterDiscord-Stuff/
  * @invite g2KnUw7u7N
 */
@@ -50,6 +50,7 @@
     --background-message-hover: rgba(4,4,5,0.07);
     --scrollbar-auto-thumb: #6E6AF6;
     --brand-experiment: #6E6AF6;
+    --brand-experiment-hover: #6f6af64d;
     --brand-experiment-560: #6E6AF6;
     --channels-default: #4A4A52;
     --selected-indicator: #97ffa5;
