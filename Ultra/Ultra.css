@@ -62,6 +62,14 @@
     background-color: var(--background-secondary) !important;
 }
 
+svg.circleIcon-2_77lA {
+   color: var(--brand-experiment) !important;
+}
+
+.circleIconButton-hZmpE8.selected-3mFF3I {
+    background-color: var(--brand-experiment-hover) !important;
+}
+
 ::placeholder, body, button, input, select, textarea {
     font-family: var(--font);
 }
