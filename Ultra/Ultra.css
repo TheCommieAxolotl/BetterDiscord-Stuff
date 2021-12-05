@@ -109,6 +109,11 @@ rect.pointerEvents-2zdfdO {
     z-index: -1;
 }
 
+.selected-1Tbx07 .colorInteractiveActive-3Ip9Eu,
+.selected-1Tbx07 .colorInteractiveNormal-PB7JN3 {
+    color: var(--background-secondary) !important;
+}
+
 .container-1CE3eW,
 .footer-1NnaNd,
 .footer-2gL1pp {
