@@ -25,6 +25,11 @@
     background-color: var(--brand-experiment) !important;
 }
 
+
+[mask="url(#svg-mask-status-online-mobile)"] {
+    height: 15px !important;
+}
+
 [aria-label=USER_SETTINGS] .info-1VyQPT > span:first-child::before {
   content: "Ultra " var(--version);
   position: relative;
