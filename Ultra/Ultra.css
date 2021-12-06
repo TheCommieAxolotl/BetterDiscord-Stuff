@@ -163,6 +163,18 @@ h3.title-3w8xhj.fontDisplay-1dagSA.base-1x0h_U.size24-RIRrxO,
     z-index: 0;
 }
 
+.perksModalContentWrapper-3WBPxC {
+    background-color: var(--background-primary) !important;
+}
+
+.lookInverted-2D7oAl .contents-18-Yxp {
+    color: black !important;
+}
+
+.scrollerBase-289Jih::-webkit-scrollbar {
+    display: none !important;
+}
+
 #app-mount .numberBadge-2s8kKX {
   background-color: var(--brand-experiment) !important;
   color: white;
