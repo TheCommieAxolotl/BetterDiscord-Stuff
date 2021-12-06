@@ -1,6 +1,6 @@
 /**
  * @name Ultra
- * @version 1.0.1
+ * @version 1.0.2
  * @author TheCommieAxolotl#6898
  * @authorId 538487970408300544
  * @description A Smooth, Black theme
@@ -20,7 +20,7 @@
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Ultra/Ultra.css");
 
 :root {
-    --version1_0_1: none;
+    --version1_0_2: none;
     --text-normal: #dcddde;
     --text-muted: #4A4A52;
     --text-link: #6E6AF6;
