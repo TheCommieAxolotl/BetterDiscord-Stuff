@@ -228,6 +228,11 @@ h3.title-3w8xhj.fontDisplay-1dagSA.base-1x0h_U.size24-RIRrxO,
     display: none;
 }
 
+.container-1giJp5 {
+    background-color: var(--background-secondary) !important;
+    border: none !important;
+}
+
 .searchBar-3dMhjb {
     width: 300px !important;
     position: relative;
