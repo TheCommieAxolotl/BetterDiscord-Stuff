@@ -260,6 +260,10 @@ h3.title-3w8xhj.fontDisplay-1dagSA.base-1x0h_U.size24-RIRrxO,
     height: 5px;
 }
 
+.chat-3bRxxu .privateChannels-1nO12o, .chat-3bRxxu .content-3YMskv {
+    background-color: var(--background-primary) !important;
+}
+
 .reactions-12N0jA {
     padding-top: 2px !important;
     margin-bottom: -5px !important;
