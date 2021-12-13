@@ -1,6 +1,6 @@
 /**
  * @name Ultra
- * @version 1.0.2
+ * @version 1.0.3
  * @author TheCommieAxolotl#6898
  * @authorId 538487970408300544
  * @description A Smooth, Black theme
@@ -20,7 +20,7 @@
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Ultra/Ultra.css");
 
 :root {
-    --version1_0_2: none;
+    --version1_0_3: none;
     --text-normal: #dcddde;
     --text-muted: #4A4A52;
     --text-link: #6E6AF6;
@@ -37,7 +37,7 @@
     --background-secondary-alt: #17161B;
     --background-tertiary: #101014;
     --background-accent: #4f545c;
-    --background-floating: #18191c;
+    --background-floating: #17161B;
     --channeltextarea-background: #17161B;
     --info-positive-text: #fff;
     --info-warning-text: #fff;
