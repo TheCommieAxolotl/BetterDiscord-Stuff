@@ -37,6 +37,14 @@
   display: block;
 }
 
+.scroller-1-nKid {
+    background-color: var(--background-secondary) !important;
+}
+
+.container-1If-HZ, .reactors-Blmlhw {
+    background-color: var(--background-primary) !important;
+}
+
 .tabs-3L9Rgq {
     border-bottom: none !important;
 }
