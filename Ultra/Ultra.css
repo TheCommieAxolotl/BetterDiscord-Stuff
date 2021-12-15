@@ -217,7 +217,8 @@ h3.title-3w8xhj.fontDisplay-1dagSA.base-1x0h_U.size24-RIRrxO,
     left: -11px;
 }
 
-.userPopout-xaxa6l .avatar-37jOim[data-user-id="538487970408300544"] {
+.userPopout-xaxa6l .avatar-37jOim[data-user-id="538487970408300544"],
+.userPopout-xaxa6l[data-user-id="538487970408300544"] .avatarWrapperNormal-26WQIb {
     position: relative;
     top: 70px;
 }
