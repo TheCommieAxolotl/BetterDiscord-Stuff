@@ -1,16 +1,11 @@
 # Ultra Theme for BetterDiscord
 A Smooth and Dark theme that is complimented with a touch of colour
 
-## Features
-
 ## Screenshots
+<img width="1440" alt="Home" src="https://user-images.githubusercontent.com/87679354/146335367-12e85828-5394-4773-bdaf-6f61d53a1597.png">
 
-<img width="1440" alt="Home" src="https://user-images.githubusercontent.com/87679354/144570450-d1b116fd-a56e-4945-890b-c81270b81493.png">
+<img width="1440" alt="Status Picker" src="https://user-images.githubusercontent.com/87679354/146335390-37261b47-332d-4414-9937-3487bd14be75.png">
 
-<img width="1440" alt="Switch Accounts" src="https://user-images.githubusercontent.com/87679354/144570620-8cefa757-0fe6-435f-8715-0c4b63c51447.png">
+<img width="1440" alt="Server Discovery" src="https://user-images.githubusercontent.com/87679354/146335393-14ca350b-adf4-4737-b721-a306879efe73.png">
 
-<img width="1440" alt="Context Notifications" src="https://user-images.githubusercontent.com/87679354/144570498-2818b327-ec48-4db3-b69d-00191284e8bb.png">
-
-<img width="1440" alt="Discover Servers" src="https://user-images.githubusercontent.com/87679354/144570725-a801b82a-5549-493e-baf7-a84067e0bdbe.png">
-
-<img width="1440" alt="User Popout" src="https://user-images.githubusercontent.com/87679354/144659029-fba6b649-11a1-4127-bb50-310ab1bbafa4.png">
+<img width="1440" alt="Popout" src="https://user-images.githubusercontent.com/87679354/146334649-0a51573f-8fcc-4d75-941d-333998f53a7a.png">
