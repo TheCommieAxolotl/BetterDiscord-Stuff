@@ -45,6 +45,34 @@
     background-color: var(--background-primary) !important;
 }
 
+.avatarWrapperNormal-26WQIb {
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+.headerTop-3vNv-a {
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  right: 0px;
+  top: 0px;
+}
+
+.profileBadges-ohc0Vu {
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  right: 0px;
+  top: 0px;
+}
+
+.customStatus-oN4ZZY{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .tabs-3L9Rgq {
     border-bottom: none !important;
 }
