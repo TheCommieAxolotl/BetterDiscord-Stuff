@@ -29,6 +29,10 @@ rect.pointerEvents-2zdfdO {
     rx: 4px;
 }
 
+svg.cursorDefault-dsQJ1n {
+    display: none;
+}
+
 .selected-1Tbx07 {
     background-color: var(--brand-experiment) !important;
 }
