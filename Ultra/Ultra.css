@@ -21,6 +21,14 @@
   border-bottom-right-radius: 5px;
 }
 
+rect.pointerEvents-2zdfdO {
+    stroke: var(--background-primary);
+    stroke-width: 2px;
+    mask: none;
+    ry: 4px;
+    rx: 4px;
+}
+
 .selected-1Tbx07 {
     background-color: var(--brand-experiment) !important;
 }
