@@ -1,5 +1,5 @@
 # OSX Theme
-### Theme that matches the look of old MacOS
+### Theme that brings the best and most memorable parts of MacOS and OSX into 1 theme
 
 # Installation
 ## Download SF Pro Font
