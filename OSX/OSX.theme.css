@@ -1,6 +1,6 @@
 /**
  * @name OSX
- * @version 0.3.0
+ * @version 1.0.0
  * @author TheCommieAxolotl#6898
  * @authorId 538487970408300544
  * @description Bring the best and most memorable parts of MacOS and OSX into 1 theme
@@ -20,6 +20,7 @@
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/OSX/OSX.css");
 
 :root {
+    --version_1_0_0: none;
     --font: 'SF Pro Display';
     --macbuttons-outline-color: #5f5f5f;
     --context-blur: 20px;
