@@ -181,10 +181,6 @@
     background-color: var(--background-active) !important;
 }
 
-[src="/assets/1f0bfc0865d324c2587920a7d80c609b.png"] {
-    display: none;
-}
-
 .discriminator-22Okc1 {
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
