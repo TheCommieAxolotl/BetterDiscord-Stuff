@@ -1,5 +1,5 @@
 # OSX Theme
-### Theme that brings the best and most memorable parts of MacOS and OSX into 1 theme
+### Theme that brings some of the best and most memorable parts of MacOS and OSX into 1 theme
 
 # Installation
 ## Download SF Pro Font
