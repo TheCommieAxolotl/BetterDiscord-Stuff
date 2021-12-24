@@ -2,7 +2,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=orange)
 [![GitHub license](https://img.shields.io/github/license/TheCommieAxolotl/BetterDiscord-Stuff?&style=for-the-badge)](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/TheCommieAxolotl/BetterDiscord-Stuff?l&style=for-the-badge)
-![GitHub monthly commit activity](https://img.shields.io/github/commit-activity/m/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=brightgreen)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=brightgreen)
 
 # BetterDiscord Stuff
 BetterDiscord Plugins and Themes
