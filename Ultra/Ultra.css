@@ -151,9 +151,25 @@ rect.pointerEvents-2zdfdO {
     background: linear-gradient (90deg, rgba(54,57,63,0), #36393f 80%);
 }
 
-.container-3ayLPN {
+.react-datepicker,
+.react-datepicker__header,
+.react-datepicker__day--disabled,
+.react-datepicker__day {
+    background-color: var(--background-primary) !important;
+}
+
+.react-datepicker__day:hover:not(.react-datepicker__day--disabled) {
+    background-color: var(--brand-experiment) !important;
+}
+
+.queryContainer-RKFJW- {
     background-color: var(--background-secondary) !important;
 }
+
+.container-3ayLPN {
+    background-color: var(--background-primary) !important;
+}
+
 
 .wrapper-3t9DeA foreignObject:not(rect.pointerEvents-2zdfdO) {
     mask: unset;
