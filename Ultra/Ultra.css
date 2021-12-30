@@ -539,3 +539,18 @@ code {
 .scroller-3BxosC {
   padding: 6px 8px !important;
 }
+
+.bf-toolbar::before,
+.contentWarningPopout-n5JsIs {
+    background: var(--background-floating) !important;
+}
+
+.axolotlcord .homeIcon-AaowEC path {
+    fill: transparent;
+}
+.axolotlcord .homeIcon-AaowEC {
+    background: url("https://cdn.discordapp.com/attachments/924401378875559986/926225616150347776/discord-avatar-512-260NE.png")
+        center/cover no-repeat;
+    min-width: 60px;
+    min-height: 60px;
+}
