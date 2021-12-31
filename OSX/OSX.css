@@ -1,5 +1,17 @@
 /* Source Code */
 
+#app-mount .app-2rEoOp::before {
+    content: "Your version of OSX is outdated. Please download the newest version from: https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/OSX/";
+    display: var(--version1_0_0, block);
+    background-color: var(--brand-experiment);
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 101;
+}
+
 .layer-3QrUeG::before {
     content: "Discord";
     background: linear-gradient(
