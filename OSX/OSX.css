@@ -1,6 +1,5 @@
 /* Source Code */
 
-
 .layer-3QrUeG::before {
     content: "Discord";
     background: linear-gradient(
@@ -106,7 +105,7 @@
     margin-top: 5px !important;
 }
 
-.bd-switch input:checked+.bd-switch-body {
+.bd-switch input:checked + .bd-switch-body {
     --switch-color: var(--brand-experiment);
     --symbol1path: none;
     --symbol2path: none;
@@ -117,17 +116,22 @@
     --symbol2path: none;
 }
 
-::placeholder, body, button, input, select, textarea {
+::placeholder,
+body,
+button,
+input,
+select,
+textarea {
     font-family: var(--font), arial;
 }
 
-.menu-3sdvDG{
+.menu-3sdvDG {
     background: var(--background-floating);
     min-width: 240px;
 }
 
 .menu-3sdvDG::before {
-    content:"";
+    content: "";
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -289,10 +293,13 @@
     left: -190px;
 }
 
-.theme-dark .menu-3sdvDG .labelContainer-1BLJti .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT) {
+.theme-dark
+    .menu-3sdvDG
+    .labelContainer-1BLJti
+    .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT) {
     font-weight: normal;
     padding: 0px;
-    color: #F7EDE6;
+    color: #f7ede6;
     font-size: 10pt;
 }
 
@@ -301,7 +308,10 @@
     font-weight: normal;
 }
 
-.theme-light .menu-3sdvDG .labelContainer-1BLJti .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT) {
+.theme-light
+    .menu-3sdvDG
+    .labelContainer-1BLJti
+    .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT) {
     font-weight: normal;
     padding: 0px;
     font-size: 10pt;
