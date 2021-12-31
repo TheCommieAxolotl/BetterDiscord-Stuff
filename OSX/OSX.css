@@ -1,15 +1,44 @@
 /* Source Code */
 
-#app-mount .app-2rEoOp::before {
+
+.layer-3QrUeG::before {
     content: "Discord";
-    background: linear-gradient(0deg, rgb(41 41 41) 0%, rgb(132 132 132) 1%, rgb(185 185 185) 51%, rgba(228,230,228,1) 98%, rgba(226,230,243,1) 100%);
+    background: linear-gradient(
+        0deg,
+        rgb(41 41 41) 0%,
+        rgb(132 132 132) 1%,
+        rgb(185 185 185) 51%,
+        rgba(228, 230, 228, 1) 98%,
+        rgba(226, 230, 243, 1) 100%
+    );
     display: block;
     color: black;
     font-size: 14px;
     line-height: 32px;
     font-weight: regular;
     text-align: center;
-    z-index: 101;
+    z-index: 99999;
+    height: 32px;
+    -webkit-app-region: drag;
+}
+
+.layer-3QrUeG:not(.baseLayer-35bLyl)::before {
+    content: "Discord Preferences";
+    background: linear-gradient(
+        0deg,
+        rgb(41 41 41) 0%,
+        rgb(132 132 132) 1%,
+        rgb(185 185 185) 51%,
+        rgba(228, 230, 228, 1) 98%,
+        rgba(226, 230, 243, 1) 100%
+    );
+    display: block;
+    color: black;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: regular;
+    text-align: center;
+    z-index: 99999;
     height: 32px;
     -webkit-app-region: drag;
 }
