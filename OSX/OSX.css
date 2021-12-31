@@ -41,6 +41,7 @@
     z-index: 99999;
     height: 32px;
     -webkit-app-region: drag;
+    border-radius: 8px 8px 0 0;
 }
 
 .listItem-2Ig28I .button-Jt-tIg {
