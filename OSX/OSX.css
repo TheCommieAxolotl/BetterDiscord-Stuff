@@ -44,6 +44,40 @@
     border-radius: 8px 8px 0 0;
 }
 
+#app-mount .layer-3QrUeG:not(.baseLayer-35bLyl) {
+    background-color: transparent !important;
+    margin: 8rem 12.5rem;
+    box-shadow: 5px 10px 20px #1d1d1d9f;
+    border-radius: 0 0 8px 8px;
+    transition: all 0.1s ease !important;
+}
+
+.layer-3QrUeG {
+    background-color: transparent !important;
+    opacity: 1 !important;
+}
+
+.layer-3QrUeG.baseLayer-35bLyl.stop-animations {
+    margin: 0px !important;
+    transform: none !important;
+    pointer-events: none !important;
+}
+
+.layer-3QrUeG.baseLayer-35bLyl {
+    transform: none !important;
+}
+
+.layer-3QrUeG:not(.baseLayer-35bLyl).animating-rRxada {
+    transform: scale(1.001) !important;
+    transition: all 0.1s ease-in-out !important;
+}
+
+.accountProfileCard-1XCH88 {
+    background: var(--background-secondary);
+    box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
+    border-radius: 7px;
+}
+
 .listItem-2Ig28I .button-Jt-tIg {
     text-transform: capitalize;
     width: 60px !important;
