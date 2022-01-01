@@ -79,6 +79,10 @@
     pointer-events: none !important;
 }
 
+.layer-3QrUeG:not(.baseLayer-35bLyl) {
+    z-index: 9999;
+}
+
 .layer-3QrUeG.baseLayer-35bLyl {
     transform: none !important;
 }
