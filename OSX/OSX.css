@@ -425,3 +425,7 @@ textarea {
     top: -12px;
     z-index: 9999;
 }
+
+.platform-win .titleBar-AC4pGV.directionRowReverse-m8IjIq {
+    z-index: 999999 !important;
+}
