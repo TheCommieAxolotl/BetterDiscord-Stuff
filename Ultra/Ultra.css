@@ -143,6 +143,10 @@ rect.pointerEvents-2zdfdO {
     width: 10px;
 }
 
+.wrapper-35wsBm {
+    border: 3px solid var(--background-secondary);
+}
+
 .membersWrap-2h-GB4 {
     min-height: 100% !important;
 }
