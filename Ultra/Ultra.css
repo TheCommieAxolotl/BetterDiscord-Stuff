@@ -1,10 +1,10 @@
 :root {
-  --version: "1.0.3";
+  --version: "1.0.4";
 }
 
 #app-mount .app-2rEoOp::before {
     content: "Your version of Ultra is outdated. Please download the newest version from: https://betterdiscord.app/theme/Ultra";
-    display: var(--version1_0_3, block);
+    display: var(--version1_0_4, block);
     background-color: var(--brand-experiment);
     color: #fff;
     font-size: 14px;
