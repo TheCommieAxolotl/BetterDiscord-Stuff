@@ -1,6 +1,7 @@
 /* Source Code */
 
-#app-mount .app-2rEoOp::before {
+#app-mount .app-2rEoOp::before,
+#app-mount .app-2CXKsg::before {
     content: "Your version of OSX is outdated.";
     display: var(--version1_0_0, block);
     bottom: 90vh;
@@ -16,8 +17,8 @@
     font-weight: 400;
 }
 
-
-.layer-3QrUeG::before {
+.layer-3QrUeG::before,
+.layer-86YKbF::before {
     content: "Discord";
     background: linear-gradient(
         0deg,
@@ -38,7 +39,8 @@
     -webkit-app-region: drag;
 }
 
-.layer-3QrUeG:not(.baseLayer-35bLyl)::before {
+.layer-3QrUeG:not(.baseLayer-35bLyl)::before,
+.layer-86YKbF:not(.baseLayer-W6S8cY)::before {
     content: "Discord Preferences";
     background: linear-gradient(
         0deg,
@@ -60,7 +62,8 @@
     border-radius: 8px 8px 0 0;
 }
 
-#app-mount .layer-3QrUeG:not(.baseLayer-35bLyl) {
+#app-mount .layer-3QrUeG:not(.baseLayer-35bLyl),
+#app-mount .layer-86YKbF:not(.baseLayer-W6S8cY) {
     background-color: transparent !important;
     margin: 8rem 12.5rem;
     box-shadow: 5px 10px 20px #1d1d1d9f;
@@ -68,31 +71,37 @@
     transition: all 0.1s ease !important;
 }
 
-.layer-3QrUeG {
+.layer-3QrUeG,
+.layer-86YKbF {
     background-color: transparent !important;
     opacity: 1 !important;
 }
 
-.layer-3QrUeG.baseLayer-35bLyl.stop-animations {
+.layer-3QrUeG.baseLayer-35bLyl.stop-animations,
+.layer-86YKbF.baseLayer-W6S8cY.stop-animations {
     margin: 0px !important;
     transform: none !important;
     pointer-events: none !important;
 }
 
-.layer-3QrUeG:not(.baseLayer-35bLyl) {
+.layer-3QrUeG:not(.baseLayer-35bLyl),
+.layer-86YKbF:not(.baseLayer-W6S8cY) {
     z-index: 9999;
 }
 
-.layer-3QrUeG.baseLayer-35bLyl {
+.layer-3QrUeG.baseLayer-35bLyl,
+.layer-86YKbF.baseLayer-W6S8cY {
     transform: none !important;
 }
 
-.layer-3QrUeG:not(.baseLayer-35bLyl).animating-rRxada {
+.layer-3QrUeG:not(.baseLayer-35bLyl).animating-rRxada,
+.layer-86YKbF:not(.baseLayer-W6S8cY).animating-1rIrGV {
     transform: scale(1.001) !important;
     transition: all 0.1s ease-in-out !important;
 }
 
-.accountProfileCard-1XCH88 {
+.accountProfileCard-1XCH88,
+.accountProfileCard-lbN7n- {
     background: var(--background-secondary);
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
     border-radius: 7px;
@@ -103,26 +112,31 @@
     width: 60px !important;
 }
 
-.backdrop-1wrmKB {
+.backdrop-1wrmKB,
+.backdrop-2ByYRN {
     height: 96%;
     top: 4%;
     position: relative;
 }
 
-.container-3auIfb[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"] {
+.container-3auIfb[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"],
+.container-2nx-BQ[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"] {
     background-color: var(--brand-experiment) !important;
 }
 
-.slider-TkfMQL > svg {
+.slider-TkfMQL > svg,
+.slider-32CRPX > svg {
     display: none;
 }
 
-.popoutContainer-1MXdqN {
+.popoutContainer-1MXdqN,
+.popoutContainer-2wbmiM {
     background-color: transparent;
 }
 
 .platform-osx .wrapper-3NnKdC,
-.platform-win .scroller-1Bvpku {
+.platform-win .scroller-1Bvpku,
+.platform-osx .wrapper-1_HaEi {
     margin-top: 5px !important;
 }
 
@@ -146,12 +160,14 @@ textarea {
     font-family: var(--font), arial;
 }
 
-.menu-3sdvDG {
+.menu-3sdvDG,
+.menu-1QACrS {
     background: var(--background-floating);
     min-width: 240px;
 }
 
-.menu-3sdvDG::before {
+.menu-3sdvDG::before,
+.menu-1QACrS::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -163,32 +179,44 @@ textarea {
 }
 
 .userPopout-xaxa6l,
+.userPopout-2j1gM4,
 .emojiSection-3Fb9ix,
+.emojiSection-3QtaWO,
 .guildSection-1EoFKd,
+.guildSection-2Zyzy8,
 .tooltip-2QfLtc,
+.tooltip-14MtrL,
 .container-2dqNWc,
+.container-8Futzw,
 .wrapper-2aW0bm,
+.wrapper-2vIMkT,
 .full-motion .wrapper-2aW0bm:hover,
+.full-motion .wrapper-2vIMkT:hover,
 .toast-1DEQGy,
-.scrollableContainer-2NUZem {
+.toast-q3Y4wI,
+.scrollableContainer-2NUZem,
+.scrollableContainer-15eg7h {
     background-color: var(--background-floating) !important;
     backdrop-filter: blur(var(--context-blur));
     border-radius: 7px;
     box-shadow: inset 0 0 0 1px var(--context-outline);
 }
 
-.guildSection-1EoFKd {
+.guildSection-1EoFKd,
+.guildSection-2Zyzy8 {
     position: relative;
 }
 
-.full-motion .translate-2dAEQ6.didRender-33z1u8 {
+.full-motion .translate-2dAEQ6.didRender-33z1u8,
+.full-motion .translate-PeW1wK.didRender-2SiRlm {
     transition: none;
     transform: none;
     -webkit-transition: none;
     -webkit-transform: none;
 }
 
-.channelTextArea-rNsIhG {
+.channelTextArea-rNsIhG,
+.channelTextArea-1FufC0 {
     background-color: transparent;
 }
 
@@ -203,7 +231,9 @@ textarea {
 }
 
 .popoutBannerPremium-1n96gg,
-.banner-2QYc2d {
+.banner-2QYc2d,
+.banner-1YaD3N,
+.popoutBanner-3cqRD9 {
     width: 298px;
     height: calc(inherit - 1px);
     position: relative;
@@ -212,7 +242,8 @@ textarea {
     top: 1px;
 }
 
-.peopleListItem-2nzedh {
+.peopleListItem-2nzedh,
+.peopleListItem-u6dGxF {
     width: 40%;
     height: 150px !important;
     border: none;
@@ -226,7 +257,8 @@ textarea {
     -webkit-transition: all 0.2s ease-in-out;
 }
 
-.peopleListItem-2nzedh:hover {
+.peopleListItem-2nzedh:hover,
+.peopleListItem-u6dGxF:hover {
     width: 40%;
     height: 150px !important;
     border: none;
@@ -241,7 +273,8 @@ textarea {
     padding: 0;
 }
 
-.peopleListItem-2nzedh.active-rhSpJJ {
+.peopleListItem-2nzedh.active-rhSpJJ,
+.peopleListItem-u6dGxF.active-2UF8Zh {
     width: 40%;
     height: 150px !important;
     border: none;
@@ -256,7 +289,8 @@ textarea {
     padding: 0;
 }
 
-.itemCard-v9viV7 {
+.itemCard-v9viV7,
+.itemCard-3Etziu {
     border: none;
     background: var(--background-secondary);
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
@@ -267,23 +301,28 @@ textarea {
     -webkit-transition: all 0.2s ease-in-out;
 }
 
-.itemCard-v9viV7:hover {
+.itemCard-v9viV7:hover,
+.itemCard-3Etziu:hover {
     background-color: var(--background-active) !important;
 }
 
-.discriminator-22Okc1 {
+.discriminator-22Okc1,
+.discriminator-WV5K5s {
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     opacity: 0;
     visibility: visible;
 }
 
-.hovered-15FzL3 .discriminator-22Okc1 {
+.hovered-15FzL3 .discriminator-22Okc1,
+.hovered-1EO01j .discriminator-WV5K5s {
     opacity: 1;
 }
 
 .listItemContents-95HL3L,
-.listItemContents-95HL3L:hover {
+.listItemContents-95HL3L:hover,
+.listItemContents-2n2Uy9,
+.listItemContents-2n2Uy9:hover {
     height: 100% !important;
     margin: 0 !important;
     padding: 0;
@@ -294,12 +333,14 @@ textarea {
     -webkit-transition: all 0.2s ease-in-out;
 }
 
-.listItemContents-95HL3L:hover {
+.listItemContents-95HL3L:hover,
+.listItemContents-2n2Uy9:hover {
     transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
 }
 
-.peopleListItem-2nzedh .userInfo-2zN2z8 {
+.peopleListItem-2nzedh .userInfo-2zN2z8,
+.peopleListItem-u6dGxF .userInfo-2WpsYG {
     position: relative;
     top: -40px;
 }
@@ -308,7 +349,8 @@ textarea {
     font-weight: normal;
 }
 
-.peopleListItem-2nzedh .actions-1SQwjn {
+.peopleListItem-2nzedh .actions-1SQwjn,
+.peopleListItem-u6dGxF .actions-YHvpIT {
     position: relative;
     top: 47.5px;
     left: -190px;
@@ -317,7 +359,11 @@ textarea {
 .theme-dark
     .menu-3sdvDG
     .labelContainer-1BLJti
-    .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT) {
+    .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT),
+.theme-dark
+    .menu-1QACrS
+    .labelContainer-2vJzYL
+    .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
     font-weight: normal;
     padding: 0px;
     color: #f7ede6;
@@ -325,52 +371,67 @@ textarea {
 }
 
 .channelName-2YrOjO,
-.name-23GUGE {
+.name-23GUGE,
+.channelName-3KPsGw,
+.name-28HaxV {
     font-weight: normal;
 }
 
 .theme-light
     .menu-3sdvDG
     .labelContainer-1BLJti
-    .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT) {
+    .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT),
+.theme-light
+    .menu-1QACrS
+    .labelContainer-2vJzYL
+    .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
     font-weight: normal;
     padding: 0px;
     font-size: 10pt;
 }
 
 .menu-3sdvDG .labelContainer-1BLJti,
-.statusItem-33LqPf {
+.statusItem-33LqPf,
+.menu-1QACrS .labelContainer-2vJzYL,
+.statusItem-2hiCNB {
     min-height: 18px;
     padding: 3px 7px;
     border-radius: 4px;
 }
 
-.layer-v9HyYc {
+.layer-v9HyYc,
+.layer-2aCOJ3 {
     border-radius: 7px;
 }
 
-.submenu-2-ysNh {
+.submenu-2-ysNh,
+.submenu-1apzyU {
     left: -7px;
 }
 
-.menu-3sdvDG .separator-2I32lJ {
+.menu-3sdvDG .separator-2I32lJ,
+.menu-1QACrS .separator-1So4YB {
     border-bottom: 1.2px solid var(--divider);
 }
 
-.bodyInnerWrapper-26fQXj {
+.bodyInnerWrapper-26fQXj,
+.bodyInnerWrapper-2bQs1k {
     background: transparent;
 }
 
-.button-F9qN4n {
+.button-F9qN4n,
+.button-1zW0-r {
     background: transparent;
 }
 
-.statusItem-33LqPf .description-2L932D {
+.statusItem-33LqPf .description-2L932D,
+.statusItem-2hiCNB .description-3Cwkxk {
     display: none;
 }
 
-/* Mac Only */
+/* Mac Buttons */
 .platform-osx .macButtonMaximize-2FMHAO::before,
+.platform-osx .macButtonMaximize-1vTCwt::before,
 .platform-win .winButtonMinMax-PBQ2gm {
     content: "";
     background-color: #34c749;
@@ -384,13 +445,15 @@ textarea {
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
 }
 
-.platform-osx .macButtonMaximize-2FMHAO > svg {
+.platform-osx .macButtonMaximize-2FMHAO > svg,
+.platform-osx .macButtonMaximize-1vTCwt > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
 }
 
 .platform-osx .macButtonMinimize-3EJ6wo::before,
+.platform-osx .macButtonMinimize-Q8clSI::before,
 .platform-win .winButtonMinMax-PBQ2gm:last-child {
     content: "";
     background-color: #fdbc40;
@@ -404,13 +467,15 @@ textarea {
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
 }
 
-.platform-osx .macButtonMinimize-3EJ6wo > svg {
+.platform-osx .macButtonMinimize-3EJ6wo > svg,
+.platform-osx .macButtonMinimize-Q8clSI > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
 }
 
 .platform-osx .macButtonClose-MwZ2nf::before,
+.platform-osx .macButtonClose-3IXwAm::before,
 .platform-win .winButtonClose-1HsbF- {
     content: "";
     background-color: #fc615d;
@@ -424,7 +489,8 @@ textarea {
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
 }
 
-.platform-osx .macButtonClose-MwZ2nf > svg {
+.platform-osx .macButtonClose-MwZ2nf > svg,
+.platform-osx .macButtonClose-3IXwAm > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
