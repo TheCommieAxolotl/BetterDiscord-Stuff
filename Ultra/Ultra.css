@@ -2,6 +2,19 @@
   --version: "1.0.4";
 }
 
+/* Canary Warning */
+.appMount-2yBXZl::before {
+    content: "If you can see this, you are probably on Canary, stuff has changed and I am going to (try to) fix the theme, You can switch to stable or disable the theme for now. if you have questions join my support server";
+    display: var(--canary-override, block);
+    background-color: #e24a4a;
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 101;
+}
+
 #app-mount .app-2rEoOp::before {
     content: "Your version of Ultra is outdated. Please download the newest version from source";
     display: var(--version1_0_4, block);
