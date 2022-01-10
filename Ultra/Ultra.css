@@ -15,7 +15,7 @@
     z-index: 101;
 }
 
-.embedImage-2Ynqkh img, .embedImage-2Ynqkh video, .embedThumbnail-2nTasl img, .embedThumbnail-2nTasl video, .embedVideo-2ixt5A img, .embedVideo-2ixt5A video {
+.embedThumbnail-2nTasl {
     border-radius: 4px !important;
 }
 
