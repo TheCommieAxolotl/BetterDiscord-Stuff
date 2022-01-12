@@ -1,4 +1,4 @@
-# CallWarnings
+# CallWarnings (Depreciated)
 
 A utility plugin for BetterDiscord
 
