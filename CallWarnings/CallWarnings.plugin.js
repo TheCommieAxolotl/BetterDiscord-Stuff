@@ -57,8 +57,8 @@ module.exports = (() => {
     display: none !important;
   }
 
-  [aria-label='Start Video Call'] .icon-22AiRD,
-  [aria-label='Start Voice Call'] .icon-22AiRD
+  [aria-label='Start Video Call'] .icon-2xnN2Y,
+  [aria-label='Start Voice Call'] .icon-2xnN2Y
   {
     display: none !important;
   }
@@ -79,8 +79,8 @@ module.exports = (() => {
     transition:150ms;
   }
 
-[aria-label='Start Video Call'] .icon-22AiRD:hover,
-[aria-label='Start Voice Call'] .icon-22AiRD:hover
+[aria-label='Start Video Call'] .icon-2xnN2Y:hover,
+[aria-label='Start Voice Call'] .icon-2xnN2Y:hover
 {
     color: red!important;
 }
