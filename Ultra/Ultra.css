@@ -396,7 +396,11 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-21yXnu.size24-17l95E,
     left: 10px;
 }
 
-.overflow-1wOqNV {
+.autocompleteRowVertical-EA9dCg rect.pointerEvents-9SZWKj {
+    x: 18 !important;
+}
+
+.overflow-1wOqNV:not(.nameAndDecorators-3ERwy2 .overflow-1wOqNV) {
     text-transform: capitalize !important;
     font-size: 11pt;
     font-weight: 500;
