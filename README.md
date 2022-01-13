@@ -1,8 +1,8 @@
-![Better Discord](https://img.shields.io/badge/Better-Discord-%235963EB?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=orange)
-[![GitHub license](https://img.shields.io/github/license/TheCommieAxolotl/BetterDiscord-Stuff?&style=for-the-badge)](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/LICENSE)
-![GitHub last commit](https://img.shields.io/github/last-commit/TheCommieAxolotl/BetterDiscord-Stuff?l&style=for-the-badge)
-![GitHub monthly commit activity](https://img.shields.io/github/commit-activity/m/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=brightgreen)
+<a href="#"><img align="center" alt="BetterDiscord" src="https://img.shields.io/badge/Better-Discord-%235963EB?style=for-the-badge">
+<a href="#"><img align="center" alt="Languages" src="https://img.shields.io/github/languages/count/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=orange">
+<a href="#"><img align="center" alt="LICENSE" src="https://img.shields.io/github/license/TheCommieAxolotl/BetterDiscord-Stuff?&style=for-the-badge">
+<a href="#"><img align="center" alt="Last Commit" src="https://img.shields.io/github/last-commit/TheCommieAxolotl/BetterDiscord-Stuff?l&style=for-the-badge">
+<a href="#"><img align="center" alt="Commits" src="https://img.shields.io/github/commit-activity/m/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=brightgreen">
 
 # BetterDiscord Stuff
 BetterDiscord Plugins and Themes
