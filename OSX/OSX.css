@@ -430,9 +430,23 @@ textarea {
 }
 
 /* Mac Buttons */
-.platform-osx .macButtonMaximize-2FMHAO::before,
-.platform-osx .macButtonMaximize-1vTCwt::before,
-.platform-win .winButtonMinMax-PBQ2gm {
+.macButton-2M5W_9::before,
+.winButton-3UMjdg {
+    content: "";
+    background-color: #313131;
+    display: block;
+    z-index: 1;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    top: 0px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.6pt #383838;
+}
+
+.app-focused.platform-osx .macButtonMaximize-2FMHAO::before,
+.app-focused.platform-osx .macButtonMaximize-1vTCwt::before,
+.app-focused.platform-win .winButtonMinMax-PBQ2gm {
     content: "";
     background-color: #34c749;
     display: block;
@@ -445,16 +459,16 @@ textarea {
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
 }
 
-.platform-osx .macButtonMaximize-2FMHAO > svg,
-.platform-osx .macButtonMaximize-1vTCwt > svg {
+.app-focused.platform-osx .macButtonMaximize-2FMHAO > svg,
+.app-focused.platform-osx .macButtonMaximize-1vTCwt > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
 }
 
-.platform-osx .macButtonMinimize-3EJ6wo::before,
-.platform-osx .macButtonMinimize-Q8clSI::before,
-.platform-win .winButtonMinMax-PBQ2gm:last-child {
+.app-focused.platform-osx .macButtonMinimize-3EJ6wo::before,
+.app-focused.platform-osx .macButtonMinimize-Q8clSI::before,
+.app-focused.platform-win .winButtonMinMax-PBQ2gm:last-child {
     content: "";
     background-color: #fdbc40;
     display: block;
@@ -467,16 +481,16 @@ textarea {
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
 }
 
-.platform-osx .macButtonMinimize-3EJ6wo > svg,
-.platform-osx .macButtonMinimize-Q8clSI > svg {
+.app-focused.platform-osx .macButtonMinimize-3EJ6wo > svg,
+.app-focused.platform-osx .macButtonMinimize-Q8clSI > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
 }
 
-.platform-osx .macButtonClose-MwZ2nf::before,
-.platform-osx .macButtonClose-3IXwAm::before,
-.platform-win .winButtonClose-1HsbF- {
+.app-focused.platform-osx .macButtonClose-MwZ2nf::before,
+.app-focused.platform-osx .macButtonClose-3IXwAm::before,
+.app-focused.platform-win .winButtonClose-1HsbF- {
     content: "";
     background-color: #fc615d;
     display: block;
@@ -489,8 +503,8 @@ textarea {
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
 }
 
-.platform-osx .macButtonClose-MwZ2nf > svg,
-.platform-osx .macButtonClose-3IXwAm > svg {
+.app-focused.platform-osx .macButtonClose-MwZ2nf > svg,
+.app-focused.platform-osx .macButtonClose-3IXwAm > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
