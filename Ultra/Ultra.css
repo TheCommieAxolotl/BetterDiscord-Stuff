@@ -492,8 +492,14 @@ code {
 .avatar-2Vndt_,
 .wrapper-1VLyxH,
 .avatar-b5OQ1N,
-.avatar-2e8lTP {
+.avatar-2e8lTP,
+.avatar-3FKimL{
     border-radius: 38%;
+}
+
+.replyBar-1oi75v,
+.clipContainer-31nYlH {
+    background: var(--background-primary);
 }
 
 .avatarHint-k7pYop foreignObject {
