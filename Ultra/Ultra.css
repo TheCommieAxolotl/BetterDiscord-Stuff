@@ -551,7 +551,8 @@ code {
     display: none;
 }
 
-.userPopout-2j1gM4 rect.pointerEvents-9SZWKj {
+.userPopout-2j1gM4 rect.pointerEvents-9SZWKj, 
+.userInfo-regn9W rect.pointerEvents-9SZWKj {
     x: 66 !important;
     y: 66 !important;
 }
