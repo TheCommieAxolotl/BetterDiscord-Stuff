@@ -1,9 +1,9 @@
 /* MacButtons */
-.titleBar-1it3bQ {
+.platform-win .titleBar-1it3bQ {
     position: fixed;
     top: 5px;
 }
-.winButton-3UMjdg {
+.platform-win .winButton-3UMjdg {
     z-index: 999999;
     width: 13px;
     height: 13px;
@@ -13,30 +13,30 @@
     top: 5px;
     left: 10px;
 }
-.winButton-3UMjdg:nth-last-child(1) {
+.platform-win .winButton-3UMjdg:nth-last-child(1) {
     background: #fdbc40;
     order: 2;
 }
-.winButton-3UMjdg:nth-last-child(2) {
+.platform-win .winButton-3UMjdg:nth-last-child(2) {
     background: #34c749;
     order: 1;
 }
-.winButton-3UMjdg:nth-last-child(3) {
+.platform-win .winButton-3UMjdg:nth-last-child(3) {
     background: #fc615d;
     order: 3;
 }
-.winButton-3UMjdg:nth-last-child(3) *,
-.winButton-3UMjdg:nth-last-child(2) *,
-.winButton-3UMjdg:nth-last-child(1) * {
+.platform-win .winButton-3UMjdg:nth-last-child(3) *,
+.platform-win .winButton-3UMjdg:nth-last-child(2) *,
+.platform-win .winButton-3UMjdg:nth-last-child(1) * {
     display: none;
 }
-html:not(.app-focused) .winButton-3UMjdg {
-    background-color: var(--background-modifier-accent) !important;
+.platform-win html:not(.app-focused) .winButton-3UMjdg {
+    background-color: #313131 !important;
 }
-.wordmark-2u86JB {
+.platform-win .wordmark-2u86JB {
     position: fixed !important;
 }
-.wordmarkWindows-2dq6rw.wordmark-2u86JB {
+.platform-win .wordmarkWindows-2dq6rw.wordmark-2u86JB {
     -webkit-app-region: drag;
 }
 
