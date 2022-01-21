@@ -1,4 +1,3 @@
-
 :root {
     --version: "1.0.5";
 }
@@ -33,6 +32,10 @@ rect.pointerEvents-9SZWKj {
     mask: none;
     ry: 4px;
     rx: 4px;
+}
+
+.lookInverted-2mDUMi .contents-3ca1mk {
+    color: var(--brand-experiment);
 }
 
 svg.cursorDefault--wfhy5 {
