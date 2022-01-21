@@ -1,3 +1,45 @@
+/* MacButtons */
+.titleBar-1it3bQ {
+    position: fixed;
+    top: 5px;
+}
+.winButton-3UMjdg {
+    z-index: 999999;
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    background: transparent;
+    margin-right: 6px;
+    top: 5px;
+    left: 10px;
+}
+.winButton-3UMjdg:nth-last-child(1) {
+    background: #fdbc40;
+    order: 2;
+}
+.winButton-3UMjdg:nth-last-child(2) {
+    background: #34c749;
+    order: 1;
+}
+.winButton-3UMjdg:nth-last-child(3) {
+    background: #fc615d;
+    order: 3;
+}
+.winButton-3UMjdg:nth-last-child(3) *,
+.winButton-3UMjdg:nth-last-child(2) *,
+.winButton-3UMjdg:nth-last-child(1) * {
+    display: none;
+}
+html:not(.app-focused) .winButton-3UMjdg {
+    background-color: var(--background-modifier-accent) !important;
+}
+.wordmark-2u86JB {
+    position: fixed !important;
+}
+.wordmarkWindows-2dq6rw.wordmark-2u86JB {
+    -webkit-app-region: drag;
+}
+
 /* Source Code */
 
 #app-mount .app-2rEoOp::before,
@@ -34,7 +76,7 @@
     line-height: 32px;
     font-weight: regular;
     text-align: center;
-    z-index: 99999;
+    z-index: 999;
     height: 32px;
     -webkit-app-region: drag;
 }
@@ -195,7 +237,8 @@ textarea {
 .toast-1DEQGy,
 .toast-q3Y4wI,
 .scrollableContainer-2NUZem,
-.scrollableContainer-15eg7h {
+.scrollableContainer-15eg7h,
+.betterMessageLinks.Popout {
     background-color: var(--background-floating) !important;
     backdrop-filter: blur(var(--context-blur));
     border-radius: 7px;
@@ -510,6 +553,10 @@ textarea {
     z-index: 9999;
 }
 
-.platform-win .titleBar-AC4pGV.directionRowReverse-m8IjIq {
+/* .platform-win .titleBar-AC4pGV.directionRowReverse-m8IjIq {
     z-index: 999999 !important;
+} */
+
+.wordmarkWindows-2dq6rw {
+    display: none;
 }
