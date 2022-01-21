@@ -13,7 +13,6 @@
 @import url("https://discord-custom-covers.github.io/usrbg/dist/usrbg.css");
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/UserBadges.css");
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
-@import url("https://xhylo.github.io/Mac-buttons/Macbuttonssc.css");
 
 /* Source */
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/OSX/OSX.css");
@@ -35,6 +34,7 @@
     --background-mentioned: #346dca52;
     --background-mentioned-hover: #346dca2c;
     --background-active: #26282b;
+    --background-notification: #3b3c3d98;
 }
 
 .theme-light {
@@ -47,6 +47,7 @@
     --background-mentioned: #5791f448;
     --background-mentioned-hover: #5791f428;
     --background-active: #c4c4c4;
+    --background-notification: #26262bb4;
 }
 
 /* Made By The Commie Axolotl */
