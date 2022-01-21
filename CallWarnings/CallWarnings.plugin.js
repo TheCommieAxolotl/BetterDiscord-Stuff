@@ -1,7 +1,7 @@
 /**
   * @name CallWarnings
   * @version 0.3.0
-  * @author TheCommieAxolotl#6898
+  * @author TheCommieAxolotl#0001
   * @authorId 538487970408300544
   * @description Makes it harder to accidentally call someone. (unmaintained)
   * @invite g2KnUw7u7N
