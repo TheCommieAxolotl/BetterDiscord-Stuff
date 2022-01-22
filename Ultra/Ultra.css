@@ -451,6 +451,7 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-21yXnu.size24-17l95E,
 }
 
 .scrollableContainer-15eg7h {
+    border-radius: 20px;
     min-height: 70px !important;
     display: flex;
     justify-content: center;
