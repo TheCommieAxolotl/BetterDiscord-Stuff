@@ -453,6 +453,8 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-21yXnu.size24-17l95E,
 .scrollableContainer-15eg7h {
     min-height: 70px !important;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .container-1eD8xH {
@@ -478,11 +480,7 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-21yXnu.size24-17l95E,
 }
 
 .inner-NQg18Y {
-    position: relative;
-    position: relative;
-    top: 50%;
-    transform: translate(0, 25%);
-    min-width: 85%;
+    min-width: 96%;
 }
 
 .codeBlockText-311wOq,
