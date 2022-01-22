@@ -452,9 +452,10 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-21yXnu.size24-17l95E,
 
 .scrollableContainer-15eg7h {
     min-height: 70px !important;
-    border-radius: 20px;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start !important;
 }
 
 .container-1eD8xH {
