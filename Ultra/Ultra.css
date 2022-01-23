@@ -604,3 +604,8 @@ code {
 .callContainer-BGIngG .content-2a4AW9 {
     background-color: transparent !important;
 }
+
+.root-g14mjS:not(.bd-addon-modal) {
+    background-color: transparent !important;
+}
+
