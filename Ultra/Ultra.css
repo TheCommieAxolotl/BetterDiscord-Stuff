@@ -608,5 +608,5 @@ code {
 
 #MemberCount, 
 #MemberCount .membersGroup-2eiWxl {
-   background-color: var(--background-primary);
+   background-color: var(--background-primary) !important;
 }
