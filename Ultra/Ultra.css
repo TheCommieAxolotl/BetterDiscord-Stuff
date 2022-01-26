@@ -605,3 +605,8 @@ code {
 .callContainer-BGIngG .content-2a4AW9 {
     background-color: transparent !important;
 }
+
+#MemberCount, 
+#MemberCount .membersGroup-2eiWxl {
+   background-color: var(--background-primary);
+}
