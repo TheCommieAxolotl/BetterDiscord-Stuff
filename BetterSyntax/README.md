@@ -9,4 +9,4 @@ Utility Buttons
 
 Themes
 
-<img width="649" alt="tokyo night" src="https://user-images.githubusercontent.com/87679354/151765701-9ab226b7-71a3-415c-be2c-792afa430c9b.png">
+<img width="660" alt="tokyo night" src="https://user-images.githubusercontent.com/87679354/151765701-9ab226b7-71a3-415c-be2c-792afa430c9b.png">
