@@ -5,7 +5,10 @@ Adds themeble codeblocks and some utility buttons.
 
 Utility Buttons
 
-<img width="660" alt="buttons" src="https://user-images.githubusercontent.com/87679354/151765598-801f2666-c2b9-42d2-8311-0149d6262b26.png">
+<img width="103" alt="Copy button" src="https://user-images.githubusercontent.com/87679354/151765880-8a89f8be-a9b3-4941-a998-e1d6567633d5.png">
+
+<img width="103" alt="Collapse button" src="https://user-images.githubusercontent.com/87679354/151765927-bbe82a38-ccfa-4ad1-9691-d50d5d91b448.png">
+
 
 Themes
 
