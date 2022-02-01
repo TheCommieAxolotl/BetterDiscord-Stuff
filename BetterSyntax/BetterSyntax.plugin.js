@@ -2,11 +2,11 @@
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
  * @description Lets you edit sytnax highligting with an easy interface and adds some useful buttons.
- * @version 0.5.1
+ * @version 1.0.0
  * @authorId 538487970408300544
- * @source
- * @updateurl
- * @import
+ * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
+ * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js
+ * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/BetterSyntax/BetterSyntax.plugin.js
  */
 
 module.exports = (() => {
@@ -19,8 +19,8 @@ module.exports = (() => {
                     discord_id: "538487970408300544",
                 },
             ],
-            github_raw: "",
-            version: "0.5.1",
+            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
+            version: "1.0.0",
             description: "Lets you edit sytnax highligting with an easy interface and adds some useful buttons.",
         },
 
@@ -201,9 +201,9 @@ module.exports = (() => {
 
         changelog: [
             {
-                title: "Version 0.5.1",
-                type: "added",
-                items: ["Added Collapsable Codeblocks"],
+                title: "Version 1.0.0",
+                type: "improved",
+                items: ["Fixed buttons not loading"],
             },
         ],
     };
@@ -237,7 +237,7 @@ module.exports = (() => {
           }
         : (([Plugin, Api]) => {
               const plugin = (Plugin, Api) => {
-                  const { Tooltip, Logger, Popouts, DiscordModules } = Api;
+                  const { Tooltip, Logger } = Api;
 
                   const SelectedChannelStore = BdApi.findModuleByProps("getLastSelectedChannelId");
 
