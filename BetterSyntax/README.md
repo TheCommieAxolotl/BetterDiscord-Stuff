@@ -1,5 +1,3 @@
-<img width="460" alt="BetterSyntax" src="https://user-images.githubusercontent.com/87679354/152235516-8319ee74-9162-4186-8787-43ce38c1918d.png">
-
 # BetterSyntax
 Adds themeble codeblocks and some utility buttons.
 
