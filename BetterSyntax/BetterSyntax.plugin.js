@@ -411,12 +411,12 @@ module.exports = (() => {
                                   sel.removeAllRanges();
                                   sel.addRange(range);
 
-                                  if (document.execCommand("copy")) {
+                                  if (document.execCommand()) {
                                       document.execCommand("copy");
                                   } else {
                                       DiscordNative.clipboard.copy;
 
-                                      Logger.warn(`"execCommand" is not available. Using these funtions in copy may not produce best results.`);
+                                      Logger.warn(`"execCommand" is not available. Using native funtions in copy may not produce best results.`);
                                   }
 
                                   setTimeout(() => {
