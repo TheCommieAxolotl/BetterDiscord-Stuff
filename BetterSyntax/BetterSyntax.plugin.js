@@ -4,6 +4,7 @@
  * @description Lets you edit sytnax highligting with an easy interface and adds some useful buttons.
  * @version 1.0.0
  * @authorId 538487970408300544
+ * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
  * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js
  * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/BetterSyntax/BetterSyntax.plugin.js
