@@ -402,27 +402,8 @@ module.exports = (() => {
                               }
 
                               ele.addEventListener("click", async () => {
-                                  BdApi.injectCSS("select", selectCSS);
-                                  const parent = ele.parentNode.parentNode;
-                                  const range = document.createRange();
-                                  range.setStart(parent.firstChild, 0);
-                                  range.setEnd(parent.lastChild, parent.lastChild);
-                                  const sel = window.getSelection();
-                                  sel.removeAllRanges();
-                                  sel.addRange(range);
-
-                                  if (document.execCommand()) {
-                                      document.execCommand("copy");
-                                  } else {
-                                      DiscordNative.clipboard.copy;
-
-                                      Logger.warn(`"execCommand" is not available. Using native funtions in copy may not produce best results.`);
-                                  }
-
-                                  setTimeout(() => {
-                                      sel.removeAllRanges();
-                                      BdApi.clearCSS("select");
-                                  }, 5);
+                                const text = ele.parentElement.textContent
+                                DiscordNative.clipboard.copy(text);
                               });
                           }
 
