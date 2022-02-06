@@ -45,9 +45,7 @@ module.exports = (() => {
            }
        ],
 
-
    }
-
       const NoButtonCSS =
   `
   #user-context-call
@@ -62,7 +60,6 @@ module.exports = (() => {
   }
 
     `;
-
        const PluginCSS =
   `
   #user-context-call:hover,
