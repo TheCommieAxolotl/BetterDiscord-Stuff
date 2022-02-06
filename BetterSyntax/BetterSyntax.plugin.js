@@ -267,7 +267,7 @@ module.exports = (() => {
                           BdApi.clearCSS("onedark");
                           BdApi.clearCSS("ultra");
                           BdApi.clearCSS("editor");
-                          BdApi.clearCSS("theSyntaxiverseCSS");
+                          BdApi.clearCSS("BetterSyntaxCSS");
 
                           const Events = BdApi.findModuleByProps("dirtyDispatch");
                           Events.unsubscribe("LOAD_MESSAGES_SUCCESS", () => {this.timeoutButtons()});
@@ -299,7 +299,7 @@ module.exports = (() => {
                       injectCSS() {
                           const editorTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:${this.settings.categoryEditor.color1}!important}.hljs-function .hljs-title{color:${this.settings.categoryEditor.color2}!important}code.hljs{background-color:${this.settings.categoryEditor.background}}.hljs-selector-class{color:${this.settings.categoryEditor.color5}}.hljs-number{color:${this.settings.categoryEditor.color6}}.hljs-attribute{color:${this.settings.categoryEditor.color7}}.hljs-built_in{color:${this.settings.categoryEditor.color3}}.css .hljs-built_in{color:${this.settings.categoryEditor.color4}}.hljs{color:${this.settings.categoryEditor.defaultColor}}.hljs-meta{color:${this.settings.categoryEditor.color8}}.hljs-string{color:${this.settings.categoryEditor.stringColor}}.hljs-literal{color:${this.settings.categoryEditor.color9}}.hljs-selector-pseudo{color:${this.settings.categoryEditor.color10}}.hljs-comment{color:${this.settings.categoryEditor.commentColor}}.hljs-bullet,.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol{color:${this.settings.categoryEditor.other}}`;
 
-                          BdApi.injectCSS("theSyntaxiverseCSS", BetterSyntaxCSS);
+                          BdApi.injectCSS("BetterSyntaxCSS", BetterSyntaxCSS);
 
                           if (this.settings.categoryPresets.enablePresets) {
                               if (this.settings.categoryPresets.nordTheme) {
