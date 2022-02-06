@@ -11,8 +11,6 @@
   * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/CallWarnings/CallWarnings.plugin.js
  */
 
-
-
 module.exports = (() => {
   const config = {
        info: {
@@ -33,7 +31,7 @@ module.exports = (() => {
               type: "switch",
               id: "hideAll",
               name: "Hide Call Direct Call Buttons",
-              note: "Removes ALL Call Buttons (Requires restart with ctrl + r)",
+              note: "Removes ALL Call Buttons (Requires restart with ctrl/cmd + r)",
               value: true,
           },
       ],
