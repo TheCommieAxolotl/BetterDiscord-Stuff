@@ -80,7 +80,7 @@ svg.dots-1BwzZQ {
     height: 15px !important;
 }
 
-[aria-label="USER_SETTINGS"] .info-1sUqUG > span:first-child::before {
+[class^="socialLinks-"] + [class^="info-"] [class^="colorMuted-"]:first-child::before {
     content: "Ultra " var(--version);
     position: relative;
     top: 0px;
