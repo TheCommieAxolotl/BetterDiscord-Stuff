@@ -54,17 +54,17 @@ svg.cursorDefault--wfhy5 {
     overflow: visible;
 }
 
-.dots-1BwzZQ circle {
+.member-2gU6Ar .dots-1BwzZQ circle {
     cy: -18.5px;
     overflow: visible;
     color: var(--background-primary);
 }
 
-.dots-1BwzZQ circle:nth-child(odd) {
+.member-2gU6Ar .dots-1BwzZQ circle:nth-child(odd) {
     display: none;
 }
 
-svg.dots-1BwzZQ {
+.member-2gU6Ar svg.dots-1BwzZQ {
     overflow: visible;
 }
 
