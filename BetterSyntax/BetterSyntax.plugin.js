@@ -250,8 +250,8 @@ module.exports = (() => {
                           this.onSwitch();
 
                           const Events = BdApi.findModuleByProps("dirtyDispatch");
-                          Events.subscribe("LOAD_MESSAGES_SUCCESS",this.timeoutButtons());
-                          Events.subscribe("MESSAGE_CREATE",this.timeoutButtons());
+                          Events.subscribe("LOAD_MESSAGES_SUCCESS", () => {this.timeoutButtons()});
+                          Events.subscribe("MESSAGE_CREATE", () => {this.timeoutButtons();});
                       }
 
                       timeoutButtons() {
@@ -270,8 +270,8 @@ module.exports = (() => {
                           BdApi.clearCSS("theSyntaxiverseCSS");
 
                           const Events = BdApi.findModuleByProps("dirtyDispatch");
-                          Events.unsubscribe("LOAD_MESSAGES_SUCCESS", this.timeoutButtons());
-                          Events.unsubscribe("MESSAGE_CREATE", this.timeoutButtons());
+                          Events.unsubscribe("LOAD_MESSAGES_SUCCESS", () => {this.timeoutButtons()});
+                          Events.unsubscribe("MESSAGE_CREATE", () => {this.timeoutButtons();});
                       }
 
                       getSettingsPanel() {
