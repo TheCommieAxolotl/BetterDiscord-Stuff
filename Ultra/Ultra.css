@@ -639,3 +639,7 @@ code {
 #MemberCount .membersGroup-2eiWxl {
     background-color: var(--background-primary) !important;
 }
+
+.header-2Kx1US.ChannelDms-channelmembers-header.topPill-3DJJNV {
+    background: var(--background-primary) !important;
+}
