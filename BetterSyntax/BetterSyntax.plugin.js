@@ -8,7 +8,7 @@
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
  * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js
  * @import https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/BetterSyntax/BetterSyntax.plugin.js
-*/
+ */
 
 module.exports = (() => {
     const config = {
@@ -250,8 +250,12 @@ module.exports = (() => {
                           this.onSwitch();
 
                           const Events = BdApi.findModuleByProps("dirtyDispatch");
-                          Events.subscribe("LOAD_MESSAGES_SUCCESS", () => {this.timeoutButtons()});
-                          Events.subscribe("MESSAGE_CREATE", () => {this.timeoutButtons();});
+                          Events.subscribe("LOAD_MESSAGES_SUCCESS", () => {
+                              this.timeoutButtons();
+                          });
+                          Events.subscribe("MESSAGE_CREATE", () => {
+                              this.timeoutButtons();
+                          });
                       }
 
                       timeoutButtons() {
@@ -270,8 +274,12 @@ module.exports = (() => {
                           BdApi.clearCSS("BetterSyntaxCSS");
 
                           const Events = BdApi.findModuleByProps("dirtyDispatch");
-                          Events.unsubscribe("LOAD_MESSAGES_SUCCESS", () => {this.timeoutButtons()});
-                          Events.unsubscribe("MESSAGE_CREATE", () => {this.timeoutButtons();});
+                          Events.unsubscribe("LOAD_MESSAGES_SUCCESS", () => {
+                              this.timeoutButtons();
+                          });
+                          Events.unsubscribe("MESSAGE_CREATE", () => {
+                              this.timeoutButtons();
+                          });
                       }
 
                       getSettingsPanel() {
@@ -382,7 +390,6 @@ module.exports = (() => {
                               const container = document.querySelectorAll(".bettersyntax-buttons");
 
                               for (let ele of container) {
-
                                   const queryContainer = document.createElement("div");
                                   queryContainer.classList.add("code-button");
                                   queryContainer.classList.add("bettersyntax-copy");
@@ -402,8 +409,8 @@ module.exports = (() => {
                               }
 
                               ele.addEventListener("click", async () => {
-                                const text = ele.parentElement.textContent
-                                DiscordNative.clipboard.copy(text);
+                                  const text = ele.parentElement.parentElement.textContent;
+                                  DiscordNative.clipboard.copy(text);
                               });
                           }
 
