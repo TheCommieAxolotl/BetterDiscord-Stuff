@@ -2,7 +2,7 @@
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
  * @description Lets you edit sytnax highligting with an easy interface and adds some useful buttons.
- * @version 1.5.0
+ * @version 1.5.1
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
-            version: "1.5.0",
+            version: "1.5.1",
             description: "Lets you edit sytnax highligting with an easy interface and adds some useful buttons.",
         },
 
@@ -249,7 +249,7 @@ module.exports = (() => {
                           }, 200);
                       }
 
-                      onStop() {
+                      async onStop() {
                           BdApi.clearCSS("nord");
                           BdApi.clearCSS("gruvbox");
                           BdApi.clearCSS("tokyonight");
@@ -265,6 +265,9 @@ module.exports = (() => {
                           Events.unsubscribe("MESSAGE_CREATE", () => {
                               this.timeoutButtons();
                           });
+
+                          const MessageContextMenu = await ContextMenu.getDiscordMenu("MessageContextMenu");
+                          Patcher.unpatchAll(MessageContextMenu);
                       }
 
                       async patchContext() {
