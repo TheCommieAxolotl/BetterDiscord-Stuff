@@ -2,7 +2,7 @@
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
  * @description Lets you edit sytnax highligting with an easy interface and adds some useful buttons.
- * @version 1.0.0
+ * @version 1.5.0
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
-            version: "1.0.0",
+            version: "1.5.0",
             description: "Lets you edit sytnax highligting with an easy interface and adds some useful buttons.",
         },
 
@@ -41,39 +41,18 @@ module.exports = (() => {
                         value: true,
                     },
                     {
-                        type: "switch",
-                        id: "nordTheme",
-                        name: "Nord Theme",
-                        value: false,
-                        disabled: false,
-                    },
-                    {
-                        type: "switch",
-                        id: "gruvboxTheme",
-                        name: "Gruvbox Theme",
-                        value: false,
-                        disabled: false,
-                    },
-                    {
-                        type: "switch",
-                        id: "tokyonightTheme",
-                        name: "Tokyo Night Theme",
-                        value: false,
-                        disabled: false,
-                    },
-                    {
-                        type: "switch",
-                        id: "onedarkTheme",
-                        name: "OneDark Theme",
-                        value: false,
-                        disabled: false,
-                    },
-                    {
-                        type: "switch",
-                        id: "ultraTheme",
-                        name: "Ultra Theme",
-                        value: false,
-                        disabled: false,
+                        name: "",
+                        id: "theme",
+                        type: "radio",
+                        options: [
+                            { name: "Default", desc: "Discord's default colors", value: "default" },
+                            { name: "Nord Theme", value: "nord" },
+                            { name: "Gruvbox Theme", value: "gruvbox" },
+                            { name: "OneDark Theme", value: "onedark" },
+                            { name: "Tokyo Night Theme", value: "tokyonight" },
+                            { name: "Ultra Theme", value: "ultra" },
+                        ],
+                        value: "default",
                     },
                 ],
             },
@@ -202,9 +181,14 @@ module.exports = (() => {
 
         changelog: [
             {
-                title: "Version 1.0.0",
+                title: "Added",
+                type: "added",
+                items: ["Context Menus!!!!", "Ease of access to settings"],
+            },
+            {
+                title: "Changed",
                 type: "improved",
-                items: ["Fixed buttons not loading"],
+                items: ["Switched to RadioGroups"],
             },
         ],
     };
@@ -238,7 +222,7 @@ module.exports = (() => {
           }
         : (([Plugin, Api]) => {
               const plugin = (Plugin, Api) => {
-                  const { Tooltip, Logger } = Api;
+                  const { Tooltip, Logger, ContextMenu, Patcher, DCM } = Api;
 
                   const SelectedChannelStore = BdApi.findModuleByProps("getLastSelectedChannelId");
 
@@ -248,6 +232,7 @@ module.exports = (() => {
                           this.addButtons();
                           this.lastChannelId = SelectedChannelStore.getChannelId();
                           this.onSwitch();
+                          this.patchContext();
 
                           const Events = BdApi.findModuleByProps("dirtyDispatch");
                           Events.subscribe("LOAD_MESSAGES_SUCCESS", () => {
@@ -282,6 +267,28 @@ module.exports = (() => {
                           });
                       }
 
+                      async patchContext() {
+                          const MessageContextMenu = await ContextMenu.getDiscordMenu("MessageContextMenu");
+                          await Patcher.after(MessageContextMenu, "default", (_, [props], component) => {
+                              component.props.children.push(
+                                  DCM.buildMenuItem({
+                                      label: "BetterSyntax",
+                                      type: "submenu",
+                                      id: "bettersyntax-context",
+                                      children: [
+                                          DCM.buildMenuItem({
+                                              label: "Change Theme",
+                                              type: "text",
+                                              action: () => {
+                                                  this.showSettingsModal();
+                                              },
+                                          }),
+                                      ],
+                                  }),
+                              );
+                          });
+                      }
+
                       getSettingsPanel() {
                           const panel = this.buildSettingsPanel();
                           setTimeout(() => {
@@ -310,36 +317,43 @@ module.exports = (() => {
                           BdApi.injectCSS("BetterSyntaxCSS", BetterSyntaxCSS);
 
                           if (this.settings.categoryPresets.enablePresets) {
-                              if (this.settings.categoryPresets.nordTheme) {
+                              if (this.settings.categoryPresets.theme == "nord") {
                                   BdApi.injectCSS("nord", nordTheme);
                               }
-                              if (this.settings.categoryPresets.gruvboxTheme) {
+                              if (this.settings.categoryPresets.theme == "gruvbox") {
                                   BdApi.injectCSS("gruvbox", gruvboxTheme);
                               }
-                              if (this.settings.categoryPresets.tokyonightTheme) {
+                              if (this.settings.categoryPresets.theme == "tokyonight") {
                                   BdApi.injectCSS("tokyonight", tokyonightTheme);
                               }
-                              if (this.settings.categoryPresets.onedarkTheme) {
+                              if (this.settings.categoryPresets.theme == "onedark") {
                                   BdApi.injectCSS("onedark", onedarkTheme);
                               }
-                              if (this.settings.categoryPresets.ultraTheme) {
+                              if (this.settings.categoryPresets.theme == "ultra") {
                                   BdApi.injectCSS("ultra", ultraTheme);
+                              }
+                              if (this.settings.categoryPresets.theme == "default") {
+                                  BdApi.clearCSS("nord");
+                                  BdApi.clearCSS("gruvbox");
+                                  BdApi.clearCSS("tokyonight");
+                                  BdApi.clearCSS("onedark");
+                                  BdApi.clearCSS("ultra");
                               }
 
                               // Clear
-                              if (!this.settings.categoryPresets.nordTheme) {
+                              if (!this.settings.categoryPresets.theme == "nord") {
                                   BdApi.clearCSS("nord");
                               }
-                              if (!this.settings.categoryPresets.gruvboxTheme) {
+                              if (!this.settings.categoryPresets.theme == "gruvbox") {
                                   BdApi.clearCSS("gruvbox");
                               }
-                              if (!this.settings.categoryPresets.tokyonightTheme) {
+                              if (!this.settings.categoryPresets.theme == "tokyonight") {
                                   BdApi.clearCSS("tokyonight");
                               }
-                              if (!this.settings.categoryPresets.onedarkTheme) {
+                              if (!this.settings.categoryPresets.theme == "onedark") {
                                   BdApi.clearCSS("onedark");
                               }
-                              if (!this.settings.categoryPresets.ultraTheme) {
+                              if (!this.settings.categoryPresets.theme == "ultra") {
                                   BdApi.clearCSS("ultra");
                               }
                               BdApi.clearCSS("editor");
