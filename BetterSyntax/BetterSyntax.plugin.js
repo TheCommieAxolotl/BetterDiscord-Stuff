@@ -274,10 +274,11 @@ module.exports = (() => {
                           const MessageContextMenu = await ContextMenu.getDiscordMenu("MessageContextMenu");
                           await Patcher.after(MessageContextMenu, "default", (_, [props], component) => {
                               component.props.children.push(
+                                  DCM.buildMenuItem({type: "separator"}),
                                   DCM.buildMenuItem({
                                       label: "BetterSyntax",
                                       type: "submenu",
-                                      id: "bettersyntax-context",
+                                      id: "context-bettersyntax",
                                       children: [
                                           DCM.buildMenuItem({
                                               label: "Change Theme",
