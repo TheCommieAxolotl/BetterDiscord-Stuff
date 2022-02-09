@@ -54,17 +54,20 @@ svg.cursorDefault--wfhy5 {
     overflow: visible;
 }
 
-.member-2gU6Ar .dots-1BwzZQ circle {
+.member-2gU6Ar .dots-1BwzZQ circle,
+.channel-1Shao0 .dots-1BwzZQ circle {
     cy: -18.5px;
     overflow: visible;
     color: var(--background-primary);
 }
 
-.member-2gU6Ar .dots-1BwzZQ circle:nth-child(odd) {
+.member-2gU6Ar .dots-1BwzZQ circle:nth-child(odd),
+.channel-1Shao0 .dots-1BwzZQ circle:nth-child(odd) {
     display: none;
 }
 
-.member-2gU6Ar svg.dots-1BwzZQ {
+.member-2gU6Ar .channel-1Shao0 svg.dots-1BwzZQ,
+.channel-1Shao0 svg.dots-1BwzZQ {
     overflow: visible;
 }
 
