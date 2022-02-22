@@ -2,7 +2,7 @@
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
  * @description Lets you edit sytnax highligting with an easy interface and adds some useful buttons.
- * @version 1.5.2
+ * @version 1.5.3
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
@@ -21,8 +21,8 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
-            version: "1.5.2",
-            description: "Lets you edit sytnax highligting with an easy interface and adds some useful buttons.",
+            version: "1.5.3",
+            description: "Lets you edit syntax highligting with an easy interface and adds some useful buttons.",
         },
 
         defaultConfig: [
