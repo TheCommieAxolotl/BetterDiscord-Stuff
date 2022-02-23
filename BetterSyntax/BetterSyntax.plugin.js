@@ -11,6 +11,22 @@
  */
 
 module.exports = (() => {
+    const BetterSyntaxCSS = `@import url("https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap");.bettersyntax-tip{margin-bottom:10px;}code{font-family:"Source Code Pro"}.hljs{box-shadow: 2px 3px 10px 0px #00000057;border-radius:4px;margin-bottom:10px !important;border: none !important;} .hljs.collapsed {min-height: 28px; max-height: 28px; font-size: 0;display: flex;} .hljs.collapsed .bettersyntax-buttons {margin-right: 7px;margin-top: 6px;pointer-events: all;top: 10px;} .hljs.collapsed::before {content: "Collapsed codeblock";width: 76%;height: 28px;text-align: center;font-size: 10pt;position: absolute;padding-top: 5.5px;font-family: var(--font-primary);font-weight: 500;} .layerContainer-2v_Sit code.hljs {margin: 15px;}`;
+    const nordTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:#81A1C1 !important}.hljs-function .hljs-title{color:#8FBCBB !important}code.hljs{background-color:#2E343F}.hljs-selector-class{color:#8FBCBB}.hljs-number{color:#B48EAD}.hljs-attribute{color:#D8DEE9}.hljs-built_in{color:#88C0D0}.hljs{color:#81A1C1}.hljs-meta{color:#81A1C1}.hljs-string{color:#A3BE8C}.hljs-literal{color:#81A1C1}.hljs-selector-pseudo{color:#8FBCBB}.hljs-comment{color:#616E88}.hljs-bullet,.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol{color:#8FBCBB}`;
+    const gruvboxTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:#FB4934 !important}.hljs-title{color:#FABD2F !important}.hljs-function .hljs-title{color:#FABD2F !important}code.hljs{background-color:#282828}.hljs-selector-class{color:#B8BB26}.hljs-number{color:#D3869B}.hljs-attribute{color:#FE8019}.hljs-built_in{color:#FB4934}.hljs{color:#EBDBB2}.hljs-meta{color:#FB4934}.hljs-string{color:#B8BB26}.hljs-literal{color:#FB4934}.hljs-selector-pseudo{color:#FABD2F}.hljs-comment{color:#928374}.hljs-doctag{color:#83A598}.hljs-bullet,.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol{color:#FB4934}`;
+    const tokyonightTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:#BB9AF7 !important}.hljs-function .hljs-title{color:#7AA2F7 !important}code.hljs{background-color:#1A1B26}.hljs-selector-class{color:#9ECE6A}.hljs-number{color:#FF9E64}.hljs-attribute{color:#7AA2F7}.hljs-built_in{color:#F7768E}.css .hljs-built_in{color:#0DB9D7}.hljs{color:#C0CAF5}.hljs-meta{color:#81A1C1}.hljs-string{color:#9ECE6A}.hljs-literal{color:#81A1C1}.hljs-selector-pseudo{color:#BB9AF7}.hljs-comment{color:#444B6A}.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol,.hljs-bullet{color:#BB9AF7}`;
+    const onedarkTheme = `.hljs{color:#abb2bf;background:#282c34 !important;}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}`;
+    const ultraTheme = `.hljs{color:#dcddde;background:#17161b !important;}.hljs-comment,.hljs-quote{color:#b9bbbe;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#6e6af6}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#eb8181}.hljs-literal{color:#ffce97}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#97ffa5}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#fdff97}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#97aaff}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}`;
+
+    const Themes = [
+        { name: "Default", desc: "Discord's default colors", value: "default", css: "" },
+        { name: "Nord Theme", value: "nord", css: nordTheme },
+        { name: "Gruvbox Theme", value: "gruvbox", css: gruvboxTheme },
+        { name: "OneDark Theme", value: "onedark", css: onedarkTheme },
+        { name: "Tokyo Night Theme", value: "tokyonight", css: tokyonightTheme },
+        { name: "Ultra Theme", value: "ultra", css: ultraTheme },
+    ];
+
     const config = {
         info: {
             name: "BetterSyntax",
@@ -22,7 +38,7 @@ module.exports = (() => {
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
             version: "1.5.3",
-            description: "Lets you edit syntax highligting with an easy interface and adds some useful buttons.",
+            description: "Lets you edit syntax highlighting with an easy interface and adds some useful buttons.",
         },
 
         defaultConfig: [
@@ -44,14 +60,7 @@ module.exports = (() => {
                         name: "",
                         id: "theme",
                         type: "radio",
-                        options: [
-                            { name: "Default", desc: "Discord's default colors", value: "default" },
-                            { name: "Nord Theme", value: "nord" },
-                            { name: "Gruvbox Theme", value: "gruvbox" },
-                            { name: "OneDark Theme", value: "onedark" },
-                            { name: "Tokyo Night Theme", value: "tokyonight" },
-                            { name: "Ultra Theme", value: "ultra" },
-                        ],
+                        options: Themes,
                         value: "default",
                     },
                 ],
@@ -177,6 +186,30 @@ module.exports = (() => {
                     },
                 ],
             },
+            {
+                type: "category",
+                id: "categoryLink",
+                name: "Link Stylesheet",
+                collapsible: true,
+                shown: true,
+                settings: [
+                    {
+                        type: "switch",
+                        id: "enableLink",
+                        name: "Enable Link Module",
+                        note: "Without this, nothing in this category will apply.",
+                        value: false,
+                    },
+                    {
+                        type: "textbox",
+                        placeholder: "https://styles.com/hljs.css",
+                        id: "link",
+                        name: "Link",
+                        note: "Link to a hljs stylesheet",
+                        value: "",
+                    },
+                ],
+            },
         ],
 
         changelog: [
@@ -192,13 +225,6 @@ module.exports = (() => {
             },
         ],
     };
-
-    const BetterSyntaxCSS = `@import url("https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap");.bettersyntax-tip{margin-bottom:10px;}code{font-family:"Source Code Pro"}.hljs{box-shadow: 2px 3px 10px 0px #00000057;border-radius:4px;margin-bottom:10px !important;border: none !important;} .hljs.collapsed {min-height: 28px; max-height: 28px; font-size: 0;display: flex;} .hljs.collapsed .bettersyntax-buttons {margin-right: 7px;margin-top: 6px;pointer-events: all;top: 10px;} .hljs.collapsed::before {content: "Collapsed codeblock";width: 76%;height: 28px;text-align: center;font-size: 10pt;position: absolute;padding-top: 5.5px;font-family: var(--font-primary);font-weight: 500;} .layerContainer-2v_Sit code.hljs {margin: 15px;}`;
-    const nordTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:#81A1C1 !important}.hljs-function .hljs-title{color:#8FBCBB !important}code.hljs{background-color:#2E343F}.hljs-selector-class{color:#8FBCBB}.hljs-number{color:#B48EAD}.hljs-attribute{color:#D8DEE9}.hljs-built_in{color:#88C0D0}.hljs{color:#81A1C1}.hljs-meta{color:#81A1C1}.hljs-string{color:#A3BE8C}.hljs-literal{color:#81A1C1}.hljs-selector-pseudo{color:#8FBCBB}.hljs-comment{color:#616E88}.hljs-bullet,.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol{color:#8FBCBB}`;
-    const gruvboxTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:#FB4934 !important}.hljs-title{color:#FABD2F !important}.hljs-function .hljs-title{color:#FABD2F !important}code.hljs{background-color:#282828}.hljs-selector-class{color:#B8BB26}.hljs-number{color:#D3869B}.hljs-attribute{color:#FE8019}.hljs-built_in{color:#FB4934}.hljs{color:#EBDBB2}.hljs-meta{color:#FB4934}.hljs-string{color:#B8BB26}.hljs-literal{color:#FB4934}.hljs-selector-pseudo{color:#FABD2F}.hljs-comment{color:#928374}.hljs-doctag{color:#83A598}.hljs-bullet,.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol{color:#FB4934}`;
-    const tokyonightTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:#BB9AF7 !important}.hljs-function .hljs-title{color:#7AA2F7 !important}code.hljs{background-color:#1A1B26}.hljs-selector-class{color:#9ECE6A}.hljs-number{color:#FF9E64}.hljs-attribute{color:#7AA2F7}.hljs-built_in{color:#F7768E}.css .hljs-built_in{color:#0DB9D7}.hljs{color:#C0CAF5}.hljs-meta{color:#81A1C1}.hljs-string{color:#9ECE6A}.hljs-literal{color:#81A1C1}.hljs-selector-pseudo{color:#BB9AF7}.hljs-comment{color:#444B6A}.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol,.hljs-bullet{color:#BB9AF7}`;
-    const onedarkTheme = `.hljs{color:#abb2bf;background:#282c34 !important;}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}`;
-    const ultraTheme = `.hljs{color:#dcddde;background:#17161b !important;}.hljs-comment,.hljs-quote{color:#b9bbbe;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#6e6af6}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#eb8181}.hljs-literal{color:#ffce97}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#97ffa5}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#fdff97}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#97aaff}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}`;
 
     return !global.ZeresPluginLibrary
         ? class {
@@ -222,7 +248,7 @@ module.exports = (() => {
           }
         : (([Plugin, Api]) => {
               const plugin = (Plugin, Api) => {
-                  const { Tooltip, Logger, ContextMenu, Patcher, DCM } = Api;
+                  const { Tooltip, Logger, ContextMenu, Patcher, DCM, WebpackModules } = Api;
 
                   const SelectedChannelStore = BdApi.findModuleByProps("getLastSelectedChannelId");
 
@@ -250,12 +276,8 @@ module.exports = (() => {
                       }
 
                       async onStop() {
-                          BdApi.clearCSS("nord");
-                          BdApi.clearCSS("gruvbox");
-                          BdApi.clearCSS("tokyonight");
-                          BdApi.clearCSS("onedark");
-                          BdApi.clearCSS("ultra");
-                          BdApi.clearCSS("editor");
+                          Themes.forEach((theme) => BdApi.clearCSS(theme.value));
+
                           BdApi.clearCSS("BetterSyntaxCSS");
 
                           const Events = BdApi.findModuleByProps("dirtyDispatch");
@@ -274,7 +296,7 @@ module.exports = (() => {
                           const MessageContextMenu = await ContextMenu.getDiscordMenu("MessageContextMenu");
                           await Patcher.after(MessageContextMenu, "default", (_, [props], component) => {
                               component.props.children.push(
-                                  DCM.buildMenuItem({type: "separator"}),
+                                  DCM.buildMenuItem({ type: "separator" }),
                                   DCM.buildMenuItem({
                                       label: "BetterSyntax",
                                       type: "submenu",
@@ -321,64 +343,34 @@ module.exports = (() => {
                           BdApi.injectCSS("BetterSyntaxCSS", BetterSyntaxCSS);
 
                           if (this.settings.categoryPresets.enablePresets) {
-                              if (this.settings.categoryPresets.theme == "nord") {
-                                  BdApi.injectCSS("nord", nordTheme);
-                              }
-                              if (this.settings.categoryPresets.theme == "gruvbox") {
-                                  BdApi.injectCSS("gruvbox", gruvboxTheme);
-                              }
-                              if (this.settings.categoryPresets.theme == "tokyonight") {
-                                  BdApi.injectCSS("tokyonight", tokyonightTheme);
-                              }
-                              if (this.settings.categoryPresets.theme == "onedark") {
-                                  BdApi.injectCSS("onedark", onedarkTheme);
-                              }
-                              if (this.settings.categoryPresets.theme == "ultra") {
-                                  BdApi.injectCSS("ultra", ultraTheme);
-                              }
-                              if (this.settings.categoryPresets.theme == "default") {
-                                  BdApi.clearCSS("nord");
-                                  BdApi.clearCSS("gruvbox");
-                                  BdApi.clearCSS("tokyonight");
-                                  BdApi.clearCSS("onedark");
-                                  BdApi.clearCSS("ultra");
-                              }
-
-                              // Clear
-                              if (!this.settings.categoryPresets.theme == "nord") {
-                                  BdApi.clearCSS("nord");
-                              }
-                              if (!this.settings.categoryPresets.theme == "gruvbox") {
-                                  BdApi.clearCSS("gruvbox");
-                              }
-                              if (!this.settings.categoryPresets.theme == "tokyonight") {
-                                  BdApi.clearCSS("tokyonight");
-                              }
-                              if (!this.settings.categoryPresets.theme == "onedark") {
-                                  BdApi.clearCSS("onedark");
-                              }
-                              if (!this.settings.categoryPresets.theme == "ultra") {
-                                  BdApi.clearCSS("ultra");
-                              }
+                              Themes.forEach((theme) => {
+                                  if (this.settings.categoryPresets.theme == theme.value) {
+                                      BdApi.injectCSS(theme.value, theme.css);
+                                  } else {
+                                      BdApi.clearCSS(theme.value);
+                                  }
+                              });
                               BdApi.clearCSS("editor");
                           }
 
                           if (!this.settings.categoryPresets.enablePresets) {
-                              BdApi.clearCSS("nord");
-                              BdApi.clearCSS("gruvbox");
-                              BdApi.clearCSS("tokyonight");
-                              BdApi.clearCSS("onedark");
-                              BdApi.clearCSS("ultra");
+                              Themes.forEach((theme) => {
+                                  if (this.settings.categoryPresets.theme == theme.value) {
+                                      BdApi.injectCSS(theme.value, theme.css);
+                                  } else {
+                                      BdApi.clearCSS(theme.value);
+                                  }
+                              });
                           }
 
                           if (this.settings.categoryEditor.enableEditor) {
                               BdApi.injectCSS("editor", editorTheme);
-                              BdApi.clearCSS("nord");
-                              BdApi.clearCSS("gruvbox");
-                              BdApi.clearCSS("tokyonight");
-                              BdApi.clearCSS("onedark");
-                              BdApi.clearCSS("ultra");
-                              BdApi.clearCSS("buttons");
+                              Themes.forEach((theme) => BdApi.clearCSS(theme.value));
+                          }
+
+                          if (this.settings.categoryLink.enableLink) {
+                              BdApi.injectCSS("hljslink", `@import url("${this.settings.categoryLink.link}");`);
+                              Themes.forEach((theme) => BdApi.clearCSS(theme.value));
                           }
 
                           Logger.log("Injected");
