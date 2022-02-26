@@ -1,11 +1,11 @@
-.messageContent-2t3eCI a[href^="https://discord.com"]
+.messageContent-2t3eCI a[href^="https://discord.com"]:not([href*="channels"])
 {
     font-size: 0;
     line-height: 0;
     text-decoration: none;
 }
 
-.messageContent-2t3eCI a[href^="https://discord.com"]::after
+.messageContent-2t3eCI a[href^="https://discord.com"]:not([href*="channels"])::after
 {
     content: "Jump To Discord";
     font-size: 11pt !important;
@@ -68,6 +68,11 @@
 }
 
 .messageContent-2t3eCI a[href^="https://discord.com/tos"]::after
+{
+    content: "Jump To TOS";
+}
+
+.messageContent-2t3eCI a[href^="https://discord.com/terms"]::after
 {
     content: "Jump To TOS";
 }
