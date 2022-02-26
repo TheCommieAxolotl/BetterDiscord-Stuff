@@ -28,7 +28,7 @@
 
 .messageContent-2t3eCI a[href^="https://support.discord.com"]::after
 {
-    content: "Jump To Discord Support";
+    content: "Jump To Discord Support" !important;
     font-size: 11pt !important;
     line-height: 10px !important;
     background: var(--brand-experiment-30a);
@@ -49,7 +49,7 @@
 
 .messageContent-2t3eCI a[href^="https://discordstatus.com"]::after
 {
-    content: "Jump To Discord Status";
+    content: "Jump To Discord Status" !important;
     font-size: 11pt !important;
     line-height: 10px !important;
     background: var(--brand-experiment-30a);
@@ -69,35 +69,35 @@
 
 .messageContent-2t3eCI a[href^="https://discord.com/tos"]::after
 {
-    content: "Jump To TOS";
+    content: "Jump To TOS" !important;
 }
 
 .messageContent-2t3eCI a[href^="https://discord.com/terms"]::after
 {
-    content: "Jump To TOS";
+    content: "Jump To TOS" !important;
 }
 
 .messageContent-2t3eCI a[href^="https://discord.com/nitro"]::after
 {
-    content: "Jump To Nitro";
+    content: "Jump To Nitro" !important;
 }
 
 .messageContent-2t3eCI a[href^="https://discord.com/safety"]::after
 {
-    content: "Jump To Trust and Safety";
+    content: "Jump To Trust and Safety" !important;
 }
 
 .messageContent-2t3eCI a[href^="https://discord.com/blog"]::after
 {
-    content: "Jump To Blog";
+    content: "Jump To Blog" !important;
 }
 
 .messageContent-2t3eCI a[href^="https://discord.com/jobs"]::after
 {
-    content: "Jump To Jobs At Discord";
+    content: "Jump To Jobs At Discord" !important;
 }
 
 .messageContent-2t3eCI a[href^="https://discord.com/branding"]::after
 {
-    content: "Jump To Discord Branding";
+    content: "Jump To Discord Branding" !important;
 }
