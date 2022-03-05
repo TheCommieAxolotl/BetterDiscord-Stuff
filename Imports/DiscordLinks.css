@@ -61,7 +61,7 @@
     font-weight: 500;
 }
 
-.messageContent-2t3eCI a[href^="https://discord.com"]:hover::after
+.messageContent-2t3eCI a[href^="https://discord.com"]:hover::after, .messageContent-2t3eCI a[href^="https://discordstatus.com"]:hover::after, .messageContent-2t3eCI a[href^="https://support.discord.com"]:hover::after
 {
     color: #fff;
     background-color: var(--brand-experiment);
