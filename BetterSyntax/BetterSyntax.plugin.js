@@ -421,7 +421,6 @@ module.exports = (() => {
                               ele.addEventListener("click", async () => {
                                   const text = ele.parentElement.parentElement.textContent;
                                   DiscordNative.clipboard.copy(text);
-                                  BdApi.showToast("Copied", { type: "success" });
                               });
                           }
 
