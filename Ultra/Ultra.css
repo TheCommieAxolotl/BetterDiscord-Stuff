@@ -189,6 +189,16 @@ rect.pointerEvents-9SZWKj {
     width: 10px;
 }
 
+.containerDefault-YUSmu3 rect.pointerEvents-9SZWKj {
+    x: 13 !important;
+    y: 0 !important;
+    height: 6px;
+    width: 6px;
+    rx: 2px;
+    ry: 2px;
+    stroke-width: 0.5px;
+}
+
 .wrapper-1HIH0j {
     border: 3px solid var(--background-secondary);
 }

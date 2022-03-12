@@ -1,4 +1,7 @@
-#app-mount [data-user-id="538487970408300544"] .name-3Vmqxm::after,
+.headerTop-3GPUSF {
+    overflow: visible;
+}
+
 #app-mount [data-user-id="538487970408300544"] .badgeList-2aoHPw::after,
 #app-mount [data-user-id="538487970408300544"] .profileBadges-2pItdR::before,
 #app-mount [data-user-id="538487970408300544"] .badges-XRnWAp::after {
@@ -9,4 +12,21 @@
     width: 22px;
     height: 22px;
     background: url(https://user-images.githubusercontent.com/87679354/142162167-73796362-b916-4f13-a2bc-156ed2484a65.png) center / 100% 100%;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#app-mount [data-user-id="538487970408300544"] .profileBadges-2pItdR:hover::after {
+    content: "TheCommieAxolotl";
+    position: absolute;
+    display: flex;
+    color: var(--text-normal);
+    font-weight: 600;
+    font-size: 10pt;
+    z-index: 999;
+    transform: translateY(-40px) translateX(10px);
+    padding: 10px 12px;
+    border-radius: 4px;
+    box-shadow: var(--elevation-high);
+    background-color: var(--background-floating);
 }
