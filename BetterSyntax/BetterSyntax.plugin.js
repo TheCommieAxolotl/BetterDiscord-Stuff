@@ -300,8 +300,7 @@ module.exports = (() => {
                               this.timeoutButtons();
                           });
 
-                          const MessageContextMenu = await ContextMenu.getDiscordMenu("MessageContextMenu");
-                          Patcher.unpatchAll(MessageContextMenu);
+                          Patcher.unpatchAll();
                       }
 
                       async patchContext() {
