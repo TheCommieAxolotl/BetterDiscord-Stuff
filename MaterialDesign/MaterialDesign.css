@@ -403,7 +403,7 @@ button.lookFilled-yCfaCM {
     Buttons
 **/
 
-.button-f2h6uQ:not(.toolbar-37BrJ5 button, .focusLock-2tveLW button, .wrapper-3t3Yqv button) {
+.button-f2h6uQ:not(.toolbar-37BrJ5 button, .wrapper-3t3Yqv button) {
     padding: 6px 12px;
     border-radius: 50px;
     font-weight: 500;
