@@ -31,6 +31,10 @@ code {
     font-family: var(--font-code, "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif);
 }
 
+.hljs {
+    min-width: 200px;
+}
+
 .container-2cd8Mz {
     background-color: var(--background-primary) !important;
 }
