@@ -410,7 +410,7 @@ button.lookFilled-yCfaCM {
     transition: all 0.2s ease;
 }
 
-button.lookFilled-yCfaCM:not(.toolbar-37BrJ5 button) {
+button.lookFilled-yCfaCM:not(.toolbar-37BrJ5 button, .wrapper-3t3Yqv button) {
     background: var(--16dp) !important;
     padding: 6px 12px;
     border-radius: 50px;
