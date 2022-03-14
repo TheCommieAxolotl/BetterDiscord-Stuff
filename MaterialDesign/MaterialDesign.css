@@ -63,6 +63,10 @@ code {
     background: transparent !important;
 }
 
+.option-ayUoaq[aria-selected="true"] {
+    background-color: var(--background-accent);
+}
+
 .theme-dark .keybindShortcut-3zF1P9 span {
     box-shadow: inset 0 -4px 0 var(--08dp);
 }
