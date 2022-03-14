@@ -488,6 +488,10 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     color: var(--brand-experiment-400);
 }
 
+.colorRed-rQXKgM .contents-3ca1mk {
+    color: var(--text-danger) !important;
+}
+
 .footer-31IekZ .button-f2h6uQ {
     background: transparent !important;
     box-shadow: none !important;
