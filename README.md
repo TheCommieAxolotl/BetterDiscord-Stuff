@@ -5,12 +5,10 @@
 <a href="#"><img align="center" alt="Commits" src="https://img.shields.io/github/commit-activity/m/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=brightgreen">
 
 # BetterDiscord Stuff
-BetterDiscord Plugins and Themes
+TheCommieAxolotl's BetterDiscord Plugins and Themes
 
 **Axolotl Support Server:** https://discord.gg/g2KnUw7u7N
 
 **Download BetterDiscord:** https://betterdiscord.app/
  
-**Official Support Server:** https://betterdiscord.app/invite
-
-![](https://betterdiscord.app/resources/branding/logo_large.svg)
+**Official BetterDiscord Support Server:** https://betterdiscord.app/invite
