@@ -448,6 +448,11 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     padding: 3px !important;
 }
 
+.buttons-uaqb-5 .button-f2h6uQ.emojiButton-3FRTuj {
+    padding-inline: 12px !important;
+    margin-right: 0;
+}
+
 .attachWrapper-3slhXI button,
 .emojiButton-3FRTuj {
     padding: 10px !important;
