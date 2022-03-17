@@ -436,6 +436,7 @@ button.lookFilled-yCfaCM:not(.toolbar-37BrJ5 button, .focusLock-2tveLW button, .
     border-radius: 50px;
     font-weight: 500;
 }
+
 button.lookFilled-yCfaCM.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ) {
     background: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%) !important;
 }
@@ -454,6 +455,10 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
 
 .contents-3ca1mk {
     background-image: none !important;
+}
+
+.colorGreen-3y-Z79 .contents-3ca1mk {
+    color: #fff;
 }
 
 .buttons-uaqb-5 .button-f2h6uQ {
