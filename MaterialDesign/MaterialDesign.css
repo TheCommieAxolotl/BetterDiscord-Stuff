@@ -2,6 +2,18 @@
     Setup
 **/
 
+#app-mount .base-2jDfDU::before {
+    content: "Your version of MaterialDesign is outdated. Please download the latest version from source";
+    display: var(--version0_9_6, block);
+    background-color: var(--brand-experiment-60a);
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 101;
+}
+
 [class^="socialLinks-"] + [class^="info-"] [class^="colorMuted-"]:first-child::before {
     content: "MaterialDesign " var(--version);
     position: relative;

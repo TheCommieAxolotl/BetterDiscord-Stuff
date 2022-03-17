@@ -20,6 +20,7 @@
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/MaterialDesign/MaterialDesign.css");
 :root {
     --version: "0.9.6";
+    --version0_9_6: none;
     --font: "Roboto";
     --font-code: "Source Code Pro";
     --01dpShadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
