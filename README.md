@@ -7,8 +7,8 @@
 # BetterDiscord Stuff
 TheCommieAxolotl's BetterDiscord Plugins and Themes
 
-**Axolotl Support Server:** https://discord.gg/g2KnUw7u7N
+**[Axolotl Support Server](https://discord.gg/g2KnUw7u7N)** 
 
-**Download BetterDiscord:** https://betterdiscord.app/
+**[Download BetterDiscord](https://betterdiscord.app/)** 
  
-**Official BetterDiscord Support Server:** https://betterdiscord.app/invite
+**[Official BetterDiscord Support Server](https://betterdiscord.app/invite)** 
