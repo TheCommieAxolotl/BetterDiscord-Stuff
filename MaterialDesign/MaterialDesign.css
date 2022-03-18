@@ -82,6 +82,17 @@ code {
 .theme-dark .keybindShortcut-3zF1P9 span {
     box-shadow: inset 0 -4px 0 var(--08dp);
 }
+
+.pageWrapper-2PwDoS {
+    background-color: var(--background-secondary) !important;
+}
+
+.unreadBar-elBRZx {
+    border-radius: 4px;
+    background-color: var(--brand-experiment);
+    opacity: 1;
+}
+
 /**
     Toasts
 **/
