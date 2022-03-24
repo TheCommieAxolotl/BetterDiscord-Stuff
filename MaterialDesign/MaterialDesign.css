@@ -448,11 +448,11 @@ button.lookFilled-yCfaCM:not(.toolbar-37BrJ5 button, .focusLock-2tveLW button, .
     font-weight: 500;
 }
 
-button.lookFilled-yCfaCM.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ) {
-    background: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%) !important;
-}
 button.lookFilled-yCfaCM.colorBrand-I6CyqQ:not(.footer-31IekZ .button-f2h6uQ) {
     background: var(--brand-experiment-560) !important;
+}
+button.lookFilled-yCfaCM.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ) {
+    background: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%) !important;
 }
 button.lookBlank-21BCro:hover,
 button.lookFilled-yCfaCM:hover,
@@ -525,7 +525,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     color: var(--brand-experiment-400);
 }
 
-.root-g14mjS .colorRed-rQXKgM .contents-3ca1mk {
+.root-g14mjS .footer-31IekZ .colorRed-rQXKgM .contents-3ca1mk {
     color: var(--text-danger) !important;
 }
 
