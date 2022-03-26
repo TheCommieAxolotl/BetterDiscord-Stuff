@@ -93,6 +93,14 @@ code {
     opacity: 1;
 }
 
+.textarea-_59yqs:focus {
+    background-color: var(--08dp);
+}
+
+blockquote {
+    display: flex;
+}
+
 /**
     Toasts
 **/
