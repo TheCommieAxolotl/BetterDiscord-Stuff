@@ -5,8 +5,8 @@
  * @version 0.1.1
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
- * @source
- * @updateurl
+ * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CleanUpConfigs/CleanUpConfigs.plugin.js
+ * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CleanUpConfigs/CleanUpConfigs.plugin.js
  */
 
 module.exports = (() => {
@@ -19,7 +19,7 @@ module.exports = (() => {
                     discord_id: "538487970408300544",
                 },
             ],
-            github_raw: "",
+            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CleanUpConfigs/CleanUpConfigs.plugin.js",
             version: "0.1.1",
             description: " Check and remove config files that don't have a matching Plugin. Thanks to Strencher for the functions to be able to patch settings.",
         },
