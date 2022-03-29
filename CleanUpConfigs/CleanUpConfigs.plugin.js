@@ -1,7 +1,7 @@
 /**
  * @name CleanUpConfigs
  * @author TheCommieAxolotl#0001
- * @description Check and remove config files that don't have a matching Plugin. Thanks to Strencher for the functions to be able to patch settings.
+ * @description Check and remove config files that don't have a matching Plugin. Thanks to Strencher's ShowSessions for the functions to be able to patch settings.
  * @version 0.1.1
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
