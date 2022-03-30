@@ -2,10 +2,10 @@
  * @name CleanUpConfigs
  * @author TheCommieAxolotl#0001
  * @description Check and remove config files that don't have a matching Plugin. Thanks to Strencher's ShowSessions for the functions to be able to patch settings.
- * @version 0.1.1
+ * @version 0.1.2
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
- * @source https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CleanUpConfigs/CleanUpConfigs.plugin.js
+ * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs
  * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CleanUpConfigs/CleanUpConfigs.plugin.js
  */
 
@@ -20,7 +20,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CleanUpConfigs/CleanUpConfigs.plugin.js",
-            version: "0.1.1",
+            version: "0.1.2",
             description: " Check and remove config files that don't have a matching Plugin. Thanks to Strencher for the functions to be able to patch settings.",
         },
 
