@@ -290,7 +290,7 @@ button.lookFilled-yCfaCM {
     background-color: #615f45;
 }
 .groupStart-3Mlgv1.cozy-VmLDNB[data-is-author-self="true"] .contents-2MsGLg,
-.groupStart-3Mlgv1.cozy-VmLDNB[data-is-author-self="true"]:not(.groupStart-3Mlgv1) .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
+.cozy-VmLDNB:not(.groupStart-3Mlgv1)[data-is-author-self="true"] .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
     background-color: var(--brand-experiment-30a);
     color: #dde9f9;
     border-radius: 0 4px 4px 4px;
