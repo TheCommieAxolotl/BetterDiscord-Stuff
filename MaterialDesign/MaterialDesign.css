@@ -280,6 +280,9 @@ button.lookFilled-yCfaCM {
     position: relative;
     overflow: visible;
 }
+.contents-2MsGLg img.avatar-2e8lTP.clickable-31pE3P {
+    left: -55px;
+}
 .mentioned-Tre-dv .contents-2MsGLg {
     background-color: hsla(54, calc(var(--saturation-factor, 1) * 84%), 75%, 0.3);
 }
