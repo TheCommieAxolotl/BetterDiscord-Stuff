@@ -188,7 +188,7 @@ blockquote {
 .content-1jQy2l {
     box-shadow: var(--02dpShadow);
 }
-.cozyMessage-1DWF9U .contents-2MsGLg > .markup-eYLPri:not(:empty) {
+.cozyMessage-1DWF9U .contents-2MsGLg {
     box-shadow: var(--04dpShadow);
 }
 
@@ -269,7 +269,7 @@ button.lookFilled-yCfaCM {
     border-radius: 26px;
     padding: 4px 6px;
 }
-.cozyMessage-1DWF9U .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
+.cozyMessage-1DWF9U .contents-2MsGLg {
     background-color: var(--04dp);
     display: inline-block;
     max-width: 650px;
@@ -279,10 +279,10 @@ button.lookFilled-yCfaCM {
     position: relative;
     overflow: visible;
 }
-.mentioned-Tre-dv .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
+.mentioned-Tre-dv .contents-2MsGLg {
     background-color: hsla(54, calc(var(--saturation-factor, 1) * 84%), 75%, 0.3);
 }
-.cozy-VmLDNB[data-is-author-self="true"] .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
+.cozy-VmLDNB[data-is-author-self="true"] .contents-2MsGLg {
     background-color: var(--brand-experiment-30a);
     color: #dde9f9;
     border-radius: 0 4px 4px 4px;
