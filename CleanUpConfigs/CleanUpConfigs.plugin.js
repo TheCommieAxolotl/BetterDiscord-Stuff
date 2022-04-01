@@ -2,7 +2,7 @@
  * @name CleanUpConfigs
  * @author TheCommieAxolotl#0001
  * @description Check and remove config files that don't have a matching Plugin. Thanks to Strencher's ShowSessions for the functions to be able to patch settings.
- * @version 0.1.2
+ * @version 0.1.3
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs
@@ -20,7 +20,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CleanUpConfigs/CleanUpConfigs.plugin.js",
-            version: "0.1.2",
+            version: "0.1.3",
             description: " Check and remove config files that don't have a matching Plugin. Thanks to Strencher for the functions to be able to patch settings.",
         },
 
@@ -31,6 +31,13 @@ module.exports = (() => {
                 name: "Log Items To Console",
                 note: "Logs the Items to be deleted to the console.",
                 value: false,
+            },
+        ],
+        changelog: [
+            {
+                title: "Fixed",
+                type: "changed",
+                items: ["Will no longer delete ChannelTabs configs"],
             },
         ],
     };
@@ -97,11 +104,9 @@ module.exports = (() => {
                         margin-bottom: 10px;
                         font-size: 18px;
                     }
-
                     .CleanUpConfigs-bd-logo {
                         width: 14px;
                     }
-
                     .CleanUpConfigs-header {
                         display: flex;
                         gap: 4px;
@@ -261,7 +266,7 @@ module.exports = (() => {
                                                       this.cfiles.forEach((p) => {
                                                           let n = p.replace(".config.json", "");
 
-                                                          if (!plugins.hasOwnProperty(n) && !BdApi.Plugins.get(n)) {
+                                                          if (!plugins.hasOwnProperty(n) && !BdApi.Plugins.get(n) && !n.toLowerCase().includes("channeltabs")) {
                                                               if (this.settings.debug) Logger.log(`Marked ${n} config to delete.`);
 
                                                               toDel = [...toDel, n];
