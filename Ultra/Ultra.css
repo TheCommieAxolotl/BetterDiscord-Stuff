@@ -508,6 +508,8 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-21yXnu.size24-17l95E,
 
 .header-3OsQeK {
     height: 70px;
+    display: flex;
+    align-items: center;
 }
 
 .name-3Uvkvr {
