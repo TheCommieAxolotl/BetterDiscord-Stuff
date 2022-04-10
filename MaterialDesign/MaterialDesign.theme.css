@@ -1,11 +1,12 @@
 /**
  * @name MaterialDesign
- * @version 0.9.6
+ * @version 0.9.7
  * @author TheCommieAxolotl#0001
  * @authorId 538487970408300544
  * @description A clean theme inspired by Google's Material Design
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/MaterialDesign
  * @website https://thecommieaxolotl.github.io/BetterDiscord-Stuff/
+ * @license MIT
  * @invite g2KnUw7u7N
 */
 
@@ -19,8 +20,8 @@
 /* Source */
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/MaterialDesign/MaterialDesign.css");
 :root {
-    --version: "0.9.6";
-    --version0_9_6: none;
+    --version: "0.9.7";
+    --version0_9_7: none;
     --font: "Roboto";
     --font-code: "Source Code Pro";
     --01dpShadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
@@ -62,7 +63,8 @@
     --scrollbar-thin-thumb: var(--12dp); /* 12dp */
     --scrollbar-thin-track: transparent;
     --scrollbar-auto-thumb: var(--12dp); /* 12dp */
-    --scrollbar-auto-track: var(--04dp);
+    --scrollbar-auto-track: var(--04dp); /* 04dp */
+    --input-background: var(--08dp); /* 08dp */
 
     /* Brand Experiment */
     --brand-experiment: hsl(264, calc(var(--saturation-factor, 1) * 84%), 75%);
@@ -113,3 +115,13 @@
 }
 
 /* Made By The Commie Axolotl */
+
+/* @var primary: red */
+
+/* * {
+    background: -primary;
+}
+
+* {
+    color: -primary !important;
+} */
