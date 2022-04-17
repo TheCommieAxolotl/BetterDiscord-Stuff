@@ -677,6 +677,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
 .bd-addon-list .bd-addon-card {
     border-radius: 20px;
     margin-bottom: 30px;
+    background: var(--12dp);
 }
 
 .bd-addon-list .bd-addon-header {
