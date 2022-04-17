@@ -62,14 +62,7 @@
 .layer-3QrUeG::before,
 .layer-86YKbF::before {
     content: "Discord";
-    background: linear-gradient(
-        0deg,
-        rgb(41 41 41) 0%,
-        rgb(132 132 132) 1%,
-        rgb(185 185 185) 51%,
-        rgba(228, 230, 228, 1) 98%,
-        rgba(226, 230, 243, 1) 100%
-    );
+    background: linear-gradient(0deg, rgb(41 41 41) 0%, rgb(132 132 132) 1%, rgb(185 185 185) 51%, rgba(228, 230, 228, 1) 98%, rgba(226, 230, 243, 1) 100%);
     display: block;
     color: black;
     font-size: 14px;
@@ -84,14 +77,7 @@
 .layer-3QrUeG:not(.baseLayer-35bLyl)::before,
 .layer-86YKbF:not(.baseLayer-W6S8cY)::before {
     content: "Discord Preferences";
-    background: linear-gradient(
-        0deg,
-        rgb(41 41 41) 0%,
-        rgb(132 132 132) 1%,
-        rgb(185 185 185) 51%,
-        rgba(228, 230, 228, 1) 98%,
-        rgba(226, 230, 243, 1) 100%
-    );
+    background: linear-gradient(0deg, rgb(41 41 41) 0%, rgb(132 132 132) 1%, rgb(185 185 185) 51%, rgba(228, 230, 228, 1) 98%, rgba(226, 230, 243, 1) 100%);
     display: block;
     color: black;
     font-size: 14px;
@@ -285,6 +271,10 @@ textarea {
     top: 1px;
 }
 
+.topSection-13QKHs .profileBannerPremium-KD60EB {
+    width: 100%;
+}
+
 .peopleListItem-2nzedh,
 .peopleListItem-u6dGxF {
     width: 40%;
@@ -399,14 +389,8 @@ textarea {
     left: -190px;
 }
 
-.theme-dark
-    .menu-3sdvDG
-    .labelContainer-1BLJti
-    .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT),
-.theme-dark
-    .menu-1QACrS
-    .labelContainer-2vJzYL
-    .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
+.theme-dark .menu-3sdvDG .labelContainer-1BLJti .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT),
+.theme-dark .menu-1QACrS .labelContainer-2vJzYL .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
     font-weight: normal;
     padding: 0px;
     color: #f7ede6;
@@ -420,14 +404,8 @@ textarea {
     font-weight: normal;
 }
 
-.theme-light
-    .menu-3sdvDG
-    .labelContainer-1BLJti
-    .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT),
-.theme-light
-    .menu-1QACrS
-    .labelContainer-2vJzYL
-    .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
+.theme-light .menu-3sdvDG .labelContainer-1BLJti .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT),
+.theme-light .menu-1QACrS .labelContainer-2vJzYL .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
     font-weight: normal;
     padding: 0px;
     font-size: 10pt;
