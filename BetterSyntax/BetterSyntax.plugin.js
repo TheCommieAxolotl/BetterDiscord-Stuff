@@ -402,7 +402,7 @@ module.exports = (() => {
                                                                 children: [
                                                                     React.createElement("path", {
                                                                         fill: "currentColor",
-                                                                        d: "M 12 2 C 6.486 2 2 6.487 2 12 C 2 17.515 6.486 22 12 22 C 17.514 22 22 17.515 22 12 C 22 6.487 17.514 2 12 2 M6.5 8Q6.5 7 7.5 7L11.5 7Q12.5 7 12.5 8T11.5 9L7.5 9Q6.5 9 6.5 8M13.5 8Q13.5 7 14.5 7 15.5 7 15.5 8T14.5 9 13.5 8zM6.5 11Q6.5 10 7.5 10L8.5 10Q9.5 10 9.5 11T8.5 12L7.5 12Q6.5 12 6.5 11M10.5 11Q10.5 10 11.5 10L15.5 10Q16.5 10 16.5 11T15.5 12L11.5 12Q10.5 12 10.5 11M6.5 14Q6.5 13 7.5 13L11.5 13Q12.5 13 12.5 14T11.5 15L7.5 15Q6.5 15 6.5 14M13.5 14Q13.5 13 14.5 13L17.5 13Q18.5 13 18.5 14T17.5 15L14.5 15Q13.5 15 13.5 14M6.5 17Q6.5 16 7.5 16L9.5 16Q10.5 16 10.5 17T9.5 18L7.5 18Q6.5 18 6.5 17",
+                                                                        d: "M6.5 8Q6.5 7 7.5 7L11.5 7Q12.5 7 12.5 8T11.5 9L7.5 9Q6.5 9 6.5 8M13.5 8Q13.5 7 14.5 7 15.5 7 15.5 8T14.5 9 13.5 8zM6.5 11Q6.5 10 7.5 10L8.5 10Q9.5 10 9.5 11T8.5 12L7.5 12Q6.5 12 6.5 11M10.5 11Q10.5 10 11.5 10L15.5 10Q16.5 10 16.5 11T15.5 12L11.5 12Q10.5 12 10.5 11M6.5 14Q6.5 13 7.5 13L11.5 13Q12.5 13 12.5 14T11.5 15L7.5 15Q6.5 15 6.5 14M13.5 14Q13.5 13 14.5 13L17.5 13Q18.5 13 18.5 14T17.5 15L14.5 15Q13.5 15 13.5 14M6.5 17Q6.5 16 7.5 16L9.5 16Q10.5 16 10.5 17T9.5 18L7.5 18Q6.5 18 6.5 17",
                                                                     }),
                                                                 ],
                                                             }),
@@ -426,7 +426,7 @@ module.exports = (() => {
                                                                 children: [
                                                                     React.createElement("path", {
                                                                         fill: "currentColor",
-                                                                        d: "M12 2C6.486 2 2 6.487 2 12 2 17.515 6.486 22 12 22 17.514 22 22 17.515 22 12 22 6.487 17.514 2 12 2ZM7 19Q6 19 6 18C6 8 6 10 6 6Q6 5 7 5h6q1 0 1 1L15 6h2q1 0 1 1v11q0 1-1 1c-2 0-2 0-3 0m0-2h1q1 0 1-1V15 9Q16 8 15 8h-1m-3 9q1 0 1-1V8Q12 7 11 7H9Q8 7 8 8v8q0 1 1 1z",
+                                                                        d: "M12 2ZM7 19Q6 19 6 18C6 8 6 10 6 6Q6 5 7 5h6q1 0 1 1L15 6h2q1 0 1 1v11q0 1-1 1c-2 0-2 0-3 0m0-2h1q1 0 1-1V15 9Q16 8 15 8h-1m-3 9q1 0 1-1V8Q12 7 11 7H9Q8 7 8 8v8q0 1 1 1z",
                                                                     }),
                                                                 ],
                                                             }),
@@ -462,7 +462,7 @@ module.exports = (() => {
                                                                 children: [
                                                                     React.createElement("path", {
                                                                         fill: "currentColor",
-                                                                        d: "M 12,2 C 6.486,2 2,6.487 2,12 2,17.515 6.486,22 12,22 17.514,22 22,17.515 22,12 22,6.487 17.514,2 12,2 M 6,9 h 12 l -6,7 z",
+                                                                        d: "M6 9h12l-6 7z",
                                                                     }),
                                                                 ],
                                                             }),
@@ -475,7 +475,7 @@ module.exports = (() => {
                               })
                           });
 
-                        const buttonsCSS = `.bettersyntax-buttons{margin-left:auto;margin-top:3px;height:17.5px;width:fit-content}.code-button{display:inline-flex;background-repeat:no-repeat;cursor:pointer;height:17.5px;width:17.5px}.code-button:not(.code-button:nth-child(3)){padding-right:5px}.bettersyntax-collapse{transition:transform 0.2s ease}.collapsed .bettersyntax-collapse{transform:rotate(180deg)}pre code.hljs + .bettersyntax-buttons{background:transparent !important}`;
+                        const buttonsCSS = `.code-button .icon > path {color: var(--background-primary);}.code-button {background: currentColor;border-radius: 10px;}.bettersyntax-buttons{margin-left:auto;margin-top:3px;height:17.5px;width:fit-content}.code-button{display:inline-flex;background-repeat:no-repeat;cursor:pointer;height:17.5px;width:17.5px}.code-button:not(.code-button:nth-child(3)){margin-right:5px}.bettersyntax-collapse{transition:transform 0.2s ease}.collapsed .bettersyntax-collapse{transform:rotate(180deg)}pre code.hljs + .bettersyntax-buttons{background:transparent !important}`;
                         BdApi.injectCSS("BetterSyntaxButtons", buttonsCSS);
                       }
                   };
