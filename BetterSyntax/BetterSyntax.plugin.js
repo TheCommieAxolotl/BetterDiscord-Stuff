@@ -1,7 +1,7 @@
 /**
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
- * @description Lets you edit sytnax highligting with an easy interface and adds some useful buttons.
+ * @description Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
  * @version 2.0.1
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
@@ -36,7 +36,7 @@ module.exports = (() => {
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
             version: "2.0.1",
-            description: "Lets you edit syntax highlighting with an easy interface and adds some useful buttons.",
+            description: "Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.",
         },
 
         defaultConfig: [
