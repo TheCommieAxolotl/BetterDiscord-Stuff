@@ -225,11 +225,25 @@ blockquote {
     box-shadow: var(--04dpShadow);
     transition: all 0.2s ease;
 }
+
+.interactive-iyXY_x {
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    margin-block: 3px;
+}
+
 .item-1OdjEX.selected-g-kMVV,
 .modeSelected-3DmyhH .content-1gYQeQ,
-.modeSelected-3DmyhH:hover .content-1gYQeQ {
+.modeSelected-3DmyhH:hover .content-1gYQeQ,
+.interactive-iyXY_x.interactiveSelected-29CP8y.selected-3veCBZ {
     box-shadow: var(--08dpShadow) !important;
     transition: all 0.2s ease;
+}
+
+.interactive-1vLZ_I:focus-within,
+.interactive-1vLZ_I:hover {
+    background-color: var(--04dp);
+    box-shadow: var(--04dpShadow) !important;
 }
 
 .top-K_jibn .themed-2-lozF.item-3XjbnG:hover,
