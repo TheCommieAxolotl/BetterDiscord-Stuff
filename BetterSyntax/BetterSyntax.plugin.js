@@ -2,7 +2,7 @@
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
  * @description Lets you edit sytnax highligting with an easy interface and adds some useful buttons.
- * @version 2.0.0
+ * @version 2.0.1
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
@@ -35,7 +35,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
-            version: "2.0.0",
+            version: "2.0.1",
             description: "Lets you edit syntax highlighting with an easy interface and adds some useful buttons.",
         },
 
@@ -236,14 +236,9 @@ module.exports = (() => {
 
         changelog: [
             {
-                title: "Added",
-                type: "added",
-                items: ["Languages Button", "Font Settings"],
-            },
-            {
-                title: "Improved",
-                type: "improved",
-                items: ["Patching", "Slightly Better Styling"],
+                title: "Fixed",
+                type: "fixed",
+                items: ["Fixed Settings"],
             },
         ],
     };
@@ -335,10 +330,10 @@ module.exports = (() => {
                               this.injectCSS();
                           });
 
-                          return [
-                              tip,
-                              panel.getElement()
-                            ]
+                          let newPanel = panel.getElement()
+                          newPanel.insertBefore(tip, newPanel.firstChild);
+
+                          return newPanel
                       }
 
                       injectCSS() {
@@ -482,7 +477,7 @@ module.exports = (() => {
                               })
                           });
 
-                        const buttonsCSS = `pre code.hljs + .bettersyntax-buttons {background: transparent !important;}.bettersyntax-buttons {margin-left: auto; margin-top: 3px; height: 17.5px; width: fit-content;} .code-button {display: inline-flex; background-repeat: no-repeat; cursor: pointer; height: 17.5px; width: 17.5px;}.code-button:not(.code-button:nth-child(3)) {padding-right: 5px;} .bettersyntax-collapse{transition:transform 0.2s ease}.collapsed .bettersyntax-collapse{transform:rotate(180deg)}`;
+                        const buttonsCSS = `pre > code.hljs + .bettersyntax-buttons {background: transparent !important;}.bettersyntax-buttons {margin-left: auto; margin-top: 3px; height: 17.5px; width: fit-content;} .code-button {display: inline-flex; background-repeat: no-repeat; cursor: pointer; height: 17.5px; width: 17.5px;}.code-button:not(.code-button:nth-child(3)) {padding-right: 5px;} .bettersyntax-collapse{transition:transform 0.2s ease}.collapsed .bettersyntax-collapse{transform:rotate(180deg)}`;
                         BdApi.injectCSS("buttons", buttonsCSS);
                       }
                   };
