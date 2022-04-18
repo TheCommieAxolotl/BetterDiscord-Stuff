@@ -2,7 +2,7 @@
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
  * @description Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
- * @version 2.0.1
+ * @version 2.0.2
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
@@ -35,7 +35,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
-            version: "2.0.1",
+            version: "2.0.2",
             description: "Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.",
         },
 
@@ -236,9 +236,9 @@ module.exports = (() => {
 
         changelog: [
             {
-                title: "Fixed",
-                type: "fixed",
-                items: ["Fixed Settings"],
+                title: "Improved",
+                type: "improved",
+                items: ["Some More Maintainable Styles", "Wont flood console with Logs"],
             },
         ],
     };
@@ -292,6 +292,7 @@ module.exports = (() => {
                           Themes.forEach((theme) => BdApi.clearCSS(theme.value));
 
                           BdApi.clearCSS("BetterSyntaxCSS");
+                          BdApi.clearCSS("BetterSyntaxButtons");
                           Patcher.unpatchAll();
                       }
 
@@ -326,19 +327,18 @@ module.exports = (() => {
                           tip.classList.add("bettersyntax-tip");
 
                           panel.addListener(() => {
-                              Logger.log("Called");
                               this.injectCSS();
                           });
 
-                          let newPanel = panel.getElement()
+                          let newPanel = panel.getElement();
                           newPanel.insertBefore(tip, newPanel.firstChild);
 
-                          return newPanel
+                          return newPanel;
                       }
 
                       injectCSS() {
                           const editorTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:${this.settings.categoryEditor.color1}!important}.hljs-function .hljs-title{color:${this.settings.categoryEditor.color2}!important}code.hljs{background-color:${this.settings.categoryEditor.background}}.hljs-selector-class{color:${this.settings.categoryEditor.color5}}.hljs-number{color:${this.settings.categoryEditor.color6}}.hljs-attribute{color:${this.settings.categoryEditor.color7}}.hljs-built_in{color:${this.settings.categoryEditor.color3}}.css .hljs-built_in{color:${this.settings.categoryEditor.color4}}.hljs, .hljs + .bettersyntax-buttons{color:${this.settings.categoryEditor.defaultColor}}.hljs-meta{color:${this.settings.categoryEditor.color8}}.hljs-string{color:${this.settings.categoryEditor.stringColor}}.hljs-literal{color:${this.settings.categoryEditor.color9}}.hljs-selector-pseudo{color:${this.settings.categoryEditor.color10}}.hljs-comment{color:${this.settings.categoryEditor.commentColor}}.hljs-bullet,.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol{color:${this.settings.categoryEditor.other}}`;
-                          const BetterSyntaxCSS = `@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@550&display=swap");@import url("${this.settings.fontImport}"); .bettersyntax-tip{color: var(--header-secondary);font-weight: 500;font-family: var(--font-display);text-transform: uppercase;font-size: 12px;margin-bottom:10px;}code{font-size: ${this.settings.fontSize || "0.875rem"} !important;font-family: "${this.settings.fontName}"}.hljs{border-radius:4px;margin-bottom:10px !important;border: none !important;} .collapsed > .hljs * {color: transparent !important;} .collapsed > .hljs {color: transparent !important;min-height: 28px; max-height: 28px; font-size: 0;display: flex;} .collapsed > .hljs .bettersyntax-buttons {margin-right: 7px;margin-top: 6px;pointer-events: all;top: 10px;} .collapsed > .hljs::before {color: white; content: "Collapsed codeblock";width: 76%;height: 28px;text-align: center;font-size: 10pt;position: absolute;padding-top: 5.5px;font-family: var(--font-primary);font-weight: 500;} .layerContainer-2v_Sit code.hljs {margin:15px;}`;
+                          const BetterSyntaxCSS = `@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@550&display=swap");@import url("${this.settings.fontImport}");.bettersyntax-tip{color:var(--header-secondary);font-weight:500;font-family:var(--font-display);text-transform:uppercase;font-size:12px;margin-bottom:10px}code.hljs{font-size:${this.settings.fontSize || "0.875rem"};font-family:"${this.settings.fontName}"}.hljs{border-radius:4px;margin-bottom:10px !important;border:none !important}.collapsed > .hljs,.collapsed > .hljs *{color:transparent !important}.collapsed > .hljs{min-height:28px;max-height:28px;font-size:0;display:flex}.collapsed > .hljs .bettersyntax-buttons{margin-right:7px;margin-top:6px;pointer-events:all;top:10px}.collapsed > .hljs::before{color:white;content:"Collapsed codeblock";width:76%;height:28px;text-align:center;font-size:10pt;position:absolute;padding-top:5.5px;font-family:var(--font-primary);font-weight:500}.layerContainer-2v_Sit code.hljs{margin:15px}`;
 
                           BdApi.injectCSS("BetterSyntaxCSS", BetterSyntaxCSS);
 
@@ -372,8 +372,6 @@ module.exports = (() => {
                               BdApi.injectCSS("hljslink", `@import url("${this.settings.categoryLink.link}");`);
                               Themes.forEach((theme) => BdApi.clearCSS(theme.value));
                           }
- 
-                          Logger.log("Injected");
                       }
 
                       async addButtons() {
@@ -477,8 +475,8 @@ module.exports = (() => {
                               })
                           });
 
-                        const buttonsCSS = `pre > code.hljs + .bettersyntax-buttons {background: transparent !important;}.bettersyntax-buttons {margin-left: auto; margin-top: 3px; height: 17.5px; width: fit-content;} .code-button {display: inline-flex; background-repeat: no-repeat; cursor: pointer; height: 17.5px; width: 17.5px;}.code-button:not(.code-button:nth-child(3)) {padding-right: 5px;} .bettersyntax-collapse{transition:transform 0.2s ease}.collapsed .bettersyntax-collapse{transform:rotate(180deg)}`;
-                        BdApi.injectCSS("buttons", buttonsCSS);
+                        const buttonsCSS = `.bettersyntax-buttons{margin-left:auto;margin-top:3px;height:17.5px;width:fit-content}.code-button{display:inline-flex;background-repeat:no-repeat;cursor:pointer;height:17.5px;width:17.5px}.code-button:not(.code-button:nth-child(3)){padding-right:5px}.bettersyntax-collapse{transition:transform 0.2s ease}.collapsed .bettersyntax-collapse{transform:rotate(180deg)}pre code.hljs + .bettersyntax-buttons{background:transparent !important}`;
+                        BdApi.injectCSS("BetterSyntaxButtons", buttonsCSS);
                       }
                   };
               };
