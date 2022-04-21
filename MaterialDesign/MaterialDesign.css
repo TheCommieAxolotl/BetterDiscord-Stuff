@@ -25,6 +25,7 @@
 svg.circleIcon-3489FI {
     color: var(--brand-experiment) !important;
 }
+
 .circleIconButton-1VxDrg.selected-2r1Hvo,
 .invitetracker-hub:hover {
     background-color: var(--brand-experiment-20a) !important;
@@ -75,6 +76,7 @@ code {
 .container-2McqkF {
     background-color: var(--24dp) !important;
 }
+
 .option-ayUoaq:after {
     background: transparent !important;
 }
@@ -311,6 +313,7 @@ button.lookFilled-yCfaCM {
     border-radius: 26px;
     padding: 4px 6px;
 }
+
 .groupStart-3Mlgv1.cozyMessage-1DWF9U .contents-2MsGLg,
 .cozyMessage-1DWF9U:not(.groupStart-3Mlgv1) .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
     background-color: var(--04dp);
@@ -323,13 +326,16 @@ button.lookFilled-yCfaCM {
     position: relative;
     overflow: visible;
 }
+
 .contents-2MsGLg img.avatar-2e8lTP.clickable-31pE3P {
     left: -55px;
 }
+
 .groupStart-3Mlgv1.mentioned-Tre-dv .contents-2MsGLg,
 .mentioned-Tre-dv:not(.groupStart-3Mlgv1) .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
     background-color: #615f45;
 }
+
 .groupStart-3Mlgv1.cozy-VmLDNB[data-is-author-self="true"] .contents-2MsGLg,
 .cozy-VmLDNB:not(.groupStart-3Mlgv1)[data-is-author-self="true"] .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
     background-color: var(--brand-experiment-30a);
@@ -392,6 +398,7 @@ button.lookFilled-yCfaCM {
 .submenuPaddingContainer-_k62dJ {
     padding: 0 4px;
 }
+
 .iconContainer-1-SsTR:not(.submenuContainer-3EVTeH .iconContainer-1-SsTR) {
     order: -1;
     margin: 0;
@@ -640,11 +647,13 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
 .item-3XjbnG.selected-g-kMVV {
     background: var(--16dp) !important;
 }
+
 .modeSelected-3DmyhH .content-1gYQeQ,
 .modeSelected-3DmyhH:hover .content-1gYQeQ {
     transition: all 0.2s ease;
     background: var(--08dp);
 }
+
 .wrapper-NhbLHG:not(.modeSelected-3DmyhH):hover .content-1gYQeQ {
     background: var(--04dp);
     transition: all 0.2s ease;
@@ -654,6 +663,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     background: var(--08dp);
     transition: all 0.2s ease;
 }
+
 .clickable-28SzVr:hover .layout-1qmrhw {
     background: var(--04dp);
     transition: all 0.2s ease;
@@ -671,6 +681,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     background-color: var(--brand-experiment);
     transition: all 0.2s ease;
 }
+
 .wrapper-NhbLHG.modeSelected-3DmyhH::before,
 .wrapper-NhbLHG.modeSelected-3DmyhH:hover::before {
     content: "";
@@ -684,6 +695,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     background-color: var(--brand-experiment);
     transition: all 0.2s ease;
 }
+
 .wrapper-NhbLHG:hover::before {
     left: 0;
     transition: all 0.2s ease;
@@ -729,6 +741,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     display: flex;
     flex-direction: column;
 }
+
 .bd-switch input:checked + .bd-switch-body {
     --switch-color: var(--brand-experiment-530);
 }
@@ -747,6 +760,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     border-radius: 50px;
     font-weight: 500;
 }
+
 .bd-button:hover {
     background: var(--brand-experiment-530);
 }
