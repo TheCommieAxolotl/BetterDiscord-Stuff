@@ -105,6 +105,18 @@ blockquote {
     display: flex;
 }
 
+.accountProfileCard-lbN7n- {
+    background-color: var(--04dp);
+}
+
+.accountProfileCard-lbN7n- .background-3d_SjE {
+    background-color: var(--08dp);
+}
+
+.accountProfileCard-lbN7n- .fieldList-in8WkP {
+    background-color: var(--08dp);
+}
+
 /**
     Toasts
 **/
@@ -192,6 +204,7 @@ blockquote {
 .content-1jQy2l {
     box-shadow: var(--02dpShadow);
 }
+
 .groupStart-3Mlgv1.cozyMessage-1DWF9U .contents-2MsGLg,
 .cozyMessage-1DWF9U:not(.groupStart-3Mlgv1) .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
     box-shadow: var(--04dpShadow);
@@ -212,6 +225,7 @@ blockquote {
     box-shadow: var(--08dpShadow);
     transition: all 0.2s ease;
 }
+
 .clickable-28SzVr:hover .layout-1qmrhw {
     box-shadow: var(--04dpShadow);
     transition: all 0.2s ease;
@@ -221,6 +235,7 @@ blockquote {
     box-shadow: var(--08dpShadow);
     transition: all 0.2s ease;
 }
+
 .wrapper-NhbLHG:hover .content-1gYQeQ {
     box-shadow: var(--04dpShadow);
     transition: all 0.2s ease;
@@ -230,6 +245,14 @@ blockquote {
     border-radius: 50px;
     transition: all 0.2s ease;
     margin-block: 3px;
+}
+
+.accountProfileCard-lbN7n- {
+    box-shadow: var(--04dpShadow);
+}
+
+.accountProfileCard-lbN7n- .background-3d_SjE {
+    box-shadow: var(--08dpShadow);
 }
 
 .item-1OdjEX.selected-g-kMVV,
