@@ -293,6 +293,8 @@ module.exports = (() => {
 
                           BdApi.clearCSS("BetterSyntaxCSS");
                           BdApi.clearCSS("BetterSyntaxButtons");
+                          BdApi.clearCSS("BetterSyntaxEditorTheme");
+                          BdApi.clearCSS("BetterSyntaxHljsLink");
                           Patcher.unpatchAll();
                       }
 
@@ -350,27 +352,20 @@ module.exports = (() => {
                                       BdApi.clearCSS(theme.value);
                                   }
                               });
-                              BdApi.clearCSS("editor");
-                          }
-
-                          if (!this.settings.categoryPresets.enablePresets) {
-                              Themes.forEach((theme) => {
-                                  if (this.settings.categoryPresets.theme == theme.value) {
-                                      BdApi.injectCSS(theme.value, theme.css);
-                                  } else {
-                                      BdApi.clearCSS(theme.value);
-                                  }
-                              });
+                          } else {
+                              Themes.forEach((theme) => BdApi.clearCSS(theme.value));
                           }
 
                           if (this.settings.categoryEditor.enableEditor) {
-                              BdApi.injectCSS("editor", editorTheme);
-                              Themes.forEach((theme) => BdApi.clearCSS(theme.value));
+                              BdApi.injectCSS("BetterSyntaxEditorTheme", editorTheme);
+                          } else {
+                              BdApi.clearCSS("BetterSyntaxEditorTheme");
                           }
 
                           if (this.settings.categoryLink.enableLink) {
-                              BdApi.injectCSS("hljslink", `@import url("${this.settings.categoryLink.link}");`);
-                              Themes.forEach((theme) => BdApi.clearCSS(theme.value));
+                              BdApi.injectCSS("BetterSyntaxHljsLink", `@import url("${this.settings.categoryLink.link}");`);
+                          } else {
+                              BdApi.clearCSS("BetterSyntaxHljsLink");
                           }
                       }
 
