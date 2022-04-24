@@ -222,13 +222,18 @@ textarea {
 .full-motion .wrapper-2vIMkT:hover,
 .toast-1DEQGy,
 .toast-q3Y4wI,
+.root-8LYsGj,
 .scrollableContainer-2NUZem,
 .scrollableContainer-15eg7h,
 .betterMessageLinks.Popout {
     background-color: var(--background-floating) !important;
     backdrop-filter: blur(var(--context-blur));
     border-radius: 7px;
-    box-shadow: inset 0 0 0 1px var(--context-outline);
+    box-shadow: inset 0 0 0 1px var(--context-outline) !important;
+}
+
+.body-1Ukv50, .topSection-13QKHs {
+    background-color: transparent !important;
 }
 
 .guildSection-1EoFKd,
@@ -263,8 +268,7 @@ textarea {
 .banner-2QYc2d,
 .banner-1YaD3N,
 .popoutBanner-3cqRD9 {
-    width: 298px;
-    height: calc(inherit - 1px);
+    width: 100%;
     position: relative;
     left: 1px;
     border-radius: 6px 6px 0px 0px;
