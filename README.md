@@ -26,6 +26,8 @@ Below I have layed out a sort of table of contents for this Repo.
  
 ---
  
+##### If you like what you see, don't forget to give us a ⭐! (We really like them 🙃)
+ 
 **[Axolotl Support Server](https://discord.gg/g2KnUw7u7N)** 
  
- Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
+Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
