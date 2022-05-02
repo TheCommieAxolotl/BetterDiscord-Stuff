@@ -12,3 +12,9 @@
 <img width="660" alt="Modal" src="./assets/4.png">
 
 <img width="660" alt="Discovery" src="./assets/5.png">
+
+---
+
+[BetterDiscord-Stuff](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff) / [MaterialDesign](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/MaterialDesign)
+
+Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)

@@ -9,3 +9,9 @@ A Smooth and Dark theme that is complimented with a touch of colour
 <img width="1440" alt="Server Discovery" src="https://user-images.githubusercontent.com/87679354/146335393-14ca350b-adf4-4737-b721-a306879efe73.png">
 
 <img width="1440" alt="Popout" src="https://user-images.githubusercontent.com/87679354/146334649-0a51573f-8fcc-4d75-941d-333998f53a7a.png">
+
+---
+
+[BetterDiscord-Stuff](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff) / [Ultra](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Ultra)
+
+Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
