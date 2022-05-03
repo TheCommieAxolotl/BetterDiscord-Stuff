@@ -7,6 +7,8 @@
 # BetterDiscord-Stuff
 ### Hi 👋, welcome to the home for all TheCommieAxolotl's BetterDiscord things!
  
+**[Axolotl Support Server](https://discord.gg/5BSWtSM3XU)** 
+ 
 Below I have layed out a sort of table of contents for this Repo.
  
 # Plugins and Themes
@@ -27,7 +29,5 @@ Below I have layed out a sort of table of contents for this Repo.
 ---
  
 ##### If you like what you see, consider giving us a ⭐! (We really like them 🙃)
- 
-**[Axolotl Support Server](https://discord.gg/g2KnUw7u7N)** 
  
 Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
