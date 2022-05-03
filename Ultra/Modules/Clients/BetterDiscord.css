@@ -1,0 +1,4 @@
+.bd-error-modal-header,
+.bd-error-modal-content {
+    background-color: var(--background-secondary) !important;
+}

@@ -1,10 +1,10 @@
 :root {
-    --version: "1.0.5";
+    --version: "1.0.6";
 }
 
 #app-mount .app-2CXKsg::before {
     content: "Your version of Ultra is outdated. Please download the newest version from source";
-    display: var(--version1_0_5, block);
+    display: var(--version1_0_6, block);
     background-color: var(--brand-experiment);
     color: #fff;
     font-size: 14px;
@@ -454,11 +454,6 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-21yXnu.size24-17l95E,
 
 .option-2KkUJO:after {
     display: none;
-}
-
-.bd-error-modal-header,
-.bd-error-modal-content {
-    background-color: var(--background-secondary) !important;
 }
 
 .name-28HaxV,

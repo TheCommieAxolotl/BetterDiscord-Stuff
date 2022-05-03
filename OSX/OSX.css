@@ -45,7 +45,7 @@
 #app-mount .app-2rEoOp::before,
 #app-mount .app-2CXKsg::before {
     content: "Your version of OSX is outdated.";
-    display: var(--version1_0_0, block);
+    display: var(--version1_0_1, block);
     bottom: 90vh;
     right: 1vw;
     position: absolute;
@@ -168,17 +168,6 @@
     margin-top: 5px !important;
 }
 
-.bd-switch input:checked + .bd-switch-body {
-    --switch-color: var(--brand-experiment);
-    --symbol1path: none;
-    --symbol2path: none;
-}
-
-.bd-switch-body {
-    --symbol1path: none;
-    --symbol2path: none;
-}
-
 ::placeholder,
 body,
 button,
@@ -233,7 +222,9 @@ textarea {
     box-shadow: inset 0 0 0 1px var(--context-outline) !important;
 }
 
-.body-1Ukv50, .topSection-13QKHs, .footer-31IekZ, 
+.body-1Ukv50,
+.topSection-13QKHs,
+.footer-31IekZ,
 .scroller-2qwVWY {
     background-color: transparent !important;
 }

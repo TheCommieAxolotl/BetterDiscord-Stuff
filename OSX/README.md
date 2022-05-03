@@ -1,4 +1,4 @@
-# OSX Theme
+# OSX Theme for Discord
 ### Theme that brings some of the best and most memorable parts of MacOS and OSX into 1 theme
 
 # Installation

@@ -1,6 +1,6 @@
 /**
  * @name MaterialDesign
- * @version 0.9.7
+ * @version 0.9.8
  * @author TheCommieAxolotl#0001
  * @authorId 538487970408300544
  * @description A clean theme inspired by Google's Material Design
@@ -18,10 +18,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap");
 
 /* Source */
-@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/MaterialDesign/MaterialDesign.css");
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/MaterialDesign/Clients/betterdiscord.css");
 :root {
-    --version: "0.9.7";
-    --version0_9_7: none;
+    --version: "0.9.8";
+    --version0_9_8: none;
     --font: "Roboto";
     --font-code: "Source Code Pro";
     --01dpShadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);

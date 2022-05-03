@@ -1,0 +1,10 @@
+.bd-switch input:checked + .bd-switch-body {
+    --switch-color: var(--brand-experiment);
+    --symbol1path: none;
+    --symbol2path: none;
+}
+
+.bd-switch-body {
+    --symbol1path: none;
+    --symbol2path: none;
+}

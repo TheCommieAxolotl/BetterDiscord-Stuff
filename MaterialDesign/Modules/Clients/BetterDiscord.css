@@ -1,0 +1,109 @@
+/**
+    Toasts
+**/
+
+@keyframes snackIn {
+    from {
+        transform: scale(0.6) translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(-10px);
+        opacity: 1;
+    }
+}
+@keyframes snackOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.bd-toast {
+    background: var(--background-floating);
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571429em;
+    color: hsla(0, 0%, 100%, 0.87);
+    animation: snackIn 150ms ease-in;
+}
+
+.bd-toast.closing {
+    animation: snackOut 75ms ease-in;
+    opacity: 0;
+}
+
+.bd-toast.icon {
+    background-image: none !important;
+    padding: 14px 16px;
+}
+
+/** 
+    Elevation 
+**/
+
+.bd-addon-list .bd-addon-card {
+    box-shadow: var(--12dpShadow);
+}
+
+.bd-button.bd-view-button.selected {
+    box-shadow: var(--24dpShadow);
+}
+
+.bd-addon-views .bd-view-button:not(.selected):hover {
+    box-shadow: var(--16dpShadow);
+}
+
+/** 
+    Cards
+**/
+
+.bd-addon-list.bd-grid-view {
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+.bd-addon-list .bd-addon-card {
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background: var(--12dp);
+}
+
+.bd-addon-list .bd-addon-header {
+    background: transparent;
+}
+
+.bd-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.bd-switch input:checked + .bd-switch-body {
+    --switch-color: var(--brand-experiment-530);
+}
+
+.bd-switch input:active + .bd-switch-body {
+    --switch-color: var(--brand-experiment-360);
+}
+
+.bd-switch input:checked:active + .bd-switch-body {
+    --switch-color: var(--brand-experiment-560);
+}
+
+.bd-button {
+    background: var(--brand-experiment-530);
+    padding: 6px 12px !important;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.bd-button:hover {
+    background: var(--brand-experiment-530);
+}
+
+.bd-addon-views .bd-view-button.selected {
+    background: var(--brand-experiment-530);
+}

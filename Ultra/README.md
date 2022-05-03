@@ -1,4 +1,4 @@
-# Ultra Theme for BetterDiscord
+# Ultra Theme for Discord
 A Smooth and Dark theme that is complimented with a touch of colour
 
 ## Screenshots
