@@ -531,7 +531,7 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-21yXnu.size24-17l95E,
     max-height: 50vh;
 }
 
-.codeBlockText-311wOq,
+.codeBlockText-28BOxV,
 code {
     font-family: var(--code-font);
 }
@@ -571,8 +571,16 @@ code {
     background-color: var(--background-primary);
 }
 
+.children-3xh0VB:after {
+    display: none;
+}
+
 .auto-2K3UW5::-webkit-scrollbar-thumb {
     display: block;
+}
+
+.container-ZMc96U {
+    background: #101014 !important;
 }
 
 .container-YkUktl,
