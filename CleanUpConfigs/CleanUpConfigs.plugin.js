@@ -91,7 +91,12 @@ module.exports = (() => {
                   const Buttons = BdApi.findModuleByProps("ButtonSizes").default;
                   const ButtonColors = BdApi.findModuleByProps("ButtonSizes").ButtonColors;
                   const ButtonSizes = BdApi.findModuleByProps("ButtonSizes").ButtonSizes;
-                  const Text = BdApi.findModuleByDisplayName("Text");
+                  let Text;
+                  if (DiscordNative.app.getReleaseChannel() == "canary") {
+                      Text = BdApi.findModuleByDisplayName("LegacyText");
+                  } else {
+                      Text = BdApi.findModuleByDisplayName("Text");
+                  }
                   const FormItem = BdApi.findModuleByProps("FormItem");
 
                   const styles = `
