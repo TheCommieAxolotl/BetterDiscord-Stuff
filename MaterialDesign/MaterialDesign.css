@@ -25,6 +25,18 @@
     display: block;
 }
 
+.tabBarItem-30Te4-.selected-g-kMVV.themed-2-lozF {
+    background: var(--brand-experiment-560) !important;
+}
+
+.tabBarItem-30Te4-.themed-2-lozF:hover {
+    background: var(--brand-experiment-20a) !important;
+}
+
+.tabBarItem-30Te4- {
+    margin-right: 20px;
+}
+
 .invitetracker-hub-inner,
 svg.circleIcon-3489FI {
     color: var(--brand-experiment) !important;
