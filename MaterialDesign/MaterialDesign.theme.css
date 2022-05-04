@@ -1,6 +1,6 @@
 /**
  * @name MaterialDesign
- * @version 0.9.8
+ * @version 0.9.89
  * @author TheCommieAxolotl#0001
  * @authorId 538487970408300544
  * @description A clean theme inspired by Google's Material Design
@@ -19,8 +19,9 @@
 
 /* Source */
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/MaterialDesign/Clients/betterdiscord.css");
+
 :root {
-    --version: "0.9.8";
+    --version: "0.9.89";
     --version0_9_8: none;
     --font: "Roboto";
     --font-code: "Source Code Pro";
@@ -36,17 +37,21 @@
 }
 
 .theme-dark {
-    --00dp: #121212;
-    --01dp: #1c1c1c;
-    --02dp: #222222;
-    --03dp: #242424;
-    --04dp: #272727;
-    --06dp: #2c2c2c;
-    --08dp: #2e2d2d;
-    --12dp: #323232;
-    --16dp: #343434;
-    --24dp: #383838;
-    --26dp: #444444;
+    --skin-accent-hue: 264;
+    --skin-background-hue: 0;
+    --skin-background-saturation: 0%;
+
+    --00dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 7%);
+    --01dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 11%);
+    --02dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 13%);
+    --03dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 14%);
+    --04dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 15%);
+    --06dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 17%);
+    --08dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 18%);
+    --12dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 19%);
+    --16dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 20%);
+    --24dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 22%);
+    --26dp: hsl(var(--skin-background-hue), var(--skin-background-saturation), 27%);
 
     --background-primary: var(--02dp); /* 02dp */
     --background-secondary: var(--01dp); /* 01dp */
@@ -67,51 +72,51 @@
     --input-background: var(--08dp); /* 08dp */
 
     /* Brand Experiment */
-    --brand-experiment: hsl(264, calc(var(--saturation-factor, 1) * 84%), 75%);
-    --brand-experiment-100: hsl(264, calc(var(--saturation-factor, 1) * 84%), 98%);
-    --brand-experiment-130: hsl(264, calc(var(--saturation-factor, 1) * 84%), 96.1%);
-    --brand-experiment-160: hsl(264, calc(var(--saturation-factor, 1) * 84%), 94.2%);
-    --brand-experiment-200: hsl(264, calc(var(--saturation-factor, 1) * 84%), 92.3%);
-    --brand-experiment-230: hsl(264, calc(var(--saturation-factor, 1) * 84%), 90.3%);
-    --brand-experiment-260: hsl(264, calc(var(--saturation-factor, 1) * 84%), 88.4%);
-    --brand-experiment-300: hsl(264, calc(var(--saturation-factor, 1) * 84%), 86.5%);
-    --brand-experiment-330: hsl(264, calc(var(--saturation-factor, 1) * 84%), 84.6%);
-    --brand-experiment-360: hsl(264, calc(var(--saturation-factor, 1) * 84%), 82.7%);
-    --brand-experiment-400: hsl(264, calc(var(--saturation-factor, 1) * 84%), 80.8%);
-    --brand-experiment-430: hsl(264, calc(var(--saturation-factor, 1) * 84%), 78.8%);
-    --brand-experiment-460: hsl(264, calc(var(--saturation-factor, 1) * 84%), 76.9%);
-    --brand-experiment-500: hsl(264, calc(var(--saturation-factor, 1) * 84%), 75%);
-    --brand-experiment-530: hsl(264, calc(var(--saturation-factor, 1) * 63%), 69%);
-    --brand-experiment-560: hsl(264, calc(var(--saturation-factor, 1) * 50.4%), 63%);
-    --brand-experiment-600: hsl(264, calc(var(--saturation-factor, 1) * 46%), 57%);
-    --brand-experiment-630: hsl(264, calc(var(--saturation-factor, 1) * 46%), 51%);
-    --brand-experiment-660: hsl(264, calc(var(--saturation-factor, 1) * 46%), 45%);
-    --brand-experiment-700: hsl(264, calc(var(--saturation-factor, 1) * 46%), 39%);
-    --brand-experiment-730: hsl(264, calc(var(--saturation-factor, 1) * 46%), 33%);
-    --brand-experiment-760: hsl(264, calc(var(--saturation-factor, 1) * 46%), 27%);
-    --brand-experiment-800: hsl(264, calc(var(--saturation-factor, 1) * 46%), 21%);
-    --brand-experiment-830: hsl(264, calc(var(--saturation-factor, 1) * 46%), 15%);
-    --brand-experiment-860: hsl(264, calc(var(--saturation-factor, 1) * 46%), 9%);
-    --brand-experiment-900: hsl(264, calc(var(--saturation-factor, 1) * 46%), 3%);
-    --brand-experiment-05a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.05);
-    --brand-experiment-10a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.1);
-    --brand-experiment-15a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.15);
-    --brand-experiment-20a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.2);
-    --brand-experiment-25a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.25);
-    --brand-experiment-30a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.3);
-    --brand-experiment-35a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.35);
-    --brand-experiment-40a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.4);
-    --brand-experiment-45a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.45);
-    --brand-experiment-50a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.5);
-    --brand-experiment-55a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.55);
-    --brand-experiment-60a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.6);
-    --brand-experiment-65a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.65);
-    --brand-experiment-70a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.7);
-    --brand-experiment-75a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.75);
-    --brand-experiment-80a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.8);
-    --brand-experiment-85a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.85);
-    --brand-experiment-90a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.9);
-    --brand-experiment-95a: hsla(264, calc(var(--saturation-factor, 1) * 84%), 75%, 0.95);
+    --brand-experiment: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%);
+    --brand-experiment-100: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 98%);
+    --brand-experiment-130: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 96.1%);
+    --brand-experiment-160: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 94.2%);
+    --brand-experiment-200: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 92.3%);
+    --brand-experiment-230: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 90.3%);
+    --brand-experiment-260: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 88.4%);
+    --brand-experiment-300: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 86.5%);
+    --brand-experiment-330: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 84.6%);
+    --brand-experiment-360: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 82.7%);
+    --brand-experiment-400: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 80.8%);
+    --brand-experiment-430: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 78.8%);
+    --brand-experiment-460: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 76.9%);
+    --brand-experiment-500: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%);
+    --brand-experiment-530: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 63%), 69%);
+    --brand-experiment-560: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 50.4%), 63%);
+    --brand-experiment-600: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 57%);
+    --brand-experiment-630: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 51%);
+    --brand-experiment-660: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 45%);
+    --brand-experiment-700: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 39%);
+    --brand-experiment-730: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 33%);
+    --brand-experiment-760: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 27%);
+    --brand-experiment-800: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 21%);
+    --brand-experiment-830: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 15%);
+    --brand-experiment-860: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 9%);
+    --brand-experiment-900: hsl(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 46%), 3%);
+    --brand-experiment-05a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.05);
+    --brand-experiment-10a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.1);
+    --brand-experiment-15a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.15);
+    --brand-experiment-20a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.2);
+    --brand-experiment-25a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.25);
+    --brand-experiment-30a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.3);
+    --brand-experiment-35a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.35);
+    --brand-experiment-40a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.4);
+    --brand-experiment-45a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.45);
+    --brand-experiment-50a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.5);
+    --brand-experiment-55a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.55);
+    --brand-experiment-60a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.6);
+    --brand-experiment-65a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.65);
+    --brand-experiment-70a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.7);
+    --brand-experiment-75a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.75);
+    --brand-experiment-80a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.8);
+    --brand-experiment-85a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.85);
+    --brand-experiment-90a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.9);
+    --brand-experiment-95a: hsla(var(--skin-accent-hue), calc(var(--saturation-factor, 1) * 84%), 75%, 0.95);
 }
 
 /* Made By The Commie Axolotl */
