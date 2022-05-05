@@ -62,8 +62,8 @@
     --channeltextarea-background: var(--24dp); /* 24dp */
     --background-floating: var(--24dp); /* 24dp */
     --background-modifier-selected: var(--06dp); /* 06dp */
-    --background-modifier-hover: #6b6b6b59;
-    --background-modifier-active: #424242bd;
+    --background-modifier-hover: var(--02dp); /* 02dp */
+    --background-modifier-active: var(--04dp); /* 04dp */
     --background-mentioned: transparent;
     --background-mentioned-hover: #e7c21f04;
     --info-warning-foreground: hsl(54, calc(var(--saturation-factor, 1) * 84%), 75%);
