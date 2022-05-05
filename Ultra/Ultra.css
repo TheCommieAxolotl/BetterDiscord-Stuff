@@ -83,7 +83,7 @@ svg.cursorDefault--wfhy5 {
     height: 15px !important;
 }
 
-[class^="socialLinks-"] + [class^="info-"] [class^="colorMuted-"]:first-child::before {
+[class^="socialLinks-"] + [class^="info-"] span:first-child::before {
     content: "Ultra " var(--version);
     position: relative;
     top: 0px;
