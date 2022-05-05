@@ -521,17 +521,24 @@ button.lookFilled-yCfaCM:not(.toolbar-37BrJ5 button, .focusLock-2tveLW button, .
 button.lookFilled-yCfaCM.colorBrand-I6CyqQ:not(.footer-31IekZ .button-f2h6uQ) {
     background: var(--brand-experiment-560) !important;
 }
+
 button.lookFilled-yCfaCM.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ) {
     background: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%) !important;
 }
+
 button.lookBlank-21BCro:hover,
 button.lookFilled-yCfaCM:hover,
 button.lookLink-15mFoz:hover,
 button.lookOutlined-3yKVGo:hover {
     background: var(--brand-experiment-20a) !important;
 }
+
 button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):hover {
     background: #ff00001c !important;
+}
+
+.addButton-2mlqCW {
+    padding: 0 !important;
 }
 
 .contents-3ca1mk {
