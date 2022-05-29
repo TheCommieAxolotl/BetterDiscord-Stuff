@@ -13,18 +13,26 @@ Below I have layed out a sort of table of contents for this Repo.
  
 # Plugins and Themes
 ## Themes
- - [WinCord](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/WinCord) (Not Updated)
- - [Ultra](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Ultra)
- - [OSX](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/OSX)
- - [MaterialDesign](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/MaterialDesign)
+ - ### [WinCord](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/WinCord)
+    > Deprecated
+ - ### [Ultra](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Ultra)
+     > A Smooth, Black theme
+ - ### [OSX](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/OSX)
+     > Brings the best and most memorable parts of MacOS and OSX into 1 theme
+ - ### [MaterialDesign](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/MaterialDesign)
+     > A clean theme inspired by Google's Material Design
  
 ## Plugins
- - [CleanUpConfigs](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs)
- - [BetterSyntax](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax)
+ - ### [CleanUpConfigs](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs)
+    > Check and remove config files that don't have a matching Plugin.
+ - ### [BetterSyntax](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax)
+    > Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
  
 # Imports and Snippets
- - [DiscordLinks](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Imports/DiscordLinks.css) Makes Official Discord Links display like Discord Components.
- - [UserBadges](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/Imports/UserBadges.css) Template to use for custom CSS Badges.
+ - ### [DiscordLinks](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Imports/DiscordLinks.css) 
+    > Makes Official Discord Links display like Discord Components.
+ - ### [UserBadges](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/Imports/UserBadges.css) 
+    > Template to use for custom CSS Badges.
  
 ---
  
