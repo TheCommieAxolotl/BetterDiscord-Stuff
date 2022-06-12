@@ -7,6 +7,7 @@
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
  * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js
+ * @donate https://github.com/sponsors/thecommieaxolotl
  */
 
 module.exports = (() => {
