@@ -115,6 +115,19 @@ textarea {
     opacity: 1;
 }
 
+.preview-QJ3OG3 .avatar-2e8lTP {
+    left: -53px;
+}
+
+.container-JMJRDf {
+    margin-block: 8px;
+    border-radius: 4px;
+}
+
+.unmask-profile {
+    left: -35px;
+}
+
 .textarea-_59yqs:focus {
     background-color: var(--08dp);
 }
@@ -158,6 +171,51 @@ blockquote {
 }
 
 /**
+    Switches.
+**/
+
+.container-2nx-BQ {
+    border-radius: 50px;
+    border: 3px solid transparent;
+    box-sizing: content-box;
+    transition: all 0.4s ease;
+}
+
+.container-2nx-BQ:not(.checked-25WXMf) {
+    background-color: var(--switch-unchecked-background) !important;
+    border-color: var(--switch-unchecked-color);
+}
+
+.container-2nx-BQ:not(.checked-25WXMf) svg > rect {
+    fill: var(--switch-unchecked-color);
+}
+
+.container-2nx-BQ.checked-25WXMf {
+    background-color: var(--switch-checked-background) !important;
+}
+
+.container-2nx-BQ.checked-25WXMf .slider-32CRPX {
+    left: 15px !important;
+}
+
+.slider-32CRPX {
+    margin: 4.5px;
+    transition: left 0.2s ease;
+    width: 20px;
+    height: 12px;
+    top: -1px;
+}
+
+.container-2nx-BQ.checked-25WXMf .slider-32CRPX > svg > path {
+    fill: black !important;
+}
+
+.container-2nx-BQ {
+    width: 40px;
+    height: 20px;
+}
+
+/**
     Layout 
 **/
 
@@ -193,6 +251,28 @@ blockquote {
 .platform-osx .base-2jDfDU {
     margin-top: 20px;
     border-radius: 4px 0 0 0;
+}
+
+/**
+    Cards
+**/
+.velocity-card {
+    background: var(--04dp);
+    border: 2px solid var(--16dp);
+    border-radius: 21px;
+}
+
+.velocity-card-footer {
+    flex-direction: row-reverse;
+}
+
+.velocity-card .velocity-card-header-wrapper {
+    background: transparent;
+    border-bottom: none;
+}
+
+.velocity-card#MaterialDesign {
+    border-color: var(--brand-experiment);
 }
 
 /**
