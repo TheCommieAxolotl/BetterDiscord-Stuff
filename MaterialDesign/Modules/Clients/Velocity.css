@@ -1,0 +1,21 @@
+/**
+    Cards
+**/
+.velocity-card {
+    background: var(--04dp);
+    border: 2px solid var(--16dp);
+    border-radius: 21px;
+}
+
+.velocity-card-footer {
+    flex-direction: row-reverse;
+}
+
+.velocity-card .velocity-card-header-wrapper {
+    background: transparent;
+    border-bottom: none;
+}
+
+.velocity-card#MaterialDesign {
+    border-color: var(--brand-experiment);
+}

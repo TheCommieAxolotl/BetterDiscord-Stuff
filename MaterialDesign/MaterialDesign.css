@@ -125,7 +125,7 @@ textarea {
 }
 
 .unmask-profile {
-    left: -35px;
+    left: -35px !important;
 }
 
 .textarea-_59yqs:focus {
@@ -251,28 +251,6 @@ blockquote {
 .platform-osx .base-2jDfDU {
     margin-top: 20px;
     border-radius: 4px 0 0 0;
-}
-
-/**
-    Cards
-**/
-.velocity-card {
-    background: var(--04dp);
-    border: 2px solid var(--16dp);
-    border-radius: 21px;
-}
-
-.velocity-card-footer {
-    flex-direction: row-reverse;
-}
-
-.velocity-card .velocity-card-header-wrapper {
-    background: transparent;
-    border-bottom: none;
-}
-
-.velocity-card#MaterialDesign {
-    border-color: var(--brand-experiment);
 }
 
 /**
