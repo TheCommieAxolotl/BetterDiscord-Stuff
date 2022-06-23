@@ -121,6 +121,7 @@ module.exports = {
                 if (props.type !== "codeBlock") return;
 
                 Patcher.after(this.getName(), parRes.props, "render", (newProps, res) => {
+                    res.props.className = "bettersyntax-pre";
                     res.props.children = [
                         res.props.children,
                         React.createElement("div", {

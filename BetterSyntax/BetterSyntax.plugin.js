@@ -279,7 +279,7 @@ module.exports = (() => {
         : (([Plugin, Api]) => {
               const plugin = (Plugin, Api) => {
                   const { Logger, ContextMenu, Patcher, DCM, WebpackModules } = Api;
-                  const { React } = BdApi
+                  const { React } = BdApi;
 
                   const Tooltip = BdApi.findModuleByDisplayName("Tooltip");
 
@@ -325,8 +325,8 @@ module.exports = (() => {
                       getSettingsPanel() {
                           const panel = this.buildSettingsPanel();
                           const tip = document.createElement("div");
- 
-                          tip.innerHTML = ("TIP - if you don't like any of the preset themes, you can make your own in the Editor!");
+
+                          tip.innerHTML = "TIP - if you don't like any of the preset themes, you can make your own in the Editor!";
                           tip.classList.add("bettersyntax-tip");
 
                           panel.addListener(() => {
@@ -341,7 +341,13 @@ module.exports = (() => {
 
                       injectCSS() {
                           const editorTheme = `.hljs-addition,.hljs-keyword,.hljs-selector-tag{color:${this.settings.categoryEditor.color1}!important}.hljs-function .hljs-title{color:${this.settings.categoryEditor.color2}!important}code.hljs{background-color:${this.settings.categoryEditor.background}}.hljs-selector-class{color:${this.settings.categoryEditor.color5}}.hljs-number{color:${this.settings.categoryEditor.color6}}.hljs-attribute{color:${this.settings.categoryEditor.color7}}.hljs-built_in{color:${this.settings.categoryEditor.color3}}.css .hljs-built_in{color:${this.settings.categoryEditor.color4}}.hljs, .hljs + .bettersyntax-buttons{color:${this.settings.categoryEditor.defaultColor}}.hljs-meta{color:${this.settings.categoryEditor.color8}}.hljs-string{color:${this.settings.categoryEditor.stringColor}}.hljs-literal{color:${this.settings.categoryEditor.color9}}.hljs-selector-pseudo{color:${this.settings.categoryEditor.color10}}.hljs-comment{color:${this.settings.categoryEditor.commentColor}}.hljs-bullet,.hljs-link,.hljs-selector-attr,.hljs-subst,.hljs-symbol{color:${this.settings.categoryEditor.other}}`;
-                          const BetterSyntaxCSS = `@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@550&display=swap");@import url("${this.settings.fontImport}");.bettersyntax-tip{color:var(--header-secondary);font-weight:500;font-family:var(--font-display);text-transform:uppercase;font-size:12px;margin-bottom:10px}code.hljs{font-size:${this.settings.fontSize || "0.875rem"};font-family:"${this.settings.fontName}"}.hljs{border-radius:4px;margin-bottom:10px !important;border:none !important}.collapsed > .hljs,.collapsed > .hljs *{color:transparent !important}.collapsed > .hljs{min-height:28px;max-height:28px;font-size:0;display:flex}.collapsed > .hljs .bettersyntax-buttons{margin-right:7px;margin-top:6px;pointer-events:all;top:10px}.collapsed > .hljs::before{color:white;content:"Collapsed codeblock";width:76%;height:28px;text-align:center;font-size:10pt;position:absolute;padding-top:5.5px;font-family:var(--font-primary);font-weight:500}.layerContainer-2v_Sit code.hljs{margin:15px}`;
+                          const BetterSyntaxCSS = `@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@550&display=swap");@import url("${
+                              this.settings.fontImport
+                          }");.bettersyntax-tip{color:var(--header-secondary);font-weight:500;font-family:var(--font-display);text-transform:uppercase;font-size:12px;margin-bottom:10px}code.hljs{font-size:${
+                              this.settings.fontSize || "0.875rem"
+                          };font-family:"${
+                              this.settings.fontName
+                          }"}.hljs{border-radius:4px;margin-bottom:10px !important;border:none !important}.collapsed > .hljs,.collapsed > .hljs *{color:transparent !important}.collapsed > .hljs{min-height:28px;max-height:28px;font-size:0;display:flex}.collapsed > .hljs .bettersyntax-buttons{margin-right:7px;margin-top:6px;pointer-events:all;top:10px}.collapsed > .hljs::before{color:white;content:"Collapsed codeblock";width:76%;height:28px;text-align:center;font-size:10pt;position:absolute;padding-top:5.5px;font-family:var(--font-primary);font-weight:500}.layerContainer-2v_Sit code.hljs{margin:15px}`;
 
                           BdApi.injectCSS("BetterSyntaxCSS", BetterSyntaxCSS);
 
@@ -376,103 +382,105 @@ module.exports = (() => {
                               if (props.type !== "codeBlock") return;
 
                               Patcher.after(parRes.props, "render", (_, newProps, res) => {
-                                res.props.children = [
-                                    res.props.children,
-                                    React.createElement("div", {
-                                        className: "bettersyntax-buttons",
-                                        children: [
-                                            React.createElement(Tooltip, {
-                                                text: props.lang ? `Language: ${props.lang.toUpperCase()}` : "Unknown Language",
-                                                children: (p) =>
-                                                    React.createElement("div", {
-                                                        ...p,
-                                                        className: "code-button bettersyntax-lang",
-                                                        onClick: () => {
-                                                            DiscordNative.clipboard.copy(props.lang);
-                                                            BdApi.showToast("Copied Language", { type: "success" });
-                                                        },
-                                                        children: [
-                                                            React.createElement("svg", {
-                                                                className: "icon",
-                                                                viewBox: "2 2 20 20",
-                                                                children: [
-                                                                    React.createElement("path", {
-                                                                        fill: "currentColor",
-                                                                        d: "M6.5 8Q6.5 7 7.5 7L11.5 7Q12.5 7 12.5 8T11.5 9L7.5 9Q6.5 9 6.5 8M13.5 8Q13.5 7 14.5 7 15.5 7 15.5 8T14.5 9 13.5 8zM6.5 11Q6.5 10 7.5 10L8.5 10Q9.5 10 9.5 11T8.5 12L7.5 12Q6.5 12 6.5 11M10.5 11Q10.5 10 11.5 10L15.5 10Q16.5 10 16.5 11T15.5 12L11.5 12Q10.5 12 10.5 11M6.5 14Q6.5 13 7.5 13L11.5 13Q12.5 13 12.5 14T11.5 15L7.5 15Q6.5 15 6.5 14M13.5 14Q13.5 13 14.5 13L17.5 13Q18.5 13 18.5 14T17.5 15L14.5 15Q13.5 15 13.5 14M6.5 17Q6.5 16 7.5 16L9.5 16Q10.5 16 10.5 17T9.5 18L7.5 18Q6.5 18 6.5 17",
-                                                                    }),
-                                                                ],
-                                                            }),
-                                                        ],
-                                                    }),
-                                            }),
-                                            React.createElement(Tooltip, {
-                                                text: `Copy Code`,
-                                                children: (p) =>
-                                                    React.createElement("div", {
-                                                        ...p,
-                                                        className: "code-button bettersyntax-copy",
-                                                        onClick: () => {
-                                                            DiscordNative.clipboard.copy(props.content);
-                                                            BdApi.showToast("Copied", { type: "success" });
-                                                        },
-                                                        children: [
-                                                            React.createElement("svg", {
-                                                                className: "icon",
-                                                                viewBox: "2 2 20 20",
-                                                                children: [
-                                                                    React.createElement("path", {
-                                                                        fill: "currentColor",
-                                                                        d: "M12 2ZM7 19Q6 19 6 18C6 8 6 10 6 6Q6 5 7 5h6q1 0 1 1L15 6h2q1 0 1 1v11q0 1-1 1c-2 0-2 0-3 0m0-2h1q1 0 1-1V15 9Q16 8 15 8h-1m-3 9q1 0 1-1V8Q12 7 11 7H9Q8 7 8 8v8q0 1 1 1z",
-                                                                    }),
-                                                                ],
-                                                            }),
-                                                        ],
-                                                    }),
-                                            }),
-                                            React.createElement(Tooltip, {
-                                                text: `Toggle Collapse`,
-                                                children: (p) =>
-                                                    React.createElement("div", {
-                                                        ...p,
-                                                        className: "code-button bettersyntax-collapse",
-                                                        onClick: (ele) => {
-                                                            BdApi.showToast("Toggled Collapse");
-                                                            if (ele.target.tagName == "svg") {
-                                                                if (!ele.target.parentNode.parentNode.parentNode.classList.contains("collapsed")) {
-                                                                    ele.target.parentNode.parentNode.parentNode.classList.add("collapsed");
-                                                                } else {
-                                                                    ele.target.parentNode.parentNode.parentNode.classList.remove("collapsed");
-                                                                }
-                                                            } else if (ele.target.tagName == "path") {
-                                                                if (!ele.target.parentNode.parentNode.parentNode.parentNode.classList.contains("collapsed")) {
-                                                                    ele.target.parentNode.parentNode.parentNode.parentNode.classList.add("collapsed");
-                                                                } else {
-                                                                    ele.target.parentNode.parentNode.parentNode.parentNode.classList.remove("collapsed");
-                                                                }
-                                                            }
-                                                        },
-                                                        children: [
-                                                            React.createElement("svg", {
-                                                                className: "icon",
-                                                                viewBox: "2 2 20 20",
-                                                                children: [
-                                                                    React.createElement("path", {
-                                                                        fill: "currentColor",
-                                                                        d: "M6 9h12l-6 7z",
-                                                                    }),
-                                                                ],
-                                                            }),
-                                                        ],
-                                                    }),
-                                            }),
-                                        ],
-                                    }),
-                                ];
-                              })
+                                  res.props.className = "bettersyntax-pre";
+
+                                  res.props.children = [
+                                      res.props.children,
+                                      React.createElement("div", {
+                                          className: "bettersyntax-buttons",
+                                          children: [
+                                              React.createElement(Tooltip, {
+                                                  text: props.lang ? `Language: ${props.lang.toUpperCase()}` : "Unknown Language",
+                                                  children: (p) =>
+                                                      React.createElement("div", {
+                                                          ...p,
+                                                          className: "code-button bettersyntax-lang",
+                                                          onClick: () => {
+                                                              DiscordNative.clipboard.copy(props.lang);
+                                                              BdApi.showToast("Copied Language", { type: "success" });
+                                                          },
+                                                          children: [
+                                                              React.createElement("svg", {
+                                                                  className: "icon",
+                                                                  viewBox: "2 2 20 20",
+                                                                  children: [
+                                                                      React.createElement("path", {
+                                                                          fill: "currentColor",
+                                                                          d: "M6.5 8Q6.5 7 7.5 7L11.5 7Q12.5 7 12.5 8T11.5 9L7.5 9Q6.5 9 6.5 8M13.5 8Q13.5 7 14.5 7 15.5 7 15.5 8T14.5 9 13.5 8zM6.5 11Q6.5 10 7.5 10L8.5 10Q9.5 10 9.5 11T8.5 12L7.5 12Q6.5 12 6.5 11M10.5 11Q10.5 10 11.5 10L15.5 10Q16.5 10 16.5 11T15.5 12L11.5 12Q10.5 12 10.5 11M6.5 14Q6.5 13 7.5 13L11.5 13Q12.5 13 12.5 14T11.5 15L7.5 15Q6.5 15 6.5 14M13.5 14Q13.5 13 14.5 13L17.5 13Q18.5 13 18.5 14T17.5 15L14.5 15Q13.5 15 13.5 14M6.5 17Q6.5 16 7.5 16L9.5 16Q10.5 16 10.5 17T9.5 18L7.5 18Q6.5 18 6.5 17",
+                                                                      }),
+                                                                  ],
+                                                              }),
+                                                          ],
+                                                      }),
+                                              }),
+                                              React.createElement(Tooltip, {
+                                                  text: `Copy Code`,
+                                                  children: (p) =>
+                                                      React.createElement("div", {
+                                                          ...p,
+                                                          className: "code-button bettersyntax-copy",
+                                                          onClick: () => {
+                                                              DiscordNative.clipboard.copy(props.content);
+                                                              BdApi.showToast("Copied", { type: "success" });
+                                                          },
+                                                          children: [
+                                                              React.createElement("svg", {
+                                                                  className: "icon",
+                                                                  viewBox: "2 2 20 20",
+                                                                  children: [
+                                                                      React.createElement("path", {
+                                                                          fill: "currentColor",
+                                                                          d: "M12 2ZM7 19Q6 19 6 18C6 8 6 10 6 6Q6 5 7 5h6q1 0 1 1L15 6h2q1 0 1 1v11q0 1-1 1c-2 0-2 0-3 0m0-2h1q1 0 1-1V15 9Q16 8 15 8h-1m-3 9q1 0 1-1V8Q12 7 11 7H9Q8 7 8 8v8q0 1 1 1z",
+                                                                      }),
+                                                                  ],
+                                                              }),
+                                                          ],
+                                                      }),
+                                              }),
+                                              React.createElement(Tooltip, {
+                                                  text: `Toggle Collapse`,
+                                                  children: (p) =>
+                                                      React.createElement("div", {
+                                                          ...p,
+                                                          className: "code-button bettersyntax-collapse",
+                                                          onClick: (ele) => {
+                                                              BdApi.showToast("Toggled Collapse");
+                                                              if (ele.target.tagName == "svg") {
+                                                                  if (!ele.target.parentNode.parentNode.parentNode.classList.contains("collapsed")) {
+                                                                      ele.target.parentNode.parentNode.parentNode.classList.add("collapsed");
+                                                                  } else {
+                                                                      ele.target.parentNode.parentNode.parentNode.classList.remove("collapsed");
+                                                                  }
+                                                              } else if (ele.target.tagName == "path") {
+                                                                  if (!ele.target.parentNode.parentNode.parentNode.parentNode.classList.contains("collapsed")) {
+                                                                      ele.target.parentNode.parentNode.parentNode.parentNode.classList.add("collapsed");
+                                                                  } else {
+                                                                      ele.target.parentNode.parentNode.parentNode.parentNode.classList.remove("collapsed");
+                                                                  }
+                                                              }
+                                                          },
+                                                          children: [
+                                                              React.createElement("svg", {
+                                                                  className: "icon",
+                                                                  viewBox: "2 2 20 20",
+                                                                  children: [
+                                                                      React.createElement("path", {
+                                                                          fill: "currentColor",
+                                                                          d: "M6 9h12l-6 7z",
+                                                                      }),
+                                                                  ],
+                                                              }),
+                                                          ],
+                                                      }),
+                                              }),
+                                          ],
+                                      }),
+                                  ];
+                              });
                           });
 
-                        const buttonsCSS = `.code-button .icon > path {color: var(--background-primary);}.code-button {background: currentColor;border-radius: 10px;}.bettersyntax-buttons{margin-left:auto;margin-top:3px;height:17.5px;width:fit-content}.code-button{display:inline-flex;background-repeat:no-repeat;cursor:pointer;height:17.5px;width:17.5px}.code-button:not(.code-button:nth-child(3)){margin-right:5px}.bettersyntax-collapse{transition:transform 0.2s ease}.collapsed .bettersyntax-collapse{transform:rotate(180deg)}pre code.hljs + .bettersyntax-buttons{background:transparent !important}`;
-                        BdApi.injectCSS("BetterSyntaxButtons", buttonsCSS);
+                          const buttonsCSS = `.code-button .icon > path {color: var(--background-primary);}.code-button {background: currentColor;border-radius: 10px;}.bettersyntax-buttons{margin-left:auto;margin-top:3px;height:17.5px;width:fit-content}.code-button{display:inline-flex;background-repeat:no-repeat;cursor:pointer;height:17.5px;width:17.5px}.code-button:not(.code-button:nth-child(3)){margin-right:5px}.bettersyntax-collapse{transition:transform 0.2s ease}.collapsed .bettersyntax-collapse{transform:rotate(180deg)}pre code.hljs + .bettersyntax-buttons{background:transparent !important}`;
+                          BdApi.injectCSS("BetterSyntaxButtons", buttonsCSS);
                       }
                   };
               };
