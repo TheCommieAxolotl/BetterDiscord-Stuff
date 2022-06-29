@@ -560,6 +560,57 @@ button.lookFilled-yCfaCM {
 }
 
 /**
+    Nitro Page
+**/
+
+#app-mount .perksModal-CLcR1c {
+    background-image: none;
+}
+
+.tier-lFqDUs {
+    border: 2px solid var(--16dp);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carouselItemSelected-1_QSK7 .tier-lFqDUs {
+    border-color: var(--brand-experiment);
+}
+
+#app-mount .tierBody-3ju-rc {
+    background: var(--04dp);
+}
+
+#app-mount .perk-19D_HN {
+    background-color: var(--12dp);
+}
+
+.tierHeader-wgo0w_ {
+    border-radius: 18px 18px 0 0;
+    border-bottom: 2px solid var(--16dp);
+}
+
+#app-mount .tierHeaderUnlocked-1IvR2R {
+    background-image: none;
+    background: var(--04dp);
+}
+
+#app-mount .tierHeaderLocked-3ItHYn {
+    background-image: none;
+    background: var(--04dp);
+    color: var(--text-normal);
+}
+
+#app-mount .tierLock-1uBqZ0 {
+    color: var(--text-normal);
+}
+
+.carouselItemSelected-1_QSK7 .tierHeader-wgo0w_ {
+    border-color: var(--brand-experiment);
+    background-color: var(--brand-experiment-40a) !important;
+}
+
+/**
     Buttons
 **/
 

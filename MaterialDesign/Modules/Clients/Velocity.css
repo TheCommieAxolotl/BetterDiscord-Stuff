@@ -2,9 +2,9 @@
     Cards
 **/
 .velocity-card {
-    background: var(--04dp);
+    background: var(--04dp) !important;
     border: 2px solid var(--16dp);
-    border-radius: 21px;
+    border-radius: 20px !important;
 }
 
 .velocity-card-footer {
