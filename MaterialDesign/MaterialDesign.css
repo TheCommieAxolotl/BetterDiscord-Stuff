@@ -686,6 +686,10 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     height: 20px;
 }
 
+.userPopout-2j1gM4 button.lookFilled-yCfaCM:not(.toolbar-37BrJ5 button, .focusLock-2tveLW button, .wrapper-3t3Yqv button) {
+    background: var(--26dp) !important;
+}
+
 /**
     Dialogs
 **/
