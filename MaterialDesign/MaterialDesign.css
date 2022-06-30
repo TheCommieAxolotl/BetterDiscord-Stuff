@@ -152,23 +152,16 @@ blockquote {
 /**
     Toasts
 **/
-@keyframes snackIn {
-    from {
-        transform: scale(0.6) translateY(-10px);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1) translateY(-10px);
-        opacity: 1;
-    }
-}
-@keyframes snackOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+.toast-q3Y4wI {
+    background: var(--background-floating);
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571429em;
+    color: hsla(0, 0%, 100%, 0.87);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
 }
 
 /**
