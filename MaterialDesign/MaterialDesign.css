@@ -171,6 +171,26 @@ blockquote {
     overflow: hidden;
 }
 
+.container-20TyK0 {
+    background: var(--background-floating) !important;
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571429em;
+    color: hsla(0, 0%, 100%, 0.87);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-20TyK0.elevationHigh-28Pty4 button.lookFilled-yCfaCM {
+    background: var(--brand-experiment-560) !important;
+}
+
+.container-20TyK0 .message-3C6JQ1 {
+    font-weight: 400;
+}
+
 /**
     Switches.
 **/
