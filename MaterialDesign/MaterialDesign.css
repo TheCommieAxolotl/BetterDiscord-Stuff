@@ -610,6 +610,10 @@ button.lookFilled-yCfaCM {
     background-color: var(--brand-experiment-40a) !important;
 }
 
+#app-mount .children-3xh0VB:after {
+    display: none;
+}
+
 /**
     Buttons
 **/
