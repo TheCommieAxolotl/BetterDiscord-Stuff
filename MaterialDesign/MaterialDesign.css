@@ -25,6 +25,13 @@
     display: block;
 }
 
+[class^="socialLinks-"] + [class^="info-"] > span:nth-last-child(1)::after {
+    content: var(--skin-name) " Skin by " var(--skin-author);
+    position: relative;
+    top: 0;
+    display: block;
+}
+
 .content-2a4AW9 {
     height: 100% !important;
 }
