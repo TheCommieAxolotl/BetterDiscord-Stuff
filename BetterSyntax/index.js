@@ -113,11 +113,11 @@ module.exports = {
         }
 
         async addButtons() {
-            const { codeBlock } = WebpackModules.findByProps("parse", "parseTopic").defaultRules;
+            const { codeBlock } = WebpackModules.find(["parse", "parseTopic"]).defaultRules;
 
             const Tooltip = WebpackModules.find("Tooltip").default;
 
-            Patcher(this.getName, codeBlock, "react", ([props], parRes) => {
+            Patcher(this.getName(), codeBlock, "react", ([props], parRes) => {
                 if (props.type !== "codeBlock") return;
 
                 Patcher.after(this.getName(), parRes.props, "render", (newProps, res) => {
