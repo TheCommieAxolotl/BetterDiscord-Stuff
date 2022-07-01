@@ -140,10 +140,6 @@ textarea {
     background-color: var(--08dp);
 }
 
-blockquote {
-    display: flex;
-}
-
 .accountProfileCard-lbN7n- {
     background-color: var(--04dp);
 }
@@ -483,6 +479,10 @@ button.lookFilled-yCfaCM {
     background-color: var(--26dp);
     box-shadow: var(--24dpShadow);
     border-radius: 4px;
+}
+
+pre code {
+    min-width: 400px !important;
 }
 
 /**
