@@ -64,7 +64,11 @@ button,
 input,
 select,
 textarea {
-    font-family: var(--font-primary);
+    font-family: var(--font-primary, "Roboto");
+}
+
+code {
+    font-family: var(--font-code, "Source Code Pro");
 }
 
 .container-2cd8Mz {
