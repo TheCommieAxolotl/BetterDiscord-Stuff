@@ -176,9 +176,14 @@ code {
     background-color: var(--08dp);
 }
 
+.bodyInnerWrapper-2bQs1k {
+    background-color: nonw !important;
+}
+
 /**
     Toasts
 **/
+
 .toast-q3Y4wI {
     background: var(--background-floating);
     padding: 14px 16px;
