@@ -108,12 +108,32 @@ textarea {
     background-color: var(--background-accent);
 }
 
+.container-4HqGB3.background-3X6Uak {
+    background-color: var(--04dp) !important;
+}
+
+.containerCard-2kwJKN,
+.container-3HMTms {
+    background-color: var(--04dp) !important;
+    border: 2px solid var(--16dp);
+    transition: all 0.2s ease;
+}
+
+.containerCard-2kwJKN:hover,
+.container-3HMTms:hover {
+    background-color: var(--08dp) !important;
+}
+
 .keybindShortcut-3zF1P9 span {
     box-shadow: inset 0 -4px 0 var(--08dp);
 }
 
 .pageWrapper-2PwDoS {
     background-color: var(--background-secondary) !important;
+}
+
+.channelList-24jKfX {
+    gap: 10px;
 }
 
 .unreadBar-elBRZx {
@@ -273,6 +293,12 @@ textarea {
 /**
     Elevation 
 **/
+
+.containerCard-2kwJKN,
+.container-3HMTms {
+    box-shadow: var(--04dpShadow);
+    overflow: visible;
+}
 
 .content-1jQy2l {
     box-shadow: var(--02dpShadow);
