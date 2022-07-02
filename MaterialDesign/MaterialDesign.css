@@ -386,13 +386,30 @@ code {
 .top-K_jibn .themed-2-lozF.item-3XjbnG:active,
 .bd-button:not(.bd-view-button),
 .channelTextArea-1FufC0,
+button.lookFilled-yCfaCM {
+    box-shadow: var(--24dpShadow);
+    background: var(--24dp);
+}
+
 .container-2McqkF,
 .menu-1QACrS,
 .tooltip-14MtrL,
-.userPopout-2j1gM4,
-button.lookFilled-yCfaCM {
+.userPopout-2j1gM4 {
     box-shadow: var(--24dpShadow);
     background: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.22% * var(--skin-background-l, 0)), calc(1% * var(--floating-background-opacity, 100)));
+}
+
+.container-2McqkF::after,
+.menu-1QACrS::after,
+.tooltip-14MtrL::after,
+.userPopout-2j1gM4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     backdrop-filter: blur(var(--floating-background-blur, 0px));
 }
 
