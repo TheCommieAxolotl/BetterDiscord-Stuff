@@ -96,6 +96,10 @@ textarea {
     background-color: var(--24dp) !important;
 }
 
+#app-mount .background-fkKrXt {
+    background-color: var(--background-primary) !important;
+}
+
 .option-ayUoaq:after {
     background: transparent !important;
 }
