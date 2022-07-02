@@ -67,10 +67,6 @@ textarea {
     font-family: var(--font-primary);
 }
 
-.hljs {
-    min-width: 200px;
-}
-
 .container-2cd8Mz {
     background-color: var(--background-primary) !important;
 }
@@ -482,7 +478,7 @@ button.lookFilled-yCfaCM {
 }
 
 pre code {
-    min-width: 400px !important;
+    min-width: 80% !important;
 }
 
 /**
