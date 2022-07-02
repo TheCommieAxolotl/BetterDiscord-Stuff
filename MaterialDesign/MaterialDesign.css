@@ -4,7 +4,7 @@
 
 #app-mount .base-2jDfDU::before {
     content: "Your version of MaterialDesign is outdated. Please download the latest version from source";
-    display: var(--version0_9_8, block);
+    display: var(--version0_9_9, block);
     background-color: var(--brand-experiment-60a);
     color: #fff;
     font-size: 14px;
@@ -512,7 +512,7 @@ button.lookFilled-yCfaCM {
 }
 
 pre code {
-    min-width: 80% !important;
+    min-width: 400% !important;
 }
 
 /**

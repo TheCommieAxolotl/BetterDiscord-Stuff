@@ -1,9 +1,9 @@
 /**
  * @name MaterialDesign
- * @version 0.9.9
+ * @version 0.9.89
  * @author TheCommieAxolotl#0001
  * @authorId 538487970408300544
- * @description A clean theme inspired by Google's Material Design
+ * @description A clean theme inspired by Google's Material Design Guidelines.
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/MaterialDesign
  * @website https://thecommieaxolotl.github.io/BetterDiscord-Stuff/
  * @license MIT
@@ -21,8 +21,8 @@
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/MaterialDesign/Clients/betterdiscord.css");
 
 :root {
-    --version: "0.9.89";
-    --version0_9_8: none;
+    --version: "0.9.9";
+    --version0_9_9: none;
     --font-primary: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-code: "Source Code Pro";
     --01dpShadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
@@ -42,8 +42,8 @@
 
     --skin-accent-h: 264;
     --skin-accent-s: 84%;
-    --skin-accent-l: 1;
-    --skin-accent-a: 1;
+    --skin-accent-l: 100;
+    --skin-accent-a: 100;
 
     --skin-background-h: 0;
     --skin-background-s: 0%;
@@ -86,51 +86,51 @@
     --switch-unchecked-color: #74796e;
 
     /* Brand Experiment */
-    --brand-experiment: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)));
-    --brand-experiment-100: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(98% * var(--skin-accent-l, 1)));
-    --brand-experiment-130: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(96.1% * var(--skin-accent-l, 1)));
-    --brand-experiment-160: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(94.2% * var(--skin-accent-l, 1)));
-    --brand-experiment-200: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(92.3% * var(--skin-accent-l, 1)));
-    --brand-experiment-230: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(90.3% * var(--skin-accent-l, 1)));
-    --brand-experiment-260: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(88.4% * var(--skin-accent-l, 1)));
-    --brand-experiment-300: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(86.5% * var(--skin-accent-l, 1)));
-    --brand-experiment-330: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(84.6% * var(--skin-accent-l, 1)));
-    --brand-experiment-360: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(82.7% * var(--skin-accent-l, 1)));
-    --brand-experiment-400: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(80.8% * var(--skin-accent-l, 1)));
-    --brand-experiment-430: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(78.8% * var(--skin-accent-l, 1)));
-    --brand-experiment-460: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(76.9% * var(--skin-accent-l, 1)));
-    --brand-experiment-500: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)));
-    --brand-experiment-530: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(69% * var(--skin-accent-l, 1)));
-    --brand-experiment-560: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(63% * var(--skin-accent-l, 1)));
-    --brand-experiment-600: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(57% * var(--skin-accent-l, 1)));
-    --brand-experiment-630: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(51% * var(--skin-accent-l, 1)));
-    --brand-experiment-660: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(45% * var(--skin-accent-l, 1)));
-    --brand-experiment-700: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(39% * var(--skin-accent-l, 1)));
-    --brand-experiment-730: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(33% * var(--skin-accent-l, 1)));
-    --brand-experiment-760: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(27% * var(--skin-accent-l, 1)));
-    --brand-experiment-800: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(21% * var(--skin-accent-l, 1)));
-    --brand-experiment-830: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(15% * var(--skin-accent-l, 1)));
-    --brand-experiment-860: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(9% * var(--skin-accent-l, 1)));
-    --brand-experiment-900: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(3% * var(--skin-accent-l, 1)));
-    --brand-experiment-05a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.05);
-    --brand-experiment-10a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.1);
-    --brand-experiment-15a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.15);
-    --brand-experiment-20a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.2);
-    --brand-experiment-25a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.25);
-    --brand-experiment-30a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.3);
-    --brand-experiment-35a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.35);
-    --brand-experiment-40a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.4);
-    --brand-experiment-45a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.45);
-    --brand-experiment-50a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.5);
-    --brand-experiment-55a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.55);
-    --brand-experiment-60a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.6);
-    --brand-experiment-65a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.65);
-    --brand-experiment-70a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.7);
-    --brand-experiment-75a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.75);
-    --brand-experiment-80a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.8);
-    --brand-experiment-85a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.85);
-    --brand-experiment-90a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.9);
-    --brand-experiment-95a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.95);
+    --brand-experiment: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-100: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.98% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-130: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.96.1% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-160: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.94.2% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-200: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.92.3% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-230: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.90.3% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-260: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.88.4% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-300: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.86.5% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-330: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.84.6% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-360: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.82.7% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-400: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.80.8% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-430: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.78.8% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-460: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.76.9% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-500: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-530: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.69% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-560: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.63% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-600: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.57% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-630: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.51% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-660: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.45% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-700: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.39% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-730: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.33% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-760: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.27% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-800: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.21% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-830: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.15% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-860: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.9% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-900: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.3% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-05a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0005 * var(--skin-accent-a, 100)));
+    --brand-experiment-10a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.001 * var(--skin-accent-a, 100)));
+    --brand-experiment-15a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0015 * var(--skin-accent-a, 100)));
+    --brand-experiment-20a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.002 * var(--skin-accent-a, 100)));
+    --brand-experiment-25a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0025 * var(--skin-accent-a, 100)));
+    --brand-experiment-30a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.003 * var(--skin-accent-a, 100)));
+    --brand-experiment-35a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0035 * var(--skin-accent-a, 100)));
+    --brand-experiment-40a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.004 * var(--skin-accent-a, 100)));
+    --brand-experiment-45a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0045 * var(--skin-accent-a, 100)));
+    --brand-experiment-50a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.005 * var(--skin-accent-a, 100)));
+    --brand-experiment-55a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0055 * var(--skin-accent-a, 100)));
+    --brand-experiment-60a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.006 * var(--skin-accent-a, 100)));
+    --brand-experiment-65a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0065 * var(--skin-accent-a, 100)));
+    --brand-experiment-70a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.007 * var(--skin-accent-a, 100)));
+    --brand-experiment-75a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0075 * var(--skin-accent-a, 100)));
+    --brand-experiment-80a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.008 * var(--skin-accent-a, 100)));
+    --brand-experiment-85a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0085 * var(--skin-accent-a, 100)));
+    --brand-experiment-90a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.009 * var(--skin-accent-a, 100)));
+    --brand-experiment-95a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(00.75% * var(--skin-accent-l, 100)), calc(0.0095 * var(--skin-accent-a, 100)));
 }
 
 .theme-light {
@@ -147,51 +147,51 @@
     --switch-unchecked-color: #74796e;
 
     /* Brand Experiment */
-    --brand-experiment: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)));
-    --brand-experiment-100: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(98% * var(--skin-accent-l, 1)));
-    --brand-experiment-130: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(96.1% * var(--skin-accent-l, 1)));
-    --brand-experiment-160: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(94.2% * var(--skin-accent-l, 1)));
-    --brand-experiment-200: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(92.3% * var(--skin-accent-l, 1)));
-    --brand-experiment-230: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(90.3% * var(--skin-accent-l, 1)));
-    --brand-experiment-260: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(88.4% * var(--skin-accent-l, 1)));
-    --brand-experiment-300: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(86.5% * var(--skin-accent-l, 1)));
-    --brand-experiment-330: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(84.6% * var(--skin-accent-l, 1)));
-    --brand-experiment-360: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(82.7% * var(--skin-accent-l, 1)));
-    --brand-experiment-400: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(80.8% * var(--skin-accent-l, 1)));
-    --brand-experiment-430: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(78.8% * var(--skin-accent-l, 1)));
-    --brand-experiment-460: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(76.9% * var(--skin-accent-l, 1)));
-    --brand-experiment-500: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)));
-    --brand-experiment-530: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(69% * var(--skin-accent-l, 1)));
-    --brand-experiment-560: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(63% * var(--skin-accent-l, 1)));
-    --brand-experiment-600: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(57% * var(--skin-accent-l, 1)));
-    --brand-experiment-630: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(51% * var(--skin-accent-l, 1)));
-    --brand-experiment-660: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(45% * var(--skin-accent-l, 1)));
-    --brand-experiment-700: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(39% * var(--skin-accent-l, 1)));
-    --brand-experiment-730: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(33% * var(--skin-accent-l, 1)));
-    --brand-experiment-760: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(27% * var(--skin-accent-l, 1)));
-    --brand-experiment-800: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(21% * var(--skin-accent-l, 1)));
-    --brand-experiment-830: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(15% * var(--skin-accent-l, 1)));
-    --brand-experiment-860: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(9% * var(--skin-accent-l, 1)));
-    --brand-experiment-900: hsl(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(3% * var(--skin-accent-l, 1)));
-    --brand-experiment-05a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.05);
-    --brand-experiment-10a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.1);
-    --brand-experiment-15a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.15);
-    --brand-experiment-20a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.2);
-    --brand-experiment-25a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.25);
-    --brand-experiment-30a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.3);
-    --brand-experiment-35a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.35);
-    --brand-experiment-40a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.4);
-    --brand-experiment-45a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.45);
-    --brand-experiment-50a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.5);
-    --brand-experiment-55a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.55);
-    --brand-experiment-60a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.6);
-    --brand-experiment-65a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.65);
-    --brand-experiment-70a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.7);
-    --brand-experiment-75a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.75);
-    --brand-experiment-80a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.8);
-    --brand-experiment-85a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.85);
-    --brand-experiment-90a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.9);
-    --brand-experiment-95a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 1)), 0.95);
+    --brand-experiment: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-100: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(98% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-130: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(96.1% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-160: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(94.2% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-200: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(92.3% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-230: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(90.3% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-260: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(88.4% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-300: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(86.5% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-330: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(84.6% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-360: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(82.7% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-400: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(80.8% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-430: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(78.8% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-460: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(76.9% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-500: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-530: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(69% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-560: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(63% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-600: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(57% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-630: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(51% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-660: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(45% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-700: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(39% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-730: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(33% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-760: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(27% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-800: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(21% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-830: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(15% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-860: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(9% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-900: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(3% * var(--skin-accent-l, 100)), calc(1% * var(--skin-accent-a, 100)));
+    --brand-experiment-05a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0005 * var(--skin-accent-a, 100)));
+    --brand-experiment-10a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.001 * var(--skin-accent-a, 100)));
+    --brand-experiment-15a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0015 * var(--skin-accent-a, 100)));
+    --brand-experiment-20a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.002 * var(--skin-accent-a, 100)));
+    --brand-experiment-25a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0025 * var(--skin-accent-a, 100)));
+    --brand-experiment-30a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.003 * var(--skin-accent-a, 100)));
+    --brand-experiment-35a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0035 * var(--skin-accent-a, 100)));
+    --brand-experiment-40a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.004 * var(--skin-accent-a, 100)));
+    --brand-experiment-45a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0045 * var(--skin-accent-a, 100)));
+    --brand-experiment-50a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.005 * var(--skin-accent-a, 100)));
+    --brand-experiment-55a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0055 * var(--skin-accent-a, 100)));
+    --brand-experiment-60a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.006 * var(--skin-accent-a, 100)));
+    --brand-experiment-65a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0065 * var(--skin-accent-a, 100)));
+    --brand-experiment-70a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.007 * var(--skin-accent-a, 100)));
+    --brand-experiment-75a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0075 * var(--skin-accent-a, 100)));
+    --brand-experiment-80a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.008 * var(--skin-accent-a, 100)));
+    --brand-experiment-85a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0085 * var(--skin-accent-a, 100)));
+    --brand-experiment-90a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.009 * var(--skin-accent-a, 100)));
+    --brand-experiment-95a: hsla(var(--skin-accent-h, 264), calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), calc(75% * var(--skin-accent-l, 100)), calc(0.0095 * var(--skin-accent-a, 100)));
 }
 
 /* Made By The Commie Axolotl */
