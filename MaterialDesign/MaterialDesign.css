@@ -387,8 +387,12 @@ code {
 .userPopout-2j1gM4,
 button.lookFilled-yCfaCM {
     box-shadow: var(--24dpShadow);
-    opacity: calc(1% * var(--floating-background-opacity, 100));
+    background: hsla(var(--24dp), calc(1% * var(--floating-background-opacity, 100)));
     backdrop-filter: blur(var(--floating-background-blur, 0px));
+}
+
+.footer-3naVBw {
+    background-color: none !important;
 }
 
 /** 
