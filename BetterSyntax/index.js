@@ -90,21 +90,20 @@ module.exports = {
         }
 
         injectCSS() {
-            const BetterSyntaxCSS = `@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@550&display=swap");@import url("${
-                this.settings?.fontImport || ""
-            }");.bettersyntax-tip{color:var(--header-secondary);font-weight:500;font-family:var(--font-display);text-transform:uppercase;font-size:12px;margin-bottom:10px}code.hljs{font-size:${
-                this.settings?.fontSize || "0.875rem"
-            };font-family:"${
-                this.settings?.fontName || "Source Code Pro"
-            }"}.hljs{border-radius:4px;margin-bottom:10px !important;border:none !important}.collapsed > .hljs,.collapsed > .hljs *{color:transparent !important}.collapsed > .hljs{min-height:28px;max-height:28px;font-size:0;display:flex}.collapsed > .hljs .bettersyntax-buttons{margin-right:7px;margin-top:6px;pointer-events:all;top:10px}.collapsed > .hljs::before{color:white;content:"Collapsed codeblock";width:76%;height:28px;text-align:center;font-size:10pt;position:absolute;padding-top:5.5px;font-family:var(--font-primary);font-weight:500}.layerContainer-2v_Sit code.hljs{margin:15px}`;
+            // prettier-ignore
+            const BetterSyntaxCSS = `@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@550&display=swap");@import url("${this.settings?.fontImport || ""}");.bettersyntax-tip{color:var(--header-secondary);font-weight:500;font-family:var(--font-display);text-transform:uppercase;font-size:12px;margin-bottom:10px}code.hljs{font-size:${this.settings?.fontSize || "0.875rem"};font-family:"${this.settings?.fontName || "Source Code Pro"}"}.hljs{border-radius:4px;margin-bottom:10px !important;border:none !important}.collapsed > .hljs,.collapsed > .hljs *{color:transparent !important}.collapsed > .hljs{min-height:28px;max-height:28px;font-size:0;display:flex}.collapsed > .hljs .bettersyntax-buttons{margin-right:7px;margin-top:6px;pointer-events:all;top:10px}.collapsed > .hljs::before{color:white;content:"Collapsed codeblock";width:76%;height:28px;text-align:center;font-size:10pt;position:absolute;padding-top:5.5px;font-family:var(--font-primary);font-weight:500}.layerContainer-2v_Sit code.hljs{margin:15px}`;
 
             if (!VelocityElements.head.querySelector("#BetterSyntaxCSS")) {
                 Styling.injectCSS("BetterSyntaxCSS", BetterSyntaxCSS);
             }
 
-            Themes.forEach((theme) => Styling.clearCSS(theme.value));
+            if (this.settings?.theme == "default")
+                return Themes.forEach((theme) => {
+                    Styling.clearCSS(theme.value);
+                });
+
             Themes.forEach((theme) => {
-                if (this.settings?.theme.toLocaleLowerCase() == theme.value) {
+                if (this.settings?.theme?.toLowerCase() == theme.value) {
                     Styling.injectCSS(theme.value, theme.css);
                 } else {
                     Styling.clearCSS(theme.value);
@@ -121,7 +120,6 @@ module.exports = {
                 if (props.type !== "codeBlock") return;
 
                 Patcher.after(this.getName(), parRes.props, "render", (newProps, res) => {
-                    res.props.className = "bettersyntax-pre";
                     res.props.children = [
                         res.props.children,
                         React.createElement("div", {
