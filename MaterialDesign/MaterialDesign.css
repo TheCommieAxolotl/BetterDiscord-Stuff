@@ -387,7 +387,7 @@ code {
 .userPopout-2j1gM4,
 button.lookFilled-yCfaCM {
     box-shadow: var(--24dpShadow);
-    background: hsla(var(--24dp), calc(1% * var(--floating-background-opacity, 100)));
+    background: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.22% * var(--skin-background-l, 0)), calc(1% * var(--floating-background-opacity, 100)));
     backdrop-filter: blur(var(--floating-background-blur, 0px));
 }
 

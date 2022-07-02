@@ -105,7 +105,7 @@
     --08dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.18% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
     --12dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.19% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
     --16dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.2% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
-    --24dp: hsl(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.22% * var(--skin-background-l, 0)));
+    --24dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.22% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
     --26dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.27% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
 
     --background-primary: var(--02dp); /* 02dp */
