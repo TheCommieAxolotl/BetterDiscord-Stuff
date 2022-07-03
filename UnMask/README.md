@@ -9,4 +9,4 @@ Reveal the true identities of those who dare enter your chat.
 
 [BetterDiscord-Stuff](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff) / [UnMask](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/UnMask)
 
-Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
+Made with ❤️ by [TheCommieAxolotl](https://github.com/TheCommieAxolotl)

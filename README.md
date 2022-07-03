@@ -38,4 +38,4 @@ Below I have layed out a sort of table of contents for this Repo.
  
 ##### If you like what you see, consider giving us a ⭐! (We really like them 🙃)
  
-Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
+Made with ❤️ by [TheCommieAxolotl](https://github.com/TheCommieAxolotl)

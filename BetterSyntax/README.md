@@ -7,4 +7,4 @@ Adds themeble codeblocks and some utility buttons.
 
 [BetterDiscord-Stuff](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff) / [BetterSyntax](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax)
 
-Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
+Made with ❤️ by [TheCommieAxolotl](https://github.com/TheCommieAxolotl)

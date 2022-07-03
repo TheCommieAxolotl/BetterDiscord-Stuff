@@ -14,4 +14,4 @@ A Smooth and Dark theme that is complimented with a touch of colour
 
 [BetterDiscord-Stuff](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff) / [Ultra](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Ultra)
 
-Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
+Made with ❤️ by [TheCommieAxolotl](https://github.com/TheCommieAxolotl)

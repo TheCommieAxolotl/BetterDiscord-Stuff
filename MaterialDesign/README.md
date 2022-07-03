@@ -37,4 +37,4 @@ The theme has built-in MaterialYou Skin Variables.
 
 [BetterDiscord-Stuff](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff) / [MaterialDesign](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/MaterialDesign)
 
-Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
+Made with ❤️ by [TheCommieAxolotl](https://github.com/TheCommieAxolotl)

@@ -11,4 +11,4 @@ A BetterDiscord Utility Plugins to remove unused config files
 
 [BetterDiscord-Stuff](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff) / [CleanUpConfigs](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs)
 
-Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
+Made with ❤️ by [TheCommieAxolotl](https://github.com/TheCommieAxolotl)

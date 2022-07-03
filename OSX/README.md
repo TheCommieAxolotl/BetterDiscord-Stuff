@@ -17,4 +17,4 @@ Mac Direct Download - [SFPro.dmg](https://devimages-cdn.apple.com/design/resourc
 
 [BetterDiscord-Stuff](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff) / [OSX](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/OSX)
 
-Made with ❤️ by [TheCommieAxolotl](github.com/TheCommieAxolotl)
+Made with ❤️ by [TheCommieAxolotl](https://github.com/TheCommieAxolotl)
