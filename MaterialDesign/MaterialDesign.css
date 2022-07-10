@@ -501,6 +501,14 @@ button.lookFilled-yCfaCM {
     padding: 8px 0;
 }
 
+.submenuPaddingContainer-_k62dJ {
+    padding: 0 10px;
+}
+
+.submenuContainer-3EVTeH .layer-2aCOJ3 {
+    transform: translateX(-5px);
+}
+
 .scroller-1bVxF5::-webkit-scrollbar {
     display: none;
 }
@@ -513,10 +521,6 @@ button.lookFilled-yCfaCM {
 
 .separator-1So4YB {
     margin: 8px 0;
-}
-
-.submenuPaddingContainer-_k62dJ {
-    padding: 0 4px;
 }
 
 .iconContainer-1-SsTR:not(.submenuContainer-3EVTeH .iconContainer-1-SsTR) {
