@@ -29,11 +29,13 @@ Below I have layed out a sort of table of contents for this Repo.
     > Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
  
 # Imports and Snippets
+ - ### [Touchup](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Imports/Touchup.css)  
+    > Changes Discord's hardcoded colours to use their variable counterparts.
  - ### [DiscordLinks](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Imports/DiscordLinks.css) 
     > Makes Official Discord Links display like Discord Components.
  - ### [UserBadges](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/Imports/UserBadges.css) 
     > Template to use for custom CSS Badges.
- 
+
 ---
  
 ##### If you like what you see, consider giving us a ⭐! (We really like them 🙃)
