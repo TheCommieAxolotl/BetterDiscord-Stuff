@@ -413,6 +413,11 @@ button.lookFilled-yCfaCM {
     backdrop-filter: blur(var(--floating-background-blur, 0px));
 }
 
+.submenuContainer-3EVTeH .submenuContainer-3EVTeH .layer-2aCOJ3 {
+    left: 98% !important;
+    transform: translateY(-25px);
+}
+
 .footer-3naVBw {
     background-color: transparent !important;
 }
