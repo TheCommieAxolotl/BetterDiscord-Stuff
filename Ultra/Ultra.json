@@ -1,0 +1,39 @@
+{
+    "name": "Ultra",
+    "author": "TheCommieAxolotl#0001",
+    "version": "1.0.6",
+    "description": "A Smooth, Black theme",
+    "authors": [
+        {
+            "name": "TheCommieAxolotl",
+            "id": "538487970408300544"
+        }
+    ],
+    "theme_color_map": {
+        "KEYBOARD": ["#101014", "#FFFFFF"],
+        "BACKGROUND_PRIMARY": ["#101014", "#FFFFFF"],
+        "BACKGROUND_SECONDARY": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_SECONDARY_ALT": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_TERTIARY": ["#101014", "#FFFFFF"],
+        "BACKGROUND_ACCENT": ["#1a191e", "#FFFFFF"],
+        "BACKGROUND_FLOATING": ["#17161b", "#FFFFFF"],
+        "CHANNELS_DEFAULT": ["#4a4a52", "#FFFFFF"],
+        "HEADER_PRIMARY": ["#000000", "#FFFFFF"],
+        "HEADER_SECONDARY": ["#000000", "#FFFFFF"],
+        "INTERACTIVE_ACTIVE": ["#c9ced0", "#FFFFFF"],
+        "INTERACTIVE_MUTED": ["#4f545c", "#FFFFFF"],
+        "INTERACTIVE_HOVER": ["#dcddde", "#FFFFFF"],
+        "INTERACTIVE_NORMAL": ["#b9bbbe", "#FFFFFF"],
+        "TEXT_LINK": ["#6e6af6", "#FFFFFF"],
+        "TEXT_MUTED": ["#4a4a52", "#FFFFFF"],
+        "TEXT_NORMAL": ["#dcddde", "#FFFFFF"]
+    },
+    "colours": {
+        "BRAND_NEW": "#6e6af6",
+        "BRAND_NEW_360": "#6e6af6",
+        "WHITE": "#FFFFFF"
+    },
+    "unsafe_colors": {
+        "CHAT_GREY": "#101014"
+    }
+}
