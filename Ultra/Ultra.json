@@ -20,6 +20,7 @@
         "BACKGROUND_ACCENT": ["#1a191e", "#FFFFFF"],
         "BACKGROUND_FLOATING": ["#17161b", "#FFFFFF"],
         "CHANNELS_DEFAULT": ["#4a4a52", "#FFFFFF"],
+        "CHANNELTEXTAREA_BACKGROUND": ["#17161b", "#FFFFFF"],
         "HEADER_PRIMARY": ["#000000", "#FFFFFF"],
         "HEADER_SECONDARY": ["#000000", "#FFFFFF"],
         "INTERACTIVE_ACTIVE": ["#c9ced0", "#FFFFFF"],
@@ -30,6 +31,7 @@
         "TEXT_NORMAL": ["#dcddde", "#FFFFFF"]
     },
     "colours": {
+        "STATUS_YELLOW": "#6e6af6",
         "BRAND_NEW": "#6e6af6",
         "BRAND_NEW_360": "#6e6af6",
         "WHITE": "#FFFFFF"
