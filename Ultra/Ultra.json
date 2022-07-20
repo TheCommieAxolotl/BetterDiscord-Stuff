@@ -22,8 +22,6 @@
         "BACKGROUND_NESTED_FLOATING": ["#17161b", "#FFFFFF"],
         "CHANNELS_DEFAULT": ["#4a4a52", "#FFFFFF"],
         "CHANNELTEXTAREA_BACKGROUND": ["#17161b", "#FFFFFF"],
-        "HEADER_PRIMARY": ["#000000", "#FFFFFF"],
-        "HEADER_SECONDARY": ["#000000", "#FFFFFF"],
         "INTERACTIVE_ACTIVE": ["#c9ced0", "#FFFFFF"],
         "INTERACTIVE_MUTED": ["#4f545c", "#FFFFFF"],
         "INTERACTIVE_NORMAL": ["#b9bbbe", "#FFFFFF"],
