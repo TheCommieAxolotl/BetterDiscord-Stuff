@@ -12,7 +12,9 @@
     "theme_color_map": {
         "KEYBOARD": ["#101014", "#FFFFFF"],
         "BACKGROUND_PRIMARY": ["#101014", "#FFFFFF"],
+        "BACKGROUND_MOBILE_PRIMARY": ["#101014", "#FFFFFF"],
         "BACKGROUND_SECONDARY": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_MOBILE_SECONDARY": ["#17161b", "#FFFFFF"],
         "BACKGROUND_SECONDARY_ALT": ["#17161b", "#FFFFFF"],
         "BACKGROUND_TERTIARY": ["#101014", "#FFFFFF"],
         "BACKGROUND_ACCENT": ["#1a191e", "#FFFFFF"],
@@ -22,7 +24,6 @@
         "HEADER_SECONDARY": ["#000000", "#FFFFFF"],
         "INTERACTIVE_ACTIVE": ["#c9ced0", "#FFFFFF"],
         "INTERACTIVE_MUTED": ["#4f545c", "#FFFFFF"],
-        "INTERACTIVE_HOVER": ["#dcddde", "#FFFFFF"],
         "INTERACTIVE_NORMAL": ["#b9bbbe", "#FFFFFF"],
         "TEXT_LINK": ["#6e6af6", "#FFFFFF"],
         "TEXT_MUTED": ["#4a4a52", "#FFFFFF"],
