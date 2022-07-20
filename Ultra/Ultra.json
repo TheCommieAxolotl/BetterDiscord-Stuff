@@ -27,7 +27,9 @@
         "INTERACTIVE_NORMAL": ["#b9bbbe", "#FFFFFF"],
         "TEXT_LINK": ["#6e6af6", "#FFFFFF"],
         "TEXT_MUTED": ["#4a4a52", "#FFFFFF"],
-        "TEXT_NORMAL": ["#dcddde", "#FFFFFF"]
+        "TEXT_NORMAL": ["#dcddde", "#FFFFFF"],
+        "BACKGROUND_MENTIONED": ["#6f6af62c", "#FFFFFF"],
+        "BACKGROUND_MESSAGE_HOVER": ["#17161b", "#FFFFFF"]
     },
     "colours": {
         "STATUS_YELLOW": "#6e6af6",
