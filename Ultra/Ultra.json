@@ -38,18 +38,8 @@
         "CHANNELS_DEFAULT": ["#4a4a52", "#FFFFFF"]
     },
     "colours": {
-        "PRIMARY_DARK": "#747474",
-        "PRIMARY_DARK_100": "#FFFFFF",
-        "PRIMARY_DARK_200": "#FFFFFF",
-        "PRIMARY_DARK_300": "#B6B6B6",
-        "PRIMARY_DARK_360": "#C8C8C8",
-        "PRIMARY_DARK_400": "#585858",
-        "PRIMARY_DARK_500": "#292929",
         "PRIMARY_DARK_600": "#17161b",
-        "PRIMARY_DARK_630": "#101014",
-        "PRIMARY_DARK_700": "#090909",
-        "PRIMARY_DARK_800": "#090909",
-        "PRIMARY_DARK_900": "#090909"
+        "PRIMARY_DARK_630": "#101014"
     },
     "unsafe_colors": {
         "CHAT_GREY": "#101014"
