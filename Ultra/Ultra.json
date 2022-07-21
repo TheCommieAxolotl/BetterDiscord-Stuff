@@ -29,6 +29,7 @@
         "BACKGROUND_MENTIONED": ["#6f6af62c", "#FFFFFF"],
         "BACKGROUND_MENTIONED_HOVER": ["#6f6af615", "#FFFFFF"],
         "BACKGROUND_MESSAGE_HOVER": ["rgba(4, 4, 5, 0.07)", "#FFFFFF"],
+        "BACKGROUND_MODIFIER_SELECTED": ["#60606b14", "#FFFFFF"],
         "SCROLLBAR_THIN_THUMB": ["transparent", "#FFFFFF"],
         "SCROLLBAR_THIN_TRACK": ["transparent", "#FFFFFF"],
         "SCROLLBAR_AUTO_THUMB": ["transparent", "#FFFFFF"],
