@@ -24,7 +24,7 @@
         "CHANNELTEXTAREA_BACKGROUND": ["#17161b", "#FFFFFF"],
         "INTERACTIVE_ACTIVE": ["#c9ced0", "#FFFFFF"],
         "INTERACTIVE_MUTED": ["#4f545c", "#FFFFFF"],
-        "INTERACTIVE_NORMAL": ["#b9bbbe", "#FFFFFF"],
+        "INTERACTIVE_NORMAL": ["#17161b", "#FFFFFF"],
         "TEXT_LINK": ["#6e6af6", "#FFFFFF"],
         "TEXT_MUTED": ["#4a4a52", "#FFFFFF"],
         "TEXT_NORMAL": ["#dcddde", "#FFFFFF"],
