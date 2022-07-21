@@ -33,7 +33,7 @@
         "SCROLLBAR_THIN_TRACK": ["transparent", "#FFFFFF"],
         "SCROLLBAR_AUTO_THUMB": ["transparent", "#FFFFFF"],
         "SCROLLBAR_AUTO_TRACK": ["transparent", "#FFFFFF"],
-        "CHANNELTEXTAREA_BACKGROUND": ["transparent", "#FFFFFF"],
+        "CHANNELTEXTAREA_BACKGROUND": ["#101014", "#FFFFFF"],
         "CHANNEL_ICON": ["#4a4a52", "#FFFFFF"],
         "CHANNELS_DEFAULT": ["#4a4a52", "#FFFFFF"]
     },
@@ -45,6 +45,6 @@
         "WHITE": "#FFFFFF"
     },
     "unsafe_colors": {
-        "CHAT_GREY": "#101014"
+        "CHAT_GREY": ["#101014", "#FFFFFF"]
     }
 }
