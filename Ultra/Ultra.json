@@ -39,7 +39,10 @@
     },
     "colours": {
         "PRIMARY_DARK_600": "#17161b",
-        "PRIMARY_DARK_630": "#101014"
+        "PRIMARY_DARK_630": "#101014",
+        "BRAND_NEW": "#6e6af6",
+        "BRAND_NEW_360": "#6e6af6",
+        "WHITE": "#FFFFFF"
     },
     "unsafe_colors": {
         "CHAT_GREY": "#101014"
