@@ -210,6 +210,30 @@ module.exports = (() => {
                 ],
             },
             {
+                type: "category",
+                id: "categoryFile",
+                name: "Link CSS File",
+                collapsible: true,
+                shown: true,
+                settings: [
+                    {
+                        type: "switch",
+                        id: "enableFile",
+                        name: "Enable File Module",
+                        note: "Without this, nothing in this category will apply.",
+                        value: false,
+                    },
+                    {
+                        type: "textbox",
+                        placeholder: "C:/User/Desktop/hljs.css",
+                        id: "filePath",
+                        name: "File Path",
+                        note: "Path to a hljs stylesheet",
+                        value: ""
+                    }
+                ],
+            },
+            {
                 type: "textbox",
                 placeholder: "Source Code Pro",
                 id: "fontName",
