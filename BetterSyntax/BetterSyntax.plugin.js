@@ -320,6 +320,7 @@ module.exports = (() => {
                           BdApi.clearCSS("BetterSyntaxButtons");
                           BdApi.clearCSS("BetterSyntaxEditorTheme");
                           BdApi.clearCSS("BetterSyntaxHljsLink");
+                          BdApi.clearCSS("BetterSyntaxHljsFile");
                           Patcher.unpatchAll();
                       }
 
@@ -397,6 +398,19 @@ module.exports = (() => {
                               BdApi.injectCSS("BetterSyntaxHljsLink", `@import url("${this.settings.categoryLink.link}");`);
                           } else {
                               BdApi.clearCSS("BetterSyntaxHljsLink");
+                          }
+
+                          if (this.settings.categoryFile.enableFile) {
+                              let css = "";
+                              if (this.settings.categoryFile.filePath) {
+                                  let fs = require("fs");
+                                  if (fs.existsSync(this.settings.categoryFile.filePath)) {
+                                      css = fs.readFileSync(this.settings.categoryFile.filePath, {encoding: "utf8"});
+                                  }
+                              }
+                              BdApi.injectCSS("BetterSyntaxHljsFile", css);
+                          } else {
+                              BdApi.clearCSS("BetterSyntaxHljsFile");
                           }
                       }
 
