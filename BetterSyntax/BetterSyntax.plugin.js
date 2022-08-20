@@ -400,14 +400,14 @@ module.exports = (() => {
                               BdApi.clearCSS("BetterSyntaxHljsLink");
                           }
 
-                          if (this.settings.categoryFile.enableFile) {
+                          if (this.settings.categoryFile.enableFile && this.settings.categoryFile.filePath) {
+                              const fs = require("fs");
+
                               let css = "";
-                              if (this.settings.categoryFile.filePath) {
-                                  let fs = require("fs");
-                                  if (fs.existsSync(this.settings.categoryFile.filePath)) {
-                                      css = fs.readFileSync(this.settings.categoryFile.filePath, {encoding: "utf8"});
-                                  }
+                              if (fs.existsSync(this.settings.categoryFile.filePath)) {
+                                  css = fs.readFileSync(this.settings.categoryFile.filePath, {encoding: "utf8"});
                               }
+
                               BdApi.injectCSS("BetterSyntaxHljsFile", css);
                           } else {
                               BdApi.clearCSS("BetterSyntaxHljsFile");
