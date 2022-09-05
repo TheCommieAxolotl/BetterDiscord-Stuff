@@ -279,9 +279,10 @@ module.exports = (() => {
         : (([Plugin, Api]) => {
               const plugin = (Plugin, Api) => {
                   const { Logger, ContextMenu, Patcher, DCM, WebpackModules } = Api;
-                  const { React } = BdApi;
+                  const { React, Webpack } = BdApi;
+                  const { Filters } = Webpack;
 
-                  const Tooltip = BdApi.findModuleByDisplayName("Tooltip");
+                  const Tooltip = Webpack.getModule(Filters.byDisplayName("Tooltip"));
 
                   return class BetterSyntax extends Plugin {
                       async onStart() {
@@ -317,7 +318,7 @@ module.exports = (() => {
                                               },
                                           }),
                                       ],
-                                  }),
+                                  })
                               );
                           });
                       }
@@ -377,7 +378,7 @@ module.exports = (() => {
                       }
 
                       async addButtons() {
-                          const { codeBlock } = BdApi.findModuleByProps("parse", "parseTopic").defaultRules;
+                          const { codeBlock } = Webpack.getModule(Filters.byProps("parse", "parseTopic")).defaultRules;
                           Patcher.after(codeBlock, "react", (_, [props], parRes) => {
                               if (props.type !== "codeBlock") return;
 
