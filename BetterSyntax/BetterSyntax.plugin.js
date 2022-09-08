@@ -2,7 +2,7 @@
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
  * @description Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
- * @version 2.0.2
+ * @version 2.1.0
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
@@ -36,7 +36,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
-            version: "2.0.2",
+            version: "2.1.0",
             description: "Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.",
         },
 
@@ -210,6 +210,30 @@ module.exports = (() => {
                 ],
             },
             {
+                type: "category",
+                id: "categoryFile",
+                name: "Link CSS File",
+                collapsible: true,
+                shown: true,
+                settings: [
+                    {
+                        type: "switch",
+                        id: "enableFile",
+                        name: "Enable File Module",
+                        note: "Without this, nothing in this category will apply.",
+                        value: false,
+                    },
+                    {
+                        type: "textbox",
+                        placeholder: "C:/User/Desktop/hljs.css",
+                        id: "filePath",
+                        name: "File Path",
+                        note: "Path to a hljs stylesheet",
+                        value: ""
+                    }
+                ],
+            },
+            {
                 type: "textbox",
                 placeholder: "Source Code Pro",
                 id: "fontName",
@@ -237,9 +261,9 @@ module.exports = (() => {
 
         changelog: [
             {
-                title: "Improved",
-                type: "improved",
-                items: ["Some More Maintainable Styles", "Wont flood console with Logs"],
+                title: "New Feature",
+                type: "added",
+                items: ["Added feature to load CSS from local file"],
             },
         ],
     };
@@ -297,6 +321,7 @@ module.exports = (() => {
                           BdApi.clearCSS("BetterSyntaxButtons");
                           BdApi.clearCSS("BetterSyntaxEditorTheme");
                           BdApi.clearCSS("BetterSyntaxHljsLink");
+                          BdApi.clearCSS("BetterSyntaxHljsFile");
                           Patcher.unpatchAll();
                       }
 
@@ -374,6 +399,19 @@ module.exports = (() => {
                               BdApi.injectCSS("BetterSyntaxHljsLink", `@import url("${this.settings.categoryLink.link}");`);
                           } else {
                               BdApi.clearCSS("BetterSyntaxHljsLink");
+                          }
+
+                          if (this.settings.categoryFile.enableFile && this.settings.categoryFile.filePath) {
+                              const fs = require("fs");
+
+                              let css = "";
+                              if (fs.existsSync(this.settings.categoryFile.filePath)) {
+                                  css = fs.readFileSync(this.settings.categoryFile.filePath, {encoding: "utf8"});
+                              }
+
+                              BdApi.injectCSS("BetterSyntaxHljsFile", css);
+                          } else {
+                              BdApi.clearCSS("BetterSyntaxHljsFile");
                           }
                       }
 
