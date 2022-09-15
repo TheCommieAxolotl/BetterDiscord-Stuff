@@ -1,7 +1,8 @@
 /* Made by TheCommieAxolotl */
 
 /* #2c2e33 */
-#app-mount .background-fkKrXt {
+#app-mount .background-fkKrXt,
+#app-mount .container-3wLKDe {
     background-color: var(--background-primary);
 }
 
