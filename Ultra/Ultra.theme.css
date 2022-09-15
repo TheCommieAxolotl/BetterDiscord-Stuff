@@ -20,7 +20,8 @@
 /* Source */
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Ultra/Clients/betterdiscord.css");
 
-:root {
+:root,
+.theme-dark {
     --version1_0_6: none;
     --text-normal: #dcddde;
     --text-muted: #4a4a52;
