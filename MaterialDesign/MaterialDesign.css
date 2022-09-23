@@ -123,6 +123,11 @@ code {
     transition: all 0.2s ease;
 }
 
+.withTagAsButton-OsgQ9L,
+.withTagless-10ooWt {
+    min-width: 105px;
+}
+
 .containerCard-2kwJKN:hover,
 .container-3HMTms:hover {
     background-color: var(--08dp) !important;
