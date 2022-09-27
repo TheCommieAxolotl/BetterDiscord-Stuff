@@ -229,8 +229,8 @@ module.exports = (() => {
                         id: "filePath",
                         name: "File Path",
                         note: "Path to a hljs stylesheet",
-                        value: ""
-                    }
+                        value: "",
+                    },
                 ],
             },
             {
@@ -406,7 +406,7 @@ module.exports = (() => {
 
                               let css = "";
                               if (fs.existsSync(this.settings.categoryFile.filePath)) {
-                                  css = fs.readFileSync(this.settings.categoryFile.filePath, {encoding: "utf8"});
+                                  css = fs.readFileSync(this.settings.categoryFile.filePath, { encoding: "utf8" });
                               }
 
                               BdApi.injectCSS("BetterSyntaxHljsFile", css);
