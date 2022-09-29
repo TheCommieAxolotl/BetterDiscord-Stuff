@@ -306,7 +306,7 @@ module.exports = (() => {
                   const { React, Webpack } = BdApi;
                   const { Filters } = Webpack;
 
-                  const Tooltip = Webpack.getModule(Filters.byDisplayName("Tooltip"));
+                  const Tooltip = Webpack.getModule((m) => m?.toString().includes("shouldShowTooltip") && m?.Positions);
 
                   return class BetterSyntax extends Plugin {
                       async onStart() {
