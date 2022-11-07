@@ -1,4 +1,4 @@
-# CleanUpConfigs
+# CleanUpConfigs (DEPRECATED)
 
 A BetterDiscord Utility Plugins to remove unused config files
 

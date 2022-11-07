@@ -23,10 +23,10 @@ Below I have layed out a sort of table of contents for this Repo.
      > A clean theme inspired by Google's Material Design
  
 ## Plugins
- - ### [CleanUpConfigs](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs)
-    > Check and remove config files that don't have a matching Plugin.
  - ### [BetterSyntax](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax)
     > Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
+ - ### [CleanUpConfigs](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs)
+    > Deprecated.
  
 # Imports and Snippets
  - ### [Touchup](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Imports/Touchup.css)  
