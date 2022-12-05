@@ -189,14 +189,15 @@ rect.pointerEvents-9SZWKj {
     width: 10px;
 }
 
-.containerDefault-YUSmu3 rect.pointerEvents-9SZWKj {
-    x: 13 !important;
-    y: 0 !important;
-    height: 6px;
-    width: 6px;
-    rx: 2px;
-    ry: 2px;
-    stroke-width: 0.5px;
+.mask-1FEkla circle {
+    display: none;
+}
+
+.accountProfileCard-lbN7n- rect.pointerEvents-9SZWKj {
+    x: 70 !important;
+    y: 1 !important;
+    height: 15px;
+    width: 15px;
 }
 
 .wrapper-1HIH0j {
@@ -602,7 +603,7 @@ code {
     display: none;
 }
 
-.userPopout-29jUdN rect.pointerEvents-9SZWKj {
+.userPopoutOuter-3AVBmJ rect.pointerEvents-9SZWKj {
     x: 66 !important;
     y: 66 !important;
     height: 15px;
