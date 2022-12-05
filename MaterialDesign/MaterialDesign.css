@@ -817,7 +817,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     box-shadow: none !important;
 }
 
-.root-g14mjS > div:not(.topSection-13QKHs) {
+.root-g14mjS:not(.modal-3Crloo, .root-2uUafN) > div:not(.topSection-13QKHs) {
     padding-inline: 36px;
 }
 
