@@ -2,18 +2,6 @@
     Setup
 **/
 
-#app-mount .base-2jDfDU::before {
-    content: "Your version of MaterialDesign is outdated. Please download the latest version from source";
-    display: var(--version0_9_9, block);
-    background-color: var(--brand-experiment-60a);
-    color: #fff;
-    font-size: 14px;
-    line-height: 36px;
-    font-weight: 500;
-    text-align: center;
-    z-index: 101;
-}
-
 .content-2hZxGK.thin-31rlnD.scrollerBase-_bVAAt {
     padding-right: 36px !important;
 }
@@ -457,6 +445,10 @@ button.lookFilled-yCfaCM {
     left: -55px;
 }
 
+.avatarDecoration-34OC0G {
+    left: -58px;
+}
+
 .groupStart-3Mlgv1.mentioned-Tre-dv .contents-2MsGLg,
 .mentioned-Tre-dv:not(.groupStart-3Mlgv1) .contents-2MsGLg > .markup-eYLPri:not(:empty, .searchResultsWrap-5RVOkx *) {
     background-color: #615f45;
@@ -774,7 +766,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     padding: 0 !important;
 }
 
-.tabBarItem-30Te4-.item-3XjbnG.themed-2-lozF {
+.tabBarItem-3VvT2z.item-3XjbnG.themed-2-lozF {
     height: 20px;
 }
 
@@ -790,6 +782,10 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     right: 36px;
 }
 
+#app-mount .content-2eQb8J {
+    background-color: var(--background-primary);
+}
+
 .colorDefault-CDqZdO.focused-3qFvc8 {
     background-color: var(--brand-experiment-30a);
 }
@@ -797,6 +793,10 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
 .root-g14mjS {
     border-radius: 28px;
     background-color: var(--background-primary) !important;
+}
+
+.root-CyPAbQ {
+    width: fit-content;
 }
 
 .footer-31IekZ {
@@ -819,6 +819,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
 
 .root-g14mjS:not(.modal-3Crloo, .root-2uUafN) > div:not(.topSection-13QKHs) {
     padding-inline: 36px;
+    border-radius: 20px 20px 0 0;
 }
 
 .nameTagWithCustomStatus-5c-v3- {
@@ -837,6 +838,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
 
 .root-g14mjS .header-1zd7se {
     padding-top: 30px;
+    border-radius: 20px;
 }
 
 .root-g14mjS .content-2hZxGK {
