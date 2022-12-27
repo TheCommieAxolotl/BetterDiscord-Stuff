@@ -302,8 +302,8 @@ module.exports = (() => {
           }
         : (([Plugin, Api]) => {
               const plugin = (Plugin, Api) => {
-                  const { Logger, ContextMenu, Patcher, DCM, WebpackModules } = Api;
-                  const { React, Webpack } = BdApi;
+                  const { Logger, Patcher, DCM, WebpackModules } = Api;
+                  const { React, Webpack, ContextMenu } = BdApi;
                   const { Filters } = Webpack;
 
                   const Tooltip = Webpack.getModule((m) => m?.toString().includes("shouldShowTooltip") && m?.Positions);
@@ -322,20 +322,21 @@ module.exports = (() => {
                           BdApi.clearCSS("BetterSyntaxEditorTheme");
                           BdApi.clearCSS("BetterSyntaxHljsLink");
                           BdApi.clearCSS("BetterSyntaxHljsFile");
+
                           Patcher.unpatchAll();
+                          this.contextpatch();
                       }
 
                       async patchContext() {
-                          const MessageContextMenu = await ContextMenu.getDiscordMenu("MessageContextMenu");
-                          await Patcher.after(MessageContextMenu, "default", (_, [props], component) => {
-                              component.props.children.push(
-                                  DCM.buildMenuItem({ type: "separator" }),
-                                  DCM.buildMenuItem({
+                          this.contextpatch = ContextMenu.patch("message", (tree, _) => {
+                              tree.props.children.push(
+                                  ContextMenu.buildItem({ type: "separator" }),
+                                  ContextMenu.buildItem({
                                       label: "BetterSyntax",
                                       type: "submenu",
                                       id: "context-bettersyntax",
                                       children: [
-                                          DCM.buildMenuItem({
+                                          ContextMenu.buildItem({
                                               label: "Change Theme",
                                               type: "text",
                                               action: () => {
@@ -417,14 +418,14 @@ module.exports = (() => {
 
                       async addButtons() {
                           const { codeBlock } = Webpack.getModule(Filters.byProps("parse", "parseTopic")).defaultRules;
-                          Patcher.after(codeBlock, "react", (_, [props], parRes) => {
+                          Patcher.after(codeBlock, "react", (_, [props], res) => {
                               if (props.type !== "codeBlock") return;
 
-                              Patcher.after(parRes.props, "render", (_, newProps, res) => {
-                                  res.props.className = "bettersyntax-pre";
+                              Patcher.after(res.props.children, "type", (_, __, nestedRes) => {
+                                  nestedRes.props.className = "bettersyntax-pre";
 
-                                  res.props.children = [
-                                      res.props.children,
+                                  nestedRes.props.children = [
+                                      nestedRes.props.children,
                                       React.createElement("div", {
                                           className: "bettersyntax-buttons",
                                           children: [
