@@ -1,17 +1,5 @@
 :root {
-    --version: "1.0.6";
-}
-
-#app-mount .app-2CXKsg::before {
-    content: "Your version of Ultra is outdated. Please download the newest version from source";
-    display: var(--version1_0_6, block);
-    background-color: var(--brand-experiment);
-    color: #fff;
-    font-size: 14px;
-    line-height: 36px;
-    font-weight: 500;
-    text-align: center;
-    z-index: 101;
+    --version: "1.0.7";
 }
 
 .embedThumbnail-2nTasl {
@@ -275,6 +263,7 @@ rect.pointerEvents-9SZWKj {
 }
 
 h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
+.title-1_TkpU,
 .container-x8Y1ix .text-PdAsFQ,
 .footerTitle-3Bslxi,
 .title-OdeD-o,
@@ -466,6 +455,14 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     background-color: var(--background-tertiary) !important;
 }
 
+.theme-light .root-g14mjS {
+    box-shadow: var(--elevation-border), var(--elevation-high);
+}
+
+.sampleLink-5BWNy9 {
+    color: #fff;
+}
+
 .messageContent-2t3eC {
     font-weight: 400;
 }
@@ -603,7 +600,8 @@ code {
     display: none;
 }
 
-.userPopoutOuter-3AVBmJ rect.pointerEvents-9SZWKj {
+.userPopoutOuter-3AVBmJ rect.pointerEvents-9SZWKj,
+.profilePanel-2PWEok rect.pointerEvents-9SZWKj {
     x: 66 !important;
     y: 66 !important;
     height: 15px;

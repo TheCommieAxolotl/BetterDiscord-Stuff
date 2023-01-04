@@ -1,6 +1,6 @@
 /**
  * @name Ultra
- * @version 1.0.6
+ * @version 1.0.7
  * @author TheCommieAxolotl#0001
  * @authorId 538487970408300544
  * @description A Smooth, Black theme
@@ -23,7 +23,6 @@
 
 :root,
 .theme-dark {
-    --version1_0_6: none;
     --text-normal: #dcddde;
     --text-muted: #4a4a52;
     --text-link: #6e6af6;
@@ -41,6 +40,7 @@
     --background-tertiary: #101014;
     --background-accent: #4f545c;
     --background-floating: #17161b;
+    --modal-background: #101014;
     --channeltextarea-background: #17161b;
     --info-positive-text: #fff;
     --info-warning-text: #fff;
