@@ -849,7 +849,12 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button-f2h6uQ, .lookFilled-yCfaCM):ho
     background-color: var(--background-primary) !important;
 }
 
-.modal-3Hrb0S {
+.modal-3Hrb0S,
+.modal-1Kmy_E {
+    width: 530px;
+}
+
+.small-23Atuv {
     width: 530px;
 }
 
