@@ -96,6 +96,9 @@ module.exports = (() => {
 }
                   `;
 
+                  const TextInput = Webpack.getModule((m) => m.ZP?.prototype?.render?.toString().includes("inputClassName") && m.ZP?.prototype?.render?.toString().includes("inputPrefix")).ZP;
+                  const Markdown = Webpack.getModule((m) => m.Z?.rules && m.Z?.defaultProps?.parser).Z;
+
                   return class Timezones extends Plugin {
                       async onStart() {
                           injectCSS("Timezones-Styles", Styles);
@@ -152,9 +155,6 @@ module.exports = (() => {
                       setTimezone(id, user) {
                           let hours = 0;
                           let minutes = 0;
-
-                          const TextInput = Webpack.getModule((m) => m.ZP?.prototype?.render?.toString().includes("inputClassName") && m.ZP?.prototype?.render?.toString().includes("inputPrefix")).ZP;
-                          const Markdown = Webpack.getModule((m) => m.Z?.rules && m.Z?.defaultProps?.parser).Z;
 
                           UI.showConfirmationModal(
                               "Set Timezone",
