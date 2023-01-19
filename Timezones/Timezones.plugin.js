@@ -73,7 +73,6 @@ module.exports = (() => {
     display: inline-block;
     height: 1.25rem;
     cursor: default;
-    pointer-events: none;
     font-weight: 500;
 }
 
@@ -103,12 +102,9 @@ module.exports = (() => {
 
                           const ProfileBanner = Webpack.getModule((m) => m.Z?.toString().includes("e.hasBannerImage") && m.Z?.toString().includes("e.hasThemeColors"));
                           const MessageHeader = Webpack.getModule((m) => m.Z?.toString().includes("userOverride") && m.Z?.toString().includes("withMentionPrefix"));
-                          const GenericMenu = Webpack.getModule((m) => m.ZP?.toString().includes("menuItemProps:"));
+                          const Tooltip = Webpack.getModule((m) => m?.toString().includes("shouldShowTooltip") && m?.Positions);
 
                           ContextMenu.patch("user-context", (ret, props) => {
-                              console.log(ret, props);
-                              console.log(ret.props.children[0].props.children);
-
                               ret.props.children[0].props.children.push([
                                   ContextMenu.buildItem({ type: "separator" }),
                                   ContextMenu.buildItem({
@@ -119,6 +115,7 @@ module.exports = (() => {
                                   }),
                               ]);
                           });
+
                           Patcher.after(ProfileBanner, "Z", (_, [props], ret) => {
                               const originalRet = { ...ret };
 
@@ -127,13 +124,24 @@ module.exports = (() => {
                               ret.type = "div";
                               ret.props = {
                                   className: "timezone-banner-container",
-                                  children: [originalRet, React.createElement("div", { className: "timezone-badge" }, this.getLocalTime(props.user.id))],
+                                  children: [
+                                      originalRet,
+                                      React.createElement(Tooltip, {
+                                          text: this.getFullTime(props.user.id),
+                                          children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getLocalTime(props.user.id)),
+                                      }),
+                                  ],
                               };
                           });
 
                           Patcher.after(MessageHeader, "Z", (_, [props], ret) => {
                               this.hasTimezone(props.message.author.id) &&
-                                  ret.props.children.push(React.createElement("span", { className: "timezone" }, this.getLocalTime(props.message.author.id, props.message.timestamp._d)));
+                                  ret.props.children.push(
+                                      React.createElement(Tooltip, {
+                                          text: this.getFullTime(props.message.author.id, props.message.timestamp._d),
+                                          children: (p) => React.createElement("span", { ...p, className: "timezone" }, this.getLocalTime(props.message.author.id, props.message.timestamp._d)),
+                                      })
+                                  );
                           });
                       }
 
@@ -203,6 +211,38 @@ module.exports = (() => {
                           const ampm = hours < 12 ? "AM" : "PM";
 
                           return `${hour}:${minutes.toString().length === 1 ? `0${minutes}` : minutes} ${ampm}`;
+                      }
+
+                      getFullTime(id, time) {
+                          const timezone = Data.load(config.info.name, id);
+
+                          if (!timezone) return null;
+
+                          let date;
+
+                          if (time) {
+                              date = new Date(time);
+                              date.setHours(date.getUTCHours() + Number(timezone[0]));
+                              date.setMinutes(date.getUTCMinutes() + Number(timezone[1]));
+                          } else {
+                              date = new Date();
+                              date.setHours(date.getUTCHours() + Number(timezone[0]));
+                              date.setMinutes(date.getUTCMinutes() + Number(timezone[1]));
+                          }
+
+                          let ret = date.toLocaleString("en-US", {
+                              weekday: "long",
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                              hour: "numeric",
+                              minute: "numeric",
+                              hour12: true,
+                          });
+
+                          ret = ret.replace(/,(?=[^,]*$)/, "");
+
+                          return ret;
                       }
 
                       onStop() {
