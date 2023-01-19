@@ -207,8 +207,22 @@ module.exports = (() => {
                               minutes = new Date().getUTCMinutes() + Number(timezone[1]);
                           }
 
-                          const hour = hours % 12 || 12;
-                          const ampm = hours < 12 ? "AM" : "PM";
+                          if (hours >= 24) {
+                              hours -= 24;
+                          } else if (hours < 0) {
+                              hours += 24;
+                          }
+
+                          if (minutes >= 60) {
+                              minutes -= 60;
+                              hours += 1;
+                          } else if (minutes < 0) {
+                              minutes += 60;
+                              hours -= 1;
+                          }
+
+                          const hour = hours > 12 ? hours - 12 : hours;
+                          const ampm = hours >= 12 ? "PM" : "AM";
 
                           return `${hour}:${minutes.toString().length === 1 ? `0${minutes}` : minutes} ${ampm}`;
                       }
