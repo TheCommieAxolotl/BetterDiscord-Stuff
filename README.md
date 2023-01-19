@@ -25,6 +25,8 @@ Below I have layed out a sort of table of contents for this Repo.
 ## Plugins
  - ### [BetterSyntax](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax)
     > Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
+ - ### [Timezones](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones)
+    > Allows you to display other Users' local times.
  - ### [CleanUpConfigs](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs)
     > Deprecated.
  
