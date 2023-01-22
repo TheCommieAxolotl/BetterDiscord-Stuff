@@ -42,6 +42,11 @@ svg.cursorDefault--wfhy5 {
     overflow: visible;
 }
 
+.member-48YF_l,
+.members-3WRCEx {
+    background: transparent;
+}
+
 .member-2gU6Ar .dots-1BwzZQ circle,
 .channel-1Shao0 .dots-1BwzZQ circle {
     cy: -18.5px;
@@ -244,7 +249,7 @@ rect.pointerEvents-9SZWKj {
     color: var(--background-secondary) !important;
 }
 
-.container-1Lk8p7,
+.container-2FjuQ5,
 .footer-3ie9JP,
 .footer-31IekZ {
     background-color: #101014 !important;

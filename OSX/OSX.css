@@ -128,7 +128,6 @@
     transition: all 0.1s ease-in-out !important;
 }
 
-.accountProfileCard-1XCH88,
 .accountProfileCard-lbN7n- {
     background: var(--background-secondary);
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
@@ -148,12 +147,12 @@
 }
 
 .container-3auIfb[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"],
-.container-2nx-BQ[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"] {
+.container-1QtPKm[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"] {
     background-color: var(--brand-experiment) !important;
 }
 
 .slider-TkfMQL > svg,
-.slider-32CRPX > svg {
+.slider-HJFN2i > svg {
     display: none;
 }
 
@@ -179,6 +178,7 @@ textarea {
 
 .menu-3sdvDG,
 .menu-1QACrS {
+    position: relative;
     background: var(--background-floating);
     min-width: 240px;
 }
@@ -349,15 +349,14 @@ textarea {
     visibility: visible;
 }
 
-.hovered-15FzL3 .discriminator-22Okc1,
-.hovered-1EO01j .discriminator-WV5K5s {
+.listItemContents-2n2Uy9:hover .discriminator-WV5K5s {
     opacity: 1;
 }
 
 .listItemContents-95HL3L,
 .listItemContents-95HL3L:hover,
-.listItemContents-2n2Uy9,
-.listItemContents-2n2Uy9:hover {
+.listItemContents-3LtgRk,
+.listItemContents-3LtgRk:hover {
     height: 100% !important;
     margin: 0 !important;
     padding: 0;
@@ -369,7 +368,7 @@ textarea {
 }
 
 .listItemContents-95HL3L:hover,
-.listItemContents-2n2Uy9:hover {
+.listItemContents-3LtgRk:hover {
     transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
 }
