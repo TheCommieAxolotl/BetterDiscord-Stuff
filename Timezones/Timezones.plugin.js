@@ -96,7 +96,9 @@ module.exports = (() => {
 }
                   `;
 
-                  const TextInput = Webpack.getModule((m) => m.ZP?.prototype?.render?.toString().includes("inputClassName") && m.ZP?.prototype?.render?.toString().includes("inputPrefix")).ZP;
+                  const TextInput = Webpack.getModule((m) => m?.Sizes?.MINI && m?.defaultProps, {
+                      searchExports: true,
+                  });
                   const Markdown = Webpack.getModule((m) => m.Z?.rules && m.Z?.defaultProps?.parser).Z;
 
                   return class Timezones extends Plugin {
