@@ -141,7 +141,9 @@ module.exports = (() => {
                       }
 
                       userContextPatch = (ret, props) => {
-                          ret.props.children[0].props.children.push([
+                          const isDM = !Array.isArray(ret.props.children[0].props.children);
+
+                          (isDM ? ret.props.children : ret.props.children[0].props.children).push([
                               ContextMenu.buildItem({ type: "separator" }),
                               ContextMenu.buildItem({
                                   label: "Set Timezone",
