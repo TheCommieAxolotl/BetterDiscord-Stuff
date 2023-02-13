@@ -109,17 +109,7 @@ module.exports = (() => {
                           const MessageHeader = Webpack.getModule((m) => m.Z?.toString().includes("userOverride") && m.Z?.toString().includes("withMentionPrefix"));
                           const Tooltip = Webpack.getModule((m) => m?.toString().includes("shouldShowTooltip") && m?.Positions);
 
-                          ContextMenu.patch("user-context", (ret, props) => {
-                              ret.props.children[0].props.children.push([
-                                  ContextMenu.buildItem({ type: "separator" }),
-                                  ContextMenu.buildItem({
-                                      label: "Set Timezone",
-                                      action: () => {
-                                          return this.setTimezone(props.user.id, props.user);
-                                      },
-                                  }),
-                              ]);
-                          });
+                          ContextMenu.patch("user-context", this.userContextPatch);
 
                           Patcher.after(ProfileBanner, "Z", (_, [props], ret) => {
                               const originalRet = { ...ret };
@@ -149,6 +139,18 @@ module.exports = (() => {
                                   );
                           });
                       }
+
+                      userContextPatch = (ret, props) => {
+                          ret.props.children[0].props.children.push([
+                              ContextMenu.buildItem({ type: "separator" }),
+                              ContextMenu.buildItem({
+                                  label: "Set Timezone",
+                                  action: () => {
+                                      return this.setTimezone(props.user.id, props.user);
+                                  },
+                              }),
+                          ]);
+                      };
 
                       hasTimezone(id) {
                           return !!Data.load(config.info.name, id);
@@ -263,6 +265,7 @@ module.exports = (() => {
 
                       onStop() {
                           Patcher.unpatchAll();
+                          ContextMenu.unpatch("user-context", this.userContextPatch);
                           clearCSS("Timezones-Styles");
                       }
                   };
