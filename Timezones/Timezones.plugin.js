@@ -138,6 +138,8 @@ module.exports = (() => {
                           });
 
                           Patcher.after(MessageHeader, "Z", (_, [props], ret) => {
+                              if (props.isRepliedMessage) return;
+
                               this.hasTimezone(props.message.author.id) &&
                                   ret.props.children.push(
                                       React.createElement(Tooltip, {
@@ -173,7 +175,7 @@ module.exports = (() => {
                           UI.showConfirmationModal(
                               "Set Timezone",
                               [
-                                  React.createElement(Markdown, null, "Please enter an hour offset between -12 and 12 (UTC)"),
+                                  React.createElement(Markdown, null, "Please enter a UTC hour offset."),
                                   React.createElement(TextInput, {
                                       type: "number",
                                       maxLength: "2",
@@ -182,7 +184,7 @@ module.exports = (() => {
                                           hours = v;
                                       },
                                   }),
-                                  React.createElement(Markdown, { className: "timezone-margin-top" }, "Please enter a minute offset between 0 and 60 (UTC)"),
+                                  React.createElement(Markdown, { className: "timezone-margin-top" }, "Please enter a UTC minute offset."),
                                   React.createElement(TextInput, {
                                       type: "number",
                                       maxLength: "2",
