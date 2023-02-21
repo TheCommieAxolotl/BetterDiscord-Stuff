@@ -24,6 +24,14 @@ module.exports = (() => {
             version: "1.0.0",
             description: "Allows you to display other Users' local times.",
         },
+        defaultConfig: [
+            {
+                type: "switch",
+                id: "twentyFourHours",
+                name: "24 Hour Time",
+                value: false,
+            },
+        ],
     };
 
     return !global.ZeresPluginLibrary
@@ -227,6 +235,10 @@ module.exports = (() => {
                               hours -= 1;
                           }
 
+                          if (this.settings.twentyFourHours) {
+                              return `${hours.toString().length === 1 ? `0${hours}` : hours}:${minutes.toString().length === 1 ? `0${minutes}` : minutes}`;
+                          }
+
                           const hour = hours > 12 ? hours - 12 : hours;
                           const ampm = hours >= 12 ? "PM" : "AM";
 
@@ -257,7 +269,7 @@ module.exports = (() => {
                               day: "numeric",
                               hour: "numeric",
                               minute: "numeric",
-                              hour12: true,
+                              hour12: !this.settings.twentyFourHours,
                           });
 
                           ret = ret.replace(/,(?=[^,]*$)/, "");
@@ -270,6 +282,10 @@ module.exports = (() => {
                           ContextMenu.unpatch("user-context", this.userContextPatch);
                           clearCSS("Timezones-Styles");
                       }
+
+                      getSettingsPanel = () => {
+                          return this.buildSettingsPanel().getElement();
+                      };
                   };
               };
 
