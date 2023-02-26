@@ -220,7 +220,6 @@ module.exports = (() => {
                               minutes = time.getUTCMinutes() + Number(timezone[1]);
                           } else {
                               hours = new Date().getUTCHours() + Number(timezone[0]);
-                              hours = hours == 0 ? 12 : hours;
                               minutes = new Date().getUTCMinutes() + Number(timezone[1]);
                           }
 
@@ -242,7 +241,7 @@ module.exports = (() => {
                               return `${hours.toString().length === 1 ? `0${hours}` : hours}:${minutes.toString().length === 1 ? `0${minutes}` : minutes}`;
                           }
 
-                          const hour = hours > 12 ? hours - 12 : hours;
+                          hours > 12 ? hours - 12 : (hours == 0 : 12 ? hours);
                           const ampm = hours >= 12 ? "PM" : "AM";
 
                           return `${hour}:${minutes.toString().length === 1 ? `0${minutes}` : minutes} ${ampm}`;
