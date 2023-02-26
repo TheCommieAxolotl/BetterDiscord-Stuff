@@ -220,6 +220,7 @@ module.exports = (() => {
                               minutes = time.getUTCMinutes() + Number(timezone[1]);
                           } else {
                               hours = new Date().getUTCHours() + Number(timezone[0]);
+                              hours = hours == 0 ? 12 : hours;
                               minutes = new Date().getUTCMinutes() + Number(timezone[1]);
                           }
 
