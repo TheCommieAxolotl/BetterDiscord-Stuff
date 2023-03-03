@@ -115,7 +115,7 @@ module.exports = (() => {
 
                           const ProfileBanner = Webpack.getModule((m) => m.Z?.toString().includes("e.hasBannerImage") && m.Z?.toString().includes("e.hasThemeColors"));
                           const MessageHeader = Webpack.getModule((m) => m.Z?.toString().includes("userOverride") && m.Z?.toString().includes("withMentionPrefix"));
-                          const Tooltip = Webpack.getModule((m) => m?.toString().includes("shouldShowTooltip") && m?.Positions);
+                          const Tooltip = BdApi.Components.Tooltip;
 
                           ContextMenu.patch("user-context", this.userContextPatch);
 

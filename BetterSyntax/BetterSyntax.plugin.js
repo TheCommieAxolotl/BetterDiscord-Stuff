@@ -306,7 +306,7 @@ module.exports = (() => {
                   const { React, Webpack, ContextMenu } = BdApi;
                   const { Filters } = Webpack;
 
-                  const Tooltip = Webpack.getModule((m) => m?.toString().includes("shouldShowTooltip") && m?.Positions);
+                  const Tooltip = BdApi.Components.Tooltip;
 
                   return class BetterSyntax extends Plugin {
                       async onStart() {
