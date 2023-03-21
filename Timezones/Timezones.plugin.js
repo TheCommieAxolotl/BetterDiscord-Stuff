@@ -2,7 +2,7 @@
  * @name Timezones
  * @author TheCommieAxolotl#0001
  * @description Allows you to display other Users' local times.
- * @version 1.0.0
+ * @version 1.0.1
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Timezones/Timezones.plugin.js",
-            version: "1.0.0",
+            version: "1.0.1",
             description: "Allows you to display other Users' local times.",
         },
         defaultConfig: [
@@ -121,7 +121,7 @@ module.exports = (() => {
 
                           const ProfileBanner = Webpack.getModule((m) => m.Z?.toString().includes("e.hasBannerImage") && m.Z?.toString().includes("e.hasThemeColors"));
                           const MessageHeader = Webpack.getModule((m) => m.Z?.toString().includes("userOverride") && m.Z?.toString().includes("withMentionPrefix"));
-                          const Tooltip = Webpack.getModule((m) => m?.toString().includes("shouldShowTooltip") && m?.Positions);
+                          const Tooltip = BdApi.Components.Tooltip;
 
                           ContextMenu.patch("user-context", this.userContextPatch);
 
