@@ -2,7 +2,7 @@
  * @name Timezones
  * @author TheCommieAxolotl#0001
  * @description Allows you to display other Users' local times.
- * @version 1.0.1
+ * @version 1.0.0
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Timezones/Timezones.plugin.js",
-            version: "1.0.1",
+            version: "1.0.0",
             description: "Allows you to display other Users' local times.",
         },
         defaultConfig: [
@@ -34,7 +34,7 @@ module.exports = (() => {
             {
                 type: "switch",
                 id: "showInMessage",
-                name: "Show timezone next to each message",
+                name: "Show timezone next to message timestamp",
                 value: true,
             },
         ],
