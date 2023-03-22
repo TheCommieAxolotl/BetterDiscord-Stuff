@@ -31,6 +31,12 @@ module.exports = (() => {
                 name: "24 Hour Time",
                 value: false,
             },
+            {
+                type: "switch",
+                id: "showInMessage",
+                name: "Show timezone next to message timestamp",
+                value: true,
+            },
         ],
     };
 
@@ -138,7 +144,7 @@ module.exports = (() => {
                           });
 
                           Patcher.after(MessageHeader, "Z", (_, [props], ret) => {
-                              if (props.isRepliedMessage) return;
+                              if (props.isRepliedMessage || !this.settings.showInMessage) return;
 
                               this.hasTimezone(props.message.author.id) &&
                                   ret.props.children.push(
