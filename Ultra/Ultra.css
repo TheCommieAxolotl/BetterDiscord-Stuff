@@ -577,7 +577,7 @@ code {
 }
 
 .container-ZMc96U {
-    background: #101014 !important;
+    background: var(--background-primary) !important;
 }
 
 .container-YkUktl,
