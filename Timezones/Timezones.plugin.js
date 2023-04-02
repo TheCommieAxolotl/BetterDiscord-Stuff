@@ -2,7 +2,7 @@
  * @name Timezones
  * @author TheCommieAxolotl#0001
  * @description Allows you to display other Users' local times.
- * @version 1.0.1
+ * @version 1.0.2
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones
@@ -110,7 +110,7 @@ module.exports = (() => {
 }
                   `;
 
-                  const TextInput = Webpack.getModule((m) => m?.Sizes?.MINI && m?.defaultProps, {
+                  const TextInput = Webpack.getModule((m) => m?.Sizes?.MINI && m?.defaultProps?.type === "text", {
                       searchExports: true,
                   });
                   const Markdown = Webpack.getModule((m) => m.Z?.rules && m.Z?.defaultProps?.parser).Z;
@@ -247,7 +247,7 @@ module.exports = (() => {
                               return `${hours.toString().length === 1 ? `0${hours}` : hours}:${minutes.toString().length === 1 ? `0${minutes}` : minutes}`;
                           }
 
-                          const hour = hours > 12 ? hours - 12 : (hours == 0 ? 12 : hours);
+                          const hour = hours > 12 ? hours - 12 : hours == 0 ? 12 : hours;
                           const ampm = hours >= 12 ? "PM" : "AM";
 
                           return `${hour}:${minutes.toString().length === 1 ? `0${minutes}` : minutes} ${ampm}`;
