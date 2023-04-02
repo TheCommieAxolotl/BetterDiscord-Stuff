@@ -77,6 +77,21 @@ module.exports = (() => {
                   const { Patcher } = Api;
                   const { Data, React, injectCSS, clearCSS, Webpack, ContextMenu, UI } = BdApi;
 
+                  const DataStore = new Proxy(
+                      {},
+                      {
+                          get: (_, key) => Data.load(config.info.name, key),
+                          set: (_, key, value) => {
+                              Data.save(config.info.name, key, value);
+                              return true;
+                          },
+                          deleteProperty: (_, key) => {
+                              Data.delete(config.info.name, key);
+                              return true;
+                          },
+                      }
+                  );
+
                   const Styles = `
 .timezone {
     margin-left: 0.5rem;
@@ -162,16 +177,30 @@ module.exports = (() => {
                           (isDM ? ret.props.children : ret.props.children[0].props.children).push([
                               ContextMenu.buildItem({ type: "separator" }),
                               ContextMenu.buildItem({
-                                  label: "Set Timezone",
-                                  action: () => {
-                                      return this.setTimezone(props.user.id, props.user);
-                                  },
+                                  type: "submenu",
+                                  label: "Timezones",
+                                  children: [
+                                      ContextMenu.buildItem({
+                                          label: "Set Timezone",
+                                          action: () => {
+                                              return this.setTimezone(props.user.id, props.user);
+                                          },
+                                      }),
+                                      ContextMenu.buildItem({
+                                          label: "Remove Timezone",
+                                          danger: true,
+                                          disabled: !this.hasTimezone(props.user.id),
+                                          action: () => {
+                                              return this.removeTimezone(props.user.id, props.user);
+                                          },
+                                      }),
+                                  ],
                               }),
                           ]);
                       };
 
                       hasTimezone(id) {
-                          return !!Data.load(config.info.name, id);
+                          return !!DataStore[id];
                       }
 
                       setTimezone(id, user) {
@@ -179,13 +208,13 @@ module.exports = (() => {
                           let minutes = 0;
 
                           UI.showConfirmationModal(
-                              "Set Timezone",
+                              `Set Timezone for ${user.username}#${user.discriminator}`,
                               [
                                   React.createElement(Markdown, null, "Please enter a UTC hour offset."),
                                   React.createElement(TextInput, {
                                       type: "number",
                                       maxLength: "2",
-                                      placeholder: "0",
+                                      placeholder: DataStore[id]?.[0] || "0",
                                       onChange: (v) => {
                                           hours = v;
                                       },
@@ -194,7 +223,7 @@ module.exports = (() => {
                                   React.createElement(TextInput, {
                                       type: "number",
                                       maxLength: "2",
-                                      placeholder: "0",
+                                      placeholder: DataStore[id]?.[1] || "0",
                                       onChange: (v) => {
                                           minutes = v;
                                       },
@@ -203,7 +232,7 @@ module.exports = (() => {
                               {
                                   confirmText: "Set",
                                   onConfirm: () => {
-                                      Data.save(config.info.name, id, [hours, minutes]);
+                                      DataStore[id] = [hours, minutes];
 
                                       BdApi.showToast(`Timezone set to UTC${hours > 0 ? `+${hours}` : hours}${minutes ? `:${minutes}` : ""} for ${user.username}`, {
                                           type: "success",
@@ -213,8 +242,16 @@ module.exports = (() => {
                           );
                       }
 
+                      removeTimezone(id, user) {
+                          delete DataStore[id];
+
+                          BdApi.showToast(`Timezone removed for ${user.username}`, {
+                              type: "success",
+                          });
+                      }
+
                       getLocalTime(id, time) {
-                          const timezone = Data.load(config.info.name, id);
+                          const timezone = DataStore[id];
 
                           if (!timezone) return null;
 
@@ -254,7 +291,7 @@ module.exports = (() => {
                       }
 
                       getFullTime(id, time) {
-                          const timezone = Data.load(config.info.name, id);
+                          const timezone = DataStore[id];
 
                           if (!timezone) return null;
 
