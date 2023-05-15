@@ -1,0 +1,192 @@
+#app-mount .horizontal-112GEH,
+.velocity-addon-header .addon-buttons,
+.addon-card-lower .addon-card-footer {
+    .button-ejjZWC {
+        border-radius: 0px;
+        border-right-width: 0;
+        border-color: var(--color-btn-border) !important;
+
+        &:first-child:not(* > .disabledButtonWrapper-1m0h:last-child *) {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+        &:last-child:not(* > .disabledButtonWrapper-1m0h:first-child *) {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-right-width: 1px;
+        }
+    }
+}
+
+.addon-card-footer {
+    gap: 0;
+}
+
+.button-ejjZWC:not(.addButton-2mlqCW) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    user-select: none;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    min-width: max-content;
+    transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    transition-delay: 0s;
+    transition-property: color, fill, background-color, border-color;
+    color: var(--color-btn-text);
+    background-color: var(--color-btn-bg);
+    border: 1px solid var(--color-btn-border);
+    box-shadow: var(--color-btn-shadow);
+
+    &:hover {
+        background-color: var(--color-btn-hover-bg);
+        border-color: var(--color-btn-hover-border);
+    }
+
+    &:active {
+        background-color: var(--color-btn-active-bg);
+        border-color: var(--color-btn-active-border);
+    }
+
+    &.sizeTiny-2i7kof {
+        gap: 4px;
+        height: 28px;
+        padding-inline: 8px;
+    }
+
+    &.sizeSmall-3R2P2p {
+        gap: 8px;
+        height: 32px;
+        padding-inline: 12px;
+    }
+
+    &.sizeMedium-1AC_Sl {
+        gap: 8px;
+        height: 40px;
+        padding-inline: 16px;
+    }
+
+    &.sizeLarge-1vSeWK {
+        gap: 8px;
+        height: 48px;
+        padding-inline: 20px;
+    }
+
+    &.lookFilled-1H2Jvj {
+        &.colorBrand-2M3O3N,
+        &.colorGreen-jIPCAS {
+            color: var(--color-btn-primary-text);
+            background-color: var(--color-btn-primary-bg);
+            border-color: var(--color-btn-primary-border);
+            box-shadow: var(--color-btn-primary-shadow);
+
+            &:hover {
+                background-color: var(--color-btn-primary-hover-bg);
+                border-color: var(--color-btn-primary-hover-border);
+            }
+
+            &:active {
+                background-color: var(--color-btn-primary-active-bg);
+                border-color: var(--color-btn-primary-active-border);
+                box-shadow: var(--color-btn-primary-active-shadow);
+            }
+
+            &:disabled {
+                color: var(--color-btn-primary-disabled-text);
+                background-color: var(--color-btn-primary-disabled-bg);
+                border-color: var(--color-btn-primary-disabled-border);
+            }
+        }
+
+        &.lookOutlined-3RTC7c {
+            color: var(--color-btn-outline-text);
+            background-color: var(--color-btn-outline-bg);
+            border-color: var(--color-btn-outline-border);
+            box-shadow: var(--color-btn-outline-shadow);
+
+            &:hover {
+                color: var(--color-btn-outline-hover-text);
+                background-color: var(--color-btn-outline-hover-bg);
+                border-color: var(--color-btn-outline-hover-border);
+                box-shadow: var(--color-btn-outline-hover-shadow);
+            }
+
+            &:active {
+                color: var(--color-btn-outline-selected-text);
+                background-color: var(--color-btn-outline-selected-bg);
+                border-color: var(--color-btn-outline-selected-border);
+                box-shadow: var(--color-btn-outline-selected-shadow);
+            }
+
+            &:disabled {
+                color: var(--color-btn-outline-disabled-text);
+                background-color: var(--color-btn-outline-disabled-bg);
+                border-color: var(--color-btn-outline-disabled-border);
+            }
+        }
+    }
+
+    &.colorRed-2VFhM4 {
+        &.lookFilled-1H2Jvj {
+            color: var(--color-btn-danger-hover-text);
+            background-color: var(--color-btn-danger-hover-bg);
+            border-color: var(--color-btn-danger-hover-border);
+            box-shadow: var(--color-btn-danger-hover-shadow);
+
+            &:hover {
+                color: var(--color-btn-danger-hover-text);
+                background-color: var(--color-btn-danger-hover-bg);
+                border-color: var(--color-btn-danger-hover-border);
+                box-shadow: var(--color-btn-danger-hover-shadow);
+            }
+
+            &:active {
+                color: var(--color-btn-danger-selected-text);
+                background-color: var(--color-btn-danger-selected-bg);
+                border-color: var(--color-btn-danger-selected-border);
+                box-shadow: var(--color-btn-danger-selected-shadow);
+            }
+
+            &:disabled {
+                color: var(--color-btn-danger-disabled-text);
+                background-color: var(--color-btn-danger-disabled-bg);
+                border-color: var(--color-btn-danger-disabled-border);
+            }
+        }
+
+        &.lookOutlined-3RTC7c {
+            color: var(--color-btn-text);
+            background-color: transparent;
+            border-color: var(--color-btn-danger-hover-border);
+            box-shadow: var(--color-btn-danger-shadow);
+
+            &:hover {
+                color: var(--color-btn-danger-hover-text);
+                background-color: var(--color-btn-danger-hover-bg);
+                border-color: var(--color-btn-danger-hover-border);
+                box-shadow: var(--color-btn-danger-hover-shadow);
+            }
+
+            &:active {
+                color: var(--color-btn-danger-selected-text);
+                background-color: var(--color-btn-danger-selected-bg);
+                border-color: var(--color-btn-danger-selected-border);
+                box-shadow: var(--color-btn-danger-selected-shadow);
+            }
+
+            &:disabled {
+                color: var(--color-btn-danger-disabled-text);
+                background-color: var(--color-btn-danger-disabled-bg);
+                border-color: var(--color-btn-danger-disabled-border);
+            }
+        }
+    }
+}

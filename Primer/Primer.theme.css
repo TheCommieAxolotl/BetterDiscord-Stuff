@@ -1,0 +1,19 @@
+/**
+ * @name Primer
+ * @version 0.0.1
+ * @author TheCommieAxolotl
+ * @authorId 538487970408300544
+ * @description A discord theme based on GitHub's Primer design framework.
+ * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Primer
+ * @website https://thecommieaxolotl.studio/
+ * @donate https://github.com/sponsors/TheCommieAxolotl
+ * @invite g2KnUw7u7N
+*/
+
+/* Imports */
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
+
+/* Source */
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Primer/dist/Primer.css");
+
+/* Made By The Commie Axolotl */

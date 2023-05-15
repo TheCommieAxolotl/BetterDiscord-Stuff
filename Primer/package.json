@@ -1,0 +1,17 @@
+{
+    "name": "primer",
+    "version": "1.0.0",
+    "description": "A discord theme based on GitHub's Primer design framework.",
+    "scripts": {
+        "build": "node ./build.js",
+        "dev": "node ./build.js --watch"
+    },
+    "type": "module",
+    "author": "TheCommieAxolotl",
+    "license": "MIT",
+    "devDependencies": {
+        "@primer/primitives": "^7.11.7",
+        "sass": "^1.62.1",
+        "thena": "^0.0.10"
+    }
+}

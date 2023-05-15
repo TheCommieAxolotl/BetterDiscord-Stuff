@@ -1,0 +1,14 @@
+@use "@primer/primitives/dist/scss/colors/_dark.scss" as colorsdark;
+@use "@primer/primitives/dist/scss/colors/_light.scss" as colorslight;
+
+.theme-dark,
+.theme-dark ::after,
+.theme-dark ::before {
+    @include colorsdark.primer-colors-dark;
+}
+
+.theme-light,
+.theme-light ::after,
+.theme-light ::before {
+    @include colorslight.primer-colors-light;
+}
