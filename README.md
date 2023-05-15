@@ -5,9 +5,11 @@
 <a href="#"><img align="center" alt="Commits" src="https://img.shields.io/github/commit-activity/m/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=brightgreen">
 
 # BetterDiscord-Stuff
-### Hi 👋, welcome to the home for all TheCommieAxolotl's BetterDiscord things!
+Hi 👋, welcome to the home for all TheCommieAxolotl's BetterDiscord things!
  
 **[Axolotl Support Server](https://discord.gg/5BSWtSM3XU)** 
+
+---
  
 Below I have layed out a sort of table of contents for this Repo.
  
