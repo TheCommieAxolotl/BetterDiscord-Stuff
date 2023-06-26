@@ -1234,7 +1234,7 @@
   border-radius: 50px;
   height: 12px;
   right: 4px;
-  margin-top: -6px;
+  margin-top: 5px;
 }
 .containerDefault-YUSmu3 .unread-36eUEm + .content-1gYQeQ .name-28HaxV {
   font-weight: 600;
@@ -1424,9 +1424,37 @@
   border: 0;
 }
 
+.base-2jDfDU:has([aria-label*="Axolotl Support"]) .form-3gdLxP::before {
+  content: "Hey There! Before you send a message in here please check #announcements for known issues.";
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100px;
+  font-size: 14px;
+  z-index: 0;
+  width: calc(100% - 32px);
+  margin-inline: 16px;
+  position: absolute;
+  transform: translateY(-65px);
+  color: var(--color-btn-text);
+  background-color: var(--color-canvas-default) !important;
+  border: 1px solid var(--color-btn-border);
+  border-bottom-width: 0;
+  border-radius: 8px 8px 0 0;
+  box-shadow: var(--color-btn-shadow);
+  transform-origin: bottom;
+}
+
 #app-mount .markup-eYLPri {
   font-size: 14px;
   line-height: 21px;
+}
+#app-mount .scrollableContainer-15eg7h {
+  background-color: var(--color-canvas-subtle);
+  border: 1px solid var(--color-btn-border);
+}
+#app-mount .scrollableContainer-15eg7h button {
+  border: none !important;
+  background-color: transparent;
 }
 
 /**
