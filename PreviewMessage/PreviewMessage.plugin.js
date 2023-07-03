@@ -5,8 +5,8 @@
  * @version 1.0.0
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
- * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/PreviewMessages
- * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/PreviewMessages/PreviewMessages.plugin.js
+ * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/PreviewMessage
+ * @updateurl https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/PreviewMessage/PreviewMessage.plugin.js
  * @donate https://github.com/sponsors/thecommieaxolotl
  */
 
