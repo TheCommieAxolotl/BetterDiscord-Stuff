@@ -110,8 +110,12 @@ module.exports = (() => {
                       onStart() {
                           injectCSS("PreviewMessage-Styles", Styles);
 
-                          Patcher.after(ChannelTextArea.type, "render", (_, [props], ret) => {
-                              ret.props.children.props.children[1].props.children[1].props.children[2].props.children.splice(2, 0, this.renderButton());
+                          Patcher.after(ChannelTextArea.type, "render", (_, __, ret) => {
+                              const buttons = Utilities.getNestedProp(ret, "props.children.props.children.1.props.children.1.props.children.2.props.children");
+
+                              if (!buttons) return;
+
+                              buttons.splice(2, 0, this.renderButton());
                           });
                       }
 
