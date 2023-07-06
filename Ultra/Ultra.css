@@ -310,8 +310,13 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     border-radius: 20% !important;
 }
 
-.modeSelected-3DmyhH .content-1gYQeQ,
-.modeSelected-3DmyhH:hover .content-1x5b-n {
+.link-1_kTxV {
+    overflow: visible;
+}
+
+.modeSelected-3DmyhH .link-1_kTxV,
+.modeSelected-3DmyhH:hover .link-1_kTxV,
+.link-1_kTxV:hover {
     background: transparent;
 }
 
@@ -319,7 +324,9 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     color: #2b2b2b;
 }
 
-.modeSelected-3DmyhH .mainContent-20q_Hp::before {
+.modeSelected-3DmyhH .link-1_kTxV::before {
+    content: "";
+    display: block;
     position: relative;
     background-color: var(--selected-indicator);
     box-shadow: 0 0 20px 4px var(--selected-indicator);
@@ -327,13 +334,16 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     width: 5px;
     height: 5px;
     left: -11px;
+    top: 11px;
 }
 
 .activity-2EQDZv .icon-Lupfh- {
     color: #cfd3da;
 }
 
-.mainContent-20q_Hp:hover::before {
+.link-1_kTxV:hover::before {
+    content: "";
+    display: block;
     position: relative;
     background-color: var(--hover-indicator);
     box-shadow: 0 0 20px 4px var(--hover-indicator);
@@ -341,6 +351,7 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     width: 5px;
     height: 5px;
     left: -11px;
+    top: 11px;
 }
 
 .toolbar-3_r2xA .icon-1ELUnB:nth-child(1),
@@ -358,9 +369,7 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     position: relative;
 }
 
-.modeUnread-1qO3K1 .icon-1DeIlz,
 .modeUnread-3Cxepe .icon-2W8DHg,
-.modeUnread-1qO3K1:hover .icon-1DeIlz,
 .modeUnread-3Cxepe:hover .icon-2W8DHg {
     color: var(--interactive-active);
 }
@@ -414,11 +423,11 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     background-color: transparent;
 }
 
-.mainContent-20q_Hp:hover {
+.link-1_kTxV:hover {
     color: var(--interactive-active);
 }
 
-.mainContent-20q_Hp {
+.link-1_kTxV {
     position: relative;
     left: 15px;
     height: 30px;
@@ -430,10 +439,9 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     opacity: 0.4;
 }
 
-.modeSelected-3DmyhH .mainContent-20q_Hp,
-.mainContent-20q_Hp:hover {
+.modeSelected-3DmyhH .link-1_kTxV,
+.link-1_kTxV:hover {
     position: relative;
-    left: 10px;
 }
 
 .autocompleteRowVertical-EA9dCg rect.pointerEvents-9SZWKj {
