@@ -2,7 +2,7 @@
  * @name PreviewMessage
  * @author TheCommieAxolotl
  * @description Allows you to preview a message before you send it.
- * @version 1.0.0
+ * @version 1.0.1
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/PreviewMessage
@@ -60,7 +60,7 @@ module.exports = (() => {
           }
         : (([Plugin, Api]) => {
               const plugin = (Plugin, Api) => {
-                  const { Patcher } = Api;
+                  const { Patcher, Utilities } = Api;
                   const { Data, React, injectCSS, clearCSS, Webpack } = BdApi;
 
                   const DataStore = new Proxy(
@@ -111,11 +111,19 @@ module.exports = (() => {
                           injectCSS("PreviewMessage-Styles", Styles);
 
                           Patcher.after(ChannelTextArea.type, "render", (_, __, ret) => {
-                              const buttons = Utilities.getNestedProp(ret, "props.children.props.children.1.props.children.1.props.children.2.props.children");
+                              const chatBar = Utilities.findInReactTree(
+                                  ret,
+                                  (n) => Array.isArray(n?.children) && n.children.some((c) => c?.props?.className?.startsWith("attachButton"))
+                              )?.children;
+                              if (!chatBar) {
+                                  console.error("PreviewMessage: Couldn't find ChatBar component in React tree");
+                                  return;
+                              }
+                              const buttons = Utilities.findInReactTree(chatBar, (n) => n?.props?.showCharacterCount);
+                              if (buttons?.props.disabled)
+                                  return;
 
-                              if (!buttons) return;
-
-                              buttons.splice(2, 0, this.renderButton());
+                              chatBar.splice(-1, 0, this.renderButton());
                           });
                       }
 
