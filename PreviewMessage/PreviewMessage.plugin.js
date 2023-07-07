@@ -2,7 +2,7 @@
  * @name PreviewMessage
  * @author TheCommieAxolotl
  * @description Allows you to preview a message before you send it.
- * @version 1.0.1
+ * @version 1.0.2
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/PreviewMessage
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/PreviewMessage/PreviewMessage.plugin.js",
-            version: "1.0.0",
+            version: "1.0.2",
             description: "Allows you to preview a message before you send it.",
         },
     };
