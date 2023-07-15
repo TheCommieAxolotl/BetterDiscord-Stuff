@@ -299,13 +299,11 @@ module.exports = (() => {
 
                           if (time) {
                               date = new Date(time);
-                              date.setHours(date.getUTCHours() + Number(timezone[0]));
-                              date.setMinutes(date.getUTCMinutes() + Number(timezone[1]));
                           } else {
                               date = new Date();
-                              date.setHours(date.getUTCHours() + Number(timezone[0]));
-                              date.setMinutes(date.getUTCMinutes() + Number(timezone[1]));
                           }
+
+                          date.setTime(date.getTime() - date.getTimezoneOffset() * -60000 + timezone[0] * 3600000 + timezone[1] * 60000);
 
                           let ret = date.toLocaleString("en-US", {
                               weekday: "long",
@@ -314,7 +312,7 @@ module.exports = (() => {
                               day: "numeric",
                               hour: "numeric",
                               minute: "numeric",
-                              hour12: !this.settings.twentyFourHours,
+                              hourCycle: this.settings.twentyFourHours ? "h23" : "h12",
                           });
 
                           ret = ret.replace(/,(?=[^,]*$)/, "");
