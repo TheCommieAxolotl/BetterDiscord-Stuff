@@ -1,47 +1,33 @@
-<a href="https://betterdiscord.app/"><img align="center" alt="BetterDiscord" src="https://img.shields.io/badge/BetterDiscord-%235963EB?style=for-the-badge">
-<a href="#"><img align="center" alt="Languages" src="https://img.shields.io/github/languages/count/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=orange">
-<a href="https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/LICENSE"><img align="center" alt="LICENSE" src="https://img.shields.io/github/license/TheCommieAxolotl/BetterDiscord-Stuff?&style=for-the-badge">
-<a href="#"><img align="center" alt="Last Commit" src="https://img.shields.io/github/last-commit/TheCommieAxolotl/BetterDiscord-Stuff?l&style=for-the-badge">
-<a href="#"><img align="center" alt="Commits" src="https://img.shields.io/github/commit-activity/m/TheCommieAxolotl/BetterDiscord-Stuff?style=for-the-badge&color=brightgreen">
+# Welcome to Lilly!💜 My Custom Discord Theme Repository!
 
-# BetterDiscord-Stuff
-Hi 👋, welcome to the home for all TheCommieAxolotl's BetterDiscord things!
- 
-**[Axolotl Support Server](https://discord.gg/5BSWtSM3XU)** 
+Hello everyone and welcome to my repository dedicated to my custom Discord theme! 
 
----
- 
-Below I have layed out a sort of table of contents for this Repo.
- 
-# Plugins and Themes
-## Themes
- - ### [WinCord](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/WinCord)
-    > Deprecated
- - ### [Ultra](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Ultra)
-     > A Smooth, Black theme
- - ### [OSX](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/OSX)
-     > Brings the best and most memorable parts of MacOS and OSX into 1 theme
- - ### [MaterialDesign](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/MaterialDesign)
-     > A clean theme inspired by Google's Material Design
- 
-## Plugins
- - ### [BetterSyntax](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax)
-    > Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
- - ### [Timezones](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones)
-    > Allows you to display other Users' local times.
- - ### [CleanUpConfigs](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/CleanUpConfigs)
-    > Deprecated.
- 
-# Imports and Snippets
- - ### [Touchup](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Imports/Touchup.css)  
-    > Changes Discord's hardcoded colours to use their variable counterparts.
- - ### [DiscordLinks](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Imports/DiscordLinks.css) 
-    > Makes Official Discord Links display like Discord Components.
- - ### [UserBadges](https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/blob/main/Imports/UserBadges.css) 
-    > Template to use for custom CSS Badges.
+## What is this project about?
 
----
- 
-##### If you like what you see, consider giving us a ⭐! (We really like them 🙃)
- 
-Made with ❤️ by [TheCommieAxolotl](https://github.com/TheCommieAxolotl)
+This project is a custom theme created specifically for Discord, allowing you to change the graphical appearance of the application.
+
+## Theme Features
+
+- **Elegant Design:** The theme boasts a fancy,modern and catchy design, featuring lilac colors and well-crafted icons.
+
+- **Customization:** Options have been implemented to customize the theme according to your preferences, enabling you to modify primary colors and certain graphical elements.
+
+- **Compatibility:** The theme has been tested for compatibility with the latest stable version of Discord.
+
+## How to Use the Theme
+
+To use the theme, you'll need to install a theme manager extension for Discord (e.g., BetterDiscord or Vencord). Once the extension is installed, simply go to Discord setting, search for Vencord and copy the raw link!
+
+## Contributions and Feedback
+
+I'm always open to new ideas and suggestions! If you wish to contribute to the project, provide feedback, or report an issue, please feel free to do so by opening a new issue in the "Issues" section of the repository.
+
+## Support
+
+If you encounter any difficulties during the installation or use of the theme, don't hesitate to seek support in the "Discussions" section of the repository. I'll do my best to assist you and ensure you can fully enjoy the theme.
+
+## License
+
+This project is released under the [[MIT](https://github.com/Cacioc/DiscordTheme/blob/main/LICENSE)] License. Please read the terms of the license carefully before using or contributing to this project.
+
+Thank you for visiting my repository! I hope my custom theme can make your Discord experience even more enjoyable. Have fun and happy chatting! 😊💜
