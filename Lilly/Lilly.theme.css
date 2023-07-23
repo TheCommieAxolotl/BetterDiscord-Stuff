@@ -1,20 +1,17 @@
 /**
- * @name Ultra
- * @version 1.0.7
- * @author TheCommieAxolotl#0001
- * @authorId 538487970408300544
- * @description A Smooth, Black theme
- * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Ultra
- * @website https://thecommieaxolotl.netlify.app/
- * @donate https://github.com/sponsors/thecommieaxolotl
- * @invite g2KnUw7u7N
+ * @name Lilly
+ * @version 1.0.0
+ * @author Cacioc
+ * @description A Smooth, Lilac theme
+ * @source https://github.com/Cacioc
+ * @website https://alessandromele.me
 */
 
 /* Imports */
 @import url("https://discord-custom-covers.github.io/usrbg/dist/usrbg.css");
-@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/Touchup.css");
-@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/UserBadges.css");
-@import url("https://maendisease.github.io/BetterDiscordStuff/css/bettterInvites.css");
+@import url("../Imports/Touchup.css");
+@import url("../Imports/UserBadges.css");
+@import url("../Imports/DiscordLinks.css");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap");
 

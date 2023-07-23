@@ -1,11 +1,10 @@
 {
-    "name": "Ultra",
-    "version": "1.0.6",
-    "description": "A Smooth, Black theme",
+    "name": "Lilly",
+    "version": "1.0.0",
+    "description": "A Smooth, Lilac theme",
     "authors": [
         {
-            "name": "TheCommieAxolotl",
-            "id": "538487970408300544"
+            "name": "Cacioc"
         }
     ],
     "theme_color_map": {
