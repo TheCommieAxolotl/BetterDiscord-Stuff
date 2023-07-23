@@ -26,7 +26,7 @@
     --text-positive: #50dc7d;
     --text-warning: #ff6600;
     --text-danger: #8d4949;
-    --text-brand: #E5D5FF;
+    --text-brand: #ffffff;
     --interactive-normal: #ffffff;
     --interactive-hover: #decaff;
     --interactive-active: #ffffff;
@@ -45,13 +45,13 @@
     --info-danger-text: #fff;
     --info-help-text: #fff;
     --status-warning-text: #000;
-    --background-mentioned: #E5D5FF;
+    --background-mentioned: #ad7cfc;
     --background-mentioned-hover: #48286b;
     --background-message-hover: #48286b;
     --scrollbar-auto-thumb: #E5D5FF;
-    --brand-experiment: #E5D5FF;
+    --brand-experiment: #48286b;
     --brand-experiment-hover: #E5D5FF;
-    --brand-experiment-560: #E5D5FF;
+    --brand-experiment-560: #48286b;
     --channels-default: #E5D5FF;
     --selected-indicator: #E5D5FF;
     --hover-indicator: #ffffff;
