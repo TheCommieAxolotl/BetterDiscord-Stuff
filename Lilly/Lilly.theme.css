@@ -21,8 +21,8 @@
 :root,
 .theme-dark {
     --text-normal: #ffffff;
-    --text-muted: #c49fff;
-    --text-link: #b074ff;
+    --text-muted: #E5D5FF;
+    --text-link: #E5D5FF;
     --text-positive: #50dc7d;
     --text-warning: #ff6600;
     --text-danger: #8d4949;
@@ -35,23 +35,23 @@
     --background-secondary: #17161b;
     --background-secondary-alt: #17161b;
     --background-tertiary: #101014;
-    --background-accent: #c49fff;
+    --background-accent: #E5D5FF;
     --background-floating: #17161b;
     --modal-background: #101014;
     --channeltextarea-background: #17161b;
     --info-positive-text: #fff;
     --info-warning-text: #fff;
-    --info-warning-foreground: #6e6af6;
+    --info-warning-foreground: #E5D5FF;
     --info-danger-text: #fff;
     --info-help-text: #fff;
     --status-warning-text: #000;
-    --background-mentioned: #9B7ABE;
-    --background-mentioned-hover: #9071B1;
-    --background-message-hover: #9071B1;
+    --background-mentioned: #48286b;
+    --background-mentioned-hover: #48286b;
+    --background-message-hover: #48286b;
     --scrollbar-auto-thumb: #E5D5FF;
     --brand-experiment: #E5D5FF;
-    --brand-experiment-hover: #6f6af64d;
-    --brand-experiment-560: #6e6af6;
+    --brand-experiment-hover: #E5D5FF;
+    --brand-experiment-560: #E5D5FF;
     --channels-default: #d0b3ff;
     --selected-indicator: #E5D5FF;
     --hover-indicator: #ffffff;
