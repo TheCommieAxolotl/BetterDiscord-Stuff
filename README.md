@@ -16,7 +16,7 @@ This project is a custom theme created specifically for Discord, allowing you to
 
 ## How to Use the Theme
 
-To use the theme, you'll need to install a theme manager extension for Discord (e.g., BetterDiscord or Vencord). Once the extension is installed, simply go to Discord setting, search for Vencord and copy the raw link!
+To use the theme, you'll need to install a theme manager extension for Discord (e.g., BetterDiscord or Vencord). Once the extension is installed, simply open the Lilly folder, copy the raw link of Lilly.theme.css then go to Discord setting, search for Vencord and copy the raw link!
 
 ## Contributions and Feedback
 
