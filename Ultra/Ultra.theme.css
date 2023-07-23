@@ -49,13 +49,13 @@
     --info-help-text: #fff;
     --status-warning-text: #000;
     --background-mentioned: #6f6af62c;
-    --background-mentioned-hover: #6f6af615;
-    --background-message-hover: rgba(4, 4, 5, 0.07);
+    --background-mentioned-hover: #d0b3ff;
+    --background-message-hover: #d0b3ff;
     --scrollbar-auto-thumb: #b074ff;
     --brand-experiment: #b074ff;
     --brand-experiment-hover: #6f6af64d;
     --brand-experiment-560: #6e6af6;
-    --channels-default: #c49fff;
+    --channels-default: #d0b3ff;
     --selected-indicator: #b074ff;
     --hover-indicator: #ffffff;
     --font: "Raleway";
