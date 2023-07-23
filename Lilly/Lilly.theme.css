@@ -27,9 +27,9 @@
     --text-warning: #ff6600;
     --text-danger: #8d4949;
     --text-brand: #E5D5FF;
-    --interactive-normal: #e9e9e9;
+    --interactive-normal: #ffffff;
     --interactive-hover: #decaff;
-    --interactive-active: #c9ced0;
+    --interactive-active: #ffffff;
     --interactive-muted: #c49fff;
     --background-primary: #101014;
     --background-secondary: #17161b;
@@ -45,7 +45,7 @@
     --info-danger-text: #fff;
     --info-help-text: #fff;
     --status-warning-text: #000;
-    --background-mentioned: #48286b;
+    --background-mentioned: #a34dff;
     --background-mentioned-hover: #48286b;
     --background-message-hover: #48286b;
     --scrollbar-auto-thumb: #E5D5FF;
