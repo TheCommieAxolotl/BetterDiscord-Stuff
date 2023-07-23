@@ -33,12 +33,12 @@
     --interactive-normal: #e9e9e9;
     --interactive-hover: #decaff;
     --interactive-active: #c9ced0;
-    --interactive-muted: #4f545c;
+    --interactive-muted: #c49fff;
     --background-primary: #101014;
     --background-secondary: #17161b;
     --background-secondary-alt: #17161b;
     --background-tertiary: #101014;
-    --background-accent: #4f545c;
+    --background-accent: #c49fff;
     --background-floating: #17161b;
     --modal-background: #101014;
     --channeltextarea-background: #17161b;
