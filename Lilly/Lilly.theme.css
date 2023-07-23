@@ -26,7 +26,7 @@
     --text-positive: #50dc7d;
     --text-warning: #ff6600;
     --text-danger: #8d4949;
-    --text-brand: #b074ff;
+    --text-brand: #E5D5FF;
     --interactive-normal: #e9e9e9;
     --interactive-hover: #decaff;
     --interactive-active: #c9ced0;
@@ -45,9 +45,9 @@
     --info-danger-text: #fff;
     --info-help-text: #fff;
     --status-warning-text: #000;
-    --background-mentioned: #6f6af62c;
-    --background-mentioned-hover: #d0b3ff;
-    --background-message-hover: #d0b3ff;
+    --background-mentioned: #9B7ABE;
+    --background-mentioned-hover: #9071B1;
+    --background-message-hover: #9071B1;
     --scrollbar-auto-thumb: #E5D5FF;
     --brand-experiment: #E5D5FF;
     --brand-experiment-hover: #6f6af64d;
@@ -60,4 +60,4 @@
     --boost-bar: none;
 }
 
-/* Made By The Commie Axolotl */
+/* Made By Cacioc */
