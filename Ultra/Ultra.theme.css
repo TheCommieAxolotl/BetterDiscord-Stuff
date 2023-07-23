@@ -15,7 +15,7 @@
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/Touchup.css");
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/UserBadges.css");
 @import url("https://maendisease.github.io/BetterDiscordStuff/css/bettterInvites.css");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap");
 
 /* Source */
@@ -23,14 +23,14 @@
 
 :root,
 .theme-dark {
-    --text-normal: #dcddde;
+    --text-normal: #FFFFFF;
     --text-muted: #4a4a52;
-    --text-link: #6e6af6;
+    --text-link: #C49AF0;
     --text-positive: #50dc7d;
     --text-warning: #8d4949;
     --text-danger: #8d4949;
     --text-brand: #6e6af6;
-    --interactive-normal: #b9bbbe;
+    --interactive-normal: #FFFFFF;
     --interactive-hover: #dcddde;
     --interactive-active: #c9ced0;
     --interactive-muted: #4f545c;
@@ -58,7 +58,7 @@
     --channels-default: #4a4a52;
     --selected-indicator: #97ffa5;
     --hover-indicator: #ffffff;
-    --font: "Lato";
+    --font: "Raleway";
     --code-font: "Source Code Pro";
     --boost-bar: none;
 }
