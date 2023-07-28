@@ -1,0 +1,50 @@
+{
+    "name": "Raspy",
+    "version": "1.0.0",
+    "description": "A Smooth, Raspberry theme",
+    "authors": [
+        {
+            "name": "Cacioc"
+        }
+    ],
+    "theme_color_map": {
+        "KEYBOARD": ["#101014", "#FFFFFF"],
+        "TEXT_NORMAL": ["#dcddde", "#FFFFFF"],
+        "TEXT_MUTED": ["#4a4a52", "#FFFFFF"],
+        "INTERACTIVE_NORMAL": ["#b9bbbe", "#FFFFFF"],
+        "INTERACTIVE_HOVER": ["#dcddde", "#FFFFFF"],
+        "INTERACTIVE_ACTIVE": ["#c9ced0", "#FFFFFF"],
+        "INTERACTIVE_MUTED": ["#4f545c", "#FFFFFF"],
+        "BACKGROUND_PRIMARY": ["#101014", "#FFFFFF"],
+        "BACKGROUND_SECONDARY": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_SECONDARY_ALT": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_TERTIARY": ["#101014", "#FFFFFF"],
+        "BACKGROUND_ACCENT": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_FLOATING": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_MOBILE_PRIMARY": ["#101014", "#FFFFFF"],
+        "BACKGROUND_MOBILE_SECONDARY": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_NESTED_FLOATING": ["#17161b", "#FFFFFF"],
+        "BACKGROUND_MENTIONED": ["#262440", "#FFFFFF"],
+        "BACKGROUND_MENTIONED_HOVER": ["#1E1C2D", "#FFFFFF"],
+        "BACKGROUND_MESSAGE_HOVER": ["#151419", "#FFFFFF"],
+        "BACKGROUND_MODIFIER_SELECTED": ["#1D1C21", "#FFFFFF"],
+        "SCROLLBAR_THIN_THUMB": ["transparent", "#FFFFFF"],
+        "SCROLLBAR_THIN_TRACK": ["transparent", "#FFFFFF"],
+        "SCROLLBAR_AUTO_THUMB": ["transparent", "#FFFFFF"],
+        "SCROLLBAR_AUTO_TRACK": ["transparent", "#FFFFFF"],
+        "CHANNELTEXTAREA_BACKGROUND": ["#101014", "#FFFFFF"],
+        "CHANNEL_ICON": ["#4a4a52", "#FFFFFF"],
+        "CHANNELS_DEFAULT": ["#4a4a52", "#FFFFFF"]
+    },
+    "colours": {
+        "PRIMARY_DARK_600": "#17161b",
+        "PRIMARY_DARK_630": "#101014",
+        "PRIMARY_DARK_800": "#101014",
+        "BRAND_NEW": "#6e6af6",
+        "BRAND_NEW_360": "#6e6af6",
+        "WHITE": "#FFFFFF"
+    },
+    "unsafe_colors": {
+        "CHAT_GREY": "#101014"
+    }
+}

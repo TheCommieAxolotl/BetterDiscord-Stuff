@@ -1,0 +1,79 @@
+/**
+ * @name Magy
+ * @version 1.0.0
+ * @author Cacioc
+ * @description A Smooth, Magenta theme
+ * @source https://github.com/Cacioc
+ * @website https://alessandromele.me
+*/
+
+/* Imports */
+@import url("https://discord-custom-covers.github.io/usrbg/dist/usrbg.css");
+@import url("../Imports/Touchup.css");
+@import url("../Imports/UserBadges.css");
+@import url("../Imports/DiscordLinks.css");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap");
+
+/* Source */
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Ultra/Clients/betterdiscord.css");
+
+:root,
+.theme-dark {
+
+    /* Text colors */
+    --text-normal: #ffffff;
+    --text-muted: #E5D5FF;
+    --text-link: #E5D5FF;
+    --text-positive: #50dc7d;
+    --text-warning: #ff6600;
+    --text-danger: #8d4949;
+    --text-brand: #ffffff;
+
+    /* Clickable-names colors */
+    --interactive-normal: #ffffff;
+    --interactive-hover: #FFD9EA;
+    --interactive-active: #ffffff;
+    --interactive-muted: #c49fff;
+
+    /* Background colors */
+    --background-primary: #101014;
+    --background-secondary: #330016;
+    --background-secondary-alt: #330016;
+    --background-tertiary: #101014;
+    --background-accent: #E5D5FF;
+    --background-floating: #17161b;
+    --modal-background: #101014;
+    --channeltextarea-background: #17161b;
+
+    /* Infos colors */
+    --info-positive-text: #fff;
+    --info-warning-text: #fff;
+    --info-warning-foreground: #E5D5FF;
+    --info-danger-text: #fff;
+    --info-help-text: #fff;
+    --status-warning-text: #000;
+
+    /* Mentioned-background colors */
+    --background-mentioned: #550fc5;
+    --background-mentioned-hover: #48286b;
+    --background-message-hover: #48286b;
+    --scrollbar-auto-thumb: #E5D5FF;
+    
+    /* Buttons colors */
+    --brand-experiment: #48286b;
+    --brand-experiment-hover: #E5D5FF;
+    --brand-experiment-560: #48286b;
+
+    /* Sidebar-text colors */
+    --channels-default: #E5D5FF;
+    --selected-indicator: #E5D5FF;
+    --hover-indicator: #ffffff;
+
+    /* Fonts and misc */
+    --font: "Raleway";
+    --code-font: "Source Code Pro";
+    --boost-bar: none;
+}
+
+/* Made By Cacioc */
