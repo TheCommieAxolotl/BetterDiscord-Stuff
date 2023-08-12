@@ -105,6 +105,10 @@ module.exports = (() => {
     font-weight: 500;
 }
 
+[class*="compact"] .timezone {
+    display: inline;
+}
+
 .timezone-margin-top {
     margin-top: 0.5rem;
 }
