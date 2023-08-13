@@ -317,7 +317,7 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
 .modeSelected-3DmyhH .link-1_kTxV,
 .modeSelected-3DmyhH:hover .link-1_kTxV,
 .link-1_kTxV:hover {
-    background: transparent;
+    background: transparent !important;
 }
 
 .link-1_kTxV {
