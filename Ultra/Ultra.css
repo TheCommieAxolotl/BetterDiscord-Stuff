@@ -320,6 +320,10 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     background: transparent;
 }
 
+.link-1_kTxV {
+    width: calc(100% - 12px) !important;
+}
+
 .modeMuted-2T4MDZ .name-28HaxV {
     color: #2b2b2b;
 }
