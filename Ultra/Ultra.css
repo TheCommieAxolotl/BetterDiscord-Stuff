@@ -337,7 +337,7 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     border-radius: 50%;
     width: 5px;
     height: 5px;
-    left: -11px;
+    left: -16px;
     top: 11px;
 }
 
@@ -354,7 +354,7 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     border-radius: 50%;
     width: 5px;
     height: 5px;
-    left: -11px;
+    left: -16px;
     top: 11px;
 }
 
@@ -391,7 +391,8 @@ h3.title-1_TkpU.fontDisplay-3Gtuks.base-ZDDK0g.size24-15VPAv,
     background-color: var(--brand-experiment);
     box-shadow: 0 0 20px 4px var(--brand-experiment);
     border-radius: 50%;
-    left: 15px;
+    left: 6px;
+    top: 58%;
     width: 5px;
     height: 5px;
 }
