@@ -210,9 +210,16 @@ module.exports = (() => {
                       setTimezone(id, user) {
                           let hours = 0;
                           let minutes = 0;
-
+                          let username = `${user.username}`;
+                          let discriminator = `#${user.discriminator}`;
+                          if (discriminator === "#0") {
+                              discriminator = "";
+                          }
+                          if (discriminator === "") {
+                              username = `@${user.username}`;
+                          }
                           UI.showConfirmationModal(
-                              `Set Timezone for ${user.username}#${user.discriminator}`,
+                              `Set Timezone for ${username}${discriminator}`,
                               [
                                   React.createElement(Markdown, null, "Please enter a UTC hour offset."),
                                   React.createElement(TextInput, {
