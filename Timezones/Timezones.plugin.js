@@ -138,7 +138,7 @@ module.exports = (() => {
                       async onStart() {
                           injectCSS("Timezones-Styles", Styles);
 
-                          const ProfileBanner = Webpack.getModule((m) => m.Z?.toString().includes("e.hasBanner") && m.Z?.toString().includes("e.hasThemeColors"));
+                          const ProfileBanner = Webpack.getModule((m) => m.Z?.toString().includes("e.displayProfile") && m.Z?.toString().includes("e.user"));
                           const MessageHeader = Webpack.getModule((m) => m.Z?.toString().includes("userOverride") && m.Z?.toString().includes("withMentionPrefix"));
                           const Tooltip = BdApi.Components.Tooltip;
 
