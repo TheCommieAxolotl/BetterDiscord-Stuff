@@ -138,7 +138,7 @@ module.exports = (() => {
                       async onStart() {
                           injectCSS("Timezones-Styles", Styles);
 
-                          const ProfileBanner = Webpack.getModule(x=>x.default && x.default.toString().includes("y.GifAutoPlay")) //Webpack.getModule(x=>x.default && x.default.toString().includes("c.AvatarDecorationBorderSizes"))
+                          const ProfileBanner = Webpack.getModule(x=>x.default && x.default.toString().includes("y.GifAutoPlay"))
                           const MessageHeader = Webpack.getModule((m) => m.default?.toString().includes("withMentionPrefix"));
                           const Tooltip = Webpack.getModule(x=>x.Tooltip).Tooltip;
 
@@ -146,7 +146,6 @@ module.exports = (() => {
 
                           Patcher.after(ProfileBanner, "default", (_, [props], ret) => {
                               const originalRet = { ...ret };
-                              console.log("Banner:", _,props,ret)
                               if (!this.hasTimezone(props.user.id)) return;
                               ret.props.children.props.children.push(
                                 React.createElement(Tooltip, {
