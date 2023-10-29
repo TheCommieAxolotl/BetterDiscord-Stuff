@@ -147,7 +147,7 @@ module.exports = (() => {
                           Patcher.after(ProfileBanner, "default", (_, [props], ret) => {
                               const originalRet = { ...ret };
                               console.log("Banner:", _,props,ret)
-                              //if (!this.hasTimezone(props.userId)) return;
+                              if (!this.hasTimezone(props.user.id)) return;
                               ret.props.children.props.children.push(
                                 React.createElement(Tooltip, {
                                 text: this.getFullTime(props.user.id),
