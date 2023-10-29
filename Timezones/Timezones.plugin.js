@@ -132,37 +132,41 @@ module.exports = (() => {
                   const TextInput = Webpack.getModule((m) => m?.Sizes?.MINI && m?.defaultProps?.type === "text", {
                       searchExports: true,
                   });
-                  const Markdown = Webpack.getModule((m) => m.Z?.rules && m.Z?.defaultProps?.parser).Z;
+                  const Markdown = Webpack.getModule((m) => m.default?.rules && m.default?.defaultProps?.parser).default
 
                   return class Timezones extends Plugin {
                       async onStart() {
                           injectCSS("Timezones-Styles", Styles);
 
-                          const ProfileBanner = Webpack.getModule((m) => m.Z?.toString().includes("e.displayProfile") && m.Z?.toString().includes("e.user"));
-                          const MessageHeader = Webpack.getModule((m) => m.Z?.toString().includes("userOverride") && m.Z?.toString().includes("withMentionPrefix"));
-                          const Tooltip = BdApi.Components.Tooltip;
+                          const ProfileBanner = Webpack.getModule(x=>x.default && x.default.toString().includes("y.GifAutoPlay")) //Webpack.getModule(x=>x.default && x.default.toString().includes("c.AvatarDecorationBorderSizes"))
+                          const MessageHeader = Webpack.getModule((m) => m.default?.toString().includes("withMentionPrefix"));
+                          const Tooltip = Webpack.getModule(x=>x.Tooltip).Tooltip;
 
                           ContextMenu.patch("user-context", this.userContextPatch);
 
-                          Patcher.after(ProfileBanner, "Z", (_, [props], ret) => {
+                          Patcher.after(ProfileBanner, "default", (_, [props], ret) => {
                               const originalRet = { ...ret };
-
-                              if (!this.hasTimezone(props.user.id)) return;
-
-                              ret.type = "div";
+                              console.log("Banner:", _,props,ret)
+                              //if (!this.hasTimezone(props.userId)) return;
+                              ret.props.children.props.children.push(
+                                React.createElement(Tooltip, {
+                                text: this.getFullTime(props.user.id),
+                                children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getLocalTime(props.user.id)),
+                            }))
+                              /*ret.type = "div";
                               ret.props = {
                                   className: "timezone-banner-container",
                                   children: [
                                       originalRet,
                                       React.createElement(Tooltip, {
-                                          text: this.getFullTime(props.user.id),
-                                          children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getLocalTime(props.user.id)),
+                                          text: this.getFullTime(props.userId),
+                                          children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getLocalTime(props.userId)),
                                       }),
                                   ],
-                              };
+                              };*/
                           });
 
-                          Patcher.after(MessageHeader, "Z", (_, [props], ret) => {
+                          Patcher.after(MessageHeader, "default", (_, [props], ret) => {
                               if (props.isRepliedMessage || !this.settings.showInMessage) return;
 
                               this.hasTimezone(props.message.author.id) &&
