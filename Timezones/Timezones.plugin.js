@@ -168,7 +168,8 @@ module.exports = (() => {
                           Patcher.after(MessageHeader, "default", (_, [props], ret) => {
                               if (props.isRepliedMessage || !this.settings.showInMessage) return;
 
-                              this.hasTimezone(props.message.author.id) &&
+                              // Opening "Inbox" tends to throw errors in console
+                              this.hasTimezone(props?.message?.author?.id) &&
                                   ret.props.children.push(
                                       React.createElement(Tooltip, {
                                           text: this.getFullTime(props.message.author.id, props.message.timestamp._d),
