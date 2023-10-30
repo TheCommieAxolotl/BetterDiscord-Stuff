@@ -102,7 +102,7 @@ module.exports = (() => {
                   const SelectedChannelStore = Webpack.getModule((m) => m.getLastSelectedChannelId);
                   const DraftStore = Webpack.getModule((m) => m.getDraft);
                   const MessageActions = Webpack.getModule((m) => m.sendBotMessage);
-                  const ChannelTextArea = Webpack.getModule((m) => m.type?.render?.toString?.().includes("CHANNEL_TEXT_AREA).AnalyticsLocationProvider"));
+                  const ChannelTextArea = Webpack.getModule((m) => m.type?.render?.toString?.().includes("CHANNEL_TEXT_AREA"));
 
                   return class PreviewMessage extends Plugin {
                       onStart() {
