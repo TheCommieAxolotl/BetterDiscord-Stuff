@@ -2,7 +2,7 @@
  * @name Timezones
  * @author TheCommieAxolotl#0001
  * @description Allows you to display other Users' local times.
- * @version 1.0.3
+ * @version 1.0.4
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones
@@ -75,7 +75,7 @@ module.exports = (() => {
         : (([Plugin, Api]) => {
               const plugin = (Plugin, Api) => {
                   const { Patcher } = Api;
-                  const { Data, React, injectCSS, clearCSS, Webpack, ContextMenu, UI } = BdApi;
+                  const { Data, React, injectCSS, clearCSS, Webpack, ContextMenu, UI, Components } = BdApi;
 
                   const DataStore = new Proxy(
                       {},
@@ -132,50 +132,40 @@ module.exports = (() => {
                   const TextInput = Webpack.getModule((m) => m?.Sizes?.MINI && m?.defaultProps?.type === "text", {
                       searchExports: true,
                   });
-                  const Markdown = Webpack.getModule((m) => m.default?.rules && m.default?.defaultProps?.parser).default
+                  const Markdown = Webpack.getModule((m) => m.default?.rules && m.default?.defaultProps?.parser).default;
 
                   return class Timezones extends Plugin {
                       async onStart() {
                           injectCSS("Timezones-Styles", Styles);
 
-                          const ProfileBanner = Webpack.getModule(x=>x.default && x.default.toString().includes("y.GifAutoPlay"))
-                          const MessageHeader = Webpack.getModule((m) => m.default?.toString().includes("withMentionPrefix"));
-                          const Tooltip = Webpack.getModule(x=>x.Tooltip).Tooltip;
+                          const ProfileBanner = Webpack.getModule((x) => x.default && x.default.toString().includes(".GifAutoPlay.getSetting()"));
+                          const MessageHeader = Webpack.getModule((m) => m.default?.toString().includes(".getMessageTimestampId)("));
+                          const Tooltip = Components.Tooltip;
 
                           ContextMenu.patch("user-context", this.userContextPatch);
 
                           Patcher.after(ProfileBanner, "default", (_, [props], ret) => {
-                              const originalRet = { ...ret };
                               if (!this.hasTimezone(props.user.id)) return;
+
                               ret.props.children.props.children.push(
-                                React.createElement(Tooltip, {
-                                text: this.getFullTime(props.user.id),
-                                children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getLocalTime(props.user.id)),
-                            }))
-                              /*ret.type = "div";
-                              ret.props = {
-                                  className: "timezone-banner-container",
-                                  children: [
-                                      originalRet,
-                                      React.createElement(Tooltip, {
-                                          text: this.getFullTime(props.userId),
-                                          children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getLocalTime(props.userId)),
-                                      }),
-                                  ],
-                              };*/
+                                  React.createElement(Tooltip, {
+                                      text: this.getFullTime(props.user.id),
+                                      children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getLocalTime(props.user.id)),
+                                  })
+                              );
                           });
 
                           Patcher.after(MessageHeader, "default", (_, [props], ret) => {
                               if (props.isRepliedMessage || !this.settings.showInMessage) return;
 
-                              // Opening "Inbox" tends to throw errors in console
-                              this.hasTimezone(props?.message?.author?.id) &&
-                                  ret.props.children.push(
-                                      React.createElement(Tooltip, {
-                                          text: this.getFullTime(props.message.author.id, props.message.timestamp._d),
-                                          children: (p) => React.createElement("span", { ...p, className: "timezone" }, this.getLocalTime(props.message.author.id, props.message.timestamp._d)),
-                                      })
-                                  );
+                              if (!this.hasTimezone(props.message.author.id)) return;
+
+                              ret.props.username.props.children.push(
+                                  React.createElement(Tooltip, {
+                                      text: this.getFullTime(props.message.author.id, props.message.timestamp._d),
+                                      children: (p) => React.createElement("span", { ...p, className: "timezone" }, this.getLocalTime(props.message.author.id, props.message.timestamp._d)),
+                                  })
+                              );
                           });
                       }
 
