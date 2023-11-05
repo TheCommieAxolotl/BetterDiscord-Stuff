@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Timezones/Timezones.plugin.js",
-            version: "1.0.3",
+            version: "1.0.4",
             description: "Allows you to display other Users' local times.",
         },
         defaultConfig: [
