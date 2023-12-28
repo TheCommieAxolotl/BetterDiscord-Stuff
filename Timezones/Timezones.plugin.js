@@ -133,6 +133,8 @@ module.exports = (() => {
                       searchExports: true,
                   });
                   const Markdown = Webpack.getModule((m) => m.default?.rules && m.default?.defaultProps?.parser).default;
+                  const SearchableSelect = Webpack.getByKeys("Button", "SearchableSelect")?.SearchableSelect;
+                  const i18n = Webpack.getByKeys("getLocale");
 
                   return class Timezones extends Plugin {
                       async onStart() {
@@ -149,8 +151,9 @@ module.exports = (() => {
 
                               ret.props.children.props.children.push(
                                   React.createElement(Tooltip, {
-                                      text: this.getFullTime(props.user.id),
-                                      children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getLocalTime(props.user.id)),
+                                      text: this.getTime(props.user.id, Date.now(), { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" }),
+                                      children: (p) =>
+                                          React.createElement("div", { ...p, className: "timezone-badge" }, this.getTime(props.user.id, Date.now(), { hour: "numeric", minute: "numeric" })),
                                   })
                               );
                           });
@@ -162,8 +165,20 @@ module.exports = (() => {
 
                               ret.props.username.props.children.push(
                                   React.createElement(Tooltip, {
-                                      text: this.getFullTime(props.message.author.id, props.message.timestamp._d),
-                                      children: (p) => React.createElement("span", { ...p, className: "timezone" }, this.getLocalTime(props.message.author.id, props.message.timestamp._d)),
+                                      text: this.getTime(props.message.author.id, props.message.timestamp._d, {
+                                          weekday: "long",
+                                          year: "numeric",
+                                          month: "long",
+                                          day: "numeric",
+                                          hour: "numeric",
+                                          minute: "numeric",
+                                      }),
+                                      children: (p) =>
+                                          React.createElement(
+                                              "span",
+                                              { ...p, className: "timezone" },
+                                              this.getTime(props.message.author.id, props.message.timestamp._d, { hour: "numeric", minute: "numeric" })
+                                          ),
                                   })
                               );
                           });
@@ -198,41 +213,55 @@ module.exports = (() => {
                       };
 
                       hasTimezone(id) {
-                          return !!DataStore[id];
+                          const value = DataStore[id];
+
+                          return !Array.isArray(value) && !!value;
                       }
 
                       setTimezone(id, user) {
-                          let hours = 0;
-                          let minutes = 0;
+                          let outvalue = null;
+
+                          // https://github.com/Syncxv/vc-timezones/blob/master/TimezoneModal.tsx
+                          // I totally forgot about the Intl API until I saw their plugin in vencord
+                          const options = Intl.supportedValuesOf("timeZone").map((timezone) => {
+                              const offset = new Intl.DateTimeFormat(undefined, { timeZone: timezone, timeZoneName: "short" })
+                                  .formatToParts(new Date())
+                                  .find((part) => part.type === "timeZoneName").value;
+
+                              return { label: `${timezone} (${offset})`, value: timezone };
+                          });
 
                           UI.showConfirmationModal(
                               `Set Timezone for ${user.username}`,
                               [
-                                  React.createElement(Markdown, null, "Please enter a UTC hour offset."),
-                                  React.createElement(TextInput, {
-                                      type: "number",
-                                      maxLength: "2",
-                                      placeholder: DataStore[id]?.[0] || "0",
-                                      onChange: (v) => {
-                                          hours = v;
-                                      },
-                                  }),
-                                  React.createElement(Markdown, { className: "timezone-margin-top" }, "Please enter a UTC minute offset."),
-                                  React.createElement(TextInput, {
-                                      type: "number",
-                                      maxLength: "2",
-                                      placeholder: DataStore[id]?.[1] || "0",
-                                      onChange: (v) => {
-                                          minutes = v;
-                                      },
+                                  React.createElement(Markdown, null, "Please select a timezone."),
+                                  React.createElement(() => {
+                                      const [currentValue, setCurrentValue] = React.useState(DataStore[id] || null);
+
+                                      return React.createElement(SearchableSelect, {
+                                          options,
+                                          value: options.find((o) => o.value === currentValue),
+                                          placeholder: "Select a Timezone",
+                                          maxVisibleItems: 5,
+                                          closeOnSelect: true,
+                                          onChange: (value) => {
+                                              setCurrentValue(value);
+
+                                              console.log(value);
+
+                                              outvalue = value;
+                                          },
+                                      });
                                   }),
                               ],
                               {
                                   confirmText: "Set",
                                   onConfirm: () => {
-                                      DataStore[id] = [hours, minutes];
+                                      console.log(outvalue);
 
-                                      BdApi.showToast(`Timezone set to UTC${hours > 0 ? `+${hours}` : hours}${minutes ? `:${minutes}` : ""} for ${user.username}`, {
+                                      DataStore[id] = outvalue;
+
+                                      BdApi.showToast(`Timezone set to ${outvalue} for ${user.username}`, {
                                           type: "success",
                                       });
                                   },
@@ -248,74 +277,20 @@ module.exports = (() => {
                           });
                       }
 
-                      getLocalTime(id, time) {
+                      getTime(id, time, props) {
                           const timezone = DataStore[id];
 
                           if (!timezone) return null;
 
-                          let hours;
-                          let minutes;
+                          const date = new Date(time);
 
-                          if (time) {
-                              hours = time.getUTCHours() + Number(timezone[0]);
-                              minutes = time.getUTCMinutes() + Number(timezone[1]);
-                          } else {
-                              hours = new Date().getUTCHours() + Number(timezone[0]);
-                              minutes = new Date().getUTCMinutes() + Number(timezone[1]);
-                          }
-
-                          if (hours >= 24) {
-                              hours -= 24;
-                          } else if (hours < 0) {
-                              hours += 24;
-                          }
-
-                          if (minutes >= 60) {
-                              minutes -= 60;
-                              hours += 1;
-                          } else if (minutes < 0) {
-                              minutes += 60;
-                              hours -= 1;
-                          }
-
-                          if (this.settings.twentyFourHours) {
-                              return `${hours.toString().length === 1 ? `0${hours}` : hours}:${minutes.toString().length === 1 ? `0${minutes}` : minutes}`;
-                          }
-
-                          const hour = hours > 12 ? hours - 12 : hours == 0 ? 12 : hours;
-                          const ampm = hours >= 12 ? "PM" : "AM";
-
-                          return `${hour}:${minutes.toString().length === 1 ? `0${minutes}` : minutes} ${ampm}`;
-                      }
-
-                      getFullTime(id, time) {
-                          const timezone = DataStore[id];
-
-                          if (!timezone) return null;
-
-                          let date;
-
-                          if (time) {
-                              date = new Date(time);
-                          } else {
-                              date = new Date();
-                          }
-
-                          date.setTime(date.getTime() - date.getTimezoneOffset() * -60000 + timezone[0] * 3600000 + timezone[1] * 60000);
-
-                          let ret = date.toLocaleString("en-US", {
-                              weekday: "long",
-                              year: "numeric",
-                              month: "long",
-                              day: "numeric",
-                              hour: "numeric",
-                              minute: "numeric",
-                              hourCycle: this.settings.twentyFourHours ? "h23" : "h12",
+                          const formatter = new Intl.DateTimeFormat(i18n?.getLocale?.() ?? "en-US", {
+                              hour12: !DataStore.twentyFourHours,
+                              timeZone: timezone,
+                              ...props,
                           });
 
-                          ret = ret.replace(/,(?=[^,]*$)/, "");
-
-                          return ret;
+                          return formatter.format(date);
                       }
 
                       onStop() {
