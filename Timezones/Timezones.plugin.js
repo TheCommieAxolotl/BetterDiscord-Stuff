@@ -34,8 +34,14 @@ module.exports = (() => {
             {
                 type: "switch",
                 id: "showInMessage",
-                name: "Show timezone next to message timestamp",
+                name: "Show local timestamp next to message",
                 value: true,
+            },
+            {
+                type: "switch",
+                id: "showOffset",
+                name: "Show localized GMT format (e.g., GMT-8)",
+                value: false,
             },
         ],
     };
@@ -285,8 +291,9 @@ module.exports = (() => {
                           const date = new Date(time);
 
                           const formatter = new Intl.DateTimeFormat(i18n?.getLocale?.() ?? "en-US", {
-                              hour12: !DataStore.twentyFourHours,
+                              hourCycle: this.settings.twentyFourHours ? "h23" : "h12",
                               timeZone: timezone,
+                              timeZoneName: this.settings.showOffset ? "shortOffset" : undefined,
                               ...props,
                           });
 
