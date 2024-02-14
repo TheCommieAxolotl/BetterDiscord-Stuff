@@ -171,7 +171,7 @@ module.exports = (() => {
 
                               ret.props.username.props.children.push(
                                   React.createElement(Tooltip, {
-                                      text: this.getTime(props.message.author.id, props.message.timestamp._d, {
+                                      text: this.getTime(props.message.author.id, props.message.timestamp, {
                                           weekday: "long",
                                           year: "numeric",
                                           month: "long",
@@ -183,7 +183,7 @@ module.exports = (() => {
                                           React.createElement(
                                               "span",
                                               { ...p, className: "timezone" },
-                                              this.getTime(props.message.author.id, props.message.timestamp._d, { hour: "numeric", minute: "numeric" })
+                                              this.getTime(props.message.author.id, props.message.timestamp, { hour: "numeric", minute: "numeric" })
                                           ),
                                   })
                               );
