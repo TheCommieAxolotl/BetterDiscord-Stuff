@@ -2,7 +2,7 @@
  * @name Timezones
  * @author TheCommieAxolotl#0001
  * @description Allows you to display other Users' local times.
- * @version 1.1.0
+ * @version 1.1.1
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones
@@ -171,7 +171,7 @@ module.exports = (() => {
 
                               ret.props.username.props.children.push(
                                   React.createElement(Tooltip, {
-                                      text: this.getTime(props.message.author.id, props.message.timestamp._d, {
+                                      text: this.getTime(props.message.author.id, props.message.timestamp, {
                                           weekday: "long",
                                           year: "numeric",
                                           month: "long",
@@ -183,7 +183,7 @@ module.exports = (() => {
                                           React.createElement(
                                               "span",
                                               { ...p, className: "timezone" },
-                                              this.getTime(props.message.author.id, props.message.timestamp._d, { hour: "numeric", minute: "numeric" })
+                                              this.getTime(props.message.author.id, props.message.timestamp, { hour: "numeric", minute: "numeric" })
                                           ),
                                   })
                               );
@@ -253,8 +253,6 @@ module.exports = (() => {
                                           onChange: (value) => {
                                               setCurrentValue(value);
 
-                                              console.log(value);
-
                                               outvalue = value;
                                           },
                                       });
@@ -263,8 +261,6 @@ module.exports = (() => {
                               {
                                   confirmText: "Set",
                                   onConfirm: () => {
-                                      console.log(outvalue);
-
                                       DataStore[id] = outvalue;
 
                                       BdApi.showToast(`Timezone set to ${outvalue} for ${user.username}`, {
