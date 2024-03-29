@@ -1,9 +1,9 @@
 /* MacButtons */
-.platform-win .titleBar-1it3bQ {
+.platform-win .titleBar__710b0 {
     position: fixed;
     top: 1px;
 }
-.platform-win .winButton-3UMjdg {
+.platform-win .winButton_f17fb6 {
     z-index: 999999;
     width: 13px;
     height: 13px;
@@ -13,37 +13,37 @@
     top: 5px;
     left: 10px;
 }
-.platform-win .winButton-3UMjdg:nth-last-child(1) {
+.platform-win .winButton_f17fb6:nth-last-child(1) {
     background: #fdbc40;
     order: 2;
 }
-.platform-win .winButton-3UMjdg:nth-last-child(2) {
+.platform-win .winButton_f17fb6:nth-last-child(2) {
     background: #34c749;
     order: 1;
 }
-.platform-win .winButton-3UMjdg:nth-last-child(3) {
+.platform-win .winButton_f17fb6:nth-last-child(3) {
     background: #fc615d;
     order: 3;
 }
-.platform-win .winButton-3UMjdg:nth-last-child(3) *,
-.platform-win .winButton-3UMjdg:nth-last-child(2) *,
-.platform-win .winButton-3UMjdg:nth-last-child(1) * {
+.platform-win .winButton_f17fb6:nth-last-child(3) *,
+.platform-win .winButton_f17fb6:nth-last-child(2) *,
+.platform-win .winButton_f17fb6:nth-last-child(1) * {
     display: none;
 }
-.platform-win html:not(.app-focused) .winButton-3UMjdg {
+.platform-win html:not(.app-focused) .winButton_f17fb6 {
     background-color: #313131 !important;
 }
-.platform-win .wordmark-2u86JB {
+.platform-win .wordmark__5b8c9 {
     position: fixed !important;
 }
-.platform-win .wordmarkWindows-2dq6rw.wordmark-2u86JB {
+.platform-win .wordmarkWindows_ffbc5e.wordmark__5b8c9 {
     -webkit-app-region: drag;
 }
 
 /* Source Code */
 
 #app-mount .app-2rEoOp::before,
-#app-mount .app-2CXKsg::before {
+#app-mount .app_de4237::before {
     content: "Your version of OSX is outdated.";
     display: var(--version1_0_1, block);
     bottom: 90vh;
@@ -60,7 +60,7 @@
 }
 
 .layer-3QrUeG::before,
-.layer-86YKbF::before {
+.layer_f7d46a ::before {
     content: "Discord";
     background: linear-gradient(0deg, rgb(41 41 41) 0%, rgb(132 132 132) 1%, rgb(185 185 185) 51%, rgba(228, 230, 228, 1) 98%, rgba(226, 230, 243, 1) 100%);
     display: block;
@@ -75,7 +75,7 @@
 }
 
 .layer-3QrUeG:not(.baseLayer-35bLyl)::before,
-.layer-86YKbF:not(.baseLayer-W6S8cY)::before {
+.layer_f7d46a :not(.baseLayer__2b890)::before {
     content: "Discord Preferences";
     background: linear-gradient(0deg, rgb(41 41 41) 0%, rgb(132 132 132) 1%, rgb(185 185 185) 51%, rgba(228, 230, 228, 1) 98%, rgba(226, 230, 243, 1) 100%);
     display: block;
@@ -91,7 +91,7 @@
 }
 
 #app-mount .layer-3QrUeG:not(.baseLayer-35bLyl),
-#app-mount .layer-86YKbF:not(.baseLayer-W6S8cY) {
+#app-mount .layer_f7d46a :not(.baseLayer__2b890) {
     background-color: transparent !important;
     margin: 8rem 12.5rem;
     box-shadow: 5px 10px 20px #1d1d1d9f;
@@ -100,35 +100,35 @@
 }
 
 .layer-3QrUeG,
-.layer-86YKbF {
+.layer_f7d46a {
     background-color: transparent !important;
     opacity: 1 !important;
 }
 
 .layer-3QrUeG.baseLayer-35bLyl.stop-animations,
-.layer-86YKbF.baseLayer-W6S8cY.stop-animations {
+.layer_f7d46a .baseLayer__2b890.stop-animations {
     margin: 0px !important;
     transform: none !important;
     pointer-events: none !important;
 }
 
 .layer-3QrUeG:not(.baseLayer-35bLyl),
-.layer-86YKbF:not(.baseLayer-W6S8cY) {
+.layer_f7d46a :not(.baseLayer__2b890) {
     z-index: 999;
 }
 
 .layer-3QrUeG.baseLayer-35bLyl,
-.layer-86YKbF.baseLayer-W6S8cY {
+.layer_f7d46a .baseLayer__2b890 {
     transform: none !important;
 }
 
 .layer-3QrUeG:not(.baseLayer-35bLyl).animating-rRxada,
-.layer-86YKbF:not(.baseLayer-W6S8cY).animating-1rIrGV {
+.layer_f7d46a :not(.baseLayer__2b890).animating_b7d085 {
     transform: scale(1.001) !important;
     transition: all 0.1s ease-in-out !important;
 }
 
-.accountProfileCard-lbN7n- {
+.accountProfileCard__744d8 {
     background: var(--background-secondary);
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
     border-radius: 7px;
@@ -140,30 +140,30 @@
 }
 
 .backdrop-1wrmKB,
-.backdrop-2ByYRN {
+.backdrop__1a911 {
     height: 96%;
     top: 4%;
     position: relative;
 }
 
 .container-3auIfb[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"],
-.container-1QtPKm[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"] {
+.container__2ed72[style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"] {
     background-color: var(--brand-experiment) !important;
 }
 
 .slider-TkfMQL > svg,
-.slider-HJFN2i > svg {
+.slider__41d94 > svg {
     display: none;
 }
 
 .popoutContainer-1MXdqN,
-.popoutContainer-2wbmiM {
+.popoutContainer__66068 {
     background-color: transparent;
 }
 
 .platform-osx .wrapper-3NnKdC,
 .platform-win .scroller-1Bvpku,
-.platform-osx .wrapper-1_HaEi {
+.platform-osx .wrapper__216eb {
     margin-top: 5px !important;
 }
 
@@ -177,14 +177,14 @@ textarea {
 }
 
 .menu-3sdvDG,
-.menu-1QACrS {
+.menu__088f7 {
     position: relative;
     background: var(--background-floating);
     min-width: 240px;
 }
 
 .menu-3sdvDG::before,
-.menu-1QACrS::before {
+.menu__088f7::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -198,23 +198,23 @@ textarea {
 .userPopout-xaxa6l,
 .userPopout-2j1gM4,
 .emojiSection-3Fb9ix,
-.emojiSection-3QtaWO,
+.emojiSection_ab054b,
 .guildSection-1EoFKd,
-.guildSection-2Zyzy8,
+.guildSection__15ac6,
 .tooltip-2QfLtc,
 .tooltip-14MtrL,
 .container-2dqNWc,
-.container-8Futzw,
+.container__56cd1,
 .wrapper-2aW0bm,
-.wrapper-2vIMkT,
+.wrapper__4e6b6,
 .full-motion .wrapper-2aW0bm:hover,
-.full-motion .wrapper-2vIMkT:hover,
+.full-motion .wrapper__4e6b6:hover,
 .toast-1DEQGy,
 .toast-q3Y4wI,
 .root-8LYsGj, /* keep-in */
-.root-g14mjS, /* keep-in */
+.root_a28985, /* keep-in */
 .scrollableContainer-2NUZem,
-.scrollableContainer-15eg7h,
+.scrollableContainer_ff917f,
 .betterMessageLinks.Popout {
     background-color: var(--background-floating) !important;
     backdrop-filter: blur(var(--context-blur));
@@ -225,17 +225,17 @@ textarea {
 .body-1Ukv50,
 .topSection-13QKHs,
 .footer-31IekZ,
-.scroller-2qwVWY {
+.scroller_d4b86c {
     background-color: transparent !important;
 }
 
-.quickswitcher-pKcM9U {
+.quickswitcher_b5bb0a {
     background-color: transparent !important;
     height: 100%;
 }
 
 .guildSection-1EoFKd,
-.guildSection-2Zyzy8 {
+.guildSection__15ac6 {
     position: relative;
 }
 
@@ -248,7 +248,7 @@ textarea {
 }
 
 .channelTextArea-rNsIhG,
-.channelTextArea-1FufC0 {
+.channelTextArea_c2094b {
     background-color: transparent;
 }
 
@@ -264,8 +264,8 @@ textarea {
 
 .popoutBannerPremium-1n96gg,
 .banner-2QYc2d,
-.banner-1YaD3N,
-.popoutBanner-3cqRD9 {
+.banner__6d414,
+.popoutBanner__3fbe8 {
     width: 100%;
     position: relative;
     left: 1px;
@@ -273,12 +273,12 @@ textarea {
     top: 1px;
 }
 
-.topSection-13QKHs .profileBannerPremium-KD60EB {
+.topSection-13QKHs .profileBannerPremium__6fb42 {
     width: 100%;
 }
 
 .peopleListItem-2nzedh,
-.peopleListItem-u6dGxF {
+.peopleListItem_dab480 {
     width: 40%;
     height: 150px !important;
     border: none;
@@ -293,7 +293,7 @@ textarea {
 }
 
 .peopleListItem-2nzedh:hover,
-.peopleListItem-u6dGxF:hover {
+.peopleListItem_dab480:hover {
     width: 40%;
     height: 150px !important;
     border: none;
@@ -309,7 +309,7 @@ textarea {
 }
 
 .peopleListItem-2nzedh.active-rhSpJJ,
-.peopleListItem-u6dGxF.active-2UF8Zh {
+.peopleListItem_dab480.active__6b8ff {
     width: 40%;
     height: 150px !important;
     border: none;
@@ -325,7 +325,7 @@ textarea {
 }
 
 .itemCard-v9viV7,
-.itemCard-3Etziu {
+.itemCard_b64118 {
     border: none;
     background: var(--background-secondary);
     box-shadow: 0 0 0 0.6pt var(--macbuttons-outline-color);
@@ -337,26 +337,26 @@ textarea {
 }
 
 .itemCard-v9viV7:hover,
-.itemCard-3Etziu:hover {
+.itemCard_b64118:hover {
     background-color: var(--background-active) !important;
 }
 
 .discriminator-22Okc1,
-.discriminator-WV5K5s {
+.discriminator__463fe {
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     opacity: 0;
     visibility: visible;
 }
 
-.listItemContents-2n2Uy9:hover .discriminator-WV5K5s {
+.listItemContents_e97b28:hover .discriminator__463fe {
     opacity: 1;
 }
 
 .listItemContents-95HL3L,
 .listItemContents-95HL3L:hover,
-.listItemContents-3LtgRk,
-.listItemContents-3LtgRk:hover {
+.listItemContents_b50d55,
+.listItemContents_b50d55:hover {
     height: 100% !important;
     margin: 0 !important;
     padding: 0;
@@ -368,13 +368,13 @@ textarea {
 }
 
 .listItemContents-95HL3L:hover,
-.listItemContents-3LtgRk:hover {
+.listItemContents_b50d55:hover {
     transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
 }
 
 .peopleListItem-2nzedh .userInfo-2zN2z8,
-.peopleListItem-u6dGxF .userInfo-2WpsYG {
+.peopleListItem_dab480 .userInfo__83819 {
     position: relative;
     top: -40px;
 }
@@ -384,14 +384,14 @@ textarea {
 }
 
 .peopleListItem-2nzedh .actions-1SQwjn,
-.peopleListItem-u6dGxF .actions-YHvpIT {
+.peopleListItem_dab480 .actions_bd37ed {
     position: relative;
     top: 47.5px;
     left: -190px;
 }
 
 .theme-dark .menu-3sdvDG .labelContainer-1BLJti .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT),
-.theme-dark .menu-1QACrS .labelContainer-2vJzYL .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
+.theme-dark .menu__088f7 .labelContainer-2vJzYL .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
     font-weight: normal;
     padding: 0px;
     color: #f7ede6;
@@ -401,12 +401,12 @@ textarea {
 .channelName-2YrOjO,
 .name-23GUGE,
 .channelName-3KPsGw,
-.name-28HaxV {
+.name__4eb92 {
     font-weight: normal;
 }
 
 .theme-light .menu-3sdvDG .labelContainer-1BLJti .label-22pbtT:not(.colorDanger-2qLCe1 .label-22pbtT),
-.theme-light .menu-1QACrS .labelContainer-2vJzYL .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
+.theme-light .menu__088f7 .labelContainer-2vJzYL .label-2gNW3x:not(.colorDanger-3n-KnP .label-2gNW3x) {
     font-weight: normal;
     padding: 0px;
     font-size: 10pt;
@@ -414,8 +414,8 @@ textarea {
 
 .menu-3sdvDG .labelContainer-1BLJti,
 .statusItem-33LqPf,
-.menu-1QACrS .labelContainer-2vJzYL,
-.statusItem-2hiCNB {
+.menu__088f7 .labelContainer-2vJzYL,
+.statusItem__9b512 {
     min-height: 18px;
     padding: 3px 7px;
     border-radius: 4px;
@@ -432,7 +432,7 @@ textarea {
 }
 
 .menu-3sdvDG .separator-2I32lJ,
-.menu-1QACrS .separator-1So4YB {
+.menu__088f7 .separator-1So4YB {
     border-bottom: 1.2px solid var(--divider);
 }
 
@@ -442,18 +442,18 @@ textarea {
 }
 
 .button-F9qN4n,
-.button-1zW0-r {
+.button_bfb8e1 {
     background: transparent;
 }
 
 .statusItem-33LqPf .description-2L932D,
-.statusItem-2hiCNB .description-3Cwkxk {
+.statusItem__9b512 .description__38e73 {
     display: none;
 }
 
 /* Mac Buttons */
-.macButton-2M5W_9::before,
-.winButton-3UMjdg {
+.macButton__0de05::before,
+.winButton_f17fb6 {
     content: "";
     background-color: #313131;
     display: block;
@@ -467,7 +467,7 @@ textarea {
 }
 
 .app-focused.platform-osx .macButtonMaximize-2FMHAO::before,
-.app-focused.platform-osx .macButtonMaximize-1vTCwt::before,
+.app-focused.platform-osx .macButtonMaximize__2d4cd::before,
 .app-focused.platform-win .winButtonMinMax-PBQ2gm {
     content: "";
     background-color: #34c749;
@@ -482,14 +482,14 @@ textarea {
 }
 
 .app-focused.platform-osx .macButtonMaximize-2FMHAO > svg,
-.app-focused.platform-osx .macButtonMaximize-1vTCwt > svg {
+.app-focused.platform-osx .macButtonMaximize__2d4cd > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
 }
 
 .app-focused.platform-osx .macButtonMinimize-3EJ6wo::before,
-.app-focused.platform-osx .macButtonMinimize-Q8clSI::before,
+.app-focused.platform-osx .macButtonMinimize__38185::before,
 .app-focused.platform-win .winButtonMinMax-PBQ2gm:last-child {
     content: "";
     background-color: #fdbc40;
@@ -504,14 +504,14 @@ textarea {
 }
 
 .app-focused.platform-osx .macButtonMinimize-3EJ6wo > svg,
-.app-focused.platform-osx .macButtonMinimize-Q8clSI > svg {
+.app-focused.platform-osx .macButtonMinimize__38185 > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
 }
 
 .app-focused.platform-osx .macButtonClose-MwZ2nf::before,
-.app-focused.platform-osx .macButtonClose-3IXwAm::before,
+.app-focused.platform-osx .macButtonClose_d318e3::before,
 .app-focused.platform-win .winButtonClose-1HsbF- {
     content: "";
     background-color: #fc615d;
@@ -526,7 +526,7 @@ textarea {
 }
 
 .app-focused.platform-osx .macButtonClose-MwZ2nf > svg,
-.app-focused.platform-osx .macButtonClose-3IXwAm > svg {
+.app-focused.platform-osx .macButtonClose_d318e3 > svg {
     position: relative;
     top: -12px;
     z-index: 9999;
@@ -536,6 +536,6 @@ textarea {
     z-index: 999999 !important;
 } */
 
-.wordmarkWindows-2dq6rw {
+.wordmarkWindows_ffbc5e {
     display: none;
 }
