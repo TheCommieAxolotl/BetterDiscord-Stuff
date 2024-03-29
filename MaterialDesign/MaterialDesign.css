@@ -264,7 +264,7 @@ code {
     margin-block: 3px;
 }
 
-.wrapper__612a5 .wrapper__612a5 {
+.wrapper__612a5 {
     border-radius: 50px;
     transition: all 0.2s ease;
     margin-block: 3px;
@@ -325,7 +325,7 @@ code {
     transition: all 0.2s ease;
 }
 
-.wrapper__612a5:hover .wrapper__612a5 {
+.wrapper__612a5:hover {
     box-shadow: var(--04dpShadow);
     transition: all 0.2s ease;
 }
@@ -871,12 +871,12 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button__581d0, .lookFilled-yCfaCM):ho
 }
 
 .modeSelected__473f1 .wrapper__612a5,
-.modeSelected__473f1:hover .wrapper__612a5 {
+.modeSelected__473f1:hover.wrapper__612a5 {
     transition: all 0.2s ease;
     background: var(--08dp);
 }
 
-.wrapper__612a5:not(.modeSelected__473f1):hover .wrapper__612a5 {
+.wrapper__612a5:not(.modeSelected__473f1):hover {
     background: var(--04dp);
     transition: all 0.2s ease;
 }
@@ -898,7 +898,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button__581d0, .lookFilled-yCfaCM):ho
     width: 4px;
     border-radius: 5px;
     top: 50%;
-    left: -6px;
+    left: -12px;
     margin-top: -4px;
     background-color: var(--brand-experiment);
     transition: all 0.2s ease;
@@ -912,14 +912,14 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button__581d0, .lookFilled-yCfaCM):ho
     width: 4px;
     border-radius: 5px;
     top: 50%;
-    left: 0;
+    left: -8px;
     margin-top: -7px;
     background-color: var(--brand-experiment);
     transition: all 0.2s ease;
 }
 
 .wrapper__612a5:hover::before {
-    left: 0;
+    left: -8px;
     transition: all 0.2s ease;
     background-color: var(--brand-experiment) !important;
 }
@@ -929,7 +929,7 @@ button.colorRed-rQXKgM:not(.footer-31IekZ .button__581d0, .lookFilled-yCfaCM):ho
 }
 
 .wrapper__612a5.modeUnreadImportant__35358::before {
-    left: 0;
+    left: -8px;
     background-color: var(--interactive-active);
 }
 
