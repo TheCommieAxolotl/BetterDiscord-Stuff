@@ -146,7 +146,7 @@ module.exports = (() => {
                       async onStart() {
                           injectCSS("Timezones-Styles", Styles);
 
-                          const ProfileBanner = Webpack.getModule((x) => x.default && x.default.toString().includes(".GifAutoPlay.getSetting()"));
+                          const ProfileBanner = Webpack.getModule((x) => x.default && x.default.toString().includes("darkenOnHover:"));
                           const MessageHeader = Webpack.getModule((m) => m.default?.toString().includes(".getMessageTimestampId)("));
                           const Tooltip = Components.Tooltip;
 
