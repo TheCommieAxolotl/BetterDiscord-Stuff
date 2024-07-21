@@ -2,7 +2,7 @@
  * @name Timezones
  * @author TheCommieAxolotl#0001
  * @description Allows you to display other Users' local times.
- * @version 1.1.2
+ * @version 1.2.0
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Timezones/Timezones.plugin.js",
-            version: "1.1.2",
+            version: "1.2.0",
             description: "Allows you to display other Users' local times.",
         },
         defaultConfig: [
@@ -125,8 +125,8 @@ module.exports = (() => {
 
 .timezone-badge {
     position: absolute;
-    bottom: 10px;
-    right: 16px;
+    top: 10px;
+    left: 10px;
     background: var(--profile-body-background-color, var(--background-primary));
     border-radius: 4px;
     padding: 0.25rem 0.5rem;
@@ -135,50 +135,49 @@ module.exports = (() => {
 }
                   `;
 
-                  const TextInput = Webpack.getModule((m) => m?.Sizes?.MINI && m?.defaultProps?.type === "text", {
-                      searchExports: true,
-                  });
-                  const Markdown = Webpack.getModule((m) => m.default?.rules && m.default?.defaultProps?.parser).default;
+                  const Markdown = Webpack.getModule((m) => m?.rules && m?.defaultProps?.parser);
                   const SearchableSelect = Webpack.getByKeys("Button", "SearchableSelect")?.SearchableSelect;
+                  const ProfileBanner = Webpack.getModule(Webpack.Filters.byStrings("BITE_SIZE_PROFILE_POPOUT", "profileStatusEditEnabled"), { defaultExport: false });
+                  const MessageHeader = Webpack.getModule(Webpack.Filters.byStrings("userOverride", "withMentionPrefix"), { defaultExport: false });
+                  const Tooltip = Components.Tooltip;
                   const i18n = Webpack.getByKeys("getLocale");
 
                   return class Timezones extends Plugin {
                       async onStart() {
                           injectCSS("Timezones-Styles", Styles);
 
-                          const ProfileBanner = Webpack.getModule((x) => x.default && x.default.toString().includes("darkenOnHover:"));
-                          const MessageHeader = Webpack.getModule((m) => m.default?.toString().includes(".getMessageTimestampId)("));
-                          const Tooltip = Components.Tooltip;
-
                           ContextMenu.patch("user-context", this.userContextPatch);
 
-                          Patcher.after(ProfileBanner, "default", (_, [props], ret) => {
+                          Patcher.after(ProfileBanner, "Z", (_, [props], ret) => {
                               if (!this.hasTimezone(props.user.id)) return;
 
-                              ret.props.children.props.children.push(
+                              ret.props.children.props.children.props.children[0].props.children[1].props.children.push(
                                   React.createElement(Tooltip, {
-                                      text: this.getTime(props.user.id, Date.now(), { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" }),
+                                      text:
+                                          this.getTime(props.user.id, Date.now(), { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" }) +
+                                          ` (${DataStore[props.user.id]})`,
                                       children: (p) =>
                                           React.createElement("div", { ...p, className: "timezone-badge" }, this.getTime(props.user.id, Date.now(), { hour: "numeric", minute: "numeric" })),
                                   })
                               );
                           });
 
-                          Patcher.after(MessageHeader, "default", (_, [props], ret) => {
+                          Patcher.after(MessageHeader, "Z", (_, [props], ret) => {
                               if (props.isRepliedMessage || !this.settings.showInMessage) return;
 
                               if (!this.hasTimezone(props.message.author.id)) return;
 
-                              ret.props.username.props.children.push(
+                              ret.props.children.push(
                                   React.createElement(Tooltip, {
-                                      text: this.getTime(props.message.author.id, props.message.timestamp, {
-                                          weekday: "long",
-                                          year: "numeric",
-                                          month: "long",
-                                          day: "numeric",
-                                          hour: "numeric",
-                                          minute: "numeric",
-                                      }),
+                                      text:
+                                          this.getTime(props.message.author.id, props.message.timestamp, {
+                                              weekday: "long",
+                                              year: "numeric",
+                                              month: "long",
+                                              day: "numeric",
+                                              hour: "numeric",
+                                              minute: "numeric",
+                                          }) + ` (${DataStore[props.message.author.id]})`,
                                       children: (p) =>
                                           React.createElement(
                                               "span",
@@ -199,8 +198,14 @@ module.exports = (() => {
                                   type: "submenu",
                                   label: "Timezones",
                                   children: [
+                                      DataStore[props.user.id] &&
+                                          ContextMenu.buildItem({
+                                              type: "text",
+                                              disabled: true,
+                                              label: DataStore[props.user.id],
+                                          }),
                                       ContextMenu.buildItem({
-                                          label: "Set Timezone",
+                                          label: DataStore[props.user.id] ? "Change Timezone" : "Set Timezone",
                                           action: () => {
                                               return this.setTimezone(props.user.id, props.user);
                                           },
@@ -213,7 +218,7 @@ module.exports = (() => {
                                               return this.removeTimezone(props.user.id, props.user);
                                           },
                                       }),
-                                  ],
+                                  ].filter((x) => x),
                               }),
                           ]);
                       };
