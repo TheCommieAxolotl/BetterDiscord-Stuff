@@ -2,7 +2,7 @@
  * @name Timezones
  * @author TheCommieAxolotl#0001
  * @description Allows you to display other Users' local times.
- * @version 1.2.0
+ * @version 1.3.0
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Timezones/Timezones.plugin.js",
-            version: "1.2.0",
+            version: "1.3.0",
             description: "Allows you to display other Users' local times.",
         },
         defaultConfig: [
@@ -137,7 +137,7 @@ module.exports = (() => {
 
                   const Markdown = Webpack.getModule((m) => m?.rules && m?.defaultProps?.parser);
                   const SearchableSelect = Webpack.getByKeys("Button", "SearchableSelect")?.SearchableSelect;
-                  const ProfileBanner = Webpack.getModule(Webpack.Filters.byStrings("BITE_SIZE_PROFILE_POPOUT", "profileStatusEditEnabled"), { defaultExport: false });
+                  const ProfileBanner = Webpack.getModule(Webpack.Filters.byStrings("canUsePremiumProfileCustomization", "displayProfile"), { defaultExport: false });
                   const MessageHeader = Webpack.getModule(Webpack.Filters.byStrings("userOverride", "withMentionPrefix"), { defaultExport: false });
                   const Tooltip = Components.Tooltip;
                   const i18n = Webpack.getByKeys("getLocale");
@@ -151,15 +151,12 @@ module.exports = (() => {
                           Patcher.after(ProfileBanner, "Z", (_, [props], ret) => {
                               if (!this.hasTimezone(props.user.id)) return;
 
-                              ret.props.children.props.children.props.children[0].props.children[1].props.children.push(
-                                  React.createElement(Tooltip, {
-                                      text:
-                                          this.getTime(props.user.id, Date.now(), { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" }) +
-                                          ` (${DataStore[props.user.id]})`,
-                                      children: (p) =>
-                                          React.createElement("div", { ...p, className: "timezone-badge" }, this.getTime(props.user.id, Date.now(), { hour: "numeric", minute: "numeric" })),
-                                  })
-                              );
+                              ret.props.children = React.createElement(Tooltip, {
+                                  text:
+                                      this.getTime(props.user.id, Date.now(), { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" }) +
+                                      ` (${DataStore[props.user.id]})`,
+                                  children: (p) => React.createElement("div", { ...p, className: "timezone-badge" }, this.getTime(props.user.id, Date.now(), { hour: "numeric", minute: "numeric" })),
+                              });
                           });
 
                           Patcher.after(MessageHeader, "Z", (_, [props], ret) => {
