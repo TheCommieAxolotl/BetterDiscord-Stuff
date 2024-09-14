@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/CleanUpConfigs/CleanUpConfigs.plugin.js",
-            version: "0.1.3",
+            version: "0.2.0",
             description: " Check and remove config files that don't have a matching Plugin. Thanks to Strencher for the functions to be able to patch settings.",
         },
 
@@ -38,7 +38,7 @@ module.exports = (() => {
             {
                 title: "Fixed",
                 type: "changed",
-                items: ["Will no longer delete ChannelTabs configs"],
+                items: ["Replaced deprecated library with new one. - @RFlintstone"],
             },
         ],
     };

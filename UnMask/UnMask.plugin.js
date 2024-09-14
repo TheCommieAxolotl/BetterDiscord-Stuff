@@ -24,6 +24,13 @@ module.exports = (() => {
             version: "0.0.1",
             description: "Reveal the true identities of those who dare enter your chat.",
         },
+        changelog: [
+            {
+                title: "Fixed",
+                type: "changed",
+                items: ["Replaced deprecated library with new one. - @RFlintstone"],
+            },
+        ],
     };
 
     return !global.ZeresPluginLibrary

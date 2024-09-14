@@ -21,9 +21,16 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/PreviewMessage/PreviewMessage.plugin.js",
-            version: "1.0.2",
+            version: "1.1.0",
             description: "Allows you to preview a message before you send it.",
         },
+        changelog: [
+            {
+                title: "Fixed",
+                type: "changed",
+                items: ["Replaced deprecated library with new one. - @RFlintstone"],
+            },
+        ],
     };
 
     return !global.ZeresPluginLibrary

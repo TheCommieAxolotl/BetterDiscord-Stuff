@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Timezones/Timezones.plugin.js",
-            version: "1.3.0",
+            version: "1.4.0",
             description: "Allows you to display other Users' local times.",
         },
         defaultConfig: [
@@ -42,6 +42,13 @@ module.exports = (() => {
                 id: "showOffset",
                 name: "Show localized GMT format (e.g., GMT-8)",
                 value: false,
+            },
+        ],
+        changelog: [
+            {
+                title: "Fixed",
+                type: "changed",
+                items: ["Replaced deprecated library with new one. - @RFlintstone"],
             },
         ],
     };
