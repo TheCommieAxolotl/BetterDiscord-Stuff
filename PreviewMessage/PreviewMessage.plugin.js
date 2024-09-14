@@ -48,7 +48,7 @@ module.exports = (() => {
                       confirmText: "Download Now",
                       cancelText: "Cancel",
                       onConfirm: () => {
-                          require("request").get("https://rauenzi.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
+                          require("request").get("https://zerebos.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
                               if (error) return require("electron").shell.openExternal("https://betterdiscord.app/Download?id=9");
                               await new Promise((r) => require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0PluginLibrary.plugin.js"), body, r));
                           });
