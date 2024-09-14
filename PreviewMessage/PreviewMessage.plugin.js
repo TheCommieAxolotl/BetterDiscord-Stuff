@@ -2,7 +2,7 @@
  * @name PreviewMessage
  * @author TheCommieAxolotl
  * @description Allows you to preview a message before you send it.
- * @version 1.0.2
+ * @version 1.0.3
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/PreviewMessage
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/PreviewMessage/PreviewMessage.plugin.js",
-            version: "1.0.2",
+            version: "1.0.3",
             description: "Allows you to preview a message before you send it.",
         },
     };
@@ -48,7 +48,7 @@ module.exports = (() => {
                       confirmText: "Download Now",
                       cancelText: "Cancel",
                       onConfirm: () => {
-                          require("request").get("https://rauenzi.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
+                          require("request").get("https://zerebos.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
                               if (error) return require("electron").shell.openExternal("https://betterdiscord.app/Download?id=9");
                               await new Promise((r) => require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0PluginLibrary.plugin.js"), body, r));
                           });

@@ -65,7 +65,7 @@ module.exports = (() => {
                       confirmText: "Download Now",
                       cancelText: "Cancel",
                       onConfirm: () => {
-                          require("request").get("https://rauenzi.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
+                          require("request").get("https://zerebos.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
                               if (error) return require("electron").shell.openExternal("https://betterdiscord.app/Download?id=9");
                               await new Promise((r) => require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0PluginLibrary.plugin.js"), body, r));
                           });
@@ -218,8 +218,8 @@ module.exports = (() => {
                                                                   }),
                                                               ],
                                                           },
-                                                          tipProps,
-                                                      ),
+                                                          tipProps
+                                                      )
                                                   );
                                               },
                                           }),
@@ -229,7 +229,7 @@ module.exports = (() => {
                                                   tag: "h5",
                                                   className: "CleanUpConfigs-form-title",
                                               },
-                                              "Clean Up Config Files",
+                                              "Clean Up Config Files"
                                           ),
                                       ],
                                   }),
@@ -242,7 +242,7 @@ module.exports = (() => {
                                           ],
                                           tag: "div",
                                       },
-                                      "Check for BetterDiscord Config files that don't have a matching Plugin.",
+                                      "Check for BetterDiscord Config files that don't have a matching Plugin."
                                   ),
                                   React.createElement(
                                       Buttons,
@@ -283,7 +283,7 @@ module.exports = (() => {
                                                                           size: Text.Sizes.SIZE_16,
                                                                           className: "CleanUpConfigs-warning",
                                                                       },
-                                                                      "Do you want to Delete them?",
+                                                                      "Do you want to Delete them?"
                                                                   ),
                                                                   toDel.map((file) =>
                                                                       React.createElement(
@@ -292,8 +292,8 @@ module.exports = (() => {
                                                                               color: Text.Colors.HEADER_SECONDARY,
                                                                               size: Text.Sizes.SIZE_16,
                                                                           },
-                                                                          file + ".config.json",
-                                                                      ),
+                                                                          file + ".config.json"
+                                                                      )
                                                                   ),
                                                               ],
                                                               {
@@ -312,7 +312,7 @@ module.exports = (() => {
                                                                           console.log(e);
                                                                       }
                                                                   },
-                                                              },
+                                                              }
                                                           );
                                                       } else {
                                                           showToast("0 Unused Config Files Found.");
@@ -323,7 +323,7 @@ module.exports = (() => {
                                               });
                                           },
                                       },
-                                      "Check Configs",
+                                      "Check Configs"
                                   ),
                               ]);
                           });

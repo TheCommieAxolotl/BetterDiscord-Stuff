@@ -2,7 +2,7 @@
  * @name BetterSyntax
  * @author TheCommieAxolotl#0001
  * @description Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.
- * @version 2.1.3
+ * @version 2.1.4
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/BetterSyntax
@@ -36,7 +36,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/BetterSyntax.plugin.js",
-            version: "2.1.3",
+            version: "2.1.4",
             description: "Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.",
         },
 
@@ -290,7 +290,7 @@ module.exports = (() => {
                       confirmText: "Download Now",
                       cancelText: "Cancel",
                       onConfirm: () => {
-                          require("request").get("https://rauenzi.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
+                          require("request").get("https://zerebos.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
                               if (error) return require("electron").shell.openExternal("https://betterdiscord.app/Download?id=9");
                               await new Promise((r) => require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0PluginLibrary.plugin.js"), body, r));
                           });
