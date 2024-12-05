@@ -2,7 +2,7 @@
  * @name Timezones
  * @author TheCommieAxolotl#0001
  * @description Allows you to display other Users' local times.
- * @version 1.3.1
+ * @version 1.3.2
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Timezones
@@ -21,7 +21,7 @@ module.exports = (() => {
                 },
             ],
             github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Timezones/Timezones.plugin.js",
-            version: "1.3.1",
+            version: "1.3.2",
             description: "Allows you to display other Users' local times.",
         },
         defaultConfig: [
@@ -137,7 +137,7 @@ module.exports = (() => {
 
                   const Markdown = Webpack.getModule((m) => m?.rules && m?.defaultProps?.parser);
                   const SearchableSelect = Webpack.getByKeys("Button", "SearchableSelect")?.SearchableSelect;
-                  const ProfileBanner = Webpack.getModule(Webpack.Filters.byStrings("canUsePremiumProfileCustomization", "displayProfile"), { defaultExport: false });
+                  const ProfileBanner = Webpack.getModule(Webpack.Filters.byStrings("canUsePremiumProfileCustomization", "let{profileType", "displayProfile"), { defaultExport: false });
                   const MessageHeader = Webpack.getModule(Webpack.Filters.byStrings("userOverride", "withMentionPrefix"), { defaultExport: false });
                   const Tooltip = Components.Tooltip;
                   const i18n = Webpack.getByKeys("getLocale");
