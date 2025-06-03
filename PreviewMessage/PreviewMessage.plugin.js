@@ -2,7 +2,7 @@
  * @name PreviewMessage
  * @author TheCommieAxolotl
  * @description Allows you to preview a message before you send it.
- * @version 1.0.3
+ * @version 1.0.4
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/PreviewMessage
@@ -10,81 +10,20 @@
  * @donate https://github.com/sponsors/thecommieaxolotl
  */
 
-module.exports = (() => {
-    const config = {
-        info: {
-            name: "PreviewMessage",
-            authors: [
-                {
-                    name: "TheCommieAxolotl",
-                    discord_id: "538487970408300544",
-                },
-            ],
-            github_raw: "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/PreviewMessage/PreviewMessage.plugin.js",
-            version: "1.0.3",
-            description: "Allows you to preview a message before you send it.",
-        },
-    };
+const { React, Patcher, Webpack, Components, Utils } = BdApi;
 
-    return !global.ZeresPluginLibrary
-        ? class {
-              constructor() {
-                  this._config = config;
-              }
-              getName() {
-                  return config.info.name;
-              }
-              getAuthor() {
-                  return config.info.authors.map((a) => a.name).join(", ");
-              }
-              getDescription() {
-                  return config.info.description;
-              }
-              getVersion() {
-                  return config.info.version;
-              }
-              load() {
-                  BdApi.showConfirmationModal("Library Missing", `The library plugin needed for **${config.info.name}** is missing. Please click Download Now to install it.`, {
-                      confirmText: "Download Now",
-                      cancelText: "Cancel",
-                      onConfirm: () => {
-                          require("request").get("https://zerebos.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
-                              if (error) return require("electron").shell.openExternal("https://betterdiscord.app/Download?id=9");
-                              await new Promise((r) => require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0PluginLibrary.plugin.js"), body, r));
-                          });
-                      },
-                  });
-              }
-              start() {}
-              stop() {}
-          }
-        : (([Plugin, Api]) => {
-              const plugin = (Plugin, Api) => {
-                  const { Patcher, Utilities } = Api;
-                  const { Data, React, injectCSS, clearCSS, Webpack } = BdApi;
+const SelectedChannelStore = Webpack.getStore("SelectedChannelStore");
+const DraftStore = Webpack.getStore("DraftStore");
+const MessageActions = Webpack.getModule((m) => m.sendBotMessage);
 
-                  const DataStore = new Proxy(
-                      {},
-                      {
-                          get: (_, key) => Data.load(config.info.name, key),
-                          set: (_, key, value) => {
-                              Data.save(config.info.name, key, value);
-                              return true;
-                          },
-                          deleteProperty: (_, key) => {
-                              Data.delete(config.info.name, key);
-                              return true;
-                          },
-                      }
-                  );
+const ChatBarClasses = Webpack.getByKeys("channelTextArea", "button");
+const ChannelTextArea = Webpack.getModule((m) => m?.type?.render?.toString?.()?.includes?.("CHANNEL_TEXT_AREA"));
 
-                  const Styles = `
+const Styles = `
 .preview-button {
     background-color: transparent;
-    border: none;
-    height: 8px;
-    filter: grayscale(100%);
     cursor: pointer;
+    padding: 3px;
     color: var(--interactive-normal);
 }
 
@@ -95,143 +34,93 @@ module.exports = (() => {
 [class*=innerDisabled] .preview-button {
     display: none;
 }
-                  `;
+`;
 
-                  const Tooltip = BdApi.Components.Tooltip;
+var console;
 
-                  const SelectedChannelStore = Webpack.getModule((m) => m.getLastSelectedChannelId);
-                  const DraftStore = Webpack.getModule((m) => m.getDraft);
-                  const MessageActions = Webpack.getModule((m) => m.sendBotMessage);
-                  const ChannelTextArea = Webpack.getModule((m) => m.type?.render?.toString?.().includes("CHANNEL_TEXT_AREA"));
+module.exports = class PreviewMessage {
+    constructor(meta) {
+        this.meta = meta;
+        this.BdApi = new BdApi(meta.name);
+        console = this.BdApi.Logger;
+    }
 
-                  return class PreviewMessage extends Plugin {
-                      onStart() {
-                          injectCSS("PreviewMessage-Styles", Styles);
+    start() {
+        this.BdApi.DOM.addStyle(Styles);
+        Patcher.after(this.meta.name, ChannelTextArea.type, "render", (_, __, res) => {
+            const isProfilePopout = Utils.findInTree(res, (e) => Array.isArray(e?.value) && e.value.some((v) => v === "bite size profile popout"), {
+                walkable: ["children", "props"]
+            });
+            if (isProfilePopout) return;
+            const chatBar = Utils.findInTree(res, (e) => Array.isArray(e?.children) && e.children.some((c) => c?.props?.className?.startsWith("attachButton")), {
+                walkable: ["children", "props"]
+            });
+            if (!chatBar) return console.error("Failed to find ChatBar");
+            const textAreaState = Utils.findInTree(chatBar, (e) => e?.props?.channel, {
+                walkable: ["children"]
+            });
+            if (!textAreaState) return console.error("Failed to find textAreaState");
+            chatBar.children.splice(-1, 0, React.createElement(this.renderButton));
+        });
+    }
 
-                          Patcher.after(ChannelTextArea.type, "render", (_, __, ret) => {
-                              const chatBar = Utilities.findInReactTree(ret, (n) => Array.isArray(n?.children) && n.children.some((c) => c?.props?.className?.startsWith("attachButton")))?.children;
-                              if (!chatBar) {
-                                  console.error("PreviewMessage: Couldn't find ChatBar component in React tree");
-                                  return;
-                              }
+    stop() {
+        Patcher.unpatchAll(this.meta.name);
+        this.BdApi.DOM.removeStyle();
+    }
 
-                              const buttons = Utilities.findInReactTree(chatBar, (n) => n?.props?.showCharacterCount);
-                              if (buttons?.props.disabled) return;
+    sendPreview() {
+        const channelID = SelectedChannelStore.getChannelId();
 
-                              chatBar.splice(-1, 0, this.renderButton());
-                          });
-                      }
+        const draft = DraftStore.getDraft(channelID, 0);
 
-                      sendPreview() {
-                          const channelID = SelectedChannelStore.getChannelId();
+        if (draft) {
+            MessageActions.sendBotMessage(channelID, draft);
+        }
+    }
 
-                          const draft = DraftStore.getDraft(channelID, 0);
-
-                          if (draft) {
-                              MessageActions.sendBotMessage(channelID, draft);
-                          }
-                      }
-
-                      renderButton() {
-                          return React.createElement(Tooltip, {
-                              text: "Preview Message",
-                              children: (p) =>
-                                  React.createElement(
-                                      "div",
-                                      {
-                                          style: {
-                                              marginTop: "10px",
-                                          },
-                                      },
-                                      React.createElement(
-                                          "button",
-                                          {
-                                              ...p,
-                                              className: "preview-button",
-                                              onClick: () => {
-                                                  this.sendPreview();
-                                              },
-                                          },
-                                          React.createElement(
-                                              "svg",
-                                              {
-                                                  xmlns: "http://www.w3.org/2000/svg",
-                                                  viewBox: "0 0 36 36",
-                                                  width: "24",
-                                                  height: "24",
-                                              },
-                                              React.createElement("ellipse", {
-                                                  fill: "currentColor",
-                                                  cx: "8.828",
-                                                  cy: "18",
-                                                  rx: "7.953",
-                                                  ry: "13.281",
-                                              }),
-                                              React.createElement("path", {
-                                                  fill: "currentColor",
-                                                  d: "M8.828 32.031C3.948 32.031.125 25.868.125 18S3.948 3.969 8.828 3.969 17.531 10.132 17.531 18s-3.823 14.031-8.703 14.031zm0-26.562C4.856 5.469 1.625 11.09 1.625 18s3.231 12.531 7.203 12.531S16.031 24.91 16.031 18 12.8 5.469 8.828 5.469z",
-                                              }),
-                                              React.createElement("circle", {
-                                                  fill: "var(--bg-overlay-3,var(--channeltextarea-background))",
-                                                  cx: "6.594",
-                                                  cy: "18",
-                                                  r: "4.96",
-                                              }),
-                                              React.createElement("circle", {
-                                                  fill: "var(--bg-overlay-3,var(--channeltextarea-background))",
-                                                  cx: "6.594",
-                                                  cy: "18",
-                                                  r: "3.565",
-                                              }),
-                                              React.createElement("circle", {
-                                                  fill: "currentColor",
-                                                  cx: "7.911",
-                                                  cy: "15.443",
-                                                  r: "1.426",
-                                              }),
-                                              React.createElement("ellipse", {
-                                                  fill: "currentColor",
-                                                  cx: "27.234",
-                                                  cy: "18",
-                                                  rx: "7.953",
-                                                  ry: "13.281",
-                                              }),
-                                              React.createElement("path", {
-                                                  fill: "currentColor",
-                                                  d: "M27.234 32.031c-4.88 0-8.703-6.163-8.703-14.031s3.823-14.031 8.703-14.031S35.938 10.132 35.938 18s-3.824 14.031-8.704 14.031zm0-26.562c-3.972 0-7.203 5.622-7.203 12.531 0 6.91 3.231 12.531 7.203 12.531S34.438 24.91 34.438 18 31.206 5.469 27.234 5.469z",
-                                              }),
-                                              React.createElement("circle", {
-                                                  fill: "var(--bg-overlay-3,var(--channeltextarea-background))",
-                                                  cx: "25",
-                                                  cy: "18",
-                                                  r: "4.96",
-                                              }),
-                                              React.createElement("circle", {
-                                                  fill: "var(--bg-overlay-3,var(--channeltextarea-background))",
-                                                  cx: "25",
-                                                  cy: "18",
-                                                  r: "3.565",
-                                              }),
-                                              React.createElement("circle", {
-                                                  fill: "currentColor",
-                                                  cx: "26.317",
-                                                  cy: "15.443",
-                                                  r: "1.426",
-                                              })
-                                          )
-                                      )
-                                  ),
-                          });
-                      }
-
-                      onStop() {
-                          Patcher.unpatchAll();
-                          clearCSS("PreviewMessage-Styles");
-                      }
-                  };
-              };
-
-              return plugin(Plugin, Api);
-          })(global.ZeresPluginLibrary.buildPlugin(config));
-})();
-/*@end@*/
+    renderButton = () => {
+        return React.createElement(
+            Components.Tooltip,
+            {
+                text: "Preview Message",
+                children: (p) =>
+                    React.createElement(
+                        "div",
+                        {
+                            className: ChatBarClasses.buttons
+                        },
+                        React.createElement(
+                            "button",
+                            {
+                                ...p,
+                                className: "preview-button",
+                                onClick: () => this.sendPreview(),
+                            },
+                            React.createElement(
+                                "svg",
+                                {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 36 36",
+                                    width: "25",
+                                    height: "25",
+                                },
+                                [
+                                    React.createElement("ellipse", { fill: "currentColor", cx: "8.828", cy: "18", rx: "7.953", ry: "13.281", key: 1 }),
+                                    React.createElement("path", { fill: "currentColor", d: "M8.828 32.031C3.948 32.031.125 25.868.125 18S3.948 3.969 8.828 3.969 17.531 10.132 17.531 18s-3.823 14.031-8.703 14.031zm0-26.562C4.856 5.469 1.625 11.09 1.625 18s3.231 12.531 7.203 12.531S16.031 24.91 16.031 18 12.8 5.469 8.828 5.469z", key: 2 }),
+                                    React.createElement("circle", { fill: "var(--bg-overlay-3,var(--channeltextarea-background))", cx: "6.594", cy: "18", r: "4.96", key: 3 }),
+                                    React.createElement("circle", { fill: "var(--bg-overlay-3,var(--channeltextarea-background))", cx: "6.594", cy: "18", r: "3.565", key: 4 }),
+                                    React.createElement("circle", { fill: "currentColor", cx: "7.911", cy: "15.443", r: "1.426", key: 5 }),
+                                    React.createElement("ellipse", { fill: "currentColor", cx: "27.234", cy: "18", rx: "7.953", ry: "13.281", key: 6 }),
+                                    React.createElement("path", { fill: "currentColor", d: "M27.234 32.031c-4.88 0-8.703-6.163-8.703-14.031s3.823-14.031 8.703-14.031S35.938 10.132 35.938 18s-3.824 14.031-8.704 14.031zm0-26.562c-3.972 0-7.203 5.622-7.203 12.531 0 6.91 3.231 12.531 7.203 12.531S34.438 24.91 34.438 18 31.206 5.469 27.234 5.469z", key: 7 }),
+                                    React.createElement("circle", { fill: "var(--bg-overlay-3,var(--channeltextarea-background))", cx: "25", cy: "18", r: "4.96", key: 8 }),
+                                    React.createElement("circle", { fill: "var(--bg-overlay-3,var(--channeltextarea-background))", cx: "25", cy: "18", r: "3.565", key: 9 }),
+                                    React.createElement("circle", { fill: "currentColor", cx: "26.317", cy: "15.443", r: "1.426", key: 10 })
+                                ]
+                            )
+                        )
+                    ),
+            }
+        );
+    }
+};
