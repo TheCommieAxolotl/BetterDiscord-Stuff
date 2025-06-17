@@ -16,8 +16,8 @@ const SelectedChannelStore = Webpack.getStore("SelectedChannelStore");
 const DraftStore = Webpack.getStore("DraftStore");
 const MessageActions = Webpack.getModule((m) => m.sendBotMessage);
 
-const ChannelButtons = BdApi.Webpack.getBySource("\"ChannelTextAreaButtons\"").Z;
-const Button = BdApi.Webpack.getBySource("CHAT_INPUT_BUTTON_NOTIFICATION").Z;
+const ChatButtonsGroup = BdApi.Webpack.getBySource("\"ChannelTextAreaButtons\"").Z;
+const ChatButton = BdApi.Webpack.getBySource("CHAT_INPUT_BUTTON_NOTIFICATION").Z;
 
 var console;
 
@@ -29,7 +29,7 @@ module.exports = class PreviewMessage {
     }
 
     start() {
-        Patcher.after(this.meta.name, ChannelButtons, "type", (_, __, res) => {
+        Patcher.after(this.meta.name, ChatButtonsGroup, "type", (_, __, res) => {
             if (res.props.children && Array.isArray(res.props.children)) {
                 res.props.children.unshift(React.createElement(this.renderButton));
             }
@@ -51,7 +51,7 @@ module.exports = class PreviewMessage {
     }
 
     renderButton = () => {
-        return React.createElement(Button, {
+        return React.createElement(ChatButton, {
             onClick: () => this.sendPreview(), "aria-label": "Preview Message",
             children: React.createElement("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
