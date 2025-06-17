@@ -31,7 +31,7 @@ module.exports = class PreviewMessage {
     start() {
         Patcher.after(this.meta.name, ChatButtonsGroup, "type", (_, __, res) => {
             if (res.props.children && Array.isArray(res.props.children)) {
-                res.props.children.unshift(React.createElement(this.renderButton));
+                res.props.children.unshift(React.createElement(this.PreviewMessageButton));
             }
         });
     }
@@ -50,7 +50,7 @@ module.exports = class PreviewMessage {
         }
     }
 
-    renderButton = () => {
+    PreviewMessageButton = () => {
         return React.createElement(ChatButton, {
             onClick: () => this.sendPreview(), "aria-label": "Preview Message",
             children: React.createElement("svg", {
