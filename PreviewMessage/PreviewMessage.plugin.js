@@ -16,8 +16,8 @@ const SelectedChannelStore = Webpack.getStore("SelectedChannelStore");
 const DraftStore = Webpack.getStore("DraftStore");
 const MessageActions = Webpack.getModule((m) => m.sendBotMessage);
 
-const ChatButtonsGroup = BdApi.Webpack.getBySource("\"ChannelTextAreaButtons\"").Z;
-const ChatButton = BdApi.Webpack.getBySource("CHAT_INPUT_BUTTON_NOTIFICATION").Z;
+const ChatButtonsGroup = Webpack.getBySource("\"ChannelTextAreaButtons\"").Z;
+const ChatButton = Webpack.getBySource("CHAT_INPUT_BUTTON_NOTIFICATION").Z;
 
 var console;
 
@@ -29,8 +29,8 @@ module.exports = class PreviewMessage {
     }
 
     start() {
-        Patcher.after(this.meta.name, ChatButtonsGroup, "type", (_, __, res) => {
-            if (res.props.children && Array.isArray(res.props.children)) {
+        Patcher.after(this.meta.name, ChatButtonsGroup, "type", (_, args, res) => {
+            if (args.length >= 0 && !args[0].disabled && res.props.children && Array.isArray(res.props.children)) {
                 res.props.children.unshift(React.createElement(this.PreviewMessageButton));
             }
         });
