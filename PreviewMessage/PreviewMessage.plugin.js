@@ -30,7 +30,7 @@ module.exports = class PreviewMessage {
 
     start() {
         Patcher.after(this.meta.name, ChatButtonsGroup, "type", (_, args, res) => {
-            if (args.length >= 0 && !args[0].disabled && res.props.children && Array.isArray(res.props.children)) {
+            if (args.length >= 0 && !args[0].disabled && args[0].type.analyticsName == "normal" &&  res.props.children && Array.isArray(res.props.children)) {
                 res.props.children.unshift(React.createElement(this.PreviewMessageButton));
             }
         });
