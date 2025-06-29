@@ -16,7 +16,7 @@ const SelectedChannelStore = Webpack.getStore("SelectedChannelStore");
 const DraftStore = Webpack.getStore("DraftStore");
 const MessageActions = Webpack.getModule((m) => m.sendBotMessage);
 
-const ChatButtonsGroup = Webpack.getBySource("\"ChannelTextAreaButtons\"").Z;
+const ChatButtonsGroup = Webpack.getBySource("type","channel","showAllButtons").Z;
 const ChatButton = Webpack.getBySource("CHAT_INPUT_BUTTON_NOTIFICATION").Z;
 
 var console;
