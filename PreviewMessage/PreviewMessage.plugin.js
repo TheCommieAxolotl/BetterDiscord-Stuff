@@ -2,7 +2,7 @@
  * @name PreviewMessage
  * @author TheCommieAxolotl
  * @description Allows you to preview a message before you send it.
- * @version 1.0.4
+ * @version 1.0.5
  * @authorId 538487970408300544
  * @invite 5BSWtSM3XU
  * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/PreviewMessage
@@ -16,8 +16,8 @@ const SelectedChannelStore = Webpack.getStore("SelectedChannelStore");
 const DraftStore = Webpack.getStore("DraftStore");
 const MessageActions = Webpack.getModule((m) => m.sendBotMessage);
 
-const ChatButtonsGroup = Webpack.getBySource("type","channel","showAllButtons").Z;
-const ChatButton = Webpack.getBySource("CHAT_INPUT_BUTTON_NOTIFICATION").Z;
+const ChatButtonsGroup = Webpack.getBySource("type", "showAllButtons", "paymentsBlocked")?.Z;
+const ChatButton = Webpack.getBySource("CHAT_INPUT_BUTTON_NOTIFICATION")?.Z;
 
 var console;
 
